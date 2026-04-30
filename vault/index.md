@@ -9,6 +9,10 @@ O6lvl4 Knowledge の knowledge base。
 
 ## Notes
 
+### cli
+
+- [[rtk]] - RTK (Rust Token Killer)
+
 ### language
 
 - [[almide]] - Almide
