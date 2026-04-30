@@ -6,7 +6,7 @@
 </dialog>
 
 <script>
-  const base = import.meta.env.BASE_URL;
+  const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
   const dialog = document.getElementById('search-dialog') as HTMLDialogElement;
   const input = document.getElementById('search-input') as HTMLInputElement;
   const resultsList = document.getElementById('search-results') as HTMLUListElement;

@@ -9,7 +9,7 @@ const sorted = notes.sort((a, b) => {
   const tb = b.data.title || b.id;
   return ta.localeCompare(tb);
 });
-const base = import.meta.env.BASE_URL;
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 ---
 
 <Base title="Notes">

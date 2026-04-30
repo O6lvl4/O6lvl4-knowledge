@@ -19,7 +19,7 @@
   import { zoom, zoomIdentity } from 'd3-zoom';
   import type { ZoomTransform } from 'd3-zoom';
 
-  const base = import.meta.env.BASE_URL;
+  const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
   const canvas = document.getElementById('graph-canvas') as HTMLCanvasElement;
   const ctx = canvas.getContext('2d')!;
 
