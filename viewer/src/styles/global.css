@@ -307,6 +307,16 @@ article th {
   margin-bottom: 1.5rem;
 }
 
+a.tag {
+  text-decoration: none;
+  transition: background 0.15s;
+}
+
+a.tag:hover {
+  background: var(--bg-overlay);
+  text-decoration: none;
+}
+
 /* Backlinks */
 .backlinks {
   max-width: var(--content-width);
