@@ -213,6 +213,61 @@ article img {
   border-radius: 8px;
 }
 
+/* Mermaid diagrams (premaid dark theme) */
+.mermaid-diagram {
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+  background: #0f172a;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow-x: auto;
+  text-align: center;
+}
+
+.mermaid-diagram svg {
+  max-width: 100%;
+  height: auto;
+}
+
+.mermaid-diagram .node rect,
+.mermaid-diagram .node polygon,
+.mermaid-diagram .node circle,
+.mermaid-diagram .node ellipse,
+.mermaid-diagram .node path {
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.4))
+    drop-shadow(0 6px 14px rgba(0, 0, 0, 0.45));
+  stroke-width: 1.2px !important;
+}
+
+.mermaid-diagram .node rect {
+  rx: 10;
+  ry: 10;
+}
+
+.mermaid-diagram .edgePath path.path,
+.mermaid-diagram .flowchart-link {
+  stroke-width: 1.5px !important;
+  stroke-linecap: round !important;
+}
+
+.mermaid-diagram .cluster rect {
+  rx: 14 !important;
+  ry: 14 !important;
+  stroke-width: 1px !important;
+}
+
+.mermaid-diagram .nodeLabel,
+.mermaid-diagram .edgeLabel,
+.mermaid-diagram .cluster text,
+.mermaid-diagram .actor,
+.mermaid-diagram .messageText,
+.mermaid-diagram .noteText,
+.mermaid-diagram .labelText,
+.mermaid-diagram .titleText,
+.mermaid-diagram .taskText {
+  font-family: 'Inter', system-ui, sans-serif !important;
+}
+
 article hr {
   border: none;
   border-top: 1px solid var(--border);
