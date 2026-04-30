@@ -114,4 +114,3 @@ import self.utils.{helper_a, helper_b}
 
 - [GitHub](https://github.com/almide/almide)
 - [Playground](https://almide.github.io/playground/)
-- [[Example Note]] — Viewer の機能デモ
