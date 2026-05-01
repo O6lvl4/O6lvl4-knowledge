@@ -34,12 +34,6 @@ Hook から返す `permissionDecision`:
 - `deny` — ブロック
 - `ask` — ユーザー確認（RTK のデフォルト）
 
-## エコシステム
-
-- [[rtk|RTK]] — トークン消費を 60-90% 削減する CLI プロキシ
-- [[almide|Almide]] — LLM コード生成に最適化された言語（Claude Sonnet 4.6 で Pass Rate 100%）
-- [[graph-garden]] — このナレッジベースも Claude Code で構築
-
 ## Links
 
 - [Documentation](https://docs.anthropic.com/en/docs/claude-code)
