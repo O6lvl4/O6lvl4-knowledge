@@ -37,22 +37,14 @@ flowchart LR
 
 ## vault 内での使われ方
 
-- [[almide]] — Effect System を中核に据えた言語設計
-- [[almide-grammar]] — 効果を表現する文法
-- [[almide-docs]] — 効果システムの解説資料
-- [[almide-bindgen]] — 外部呼び出しの効果を型で扱う
-- [[almide-wasm-bindgen]] — Wasm 経由の効果伝搬
-- [[almide-examples]] — Effect System を活かした事例集
-- [[bonsai-almide]] — Almide 派生の小さな実験
-- [[almide-dojo]] — 効果に関する練習問題集
-- [[agentic-coding]] — エージェント向け言語設計の文脈で重要
+- [[almide]] — `effect fn` で I/O 境界を明示し、`async/await` を持たず effect が非同期境界を兼ねる言語設計
+- [[tree-sitter-almide]] — grammar の Features に "Effect system (`effect fn`, `async`)" を含む構文サポート
+- [[almide-wasm-bindgen]] — `effect fn` を ABI レベルで `Result[T, error]` に変換し、JS では auto-unwrap (throw on Err) として扱う
 
 ## 関連概念
 
 - [[sandbox]] — 効果システムは「言語レベルのサンドボックス」
-- [[dependency-injection]] — 効果の置き場を外に出す発想と近い
 - [[ir]] — 効果情報を IR 上で運ぶ設計
-- [[ddd]] — ドメイン層を純粋に保つための支え
 
 ## Links
 

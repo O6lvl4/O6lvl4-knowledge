@@ -50,17 +50,13 @@ sequenceDiagram
 
 ## vault 内での使われ方
 
-- [[next-auth-providers]] — NextAuth.js 向けの OAuth プロバイダ実装
-- [[auth-providers-ts]] — フレームワーク非依存な OAuth プロバイダライブラリ
-- [[famulus]] — OAuth が絡む外部 API 呼び出し
-- [[famulus2]] — MCP サーバ経由で OAuth が必要な API を叩く構成
+- [[next-auth-providers]] — NextAuth.js 向けの LINE Login OAuth 2.0 プロバイダ実装
+- [[auth-providers-ts]] — フレームワーク非依存な LINE OAuth 2.0 ライブラリ。authorization URL 生成、token 交換 / refresh / revoke、user profile 取得を提供
 
 ## 関連概念
 
 - [[capability-based-security]] — トークン = capability の一種。OAuth は capability ベースの考え方
-- [[mcp]] — MCP サーバが外部サービスにアクセスする際に OAuth を使う
 - [[edge-computing]] — エッジでのトークン検証は性能と安全の両面で工夫が必要
-- [[serialization]] — JWT などトークンの形式
 
 ## Links
 

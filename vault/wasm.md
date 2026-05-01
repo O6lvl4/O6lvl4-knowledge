@@ -39,21 +39,15 @@ flowchart LR
 
 ## vault 内での使われ方
 
-- [[almide]] — WASM をターゲットにコンパイルできる言語
-- [[almide-wasm-bindgen]] — Almide と JS を WASM 経由で繋ぐ
-- [[almide-bindgen]] — 言語間バインディング生成
-- [[almide-js]] — Almide の JavaScript ランタイム
-- [[almide-nn]] — WASM で動くニューラルネット
-- [[almide-lander]] — Almide のランディングページ（WASM デモ）
-- [[almide-lumen]] — Almide のグラフィック実装
-- [[bonsai-almide]] — ブラウザ上で Almide を動かす
-- [[lean4-rust-backend]] — Lean4 を Rust 経由で WASM 化
-- [[playground]] — ブラウザで WASM プログラムを試す環境
-- [[obsid]] — WASM を活用したツール
-- [[sandboxes-o6lvl4]] — WASM サンドボックスの集合
-- [[porta]] — WASM ポータビリティ関連
-- [[animula]] — WASM 関連プロジェクト
-- [[whenm]] — WASM 利用ツール
+- [[almide]] — ネイティブバイナリと WebAssembly の両方にコンパイルされる静的型付き言語
+- [[almide-wasm-bindgen]] — Almide コードを WebAssembly 経由で JS から呼ぶためのバインディング生成器
+- [[almide-js]] — Almide の JS/TS フレンドリーな WASM SDK の進捗ログ + ベンチマーク
+- [[almide-nn]] — Almide で書かれた Transformer ライブラリ（Whisper 推論が native + WASM で動作）
+- [[almide-lander]] — Almide モジュールを WASM 含む 21 言語の native package として書き出す CLI
+- [[bonsai-almide]] — Almide でビルドした 1-bit LLM をブラウザで WASM 推論するデモ
+- [[playground]] — Almide コンパイラを WASM としてブラウザに載せ、コードを WASM にコンパイル/実行する環境
+- [[obsid]] — Almide 用グラフィックランタイム（Canvas 2D / WebGL / 3D mesh を WASM 経由で提供）
+- [[porta]] — WASM サンドボックス（wasmtime）と OS-level 制限を併用する MCP ブリッジ
 
 ## 関連概念
 

@@ -38,18 +38,11 @@ flowchart LR
 
 ## vault 内での使われ方
 
-- [[bonsai-almide]] — 1-bit LLM「Bonsai」をブラウザで動かす実証プロジェクト。1.125 bit/weight、248 MB
-- [[almide-nn]] — Almide で書かれた Transformer 実装。量子化と相性がよい層
-- [[almai]] — Almide エコシステム内の LLM クライアント
-- [[unillm]] — 量子化済みモデルもラップできる LLM 抽象
-- [[fractop]] — エッジでの推論を見据えた並列処理
+- [[bonsai-almide]] — Bonsai 1-bit LLM (Q1_0: FP16 scale × 128 weights + 符号 1bit、実効 1.125 bit/weight、248 MB) を Almide でビルドしブラウザで動かす実証プロジェクト
 
 ## 関連概念
 
 - [[edge-computing]] — 量子化されたモデルはエッジでこそ威力を発揮
-- [[codec]] — 「精度を下げて軽くする」発想は画像・音声コーデックと共通
-- [[context-window]] — 量子化で軽くなった分、より長い文脈を処理できる
-- [[serialization]] — 量子化済みモデルの保存形式（GGUF など）
 
 ## Links
 

@@ -38,19 +38,11 @@ flowchart TB
 
 ## vault 内での使われ方
 
-- [[lean2ts]] — 証明と TypeScript の整合性を性質として検証
-- [[lean4-learning]] — Lean による形式検証の学習素材
-- [[lean4-rust-backend]] — Lean の性質を Rust 実装で検証する流れ
-- [[fuzztok]] — 入力をファズしてトークナイザの性質を試す
-- [[almide-dojo]] — Almide の性質を多数ケースで確認する
-- [[codopsy]] — コード品質チェックの一環としての性質検証
-- [[codopsy-ts]] — TS 版での同種チェック
+- [[lean2ts]] — Lean 4 の formal specification を types/stubs/fast-check property tests に変換する CLI（`properties.test.ts` を生成）
 
 ## 関連概念
 
-- [[effect-system]] — 性質を型に近づけて静的に保証する方向
 - [[ddd]] — ドメイン不変条件をプロパティとして書ける
-- [[agentic-coding]] — エージェントが書いたコードの自動検証に有効
 
 ## Links
 

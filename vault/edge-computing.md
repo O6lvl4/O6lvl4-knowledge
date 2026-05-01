@@ -43,21 +43,15 @@ flowchart LR
 
 ## vault 内での使われ方
 
-- [[unillm]] — エッジでも動く LLM プロバイダ抽象
-- [[fractop]] — エッジ稼働を前提にした並列ファイル処理
-- [[nagare]] — エッジ稼働を前提にしたストリーム処理基盤
-- [[memory-rag]] — 外部 DB なしでエッジで動く RAG。Cold start ゼロが売り
-- [[whenm]] — Cloudflare Workers などのエッジで動く時系列メモリ
-- [[next-auth-providers]] — Edge runtime にも対応する認証プロバイダ
-- [[auth-providers-ts]] — Vercel Edge / Cloudflare Workers での OAuth
-- [[llm-throttle]] — 分散環境でのレート制御に通じる発想
+- [[unillm]] — Edge-first を謳う LLM 統一インターフェース。~50KB バンドル / ~10ms cold start、Cloudflare Workers AI などをサポート
+- [[nagare]] — "Stream primitive for Edge Computing"。`Stream<T> = ReadableStream<T> + methods`、`fromSSE` / `toResponse` でエッジランタイムに直結
+- [[memory-rag]] — Edge ready / zero cold start。in-memory ベクトルストアで外部サービス不要
+- [[whenm]] — Cloudflare Workers 上で動作する時系列メモリ。`WhenM.cloudflare(...)` で D1 永続化にも対応
+- [[auth-providers-ts]] — Cloud Functions / Edge Functions (Vercel, Cloudflare Workers) で動くフレームワーク非依存の OAuth 2.0 ライブラリ
 
 ## 関連概念
 
 - [[serialization]] — エッジ間でデータを送り合うので形式設計が効く
-- [[codec]] — 動画やバイナリをエッジで効率配信する
-- [[oauth]] — エッジでのトークン検証
-- [[capability-based-security]] — エッジで動くコードに細かい権限を渡す
 
 ## Links
 

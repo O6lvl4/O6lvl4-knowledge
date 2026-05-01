@@ -42,20 +42,12 @@ flowchart TB
 
 ## vault 内での使われ方
 
-- [[porta]] — サンドボックス的な実行環境を提供
-- [[playground]] — コードを安全に試せる対話的環境
-- [[sandboxes-o6lvl4]] — サンドボックス関連の実験まとめ
-- [[claude-code]] — エージェントの操作を権限制御で囲う
-- [[famulus]] — エージェント実行を制限つきで進める
-- [[famulus2]] — 後継エージェント基盤
-- [[almide-dojo]] — Almide コードを試すための囲い場
-- [[capto]] — 隔離環境内でのキャプチャ・観測
+- [[porta]] — capability-based MCP bridge。WASM (wasmtime) 隔離と macOS sandbox-exec によるネイティブ制限の二モードを提供する
+- [[claude-code]] — Permission system (allow/ask/deny) と PreToolUse/PostToolUse hooks でツール実行を制御する CLI エージェント
 
 ## 関連概念
 
 - [[effect-system]] — 副作用を型で制限する、サンドボックスの言語版
-- [[agentic-coding]] — エージェントが暴れないための前提
-- [[ffi]] — 外部コードを呼ぶときに必須の発想
 
 ## Links
 

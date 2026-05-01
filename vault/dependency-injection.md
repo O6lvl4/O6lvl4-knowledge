@@ -36,20 +36,12 @@ flowchart LR
 
 ## vault 内での使われ方
 
-- [[famulus]] — エージェントの各部品を注入で組み立てる
-- [[famulus2]] — DI を活用した後継エージェント基盤
-- [[unillm]] — 複数 LLM プロバイダを差し替え可能にする
-- [[auth-providers-ts]] — 認証プロバイダを差し替えで切り替える
-- [[next-auth-providers]] — Next 系認証で同様の差し替え設計
-- [[memre]] — メモリストアの実装を注入で切り替え
-- [[macleap]] — サービス層の差し替えを前提にした構造
-- [[gulp-coach]] — 外部依存を差し込みで管理
+- [[famulus]] — README に "Every module is injected via DI container. `main.ts` only wires them together" と明記
+- [[famulus2]] — README で "全テストは本物のモジュールをDIで組み立て。モック・スタブなし" と明記
 
 ## 関連概念
 
 - [[hexagonal-architecture]] — DI を前提にした境界設計
-- [[ddd]] — ドメイン層が外側に依存しないための実装手段
-- [[effect-system]] — 副作用の置き場を外に出す発想は近い
 
 ## Links
 

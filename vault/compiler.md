@@ -46,18 +46,10 @@ flowchart TD
 
 ## vault 内での使われ方
 
-- [[almide]] — 自身のコンパイラを持つ言語。複数バックエンドを備える
-- [[almide-grammar]] — Almide の文法定義
-- [[almide-bindgen]] — 他言語へのバインディング生成
-- [[almide-wasm-bindgen]] — Almide と JS を WASM 経由で繋ぐ
-- [[almide-js]] — Almide の JS バックエンド
-- [[bonsai-almide]] — Almide のブラウザ向けコンパイル経路
-- [[lean4-rust-backend]] — Lean4 を Rust にコンパイルしてさらに機械語へ
-- [[lean2ts]] — Lean を TS にトランスパイル
-- [[famulus2]] — コードを解析するためのコンパイラ的フロントエンド
-- [[codopsy]] — AST 解析の段階を共有
-- [[tree-sitter-almide]] — Almide のフロントエンド部分
-- [[playground]] — コンパイル結果を即実行する環境
+- [[almide]] — Rust 実装のコンパイラを持ち native binary と WebAssembly の双方を出力する言語
+- [[bonsai-almide]] — Almide コンパイラで 1-bit LLM を WASM にビルドしてブラウザで動かすデモ
+- [[lean2ts]] — Lean 4 の formal spec を TypeScript の型・スタブ・プロパティテストにトランスパイル
+- [[playground]] — Almide コンパイラ自体を WASM 化してブラウザ上でコード実行する環境
 
 ## 関連概念
 

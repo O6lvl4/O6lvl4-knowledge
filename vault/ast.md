@@ -40,23 +40,18 @@ flowchart TD
 
 ## vault 内での使われ方
 
-- [[codopsy]] — AST レベルでコードの品質を計測する Rust 実装
-- [[codopsy-ts]] — TypeScript 版 codopsy。AST から複雑度を算出
-- [[famulus2]] — tree-sitter 経由で AST を解析するツール
-- [[famulus]] — AST を活用したコード解析の前身
-- [[tree-sitter-almide]] — Almide の文法を AST として扱う
-- [[almide-grammar]] — Almide 言語の文法定義（AST のもと）
-- [[almide]] — 自身の AST を持つプログラミング言語
-- [[vscode-almide]] — VSCode 上で AST を活用したシンタックスハイライト
-- [[lean2ts]] — Lean の AST を TypeScript に変換
-- [[ccgrid]] — AST ベースの分析を含む
+- [[codopsy]] — tree-sitter で 25 言語をパースし AST レベルで複雑度・lint を計測する解析器
+- [[codopsy-ts]] — TS/JS 専用の AST レベルコード品質アナライザ
+- [[famulus2]] — Edit 後に tree-sitter で構文 AST を検証する AI コーディングエージェント
+- [[tree-sitter-almide]] — Almide 用 tree-sitter grammar（パース結果が AST になる）
+- [[almide]] — Rust 実装内に独自 AST を持ち、AST → IR → codegen と進む
+- [[lean2ts]] — Lean 出力を S-expression AST にパースして TypeScript へ変換するツール
 
 ## 関連概念
 
 - [[parser]] — AST を作る装置
 - [[tree-sitter]] — 多言語の AST を生成するライブラリ
 - [[compiler]] — AST を機械語に変換する全体工程
-- [[llvm]] — AST から IR、機械語へ変換する基盤
 
 ## Links
 

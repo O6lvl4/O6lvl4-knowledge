@@ -39,22 +39,14 @@ flowchart TB
 
 ## vault 内での使われ方
 
-- [[memre]] — ドメインを中央に据えた構造で実装
-- [[gulp-coach]] — 業務ロジックと外部接続を分離
-- [[environment-health-viewer]] — 計測ドメインと表示・収集を分離
-- [[macleap]] — UI と外部 API をアダプタとして扱う
-- [[aid-on-ui-system]] — UI 側はアダプタとしての扱い
-- [[aid-on-contract-generator]] — 契約ドメインを中心に置く構造
-- [[aid-on-invoice-generator]] — 請求ドメインを中心に置く構造
-- [[aid-on-draft-ui]] — UI アダプタの実例
-- [[famulus2]] — ポート/アダプタ的な分離が見られる基盤
+- [[environment-health-viewer]] — README で "Hexagonal / Ports & Adapters" を明記し `domain/` 配下に純粋ドメイン層を置く
+- [[gulp-coach]] — README で「`environment-health-viewer` と同じ Hexagonal 構成」と明記、`dependency-cruiser` で層境界を CI 強制
+- [[macleap]] — `domain` (pure) ← `application` (use cases + ports) ← `infrastructure` (adapters) の Hexagonal レイヤを README に明示
 
 ## 関連概念
 
 - [[ddd]] — ドメインを中心に据えるという思想の双子
 - [[dependency-injection]] — ポートに具体実装を差し込むための手段
-- [[effect-system]] — 外との接点を型で縛るアプローチ
-- [[sandbox]] — 中央を守る発想の別表現
 
 ## Links
 

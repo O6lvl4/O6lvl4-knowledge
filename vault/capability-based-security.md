@@ -40,18 +40,14 @@ flowchart TD
 
 ## vault 内での使われ方
 
-- [[porta]] — capability ベースのセキュア MCP ブリッジ。`net` `fs.write` `exec` などの鍵を組み合わせる
-- [[sandboxes-o6lvl4]] — 隔離環境（サンドボックス）の運用
-- [[claude-code]] — Permission System として allow/ask/deny を細かく制御
-- [[famulus2]] — Permission モジュールで allow/ask/deny を制御
-- [[almide]] — Effect system による「効果型」が capability に近い役割を果たす
+- [[porta]] — Almide で書かれたセキュア MCP ブリッジ。WASI capability (`io` `fs` `fs.write` `process` `env` `clock` `random` `net` `exec`) を deny-by-default で検証し、`ai-agent` / `worker` / `full` の profile を提供
+- [[claude-code]] — Permission System として allow / ask / deny を細かく制御し、Hook (PreToolUse) でツール実行を傍受できる
+- [[famulus2]] — `src/modules/permission` で `PermissionResolver` を実装。`FAMULUS_TRUST` 環境変数 / `/trust` コマンドで `default` / `accept-edits` / `bypass` を切替
 
 ## 関連概念
 
 - [[oauth]] — トークンによる権限委譲。capability の web 版
 - [[mcp]] — MCP サーバへの接続に capability を渡して制限する
-- [[edge-computing]] — エッジで動くコードに細かい capability を配る運用
-- [[theorem-proving]] — 「許可された操作のみ」を型で証明する発想と通じる
 
 ## Links
 

@@ -38,23 +38,17 @@ flowchart LR
 
 ## vault 内での使われ方
 
-- [[claude-code]] — Anthropic の CLI 型エージェント
-- [[rtk]] — コマンド出力を圧縮する CLI ツール
-- [[codopsy]] — コード品質計測の CLI
-- [[codopsy-ts]] — TypeScript 版 codopsy CLI
-- [[famulus2]] — コード解析 CLI
-- [[capto]] — キャプチャ用 CLI
-- [[gulp-coach]] — コーチング CLI
-- [[fractop]] — 分割処理 CLI
-- [[gv]] — Graphviz 関連 CLI
-- [[ccgrid]] — グリッド表示 CLI
-- [[macleap]] — Mac 向け CLI
-- [[image-catalog-composer]] — 画像カタログ生成 CLI
-- [[premaid]] — Mermaid 図生成 CLI
-- [[treesrc]] — ソースツリー表示 CLI
-- [[dns-checker]] — DNS チェック CLI
-- [[ClipStash]] — クリップボード CLI
-- [[azprofile]] — Azure プロファイル CLI
+- [[claude-code]] — Anthropic 公式の CLI エージェント（ターミナル上で Claude が動く）
+- [[rtk]] — LLM 向けコマンド出力を圧縮する Rust 製 CLI プロキシ
+- [[codopsy]] — 25 言語対応の AST レベルコード品質計測 CLI
+- [[codopsy-ts]] — TS/JS 専用のコード品質計測 CLI
+- [[capto]] — ディレクトリ構造を PDF 化する CLI
+- [[gv]] — Go ツールチェインのバージョン管理 CLI（uv 級速度を目指す Rust 実装）
+- [[macleap]] — 現行 Mac との比較とトレードイン込みの差額を計算する CLI
+- [[premaid]] — Mermaid を Puppeteer でレンダリングして SVG/PNG を出す CLI
+- [[treesrc]] — `.gitignore` を尊重しつつディレクトリ構造とファイル内容を表示する CLI
+- [[dns-checker]] — MoonBit 製の SPF / DMARC / DKIM 設定確認 CLI
+- [[azprofile]] — 複数 Azure アカウントをシェル統合で切り替える CLI
 
 ## 関連概念
 

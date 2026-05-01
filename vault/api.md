@@ -41,21 +41,12 @@ sequenceDiagram
 
 ## vault 内での使われ方
 
-- [[unillm]] — 複数の LLM API を統一インターフェースで扱う
-- [[llm-throttle]] — LLM API のレートリミット制御
-- [[llm-queue-dispatcher]] — LLM API 呼び出しのキュー管理
-- [[outline-api-client-ts]] — Outline の API クライアント
-- [[next-auth-providers]] — 認証 API プロバイダ
-- [[auth-providers-ts]] — TS 製の認証 API ラッパー
-- [[memre]] — 記憶 API
-- [[memory-rag]] — RAG API
-- [[aid-on-contract-generator]] — 契約書生成 API 利用
-- [[almide-wasm-bindgen]] — Almide と JS の API 橋渡し
-- [[almide-bindgen]] — 言語間 API バインディング生成
-- [[image-catalog-composer]] — 画像 API を活用
-- [[fractop]] — API 連携を含むツール
-- [[ccgrid]] — API 連携グリッドツール
-- [[playground]] — API を試す環境
+- [[unillm]] — Anthropic / OpenAI / Groq / Gemini など複数の LLM API を統一インターフェースで扱う
+- [[llm-throttle]] — LLM API 向け RPM/TPM デュアルレート制限ライブラリ
+- [[llm-queue-dispatcher]] — LLM API リクエストのスコアリング型キューイングシステム
+- [[outline-api-client-ts]] — Outline 知識ベース API の TypeScript 型付きクライアント
+- [[next-auth-providers]] — NextAuth.js 用 OAuth プロバイダ集（LINE 等）
+- [[auth-providers-ts]] — フレームワーク非依存の OAuth 2.0 プロバイダライブラリ
 
 ## 関連概念
 

@@ -39,19 +39,14 @@ flowchart TB
 
 ## vault 内での使われ方
 
-- [[lean4-rust-backend]] — Lean4 を IR 経由で Rust に落とすバックエンド
-- [[almide]] — 独自言語が経由する内部表現の設計
-- [[almide-grammar]] — 言語フロント側の文法定義
-- [[tree-sitter-almide]] — 構文解析から IR の手前までを担うパーサ
-- [[lean2ts]] — Lean を TypeScript に変換する際の中間段階
-- [[bonsai-almide]] — Almide 関連の小さな実験基盤
-- [[almide-lumen]] — Almide コンパイラ周りの軽量実装
+- [[lean4-rust-backend]] — `lean-ir-codegen` / `lean-ir-export` / `lean-transpiler` クレートで Lean4 を IR 経由で Rust に落とす Cargo workspace
+- [[almide]] — parse → check → lower (AST → IR) → mono → codegen のパイプラインで Wasm/Native に出す
+- [[bonsai-almide]] — Almide の nanopass AOT コンパイラを通して 1-bit LLM を Rust/WASM に落とす実証
 
 ## 関連概念
 
 - [[ffi]] — 言語間の橋渡し。IR を共通プロトコルにすることもある
 - [[effect-system]] — 副作用を IR 上で型として持ち回す設計
-- [[agentic-coding]] — LLM がコードを生成する際にも AST/IR の知識が役立つ
 
 ## Links
 

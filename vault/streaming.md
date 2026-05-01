@@ -36,19 +36,14 @@ flowchart LR
 
 ## vault 内での使われ方
 
-- [[nagare]] — ストリーミング処理の中核実装
-- [[unillm]] — LLM の出力をストリームで受け取り、即座に表示
-- [[fractop]] — ジョブをチャンクに分割して並列に流す
-- [[iteratop]] — ストリームを操作するイテレータ群
-- [[llmine]] — LLM への入力をストリーム化するパイプライン
-- [[llm-queue-dispatcher]] — リクエストを順次流して処理
-- [[premaid]] — ダイアグラム生成過程の段階的出力
+- [[nagare]] — `Stream<T> instanceof ReadableStream` を実現する Web Streams API ベースのリアクティブストリームライブラリ
+- [[unillm]] — Web Streams API + nagare で LLM レスポンスを streaming で取得する統合インターフェース
+- [[fractop]] — nagare の `Stream<T>` 統合で大容量テキストをチャンク分割して LLM に流すパイプライン
+- [[iteratop]] — v0.2.0 で StreamingIteratoP を追加、nagare 経由でイテレーション状態を流す
 
 ## 関連概念
 
 - [[async-await]] — ストリーム処理は async と一体で扱われやすい
-- [[effect-system]] — 「流れる」副作用を型で管理する設計
-- [[agentic-coding]] — エージェントの応答をストリームで返す UX
 
 ## Links
 

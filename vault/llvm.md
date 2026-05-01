@@ -39,12 +39,6 @@ flowchart LR
 - **LTO (Link Time Optimization)**: リンク時に複数モジュールをまたいで最適化する手法。
 - **JIT**: 実行時に機械語へ変換する仕組み。LLVM はこれにも使える。
 
-## vault 内での使われ方
-
-- [[bonsai-almide]] — Almide のコンパイル経路で LLVM を活用
-- [[almide]] — Rust 実装が LLVM 経由で WASM などへ変換される
-- [[lean4-rust-backend]] — Lean4 を Rust に変換して LLVM で機械語化
-
 ## 関連概念
 
 - [[compiler]] — LLVM はコンパイラ基盤の代表例

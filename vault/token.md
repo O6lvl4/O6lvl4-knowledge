@@ -37,18 +37,13 @@ flowchart LR
 
 ## vault 内での使われ方
 
-- [[fuzztok]] — トークン単位のファジング（テスト入力生成）
-- [[rtk]] — コマンド出力をトークンレベルで圧縮
-- [[unillm]] — 複数 LLM プロバイダのトークン計算を統一
-- [[llm-throttle]] — トークン消費量に応じたレートリミット
-- [[llm-queue-dispatcher]] — トークン量を考慮したキュー処理
-- [[llmine]] — トークン関連ユーティリティ
-- [[memory-rag]] — トークン制限内で関連情報を抽出
-- [[memre]] — トークン消費を抑えた記憶管理
-- [[capto]] — トークン消費を意識したキャプチャ
-- [[fractop]] — トークン量で分割処理
-- [[claude-code]] — トークン量を意識したエージェント
-- [[agentic-coding]] — トークン経済学が中心テーマ
+- [[fuzztok]] — CJK 対応のファジー（推定）トークン数計算ライブラリ
+- [[rtk]] — コマンド出力を要約して LLM トークン消費を 60-90% 削減する CLI プロキシ
+- [[unillm]] — `maxTokens` などトークン関連メソッドを統一する LLM クライアント
+- [[llm-throttle]] — TPM（Tokens Per Minute）と RPM をデュアルで制限するライブラリ
+- [[llm-queue-dispatcher]] — token efficiency や token fit をスコアに含むキューイングシステム
+- [[fractop]] — LLM の token limit を超える長文を chunk size 指定で分割処理するライブラリ
+- [[agentic-coding]] — トークン経済学が中心テーマとなる開発パラダイム
 
 ## 関連概念
 

@@ -39,14 +39,9 @@ flowchart LR
 
 ## vault 内での使われ方
 
-- [[tree-sitter-almide]] — Almide 言語の tree-sitter 文法
-- [[almide-grammar]] — Almide の文法定義（tree-sitter で利用）
-- [[famulus2]] — tree-sitter で AST を解析するコード分析ツール
-- [[famulus]] — AST 解析の前身プロジェクト
-- [[codopsy]] — AST 経由で品質計測（tree-sitter 活用）
-- [[codopsy-ts]] — TypeScript 版。tree-sitter 系の AST を活用
-- [[vscode-almide]] — VSCode 拡張で tree-sitter ハイライト
-- [[lean2ts]] — AST 変換ツール
+- [[tree-sitter-almide]] — Almide 言語用の tree-sitter grammar（生成器自体が Almide で書かれている）
+- [[famulus2]] — Edit 後に tree-sitter で AST 検証する、決定論実行型 AI コーディングエージェント
+- [[codopsy]] — tree-sitter で 25 言語をパースし複雑度・lint を計測する Rust 製アナライザ
 
 ## 関連概念
 

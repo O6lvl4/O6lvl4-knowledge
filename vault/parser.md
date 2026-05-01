@@ -39,17 +39,11 @@ flowchart LR
 
 ## vault 内での使われ方
 
-- [[tree-sitter-almide]] — Almide のパーサー（tree-sitter で生成）
-- [[almide-grammar]] — Almide の文法定義（パーサーの設計図）
-- [[almide]] — 自前のパーサーを持つ言語
-- [[codopsy]] — パース結果の AST から品質を測定
-- [[codopsy-ts]] — TS 版。同様にパーサー結果を解析
-- [[famulus2]] — パーサー出力を活用したコード解析ツール
-- [[famulus]] — パーサーを核としたコード解析の前身
-- [[lean2ts]] — Lean をパースして TS に変換
-- [[vscode-almide]] — VSCode 上で Almide パーサーを利用
-- [[almide-js]] — JS 側で Almide をパース
-- [[ccgrid]] — 構文解析を活用したグリッドツール
+- [[tree-sitter-almide]] — Almide 用 tree-sitter パーサーを Almide 自身で生成
+- [[almide]] — Rust 実装内に lexer + parser を持ち、AST → IR → codegen と進む
+- [[codopsy]] — tree-sitter パーサーで 25 言語の AST を取り、複雑度・lint を計測
+- [[famulus2]] — Edit 出力を tree-sitter パーサーで構文検証してから採用
+- [[lean2ts]] — Lean 出力を S-expression に再帰下降パースして TypeScript に変換
 
 ## 関連概念
 

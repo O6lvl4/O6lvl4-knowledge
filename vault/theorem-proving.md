@@ -40,17 +40,13 @@ flowchart TD
 
 ## vault 内での使われ方
 
-- [[lean4-rust-backend]] — Lean 4 を Rust に変換して高速実行するバックエンド
-- [[lean2ts]] — Lean 4 の証明を TypeScript の property test に変換
-- [[lean4-learning]] — Lean 4 の学習用リポジトリ群
-- [[almide]] — 言語設計の参考として、型システムの厳密さに通じる
-- [[almide-grammar]] — 文法の形式仕様。証明的な厳密さに通じる
+- [[lean4-rust-backend]] — Lean 4 IR を JSON 経由で Rust ソースに codegen し、`lean-runtime` (mimalloc) と結合してネイティブバイナリ化するワークスペース
+- [[lean2ts]] — Lean 4 の formal spec を Pantograph で抽出し、TypeScript の型・スタブ・fast-check property test に変換する CLI
+- [[lean4-learning]] — hello-lean4 / fizzbuzz-lean4-lib・cli / lean-lang-sandbox（10 トピックの定理証明 + プログラミングチュートリアル）/ lean4-practice（Claude Code プラグイン）の 5 リポジトリ群
 
 ## 関連概念
 
-- [[capability-based-security]] — 「証明された権限のみ実行」の発想に通じる
 - [[serialization]] — Lean IR を JSON で受け渡す部分など、形式表現の文脈
-- [[mcp]] — 形式仕様としてのプロトコル
 
 ## Links
 

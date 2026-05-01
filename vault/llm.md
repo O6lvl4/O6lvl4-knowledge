@@ -38,20 +38,18 @@ flowchart LR
 
 ## vault 内での使われ方
 
-- [[claude-code]] — Anthropic の LLM を使った CLI エージェント
-- [[agentic-coding]] — LLM がコードの読み書き・実行を自律的に行う開発手法
-- [[almide]] — LLM が書きやすいよう設計された言語
-- [[rtk]] — LLM のコンテキストウィンドウを節約するためのトークン圧縮
-- [[unillm]] — 複数の LLM プロバイダを統一インターフェースで扱う
-- [[llm-queue-dispatcher]] — LLM 呼び出しのキュー管理
-- [[llm-throttle]] — LLM のレートリミット制御
-- [[llmine]] — LLM 関連のユーティリティ
-- [[fuzztok]] — トークン単位のファジングで LLM 入力をテスト
-- [[memory-rag]] — LLM に長期記憶を与える RAG 実装
-- [[memre]] — LLM の記憶管理
-- [[capto]] — LLM 用のキャプチャツール
-- [[gulp-coach]] — LLM コーチング
-- [[fractop]] — LLM を使った分割処理
+- [[claude-code]] — Anthropic 公式の CLI エージェント（LLM がターミナルでコードを読み書き・実行）
+- [[agentic-coding]] — LLM がコードの読み書き・実行・テストを自律的に行う開発パラダイム
+- [[almide]] — LLM のコード生成向けに最適化された静的型付き言語
+- [[rtk]] — LLM のトークン消費を 60-90% 削減する Rust 製 CLI プロキシ
+- [[unillm]] — Anthropic / OpenAI / Groq / Gemini 等を統一する Edge 向け LLM インターフェース
+- [[llm-queue-dispatcher]] — LLM リクエスト用のスコアリング型キューイングシステム
+- [[llm-throttle]] — LLM API 向け RPM/TPM デュアルレート制限ライブラリ
+- [[llmine]] — OpenAI/Claude/Bedrock/Ollama 等を CLI から統一的に叩くツール
+- [[fuzztok]] — CJK 対応のファジー（推定）トークン数計算ライブラリ
+- [[memory-rag]] — Vercel AI SDK 連携の in-memory RAG ライブラリ
+- [[capto]] — マルチモーダル LLM 向けに最適化された PDF スナップショット生成 CLI
+- [[fractop]] — LLM のコンテキスト上限を超える長文を分割・並列処理するチャンク処理ライブラリ
 
 ## 関連概念
 

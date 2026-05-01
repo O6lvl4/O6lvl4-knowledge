@@ -39,21 +39,16 @@ flowchart LR
 
 ## vault 内での使われ方
 
-- [[almide-toml]] — TOML パーサ／シリアライザ。Codec プロトコル統合あり
-- [[almide-yaml]] — YAML パーサ／シリアライザ。Codec プロトコル統合あり
-- [[almide-csv]] — CSV パーサ／シリアライザ。Codec プロトコル統合あり
-- [[almide-base64]] — Base64 エンコード／デコードライブラリ
-- [[almide]] — Codec プロトコルを言語標準に組み込む設計
-- [[capto]] — 画面キャプチャ（動画 codec を扱う領域）
-- [[fuzztok]] — トークン列の変換とテストに通じる
-- [[rtk]] — コマンド出力をトークン列に圧縮・整形する codec 的な存在
+- [[almide-toml]] — TOML v1.0 パーサ／シリアライザ。`type T: Codec` を派生した型に対し `toml.encode` / `toml.decode[T]` が自動動作
+- [[almide-yaml]] — YAML パーサ／シリアライザ。同じく Codec プロトコル経由で `encode` / `decode` を提供
+- [[almide-csv]] — RFC 4180 準拠の CSV パーサ／シリアライザ (Pure Almide 実装)
+- [[almide-base64]] — Base64 (RFC 4648) と URL-safe variant を実装する Pure Almide ライブラリ
+- [[almide]] — `Codec` プロトコルを言語の標準ファシリティとして提供し、各シリアライザが派生型に対し自動で encode / decode する設計
 
 ## 関連概念
 
 - [[serialization]] — 「データを保存／送信できる形に変える」codec の代表的な使われ方
 - [[quantization]] — 「精度を落として軽くする」非可逆 codec と発想が同じ
-- [[edge-computing]] — エッジでの動画 / 音声配信に codec の選定が効く
-- [[oauth]] — JWT などトークン形式の codec
 
 ## Links
 

@@ -39,21 +39,14 @@ flowchart TB
 
 ## vault 内での使われ方
 
-- [[memre]] — メモリ管理ドメインを業務語彙で設計
-- [[macleap]] — サービスのドメインモデルを中心に据える
-- [[gulp-coach]] — コーチング業務の言葉に沿ったモデル
-- [[environment-health-viewer]] — 計測対象ドメインを軸にした構造
-- [[aid-on-contract-generator]] — 契約業務の語彙で組み立てた生成器
-- [[aid-on-invoice-generator]] — 請求の業務モデル
-- [[aid-on-tax-calculator]] — 税務ドメインを反映した計算機
-- [[reporting-page-by-calendar-days]] — 業務カレンダー概念のモデル化
-- [[reporting-page-by-working-days]] — 稼働日ドメインの扱い
+- [[memre]] — README で "2026 Go DDD style: vertical slice (one bounded context per directory), consumer-side Repository interfaces" と明記
+- [[environment-health-viewer]] — `domain/{shared,location,conditions,risk,warnings,solar}` の Bounded Context 構成と Ubiquitous Language を README に明記
+- [[gulp-coach]] — Profile / IntakeEvent / IntakeLog / HydrationStatus / HydrationPolicy のドメイン用語集を README に持つ
+- [[macleap]] — `domain` (pure) ← `application` (use cases + ports) ← `infrastructure` (adapters) のレイヤを README に明示
 
 ## 関連概念
 
 - [[hexagonal-architecture]] — ドメインを中心に守る代表的な構造
-- [[dependency-injection]] — ドメイン層を外側から独立させる手段
-- [[effect-system]] — ドメインを純粋に保つための言語的支え
 - [[property-based-testing]] — ドメイン不変条件の検証手段
 
 ## Links

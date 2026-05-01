@@ -42,24 +42,20 @@ flowchart LR
 
 ## vault 内での使われ方
 
-- [[almide-toml]] — TOML パーサ／シリアライザ
-- [[almide-yaml]] — YAML パーサ／シリアライザ
-- [[almide-csv]] — CSV パーサ／シリアライザ
-- [[almide-base64]] — Base64 エンコード／デコード
-- [[resepy]] — CSV / TSV / 任意区切りの変換と結合
-- [[almide]] — Codec プロトコルを通じて型から自動でシリアライズ／デシリアライズ
-- [[lean4-rust-backend]] — Lean IR を JSON でシリアライズして Rust に渡す
-- [[lean2ts]] — Lean の証明を TypeScript の表現に変換する流れ
-- [[memory-rag]] — チャンクとベクトルを保存形式で扱う
-- [[whenm]] — Prolog 形式の export/import を持つ
+- [[almide-toml]] — TOML v1.0 パーサ／シリアライザ。`toml.parse` / `toml.stringify` と Codec 経由の `encode` / `decode[T]` を提供
+- [[almide-yaml]] — YAML パーサ／シリアライザ。`yaml.parse` / `yaml.stringify` と Codec 連携を提供
+- [[almide-csv]] — RFC 4180 準拠の CSV。`csv.parse` (array of arrays) と `csv.parse_records` (header → array of objects) の両 API
+- [[almide-base64]] — Base64 (RFC 4648) と URL-safe Base64。文字列 / バイト両 API
+- [[resepy]] — Python 製 DSV (CSV / TSV / 任意 delimiter) 変換 CLI / ライブラリ。`convert` と `cat`（複数ファイル merge）を提供
+- [[almide]] — `Codec` プロトコルを言語標準に提供。`type T: Codec` を派生すると各 serializer が自動で encode / decode に対応
+- [[lean4-rust-backend]] — `lean-ir-export` で Lean Environment から Decl を独自 JSON に書き出し、`lean-ir-codegen` が serde で読んで Rust ソースを生成
+- [[whenm]] — Event Calculus を Prolog ファクトとして表現し、`exportProlog()` / `importProlog()` で外部に取り出せる
 
 ## 関連概念
 
 - [[codec]] — シリアライゼーションは codec の代表的な使われ方
-- [[oauth]] — JWT などトークンはシリアライズの一形態
 - [[mcp]] — JSON-RPC のシリアライズ規約に基づく
 - [[edge-computing]] — エッジ間でのデータ送受信は形式選びがそのまま性能に効く
-- [[rag]] — 文書を保存・送信するための形式
 
 ## Links
 

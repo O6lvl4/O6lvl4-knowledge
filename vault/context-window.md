@@ -43,22 +43,17 @@ flowchart LR
 
 ## vault 内での使われ方
 
-- [[rtk]] — コマンド出力を 60-90% 圧縮し、context window の有効利用率を上げる
-- [[fractop]] — 大きなファイルをチャンクに分割して並列処理する。窓を超えないための工夫
-- [[famulus2]] — code graph で「必要な構造だけ」を入れることで 94% トークン削減
-- [[agentic-coding]] — エージェントの判断精度は窓の使い方で決まる
-- [[claude-code]] — Permission System と並んで context window の設計が中核
-- [[memory-rag]] — RAG で外部に置き、窓に入れるのは検索結果だけにする
-- [[whenm]] — 時系列メモリを外部化し、窓は今必要な分だけに絞る
-- [[graph-garden]] — 知識を構造化して、必要な部分だけを取り出して窓に入れる
-- [[treesrc]] — ソースを整形して窓へ渡しやすくする
+- [[rtk]] — `git status` / test 出力 / `npm install` 等を Smart Filtering / Grouping / Truncation / Deduplication で 60-90% 圧縮し、Claude Code の PreToolUse hook 経由で透過的に挿入する
+- [[fractop]] — 大文書を `chunking({ size, overlap })` で分割し並列 LLM 処理する fluent API。コンテキスト超過を回避するための前処理
+- [[famulus2]] — codopsy (Rust + tree-sitter) による Code Graph で関数 / 型 / 依存関係の JSON 構造のみを LLM に渡し、合計 25,986 → 1,597 token (94% 削減)
+- [[claude-code]] — Auto-compact で会話履歴を圧縮しトークン上限に対応する CLI エージェント
+- [[memory-rag]] — `topK` で検索結果のみ context に挿入する in-memory RAG
+- [[whenm]] — Event Calculus + Prolog で過去イベントを外部に保持し、`ask()` で現在必要な分だけ取り出す
 
 ## 関連概念
 
 - [[rag]] — 窓に入れる情報を「必要なときだけ」検索して詰める手法
-- [[quantization]] — モデル軽量化で同じ計算機でも長い窓が扱えるようになる
 - [[mcp]] — ツール定義も窓を食う。設計次第で削れる
-- [[serialization]] — 窓に入れる前のデータ形式選び
 
 ## Links
 

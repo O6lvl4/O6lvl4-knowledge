@@ -42,18 +42,13 @@ flowchart LR
 
 ## vault 内での使われ方
 
-- [[memory-rag]] — 軽量な in-memory RAG ライブラリ。外部ベクタ DB 不要、エッジ稼働
-- [[whenm]] — 時間軸を持った RAG。「いつの話か」を理解できる時系列メモリ
-- [[famulus2]] — コードを「読む」ときに code graph で構造を抜粋して LLM に渡す。広義の RAG
-- [[fractop]] — 大きな文書をチャンクに分割して並列処理する。RAG の前段に近い処理
-- [[graph-garden]] — 知識をグラフ化する。RAG の知識ベース構築に通じる発想
-- [[agentic-coding]] — エージェントがコードを「検索 → 読解 → 修正」するのも RAG 的
+- [[memory-rag]] — In-memory ベクトルストア + Vercel AI SDK 統合の RAG ライブラリ。`InMemoryVectorStore` と `RAGService` で類似検索と回答生成を行う
+- [[whenm]] — Event Calculus + Trealla Prolog (WASM) による時系列メモリ。`remember()`/`ask()` で「いつ何があったか」を問える
 
 ## 関連概念
 
 - [[context-window]] — RAG はコンテキストに資料を差し込むので窓のサイズが効く
 - [[mcp]] — RAG の「検索ツール」を AI に差し込む共通規格
-- [[serialization]] — 文書を保存・送信するための形式
 
 ## Links
 
