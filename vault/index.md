@@ -3,7 +3,7 @@ title: Welcome
 tags: [meta]
 ---
 
-[[O6lvl4-knowledge]] のトップ。O6lvl4 と Aid-On の全 public リポジトリ（および private 例外: [[famulus]], [[famulus2]]）を Obsidian vault にまとめた知識ベース。
+O6lvl4 と Aid-On の全 public リポジトリ（および private 例外: [[famulus]], [[famulus2]]）を Obsidian vault にまとめた知識ベース。
 
 ## Concept
 
@@ -58,7 +58,6 @@ tags: [meta]
 
 ## Knowledge / Docs
 
-- [[O6lvl4-knowledge]] — このリポジトリ
 - [[graph-garden]] — Markdown vault → Astro 静的サイト
 - [[premaid]] — Mermaid CLI レンダラ
 - [[outline-api-client-ts]] — Outline KB API TypeScript クライアント
