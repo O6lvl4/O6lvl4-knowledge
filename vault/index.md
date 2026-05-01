@@ -12,13 +12,44 @@ O6lvl4 と Aid-On の全 public リポジトリ（および private 例外: [[fa
 ## Languages & Runtimes
 
 - [[almide]] — LLM 生成最適化言語（Rust + WASM、MSR 指標）
-- [[almide-examples]] — Almide サンプル + mini-git ベンチマーク
-- [[animula]] — Almide で書く AI VTuber フレームワーク
 - [[lean4-rust-backend]] — Lean 4 → Rust IR codegen
 - [[lean2ts]] — Lean 4 定理 → TypeScript property test
 - [[lean4-learning]] — Lean 4 学習リポジトリ集合
 - [[zfp]] — Zig 用 zero-cost FP toolkit
 - [[php-build-standalone]] — 静的リンク済 PHP バイナリ
+
+## Almide Ecosystem
+
+### Core / Tooling
+- [[almide-grammar]] — 文法 SSoT（4 ターゲット出力）
+- [[tree-sitter-almide]] — Almide で書かれた Tree-sitter grammar
+- [[vscode-almide]] — VS Code + Chrome 拡張
+- [[almide-dojo]] — MSR 計測ハーネス
+- [[playground]] — ブラウザで `.almd` 実行
+- [[obsid]] — Canvas2D / WebGL / 3D メッシュランタイム
+- [[porta]] — capability-based セキュア MCP ブリッジ
+- [[almide-docs]] — Almide ドキュメントサイト
+
+### Bindings / FFI
+- [[almide-bindgen]] — universal native FFI（20 言語）
+- [[almide-wasm-bindgen]] — WASM linear memory + JS/TS
+- [[almide-lander]] — native/wasm を切替えるディスパッチャ
+- [[almide-js]] — JS/TS バインディング進捗ログ + ベンチ
+
+### Standard Library
+- [[almide-base64]] — Base64 エンコード／デコード
+- [[almide-csv]] — CSV パーサ／シリアライザ
+- [[almide-toml]] — TOML v1.0 パーサ
+- [[almide-yaml]] — YAML パーサ（146 tests）
+- [[almide-svg]] — SVG 生成
+- [[almide-lumen]] — 純粋グラフィック数学プリミティブ
+- [[almide-nn]] — ニューラルネットワークプリミティブ
+
+### Applications
+- [[animula]] — AI VTuber フレームワーク
+- [[almai]] — Almide 用マルチプロバイダ LLM クライアント
+- [[bonsai-almide]] — 1-bit LLM in pure Almide → WASM
+- [[almide-examples]] — Almide サンプル + mini-git ベンチマーク
 
 ## Toolchain Managers
 

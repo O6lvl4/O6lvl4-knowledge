@@ -1,0 +1,118 @@
+---
+title: tree-sitter-almide
+tags: [almide, tree-sitter, parser, grammar]
+---
+
+[[almide|Almide]] の [Tree-sitter](https://tree-sitter.github.io/) grammar。**grammar 自体が Almide で書かれている** — `generator/` 配下は手書き JS ではなく純 Almide コードで、それが `grammar.js` を生成する。
+
+## Self-Hosting Pipeline
+
+```
+generator/*.almd
+  → almide build → gen-grammar binary
+  → ./gen-grammar > grammar.js
+  → tree-sitter generate → src/parser.c
+```
+
+Almide のミッションを体現する: AI が言語エコシステムを丸ごと Almide で生み出せること。
+
+## Rule ADT
+
+文法ルールは ADT としてモデル化されている。
+
+```almide
+type Rule =
+  | Seq(List[Rule])
+  | Choice(List[Rule])
+  | Repeat(Rule)
+  | Str(String)
+  | Ref(String)
+  | Field(String, Rule)
+  | PrecLeft(Int, Rule)
+  | ...
+
+fn emit(rule: Rule) -> String = match rule {
+  Seq(rules) => "seq(" ++ string.join(list.map(rules, emit), ", ") ++ ")"
+  Ref(name) => "$." ++ name
+  ...
+}
+```
+
+各文法ルールは `(String, Rule)` を返す関数として定義する：
+
+```almide
+fn if_expression() -> (String, Rule) =
+  ("if_expression", Seq([
+    Str("if"),
+    Field("condition", Ref("expression")),
+    Str("then"),
+    Field("consequence", Ref("expression")),
+    Str("else"),
+    Field("alternative", Ref("expression"))
+  ]))
+```
+
+## Coverage
+
+- モジュール / import / 関数 / 型 / trait / impl / test
+- Effect system (`effect fn`, `async`)
+- ガード付きパターンマッチ
+- パイプ演算子 (`|>`)
+- ジェネリクス (`[T]` 構文)
+- 文字列補間 (`"Hello, ${name}"`)
+- Heredoc 文字列 (`"""..."""`)
+- Result/Option コンストラクタ (`ok` / `err` / `some` / `none`)
+
+## Usage
+
+### Rust
+
+```rust
+use tree_sitter_almide::LANGUAGE;
+
+let mut parser = tree_sitter::Parser::new();
+parser.set_language(&LANGUAGE.into()).unwrap();
+let tree = parser.parse(source, None).unwrap();
+```
+
+### Node.js
+
+```js
+const Parser = require("tree-sitter");
+const Almide = require("tree-sitter-almide");
+
+const parser = new Parser();
+parser.setLanguage(Almide);
+```
+
+## 開発フロー
+
+```bash
+# generator から再生成
+cd generator
+almide build main.almd -o gen-grammar
+./gen-grammar > ../grammar.js
+
+cd ..
+tree-sitter generate
+tree-sitter parse example.almd
+
+# 高速リビルド（Almide 不要）
+tree-sitter generate
+cargo test
+```
+
+## ファイル拡張子
+
+`.almd`
+
+## 関連
+
+- [[almide]] — パース対象の言語本体
+- [[almide-grammar]] — キーワード等の Single Source of Truth、generator が import
+- [[vscode-almide]] — 同じく almide-grammar を参照する editor 統合
+- [[codopsy]] — tree-sitter ベースの 25 言語アナライザ。Almide も対象に含む
+
+## Links
+
+- [GitHub](https://github.com/almide/tree-sitter-almide)
