@@ -12,6 +12,7 @@ O6lvl4 Knowledge の knowledge base。
 ### cli
 
 - [[claude-code]] - Claude Code
+- [[famulus2]] - famulus2
 - [[premaid]] - premaid
 - [[rtk]] - RTK (Rust Token Killer)
 
