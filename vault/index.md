@@ -11,8 +11,18 @@ O6lvl4 Knowledge の knowledge base。
 
 ### cli
 
+- [[claude-code]] - Claude Code
+- [[premaid]] - premaid
 - [[rtk]] - RTK (Rust Token Killer)
+
+### developer-tools
+
+- [[graph-garden]] - graph-garden
 
 ### language
 
 - [[almide]] - Almide
+
+### llm
+
+- [[agentic-coding]] - Agentic Coding
