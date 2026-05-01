@@ -5,6 +5,43 @@ tags: [llm, edge, typescript, streaming, library]
 
 エッジコンピューティング向けの統一 LLM インターフェース。型安全な fluent API で複数プロバイダを単一の呼び出しで扱う。[[famulus]] / [[famulus2]] が利用するプロバイダ抽象層。
 
+## 何ができる？
+
+複数の AI 業者（OpenAI、Anthropic、Groq、Gemini など）への注文窓口を 1 つにまとめる「電話交換手」のような役割を果たします。普通ならお店ごとに違うレジに並び直さないといけないところを、コンビニのように「どこの商品でも同じレジで買える」状態にします。新しい AI 業者を試したいときも、注文書（コード）の宛先を 1 行書き換えるだけで切り替え可能です。これにより「どの AI が一番良いか」を気軽に比較でき、特定の業者に縛られずに済みます。
+
+## 用語
+
+- **LLM**: 大量の文章を学習して人間のように文章を作れる AI のこと（ChatGPT の中身）
+- **プロバイダ**: AI を提供する会社（OpenAI、Anthropic、Google など）
+- **API**: 外部のサービスに「これお願い」と注文するための窓口
+- **エッジコンピューティング**: ユーザーの近くのコンピュータで処理する仕組み。注文を東京の本部まで送らず、近所のコンビニで完結させるイメージ
+- **ストリーミング**: 出来上がった分から順に少しずつ届ける方式。Netflix のように全部ダウンロードを待たずに観られる
+- **fluent API**: 文章のように繋げて書ける呼び出し方。「コーヒーを注文 → ミルク追加 → 砂糖少なめ」のように動作を連結する
+- **Zod schema**: 「答えはこの形で返してね」という型紙。受け取ったデータが約束通りの形か自動チェックする
+- **バックプレッシャー**: 受け手が追いつかないとき、送り手側が自動で速度を落とす仕組み
+- **コールドスタート**: しばらく使われていないサービスが起動するまでの待ち時間
+- **Cloudflare Workers**: ユーザーの近くで動かせる軽量な実行環境（エッジ）
+
+## 仕組み
+
+```mermaid
+flowchart LR
+    User[利用者のアプリ] --> Unillm[unillm 統一窓口]
+    Unillm -->|openai:gpt-4o| OpenAI[OpenAI]
+    Unillm -->|anthropic:claude| Anthropic[Anthropic]
+    Unillm -->|groq:llama| Groq[Groq]
+    Unillm -->|gemini:flash| Gemini[Google Gemini]
+    Unillm -->|cloudflare:llama| CF[Cloudflare]
+    OpenAI --> Stream[流れるように返事を返却]
+    Anthropic --> Stream
+    Groq --> Stream
+    Gemini --> Stream
+    CF --> Stream
+    Stream --> User
+```
+
+利用者は 1 つの窓口に「どの業者の、どのモデルを使いたいか」を文字列で伝えるだけ。unillm が裏で正しい業者に取り次ぎ、返事を流れ（ストリーム）として戻します。業者を変えたくなったら、文字列を書き換えるだけで済みます。
+
 ## Core Idea
 
 「LLM プロバイダ毎に SDK を持つ」のではなく、`provider:model` 文字列でプロバイダを切り替える。レスポンスは [[nagare|nagare]] の `Stream<T>` を返し、ストリーミングと reactive 操作を標準化。

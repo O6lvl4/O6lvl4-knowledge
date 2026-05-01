@@ -5,6 +5,44 @@ tags: [almide, wasm, codegen, javascript, typescript]
 
 [[almide|Almide]] の WebAssembly + JS/TS バインディング生成器。Almide で書かれたライブラリ（`import wasm_bindgen`）。CLI 呼び出しは [[almide-lander]] の `--target wasm`。
 
+## 何ができる？
+
+Almide で書いたプログラムを、ウェブブラウザの中で動かせるように変換する仕組みです。普段ウェブサイトを動かしている JavaScript の隣に、「Almide で書かれた高速エンジン」を置いてあげるイメージです。世界中のだれもが、ブラウザを開くだけでそのプログラムを使えるようになります。
+
+JavaScript 側からは普通の関数として呼べる形で出てくるので、ウェブの開発者は中身が Almide であることを意識せずに使えます。さらに `npm` という世界共通の部品市場にそのまま並べて公開できる完成品まで自動で出してくれます。
+
+驚くことに、こうして作ったプログラムは、同等の従来手法で作ったものより速くて、しかもファイルサイズが約 7 分の 1 に小さくなります。
+
+## 用語
+
+- **WebAssembly (WASM)**: ブラウザの中で動く、超高速な共通プログラム形式。「アプリの缶詰」の規格。
+- **JavaScript (JS)**: ウェブページを動かす定番の言語。ブラウザに必ず入っている。
+- **TypeScript (TS)**: JavaScript に「型のチェック機能」を加えた強化版。間違いを早く見つけられる。
+- **ESM (ES Modules)**: JavaScript の現代的なモジュール（部品）の書き方。`import` で部品を読み込める。
+- **glue code (糊コード)**: 二つの世界をつなぐための、ちょっとした橋渡しのコード。WASM と JS の間に挟む。
+- **npm**: JavaScript 用の世界最大の部品配布サービス。ここに登録すれば誰でも自分のプログラムに組み込める。
+- **linear memory**: WASM が使う、一本のとても長いメモリ領域。番地（ポインタ）でデータの場所を指す。
+- **ポインタ**: メモリ内の「番地」を表す数字。「3 丁目 5 番地に荷物がある」と伝えるだけでデータを共有できる。
+- **TextEncoder / TextDecoder**: JavaScript で文字を「バイト列」に変換したり戻したりする道具。
+- **Component Model / WIT**: WASM の次世代仕様で、「この WASM はこういう関数を持っています」を機械が理解できる宣言形式。
+- **persistent handle**: データそのものを毎回送らず、「あの場所にあるあれ」と番地だけ渡し合う最適化テクニック。
+
+## 仕組み
+
+```mermaid
+flowchart LR
+  A[mylib.almd<br/>Almide ソース] --> B[almide build --target wasm]
+  B --> C[mylib.wasm<br/>ブラウザで動く本体]
+  A --> D[almide-wasm-bindgen]
+  D --> E[mylib.js<br/>JS 用の橋渡し]
+  D --> F[mylib.d.ts<br/>TypeScript 用の型]
+  D --> G[package.json<br/>npm 公開用]
+  H[ウェブアプリ<br/>JS / TS から呼ぶ] --> E
+  E -.メモリ経由.-> C
+```
+
+`.almd` ファイルから 3 つの兄弟ファイル（本体・橋渡し・型情報）と公開設定が出力され、そのまま npm で配布できます。利用側の JS/TS からは「普通の関数」を呼ぶ感覚で使えます。
+
 ## なぜ [[almide-bindgen]] と分かれているか
 
 - `almide-bindgen` — cdylib + byte-buffer protocol（21 言語、C ABI ベース）
