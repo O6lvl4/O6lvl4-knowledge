@@ -14,7 +14,7 @@ Markdown vault を静的なナレッジベースサイトに変換する Astro i
 - Cmd+K 検索（fuzzy match）
 - タグインデックスページ
 - Mermaid 図レンダリング（[[premaid]] dark テーマ）
-- [[Almide]] シンタックスハイライト（カスタム TextMate grammar）
+- [[almide|Almide]] シンタックスハイライト（カスタム TextMate grammar）
 - `index.md` 自動生成
 - GitHub Pages デプロイ対応
 - Catppuccin Mocha ダークテーマ

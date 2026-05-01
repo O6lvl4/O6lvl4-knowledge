@@ -16,7 +16,7 @@ Anthropic 公式の CLI エージェント。ターミナル上で Claude がコ
 
 ## Hooks
 
-Claude Code の Hook は [[RTK (Rust Token Killer)]] の Auto-Rewrite の基盤。
+Claude Code の Hook は [[rtk|RTK]] の Auto-Rewrite の基盤。
 
 ```json
 {
@@ -36,8 +36,8 @@ Hook から返す `permissionDecision`:
 
 ## エコシステム
 
-- [[RTK (Rust Token Killer)]] — トークン消費を 60-90% 削減する CLI プロキシ
-- [[Almide]] — LLM コード生成に最適化された言語（Claude Sonnet 4.6 で Pass Rate 100%）
+- [[rtk|RTK]] — トークン消費を 60-90% 削減する CLI プロキシ
+- [[almide|Almide]] — LLM コード生成に最適化された言語（Claude Sonnet 4.6 で Pass Rate 100%）
 - [[graph-garden]] — このナレッジベースも Claude Code で構築
 
 ## Links
