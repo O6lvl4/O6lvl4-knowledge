@@ -18,7 +18,7 @@ flowchart LR
     Rust[Rust] --> Front[フロントエンド]
     Swift[Swift] --> Front
     Cpp[C++] --> Front
-    Front --> IR[LLVM IR<br/>共通中間表現]
+    Front --> IR["LLVM IR<br/>共通中間表現"]
     IR --> Opt[最適化]
     Opt --> Back[バックエンド]
     Back --> X86[x86 機械語]

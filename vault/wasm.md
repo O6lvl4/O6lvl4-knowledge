@@ -18,7 +18,7 @@ flowchart LR
     Rust[Rust コード] --> コンパイル[コンパイラ]
     Cpp[C++ コード] --> コンパイル
     Go[Go コード] --> コンパイル
-    コンパイル --> WASM[.wasm ファイル<br/>共通バイナリ]
+    コンパイル --> WASM[".wasm ファイル<br/>共通バイナリ"]
     WASM --> Browser[ブラウザで実行]
     WASM --> Server[サーバーで実行]
     WASM --> Edge[エッジで実行]

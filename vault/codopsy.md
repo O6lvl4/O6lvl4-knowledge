@@ -28,12 +28,12 @@ tags: [cli, rust, code-quality, ast, tree-sitter]
 
 ```mermaid
 flowchart LR
-    A[ソースコード<br/>25言語] --> B[tree-sitter<br/>文法解剖]
-    B --> C[AST<br/>骨組み図]
+    A["ソースコード<br/>25言語"] --> B["tree-sitter<br/>文法解剖"]
+    B --> C["AST<br/>骨組み図"]
     C --> D[複雑度計測]
     C --> E[lintルール評価]
     C --> F[構造分析]
-    D --> G[品質スコア<br/>A〜F]
+    D --> G["品質スコア<br/>A〜F"]
     E --> G
     F --> G
     G --> H[JSONレポート]

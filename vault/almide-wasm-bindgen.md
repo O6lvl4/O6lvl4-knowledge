@@ -31,13 +31,13 @@ JavaScript 側からは普通の関数として呼べる形で出てくるので
 
 ```mermaid
 flowchart LR
-  A[mylib.almd<br/>Almide ソース] --> B[almide build --target wasm]
-  B --> C[mylib.wasm<br/>ブラウザで動く本体]
+  A["mylib.almd<br/>Almide ソース"] --> B[almide build --target wasm]
+  B --> C["mylib.wasm<br/>ブラウザで動く本体"]
   A --> D[almide-wasm-bindgen]
-  D --> E[mylib.js<br/>JS 用の橋渡し]
-  D --> F[mylib.d.ts<br/>TypeScript 用の型]
-  D --> G[package.json<br/>npm 公開用]
-  H[ウェブアプリ<br/>JS / TS から呼ぶ] --> E
+  D --> E["mylib.js<br/>JS 用の橋渡し"]
+  D --> F["mylib.d.ts<br/>TypeScript 用の型"]
+  D --> G["package.json<br/>npm 公開用"]
+  H["ウェブアプリ<br/>JS / TS から呼ぶ"] --> E
   E -.メモリ経由.-> C
 ```
 

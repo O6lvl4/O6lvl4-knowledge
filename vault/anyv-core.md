@@ -28,18 +28,18 @@ tags: [rust, toolchain-manager, library, substrate]
 
 ```mermaid
 flowchart TD
-    A[anyv-core 共通基盤] --> B[paths<br/>保存先管理]
-    A --> C[presentation<br/>表示・色・進捗]
-    A --> D[extract<br/>圧縮ファイル展開]
-    A --> E[selfupdate<br/>自動更新]
-    A --> F[argv0<br/>シム切り替え]
+    A[anyv-core 共通基盤] --> B["paths<br/>保存先管理"]
+    A --> C["presentation<br/>表示・色・進捗"]
+    A --> D["extract<br/>圧縮ファイル展開"]
+    A --> E["selfupdate<br/>自動更新"]
+    A --> F["argv0<br/>シム切り替え"]
 
-    G[gv<br/>Go用] --> A
-    H[rv<br/>Ruby用] --> A
-    I[qusp<br/>多言語] --> A
+    G["gv<br/>Go用"] --> A
+    H["rv<br/>Ruby用"] --> A
+    I["qusp<br/>多言語"] --> A
 
-    G --> G1[Go固有の処理<br/>go.mod読込・go.dev取得]
-    H --> H1[Ruby固有の処理<br/>Gemfile読込・rubygems]
+    G --> G1["Go固有の処理<br/>go.mod読込・go.dev取得"]
+    H --> H1["Ruby固有の処理<br/>Gemfile読込・rubygems"]
     I --> I1[各言語固有の処理]
 ```
 

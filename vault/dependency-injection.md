@@ -15,10 +15,15 @@ tags: [concept, design, architecture, testability]
 
 ```mermaid
 flowchart LR
-    組立[組み立て役 Composition Root] -->|本体| 本体[サービス本体]
-    組立 -->|本物 or ニセ物| DB[(DB / API)]
-    本体 -.受け取って使う.-> DB
-    note[テスト時はニセ DB を注入]
+    Root["組み立て役<br/>Composition Root"]
+    Body["サービス本体"]
+    Real[("本物の DB / API")]
+    Mock[("テスト用ニセ DB")]
+    Root -->|生成| Body
+    Root -->|本番| Real
+    Root -.->|テスト| Mock
+    Body -.->|受け取って使う| Real
+    Body -.->|テスト時は| Mock
 ```
 
 「組み立て役」が、どの部品をどの順で差し込むかを決めます。サービス本体は「外から差し込まれた部品を使う」とだけ決まっていて、中身が本物のデータベースか、ニセ物かは気にしません。差し替えはすべて組み立ての段階で行います。

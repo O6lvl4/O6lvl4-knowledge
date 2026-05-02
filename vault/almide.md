@@ -32,12 +32,12 @@ LLM によるコード生成に最適化されたプログラミング言語。R
 
 ```mermaid
 flowchart LR
-  A[人間または AI が書いた<br/>source.almd] --> B[Almide コンパイラ]
+  A["人間または AI が書いた<br/>source.almd"] --> B[Almide コンパイラ]
   B --> C[Rust コードに翻訳]
   C --> D{出力先を選ぶ}
-  D -->|ネイティブ| E[パソコンで直接動く<br/>実行ファイル]
-  D -->|WASM| F[ブラウザで動く<br/>WebAssembly]
-  G[文法ルールの本<br/>almide-grammar] -.参照.-> B
+  D -->|ネイティブ| E["パソコンで直接動く<br/>実行ファイル"]
+  D -->|WASM| F["ブラウザで動く<br/>WebAssembly"]
+  G["文法ルールの本<br/>almide-grammar"] -.参照.-> B
 ```
 
 ソースコード（拡張子 `.almd`）はまずコンパイラに渡され、Rust という有名な言語の形に翻訳されます。そのあと用途に応じて「パソコン用」または「ブラウザ用」の最終形に出力されます。

@@ -29,18 +29,18 @@ tags: [rust, toolchain-manager, multi-language, cli]
 
 ```mermaid
 flowchart TD
-    A[qusp.toml<br/>使う言語を宣言] --> B[qusp install]
+    A["qusp.toml<br/>使う言語を宣言"] --> B[qusp install]
     B --> C[各言語を公式サイトから取得]
     C --> D[sha256 で指紋検証]
     D --> E[ローカル保管庫]
 
     F[cd で移動] --> G{shell hookあり?}
     G -->|あり| H[chpwd フック発動]
-    H --> I[PATH/GOROOT/JAVA_HOME 注入]
+    H --> I["PATH/GOROOT/JAVA_HOME 注入"]
     I --> J[該当バージョンが有効化]
 
-    G -->|シンプル運用| K[~/.local/bin の<br/>シンボリックリンク]
-    K --> L[直接バージョン解決<br/>ほぼゼロ秒]
+    G -->|シンプル運用| K["~/.local/bin の<br/>シンボリックリンク"]
+    K --> L["直接バージョン解決<br/>ほぼゼロ秒"]
 
     E --> J
     E --> L

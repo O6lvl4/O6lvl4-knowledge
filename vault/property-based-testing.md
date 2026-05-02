@@ -15,7 +15,7 @@ tags: [concept, testing, verification, quality]
 
 ```mermaid
 flowchart TB
-    ルール[性質: f(g(x)) == x] --> 生成[ランダム入力を大量生成]
+    ルール[性質: f("g(x")) == x] --> 生成[ランダム入力を大量生成]
     生成 --> 実行[実装を実行]
     実行 --> 判定{性質を満たす?}
     判定 -->|満たす| 次へ[次の入力へ]

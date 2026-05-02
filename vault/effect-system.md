@@ -15,8 +15,8 @@ tags: [concept, language, types, side-effects]
 
 ```mermaid
 flowchart LR
-    関数A[fn 読込: 文字列 ! 〔IO〕] --> 呼出[呼び出し側]
-    関数B[fn 計算: 整数 ! 〔Pure〕] --> 呼出
+    関数A["fn 読込: 文字列 ! 〔IO〕"] --> 呼出[呼び出し側]
+    関数B["fn 計算: 整数 ! 〔Pure〕"] --> 呼出
     呼出 --> チェック{許可された効果か?}
     チェック -->|OK| 実行[コンパイル成功]
     チェック -->|NG| 拒否[コンパイルエラー]

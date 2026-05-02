@@ -58,8 +58,11 @@ O6lvl4 Knowledge の knowledge base。
 - [[codopsy-ts]] - codopsy-ts
 - [[famulus]] - famulus
 - [[famulus2]] - famulus2
+- [[grclone]] - grclone
+- [[homullus]] - homullus
 - [[igloc]] - igloc
 - [[image-catalog-composer]] - image-catalog-composer
+- [[keiri]] - keiri
 - [[llmine]] - llmine
 - [[macleap]] - macleap
 - [[pdf-burger]] - pdf-burger
@@ -68,6 +71,40 @@ O6lvl4 Knowledge の knowledge base。
 - [[rtk]] - RTK (Rust Token Killer)
 - [[syncenv]] - syncenv
 - [[treesrc]] - treesrc
+
+### concept
+
+- [[api]] - API (Application Programming Interface)
+- [[ast]] - AST (Abstract Syntax Tree / 抽象構文木)
+- [[capability-based-security]] - Capability-based Security
+- [[cli]] - CLI (Command Line Interface)
+- [[codec]] - Codec（コーデック）
+- [[compiler]] - Compiler / Interpreter (コンパイラとインタプリタ)
+- [[context-window]] - Context Window（コンテキストウィンドウ）
+- [[ddd]] - DDD（ドメイン駆動設計）
+- [[dependency-injection]] - DI（依存性注入）
+- [[edge-computing]] - Edge Computing
+- [[effect-system]] - Effect System
+- [[ffi]] - FFI (Foreign Function Interface)
+- [[ir]] - IR (Intermediate Representation)
+- [[llm]] - LLM (Large Language Model)
+- [[llvm]] - LLVM
+- [[mcp]] - MCP (Model Context Protocol)
+- [[oauth]] - OAuth
+- [[parser]] - Parser (パーサー / 構文解析器)
+- [[quantization]] - Quantization（量子化）
+- [[rag]] - RAG (Retrieval-Augmented Generation)
+- [[serialization]] - Serialization（シリアライゼーション）
+- [[theorem-proving]] - Theorem Proving（定理証明）
+- [[token]] - Token (LLM のトークン)
+- [[tree-sitter]] - Tree-sitter
+- [[wasm]] - WebAssembly (WASM)
+- [[sandbox]] - サンドボックス（隔離実行環境）
+- [[streaming]] - ストリーミング処理
+- [[property-based-testing]] - プロパティベーステスト
+- [[hexagonal-architecture]] - ヘキサゴナルアーキテクチャ
+- [[continuation]] - 継続（Continuation）
+- [[async-await]] - 非同期処理（async/await）
 
 ### developer-tools
 
@@ -105,6 +142,10 @@ O6lvl4 Knowledge の knowledge base。
 - [[ClipStash]] - ClipStash
 - [[dotfiles]] - dotfiles
 - [[memre]] - MemRE
+
+### meta
+
+- [[_governance]] - ナレッジベース運用ルール
 
 ### moonbit
 

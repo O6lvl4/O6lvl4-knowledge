@@ -16,7 +16,7 @@ tags: [concept, cli, tooling, ux]
 ```mermaid
 flowchart LR
     User[人間] --> Keyboard[キーボード入力]
-    Keyboard --> Shell[シェル<br/>例: zsh, bash]
+    Keyboard --> Shell["シェル<br/>例: zsh, bash"]
     Shell --> Parser[コマンド解釈]
     Parser --> Tool[ツール実行]
     Tool --> Output[標準出力に文字]

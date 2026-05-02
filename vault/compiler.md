@@ -20,7 +20,7 @@ flowchart TD
     Lex1 --> Parse1[構文解析]
     Parse1 --> AST1[AST]
     AST1 --> Opt[最適化]
-    Opt --> Code[機械語/中間語]
+    Opt --> Code["機械語/中間語"]
     Code --> Exec1[配布して実行]
 
     Choice -->|インタプリタ| Lex2[字句解析]

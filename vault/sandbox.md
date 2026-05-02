@@ -16,7 +16,7 @@ tags: [concept, security, isolation, runtime]
 ```mermaid
 flowchart TB
     subgraph 外側[ホスト環境]
-        OS[OS / ファイル / ネット]
+        OS["OS / ファイル / ネット"]
     end
     subgraph 内側[サンドボックス]
         コード[実行コード]

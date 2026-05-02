@@ -15,11 +15,11 @@ tags: [concept, parser, ast, language]
 
 ```mermaid
 flowchart LR
-    Source["ソースコード<br/>if (x > 0) { ... }"] --> Lexer[レキサ<br/>字句解析]
+    Source["ソースコード<br/>if (x > 0) { ... }"] --> Lexer["レキサ<br/>字句解析"]
     Lexer --> Tokens["トークン列<br/>if, (, x, >, 0, ), {, ...}"]
-    Tokens --> Parser[パーサー<br/>構文解析]
+    Tokens --> Parser["パーサー<br/>構文解析"]
     Grammar[文法ルール] --> Parser
-    Parser --> AST[AST<br/>木構造]
+    Parser --> AST["AST<br/>木構造"]
     Parser --> Error[文法エラー]
 ```
 

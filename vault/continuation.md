@@ -15,7 +15,7 @@ tags: [concept, fp, control-flow]
 
 ```mermaid
 flowchart LR
-    A[計算開始] --> B[途中で<br/>continuation を取得]
+    A[計算開始] --> B["途中で<br/>continuation を取得"]
     B --> K1["k = 「ここから先の続き」<br/>(栞)"]
     B --> C[現在の計算を続行]
     C --> D[結果]

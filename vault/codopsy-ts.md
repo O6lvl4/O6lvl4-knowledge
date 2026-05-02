@@ -28,7 +28,7 @@ TypeScript と JavaScript 専用の「コード健康診断士」です。本家
 
 ```mermaid
 flowchart LR
-    A[TS/JSコード] --> B[codopsy-ts]
+    A["TS/JSコード"] --> B[codopsy-ts]
     B --> C[複雑度計測]
     B --> D[47ルールlint]
     B --> E[構造分析]

@@ -32,12 +32,12 @@ flowchart TD
       A1[アリスはエンジニア] --> A2[（時刻情報なし）]
     end
     subgraph WhenM
-      B1[2020/01: アリスがエンジニアになった] --> Timeline
-      B2[2022/06: アリスがリーダーになった] --> Timeline
+      B1["2020/01: アリスがエンジニアになった"] --> Timeline
+      B2["2022/06: アリスがリーダーになった"] --> Timeline
       Timeline[時系列タイムライン]
-      Timeline --> Q1{質問: 2021 年は？}
+      Timeline --> Q1{"質問: 2021 年は？"}
       Q1 --> A3[エンジニア]
-      Timeline --> Q2{質問: 今は？}
+      Timeline --> Q2{"質問: 今は？"}
       Q2 --> A4[リーダー]
     end
 ```

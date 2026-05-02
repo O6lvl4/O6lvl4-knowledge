@@ -16,7 +16,7 @@ tags: [concept, parser, ast, tooling]
 ```mermaid
 flowchart LR
     Source[ソースコード] --> Parser[tree-sitter パーサー]
-    Grammar[文法定義<br/>grammar.js] --> Parser
+    Grammar["文法定義<br/>grammar.js"] --> Parser
     Parser --> AST[AST]
     AST --> Highlight[シンタックスハイライト]
     AST --> Query[クエリ検索]

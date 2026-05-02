@@ -29,12 +29,12 @@ tags: [almide, tree-sitter, parser, grammar]
 
 ```mermaid
 flowchart LR
-  A[generator/*.almd<br/>Almide で書かれた<br/>文法定義] --> B[almide build]
-  B --> C[gen-grammar<br/>実行ファイル]
-  C --> D[grammar.js<br/>JavaScript ルール]
+  A["generator/*.almd<br/>Almide で書かれた<br/>文法定義"] --> B[almide build]
+  B --> C["gen-grammar<br/>実行ファイル"]
+  C --> D["grammar.js<br/>JavaScript ルール"]
   D --> E[tree-sitter generate]
-  E --> F[parser.c<br/>高速パーサ]
-  F --> G[エディタ等が利用<br/>色付け・補完・解析]
+  E --> F["parser.c<br/>高速パーサ"]
+  F --> G["エディタ等が利用<br/>色付け・補完・解析"]
 ```
 
 Almide で書かれた文法定義から、最終的に超高速な C 言語のパーサが生まれます。途中で JavaScript ファイルを経由する 2 段ロケットのような流れです。
