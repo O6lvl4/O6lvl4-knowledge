@@ -1,0 +1,12 @@
+{
+  "id": "face-tracking-004",
+  "note": "face-tracking",
+  "question": "ARKit blendshapes の概要",
+  "answer": "Apple が iPhone X で導入した 52 個の表情係数 (0.0〜1.0) のセットで、業界事実上の標準。眉・目・口・頬・鼻・舌をカバーし、VRM 1.0 の表情パラメータもこれに揃えられている。",
+  "ef": 2.5,
+  "interval": 0,
+  "reps": 0,
+  "due": "2026-05-04",
+  "created": "2026-05-04",
+  "history": []
+}

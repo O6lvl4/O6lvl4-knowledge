@@ -1,0 +1,12 @@
+{
+  "id": "face-tracking-005",
+  "note": "face-tracking",
+  "question": "フェイストラッキングの主要ライブラリと特性",
+  "answer": "ARKit (Apple 製、iOS の TrueDepth 限定で超高精度・52 blendshapes)、MediaPipe (Google 製 OSS、クロスプラットフォームで 478 点)、OpenSeeFace (VSeeFace の中核、VTuber 特化で軽量低遅延)、dlib (古典 68 点ランドマーク、教材で頻出)。",
+  "ef": 2.5,
+  "interval": 0,
+  "reps": 0,
+  "due": "2026-05-04",
+  "created": "2026-05-04",
+  "history": []
+}

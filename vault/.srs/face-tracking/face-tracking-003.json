@@ -1,0 +1,12 @@
+{
+  "id": "face-tracking-003",
+  "note": "face-tracking",
+  "question": "フェイストラッキングの検出方式4系統",
+  "answer": "2D ランドマーク (RGB Web カメラ、機材ゼロだが暗所・横向きに弱い)、3D ランドマーク (iPhone TrueDepth / RealSense などの深度センサ、高精度)、Blendshape Inference (深層学習で直接 blendshape を推論)、赤外線 / 構造化光 (専用プロ機材、最高精度)。",
+  "ef": 2.5,
+  "interval": 0,
+  "reps": 0,
+  "due": "2026-05-04",
+  "created": "2026-05-04",
+  "history": []
+}

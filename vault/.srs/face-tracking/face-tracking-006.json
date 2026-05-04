@@ -1,0 +1,12 @@
+{
+  "id": "face-tracking-006",
+  "note": "face-tracking",
+  "question": "フェイストラッキングの遅延の許容ラインと VTuber での実態",
+  "answer": "人間の知覚限界は 100ms 以下。VTuber 用途では 30〜80ms 程度なら自然。遅延の主因は ML モデルの重さで、軽量モデル 5〜10ms、高精度モデル 30ms 超。「軽量モデル + Web カメラ = 速いがガクガク」「TrueDepth + ARKit = 遅いが滑らか」のトレードオフ。",
+  "ef": 2.5,
+  "interval": 0,
+  "reps": 0,
+  "due": "2026-05-04",
+  "created": "2026-05-04",
+  "history": []
+}
