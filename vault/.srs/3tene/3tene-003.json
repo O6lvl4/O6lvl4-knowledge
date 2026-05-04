@@ -1,0 +1,12 @@
+{
+  "id": "3tene-003",
+  "note": "3tene",
+  "question": "3tene PRO 版で追加されるトラッキング機材は何か",
+  "answer": "iPhone X の TrueDepth (ARKit blendshapes) による高精度表情、VR ヘッドセット、Intel RealSense でのトラッキングが追加される。",
+  "ef": 2.5,
+  "interval": 0,
+  "reps": 0,
+  "due": "2026-05-04",
+  "created": "2026-05-04",
+  "history": []
+}
