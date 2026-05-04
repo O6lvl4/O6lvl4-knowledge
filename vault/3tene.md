@@ -3,9 +3,11 @@ title: 3tene
 tags: [vtuber, app, 3d, japan]
 created_at: 2026-05-04
 updated_at: 2026-05-04
-srs_state: new
+srs_state: learning
+retention: 0.25
 card_count: 6
-reviewed_count: 0
+reviewed_count: 4
+last_reviewed: 2026-05-04
 next_due: 2026-05-04
 ---
 
