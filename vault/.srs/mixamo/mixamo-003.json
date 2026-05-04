@@ -1,0 +1,12 @@
+{
+  "id": "mixamo-003",
+  "note": "mixamo",
+  "question": "Mixamo のメイン出力フォーマット",
+  "answer": "FBX (リグ + アニメーション込み、Unity/Unreal/Blender が直接読める)。DAE (Collada) もあるが利用頻度は低い。glTF への直接出力はないので必要なら FBX2glTF で変換する。",
+  "ef": 2.5,
+  "interval": 0,
+  "reps": 0,
+  "due": "2026-05-04",
+  "created": "2026-05-04",
+  "history": []
+}

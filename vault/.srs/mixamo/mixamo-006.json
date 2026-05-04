@@ -1,0 +1,12 @@
+{
+  "id": "mixamo-006",
+  "note": "mixamo",
+  "question": "Mixamo の代替・後継候補4つ",
+  "answer": "Cascadeur (物理ベース手動アニメ)、DeepMotion (AI 動画 → モーキャプ)、Rokoko (実モーキャプのハード+ソフト)、AccuRIG (Reallusion 製、自動リギング後継候補)。",
+  "ef": 2.5,
+  "interval": 0,
+  "reps": 0,
+  "due": "2026-05-04",
+  "created": "2026-05-04",
+  "history": []
+}
