@@ -11,14 +11,17 @@ const notes = defineCollection({
     // SRS-managed fields written by awen-sync. Defined here so Astro
     // doesn't strip them from the parsed frontmatter; the graph view
     // colors nodes by `srs_state` when present.
+    //
+    // Note: Astro's YAML loader auto-converts ISO dates (YYYY-MM-DD)
+    // to Date objects, so the date-like fields accept either.
     srs_state: z.enum(['new', 'learning', 'settling', 'settled']).optional(),
     retention: z.number().optional(),
     card_count: z.number().optional(),
     reviewed_count: z.number().optional(),
-    last_reviewed: z.string().optional(),
-    next_due: z.string().optional(),
-    created_at: z.string().optional(),
-    updated_at: z.string().optional(),
+    last_reviewed: z.union([z.string(), z.date()]).optional(),
+    next_due: z.union([z.string(), z.date()]).optional(),
+    created_at: z.union([z.string(), z.date()]).optional(),
+    updated_at: z.union([z.string(), z.date()]).optional(),
   }),
 });
 
