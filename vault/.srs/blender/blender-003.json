@@ -1,0 +1,12 @@
+{
+  "id": "blender-003",
+  "note": "blender",
+  "question": "Blender の 2 つのレンダラの違い",
+  "answer": "Eevee はリアルタイム ラスタライザ (GPU、即プレビュー、アニメ調・ゲーム調向き)。Cycles は物理ベース パストレーサ (CPU/GPU、写実・CM/映画品質)。Blender 4.x からは Eevee Next という再設計版が導入され、両者の差が縮まりつつある。",
+  "ef": 2.5,
+  "interval": 0,
+  "reps": 0,
+  "due": "2026-05-04",
+  "created": "2026-05-04",
+  "history": []
+}

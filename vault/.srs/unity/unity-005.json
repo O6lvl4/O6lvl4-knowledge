@@ -1,0 +1,12 @@
+{
+  "id": "unity-005",
+  "note": "unity",
+  "question": "Unity のライセンス体系",
+  "answer": "Personal (売上 / 資金調達が一定額以下で無料、スプラッシュロゴ必須)、Pro (年契約、ロゴ自由)、Enterprise (大企業向けカスタム契約) の段階制。2023 年に Runtime Fee (インストール課金) を発表して炎上・撤回し、現在は売上ベースの段階課金に戻っている。",
+  "ef": 2.5,
+  "interval": 0,
+  "reps": 0,
+  "due": "2026-05-04",
+  "created": "2026-05-04",
+  "history": []
+}

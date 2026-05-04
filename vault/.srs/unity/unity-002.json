@@ -1,0 +1,12 @@
+{
+  "id": "unity-002",
+  "note": "unity",
+  "question": "Unity の3つのレンダーパイプラインの違い",
+  "answer": "Built-in は旧来の定番 (新規プロジェクトには非推奨)。URP (Universal Render Pipeline) は軽量でモバイル・Web・VR・VTuber 系の主流。HDRP (High Definition Render Pipeline) は写実・ハイエンド PC・コンソール向け。",
+  "ef": 2.5,
+  "interval": 0,
+  "reps": 0,
+  "due": "2026-05-04",
+  "created": "2026-05-04",
+  "history": []
+}

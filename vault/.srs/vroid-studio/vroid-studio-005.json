@@ -1,0 +1,12 @@
+{
+  "id": "vroid-studio-005",
+  "note": "vroid-studio",
+  "question": "VRoid Studio だけで完結しない作業",
+  "answer": "指の関節を増やす細かい修正、オリジナル衣装のモデリング、アニメーション付け、物理演算の細調整。これらは Blender + UniVRM や Mixamo、Unity 等に渡してフィニッシュする。",
+  "ef": 2.5,
+  "interval": 0,
+  "reps": 0,
+  "due": "2026-05-04",
+  "created": "2026-05-04",
+  "history": []
+}

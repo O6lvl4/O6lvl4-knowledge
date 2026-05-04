@@ -1,0 +1,12 @@
+{
+  "id": "blender-004",
+  "note": "blender",
+  "question": "Blender の glTF と FBX 対応の品質差",
+  "answer": "glTF エクスポータは Blender Foundation 公式実装で、Khronos の参照実装としても扱われるため非常に安定。FBX は Autodesk SDK を非搭載のまま独自実装しているため、アニメや法線で微妙な相違が出ることがある。トラブル時は FBX バージョンを変えて再書き出しが定石。",
+  "ef": 2.5,
+  "interval": 0,
+  "reps": 0,
+  "due": "2026-05-04",
+  "created": "2026-05-04",
+  "history": []
+}

@@ -1,0 +1,12 @@
+{
+  "id": "unity-001",
+  "note": "unity",
+  "question": "Unity の開発元と用途",
+  "answer": "Unity Technologies が開発するクロスプラットフォームのリアルタイム 3D / ゲームエンジン。スクリプト言語は C#。モバイルゲームの大半、VR/AR、VTuber/VRChat 周辺で圧倒的シェアを持ち、Unreal Engine と双璧をなす。",
+  "ef": 2.5,
+  "interval": 0,
+  "reps": 0,
+  "due": "2026-05-04",
+  "created": "2026-05-04",
+  "history": []
+}

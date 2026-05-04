@@ -1,0 +1,12 @@
+{
+  "id": "blender-006",
+  "note": "blender",
+  "question": "Blender のモーダル操作の基本",
+  "answer": "G (Grab/移動)、R (Rotate/回転)、S (Scale/拡縮) を押すと操作モードに入る。続けて X / Y / Z で軸固定、数値キーで精密な値入力、Enter で確定 / 右クリック (または Esc) でキャンセル。このキーボード駆動が「Blender は速い」と言われる根拠。",
+  "ef": 2.5,
+  "interval": 0,
+  "reps": 0,
+  "due": "2026-05-04",
+  "created": "2026-05-04",
+  "history": []
+}

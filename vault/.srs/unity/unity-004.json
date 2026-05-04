@@ -1,0 +1,12 @@
+{
+  "id": "unity-004",
+  "note": "unity",
+  "question": "Unity のスクリプティングモデル",
+  "answer": "MonoBehaviour を継承した C# クラスを GameObject にアタッチし、Start / Update / FixedUpdate / OnCollisionEnter などのライフサイクルメソッドで処理を書く。public フィールドはエディタの Inspector に自動で表示される。",
+  "ef": 2.5,
+  "interval": 0,
+  "reps": 0,
+  "due": "2026-05-04",
+  "created": "2026-05-04",
+  "history": []
+}

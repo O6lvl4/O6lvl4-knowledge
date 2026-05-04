@@ -1,0 +1,12 @@
+{
+  "id": "unity-003",
+  "note": "unity",
+  "question": "Unity が読み込める主な 3D アセット形式",
+  "answer": "FBX が主 (ドラッグドロップで Mesh / Material / Animation Clip / Skeleton に自動分解)。glTF / .glb は Unity 6 から公式 importer 対応。VRM は UniVRM という公式 add-on 経由で Humanoid Avatar 化して読み込む。Mixamo の FBX も直接登録できる。",
+  "ef": 2.5,
+  "interval": 0,
+  "reps": 0,
+  "due": "2026-05-04",
+  "created": "2026-05-04",
+  "history": []
+}

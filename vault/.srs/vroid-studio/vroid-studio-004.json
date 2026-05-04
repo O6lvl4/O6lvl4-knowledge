@@ -1,0 +1,12 @@
+{
+  "id": "vroid-studio-004",
+  "note": "vroid-studio",
+  "question": "VRoid Studio と VRoid Hub の違い",
+  "answer": "どちらも Pixiv 運営だが別サービス。VRoid Studio は作るツール (デスクトップアプリ)。VRoid Hub はモデル共有プラットフォーム (Web)。VRoid Hub は VRM のライセンスメタデータと連携して利用条件を細かく設定できる。",
+  "ef": 2.5,
+  "interval": 0,
+  "reps": 0,
+  "due": "2026-05-04",
+  "created": "2026-05-04",
+  "history": []
+}

@@ -1,0 +1,12 @@
+{
+  "id": "unity-006",
+  "note": "unity",
+  "question": "Unity と Unreal Engine の使い分け",
+  "answer": "Unity は C# でモバイル / 2D / 軽量 3D / VR / VTuber が得意。Unreal は C++ + Blueprint (ノードグラフ) で写実 3D / AAA ゲーム / MetaHuman / シネマティックが得意。VRM/VTuber 用途では UniVRM があるため Unity がデファクト。",
+  "ef": 2.5,
+  "interval": 0,
+  "reps": 0,
+  "due": "2026-05-04",
+  "created": "2026-05-04",
+  "history": []
+}

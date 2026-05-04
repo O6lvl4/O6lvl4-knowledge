@@ -1,0 +1,12 @@
+{
+  "id": "blender-001",
+  "note": "blender",
+  "question": "Blender の開発元とライセンス",
+  "answer": "Blender Foundation が開発する完全無料・オープンソースの 3D 統合スイート。GPLv2/v3 OR ライセンスで、商用利用も可能。寄付とスポンサー (Epic, NVIDIA, AMD, Microsoft 等) で運営されている。",
+  "ef": 2.5,
+  "interval": 0,
+  "reps": 0,
+  "due": "2026-05-04",
+  "created": "2026-05-04",
+  "history": []
+}

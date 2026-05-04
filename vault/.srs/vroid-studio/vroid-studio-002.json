@@ -1,0 +1,12 @@
+{
+  "id": "vroid-studio-002",
+  "note": "vroid-studio",
+  "question": "VRoid Studio が出力するフォーマット",
+  "answer": "VRM のみ。書き出し時に VRM 0.x と 1.0 のどちらかを選択できる。VTuber アプリ (3tene / VTube Studio / VSeeFace 等) でそのまま動かせる。",
+  "ef": 2.5,
+  "interval": 0,
+  "reps": 0,
+  "due": "2026-05-04",
+  "created": "2026-05-04",
+  "history": []
+}
