@@ -73,7 +73,7 @@ glTF の真の強さは **拡張** にある。仕様コアを最小に保ち、
 - `KHR_lights_punctual` — シーン内のライト
 - `KHR_animation_pointer` — アニメ対象を任意プロパティに拡張
 
-**`VRMC_*` は [[vrm|VRM 1.0]] が定義したベンダ拡張**。glTF 標準にヒューマノイドアバター用の意味（ボーンマッピング、表情、揺れ、ライセンス）を追加して `.vrm` を成立させている。
+**`VRMC_*` は VRM 1.0 が定義したベンダ拡張**。glTF 標準にヒューマノイドアバター用の意味（ボーンマッピング、表情、揺れ、ライセンス）を追加して `.vrm` を成立させている。
 
 ## PBR メタリック・ラフネス
 
@@ -103,7 +103,7 @@ flowchart LR
 
 - **fbx**: Autodesk の編集向け。glTF への変換は Blender や FBX2glTF で行う
 - **usd / usdz**: Pixar 起源。映画・大規模シーン記述に強く、Apple AR 標準。ランタイム配信は usdz（AR Quick Look） vs glTF（Web 全般）の住み分け
-- **VRM**: glTF + ヒューマノイド拡張（[[vrm]] 参照）
+- **VRM**: glTF + ヒューマノイド拡張（vrm ノート参照）
 
 ## 押さえどころ（カード化候補）
 
