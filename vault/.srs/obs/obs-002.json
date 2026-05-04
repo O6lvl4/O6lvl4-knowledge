@@ -1,0 +1,12 @@
+{
+  "id": "obs-002",
+  "note": "obs",
+  "question": "OBS の中核概念3つを答えよ",
+  "answer": "Source (映像や音声の入力単位 - カメラ・画面・画像・ブラウザ等)、Scene (複数 Source を1画面に合成したもの)、Output (Scene の最終的な行き先 - 配信・録画・仮想カメラ)。Source → Scene → Output の3層構造。",
+  "ef": 2.5,
+  "interval": 0,
+  "reps": 0,
+  "due": "2026-05-04",
+  "created": "2026-05-04",
+  "history": []
+}

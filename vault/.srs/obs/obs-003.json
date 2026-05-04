@@ -1,0 +1,12 @@
+{
+  "id": "obs-003",
+  "note": "obs",
+  "question": "OBS が対応する主な配信プロトコルを4つ挙げよ",
+  "answer": "RTMP / RTMPS (Twitch・YouTube・Facebook Live でデフォルト、古典だが主流)、WHIP / WHEP (WebRTC ベースの低遅延配信)、SRT (放送業界・リモート制作向けの高品質低遅延)、NDI (LAN 内で他 PC と映像をやり取り)。",
+  "ef": 2.5,
+  "interval": 0,
+  "reps": 0,
+  "due": "2026-05-04",
+  "created": "2026-05-04",
+  "history": []
+}

@@ -1,0 +1,12 @@
+{
+  "id": "obs-005",
+  "note": "obs",
+  "question": "OBS Virtual Camera の機能を説明せよ",
+  "answer": "Scene の出力を OS 上の仮想カメラデバイスとして見せる機能。Zoom や Google Meet や Discord などが「Web カメラの一覧」で OBS を選べるようになり、OBS で作り込んだ映像をビデオ会議や通話にそのまま流せる。VTuber が普段の Discord でアバターを使う時の経路もこれ。",
+  "ef": 2.5,
+  "interval": 0,
+  "reps": 0,
+  "due": "2026-05-04",
+  "created": "2026-05-04",
+  "history": []
+}

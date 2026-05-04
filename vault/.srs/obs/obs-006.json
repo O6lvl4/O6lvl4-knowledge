@@ -1,0 +1,12 @@
+{
+  "id": "obs-006",
+  "note": "obs",
+  "question": "VTuber ワークフローでの OBS の役割",
+  "answer": "パイプラインの \"出口\" 担当。VTuber アプリ (3tene / VTube Studio / VSeeFace 等) が描画したアバター映像、ゲーム画面、チャット表示、配信アラートなどを Scene 上に合成し、RTMP で Twitch / YouTube に配信したり MP4 で録画したりする統合点。",
+  "ef": 2.5,
+  "interval": 0,
+  "reps": 0,
+  "due": "2026-05-04",
+  "created": "2026-05-04",
+  "history": []
+}

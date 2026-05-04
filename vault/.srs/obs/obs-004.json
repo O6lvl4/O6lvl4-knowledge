@@ -1,0 +1,12 @@
+{
+  "id": "obs-004",
+  "note": "obs",
+  "question": "OBS のエンコーダ選択肢と使い分け",
+  "answer": "x264 (CPU、高品質だが負荷高)、NVENC (NVIDIA GPU、ゲーム配信向き)、QuickSync (Intel iGPU、省電力)、VideoToolbox (Apple Silicon で標準・効率高)、AMF (AMD GPU)。ゲームしながら配信するなら GPU 系が CPU 負荷を奪わずに済む。",
+  "ef": 2.5,
+  "interval": 0,
+  "reps": 0,
+  "due": "2026-05-04",
+  "created": "2026-05-04",
+  "history": []
+}

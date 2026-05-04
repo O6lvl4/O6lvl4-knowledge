@@ -1,0 +1,12 @@
+{
+  "id": "obs-001",
+  "note": "obs",
+  "question": "OBS の正式名称とライセンス",
+  "answer": "Open Broadcaster Software。GPLv2 ライセンスの完全無料・オープンソース。Windows / macOS / Linux に対応する OBS Project (非営利) 開発のライブストリーミング・録画ソフト。",
+  "ef": 2.5,
+  "interval": 0,
+  "reps": 0,
+  "due": "2026-05-04",
+  "created": "2026-05-04",
+  "history": []
+}
