@@ -19,10 +19,10 @@ VRM 規格をベースにしつつ、上位版で [[live2d|Live2D]] にも対応
 
 ```mermaid
 flowchart LR
-    Free[FREE<br/>Webカメラ + Leap Motion] --> Pro
-    Pro[PRO<br/>+ iPhone TrueDepth / VR / RealSense] --> ProL
-    ProL[PRO+LIVE2D<br/>+ Live2D 対応] --> Studio
-    Studio[STUDIO<br/>+ Perception Neuron<br/>(全身モーキャプ)]
+    Free["FREE<br/>Webカメラ + Leap Motion"] --> Pro
+    Pro["PRO<br/>+ iPhone TrueDepth / VR / RealSense"] --> ProL
+    ProL["PRO+LIVE2D<br/>+ Live2D 対応"] --> Studio
+    Studio["STUDIO<br/>+ Perception Neuron<br/>(全身モーキャプ)"]
 ```
 
 | 版 | 対応モデル | トラッキング | 主な利用層 |
