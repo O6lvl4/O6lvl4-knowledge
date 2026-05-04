@@ -1,0 +1,12 @@
+{
+  "id": "live2d-003",
+  "note": "live2d",
+  "question": "Live2D の標準パラメータの代表例を3つ挙げよ",
+  "answer": "ParamAngleX (顔の左右の向き)、ParamMouthOpenY (口の開き具合)、ParamEyeBallX (黒目の左右位置)。",
+  "ef": 2.5,
+  "interval": 0,
+  "reps": 0,
+  "due": "2026-05-04",
+  "created": "2026-05-04",
+  "history": []
+}

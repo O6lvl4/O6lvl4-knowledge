@@ -1,0 +1,12 @@
+{
+  "id": "live2d-006",
+  "note": "live2d",
+  "question": "Cubism Editor の FREE 版と PRO 版の境目",
+  "answer": "個人や小規模利用なら FREE で十分。本格商用 (一定の売上規模を超える等) になると PRO + Cubism SDK の商用ライセンス契約が必要になる。",
+  "ef": 2.5,
+  "interval": 0,
+  "reps": 0,
+  "due": "2026-05-04",
+  "created": "2026-05-04",
+  "history": []
+}

@@ -1,0 +1,12 @@
+{
+  "id": "vrm-006",
+  "note": "vrm",
+  "question": "VRM と Live2D の違いを一行で",
+  "answer": "VRM は 3D で全角度から描画できる代わりにモデリング工程が必要。Live2D は 2D で絵をそのまま動かせるが真横や真後ろは描けない。",
+  "ef": 2.5,
+  "interval": 0,
+  "reps": 0,
+  "due": "2026-05-04",
+  "created": "2026-05-04",
+  "history": []
+}

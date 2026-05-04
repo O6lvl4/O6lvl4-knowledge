@@ -1,0 +1,12 @@
+{
+  "id": "live2d-002",
+  "note": "live2d",
+  "question": "出力ファイル `.moc3` の意味は何か",
+  "answer": "Cubism Editor がコンパイルしたモデルバイナリ。メッシュ・パラメータ・デフォーマがまとまっており、ランタイム (Cubism SDK) が読み込んで動かす対象。",
+  "ef": 2.5,
+  "interval": 0,
+  "reps": 0,
+  "due": "2026-05-04",
+  "created": "2026-05-04",
+  "history": []
+}

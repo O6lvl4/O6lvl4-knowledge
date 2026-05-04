@@ -1,0 +1,12 @@
+{
+  "id": "live2d-004",
+  "note": "live2d",
+  "question": "VTuber アプリと Cubism SDK の関係",
+  "answer": "VTuber アプリ (VTube Studio など) は Cubism SDK の上で動くクライアント。SDK は「パラメータを受け取って絵を変形する」部分だけを担当し、フェイストラッキング (カメラ → パラメータ変換) はアプリ側の実装。",
+  "ef": 2.5,
+  "interval": 0,
+  "reps": 0,
+  "due": "2026-05-04",
+  "created": "2026-05-04",
+  "history": []
+}

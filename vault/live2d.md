@@ -1,6 +1,10 @@
 ---
 title: Live2D
 tags: [graphics, vtuber, animation]
+srs_state: new
+card_count: 6
+reviewed_count: 0
+next_due: 2026-05-04
 ---
 
 2D 静止イラストを「変形だけで」動かす日本発の技術。Live2D Inc. が開発、現行版は **Cubism 4**。3D モデリングを介さずに 2D の絵をそのまま立体的に動かせるのが核。

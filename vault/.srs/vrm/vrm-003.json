@@ -1,0 +1,12 @@
+{
+  "id": "vrm-003",
+  "note": "vrm",
+  "question": "VRM 固有の代表的な拡張を 4 つ挙げよ",
+  "answer": "VRMC_vrm (コア: Humanoid と表情とメタデータ)、VRMC_springBone (揺れ物理)、VRMC_node_constraint (制約)、VRMC_materials_mtoon (アニメ調シェーダ)。",
+  "ef": 2.5,
+  "interval": 0,
+  "reps": 0,
+  "due": "2026-05-04",
+  "created": "2026-05-04",
+  "history": []
+}

@@ -1,0 +1,12 @@
+{
+  "id": "vrm-001",
+  "note": "vrm",
+  "question": "VRM ファイルの中身は何のフォーマットか",
+  "answer": "glTF 2.0 のバイナリ形式 (.glb)。VRM 固有の拡張を glTF の `extensions` セクションに乗せた構造。",
+  "ef": 2.5,
+  "interval": 0,
+  "reps": 0,
+  "due": "2026-05-04",
+  "created": "2026-05-04",
+  "history": []
+}

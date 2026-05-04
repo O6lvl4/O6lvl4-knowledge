@@ -1,0 +1,12 @@
+{
+  "id": "live2d-005",
+  "note": "live2d",
+  "question": "Live2D と VRM の根本的な違い",
+  "answer": "Live2D は 2D メッシュ変形。絵師の線がそのまま使えるが、真横や真後ろは描けない。VRM は 3D (glTF 拡張) で、どの角度からでも描画できるが事前のモデリング工程が必要。",
+  "ef": 2.5,
+  "interval": 0,
+  "reps": 0,
+  "due": "2026-05-04",
+  "created": "2026-05-04",
+  "history": []
+}
