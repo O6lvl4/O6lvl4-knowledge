@@ -1,0 +1,12 @@
+{
+  "id": "fbx-001",
+  "note": "fbx",
+  "question": "FBX の正式名称と所有者を答えよ",
+  "answer": "Filmbox。元々は Kaydara が開発し、2006 年に Autodesk が買収して以降は Autodesk のクローズド規格として所有・管理されている。",
+  "ef": 2.5,
+  "interval": 0,
+  "reps": 0,
+  "due": "2026-05-04",
+  "created": "2026-05-04",
+  "history": []
+}

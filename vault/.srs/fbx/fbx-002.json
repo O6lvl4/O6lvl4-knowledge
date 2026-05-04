@@ -1,0 +1,12 @@
+{
+  "id": "fbx-002",
+  "note": "fbx",
+  "question": "FBX の二形式は何か",
+  "answer": "Binary (.fbx、圧縮された機械可読バイナリ) と ASCII (中身がテキストで diff 可能) の2形式。両者とも拡張子は .fbx。Binary が圧倒的主流。",
+  "ef": 2.5,
+  "interval": 0,
+  "reps": 0,
+  "due": "2026-05-04",
+  "created": "2026-05-04",
+  "history": []
+}

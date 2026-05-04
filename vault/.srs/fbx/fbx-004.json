@@ -1,0 +1,12 @@
+{
+  "id": "fbx-004",
+  "note": "fbx",
+  "question": "FBX と glTF の使い分けはどうするか",
+  "answer": "FBX は編集向け (Maya/Blender/Unity/Unreal などの DCC ツール間でアニメやリグごと交換するための形式)。glTF はランタイム配信向け (Web/エンジンで即読み込んで描画する用)。「編集中は FBX、配信は glTF」が定石。",
+  "ef": 2.5,
+  "interval": 0,
+  "reps": 0,
+  "due": "2026-05-04",
+  "created": "2026-05-04",
+  "history": []
+}
