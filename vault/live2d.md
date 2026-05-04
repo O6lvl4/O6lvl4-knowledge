@@ -1,6 +1,8 @@
 ---
 title: Live2D
 tags: [graphics, vtuber, animation]
+created_at: 2026-05-04
+updated_at: 2026-05-04
 srs_state: learning
 retention: 0
 card_count: 6

@@ -5,6 +5,8 @@
  * frontmatter. Pure stdlib node, no deps.
  *
  * Managed frontmatter keys (rewritten on every run):
+ *   created_at     ISO date  — first commit date of <slug>.md (git is the source of truth)
+ *   updated_at     ISO date  — most recent commit date of <slug>.md
  *   srs_state      "new" | "learning" | "settling" | "settled"
  *   retention      0.0..1.0  — share of reviews answered with q ≥ 3
  *   card_count     int       — number of cards under this note
@@ -12,19 +14,23 @@
  *   last_reviewed  ISO date  — most recent review across all cards
  *   next_due       ISO date  — earliest `due` across cards
  *
- * Other frontmatter keys are preserved verbatim.
+ * Other frontmatter keys are preserved verbatim. Lines containing the
+ * managed keys are removed and re-emitted in the canonical order above.
  *
  * Usage:
  *   node scripts/awen-sync.mjs            # vault is ./vault
  *   AWEN_VAULT=/path node scripts/...     # override vault root
  */
 import { readFileSync, writeFileSync, readdirSync, statSync } from 'node:fs';
+import { execFileSync } from 'node:child_process';
 import { join, basename } from 'node:path';
 
 const VAULT = process.env.AWEN_VAULT || './vault';
 const SRS = join(VAULT, '.srs');
 
 const MANAGED_KEYS = [
+  'created_at',
+  'updated_at',
   'srs_state',
   'retention',
   'card_count',
@@ -32,6 +38,34 @@ const MANAGED_KEYS = [
   'last_reviewed',
   'next_due',
 ];
+
+function today() {
+  const d = new Date();
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+}
+
+/**
+ * Get [created_at, updated_at] for a vault file from git history.
+ * - created_at: oldest commit date that touched the file
+ * - updated_at: newest commit date that touched the file
+ * Both are YYYY-MM-DD (committer date, ISO). Falls back to today if
+ * the file isn't tracked yet.
+ */
+function gitDates(notePath) {
+  try {
+    // %cs = committer date in short ISO (YYYY-MM-DD)
+    const out = execFileSync('git', ['log', '--format=%cs', '--', notePath], {
+      cwd: VAULT.replace(/\/vault$/, '') || '.',
+      encoding: 'utf8',
+      stdio: ['ignore', 'pipe', 'ignore'],
+    }).trim();
+    if (!out) return [today(), today()];
+    const lines = out.split('\n').filter(Boolean);
+    return [lines.at(-1), lines.at(0)];
+  } catch {
+    return [today(), today()];
+  }
+}
 
 function safeReaddir(p) {
   try { return readdirSync(p, { withFileTypes: true }); } catch { return []; }
@@ -91,6 +125,11 @@ function summarize(cards) {
   };
 }
 
+function dateMeta(notePath) {
+  const [createdAt, updatedAt] = gitDates(notePath);
+  return { created_at: createdAt, updated_at: updatedAt };
+}
+
 /**
  * Split a markdown file into [frontmatterLines, bodyText].
  * frontmatterLines is null if no `---` block exists.
@@ -131,16 +170,19 @@ function syncNote(slug) {
 
   const cards = loadCards(slug);
   const summary = summarize(cards);
+  const dates = dateMeta(notePath);
+  const merged = { ...dates, ...(summary ?? {}) };
+  const haveAnything = Object.values(merged).some((v) => v !== null && v !== undefined);
 
   const [fmLines, body] = splitFrontmatter(raw);
   const lines = fmLines ?? ['title: ' + slug];
-  const next = rebuildFrontmatter(lines, summary);
+  const next = rebuildFrontmatter(lines, haveAnything ? merged : null);
   const fm = `---\n${next.join('\n')}\n---\n`;
   const out = fm + (fmLines ? body : raw);
 
   if (out !== raw) {
     writeFileSync(notePath, out);
-    return { slug, summary };
+    return { slug, summary, dates };
   }
   return null;
 }

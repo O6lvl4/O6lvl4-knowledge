@@ -1,6 +1,8 @@
 ---
 title: フェイストラッキング
 tags: [concept, computer-vision, vtuber, ar]
+created_at: 2026-05-04
+updated_at: 2026-05-04
 srs_state: new
 card_count: 6
 reviewed_count: 0
