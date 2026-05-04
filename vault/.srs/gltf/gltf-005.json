@@ -1,0 +1,12 @@
+{
+  "id": "gltf-005",
+  "note": "gltf",
+  "question": "glTF が「3D の JPEG」と呼ばれる理由",
+  "answer": "配信に最適化された単一ファイル形式で、Three.js / Babylon.js / Unity / Web ブラウザ等どのランタイムでもほぼ同じ見た目で開けるデファクト規格だから。JPEG と同じ位置づけ。",
+  "ef": 2.5,
+  "interval": 0,
+  "reps": 0,
+  "due": "2026-05-04",
+  "created": "2026-05-04",
+  "history": []
+}

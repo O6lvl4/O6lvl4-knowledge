@@ -1,0 +1,12 @@
+{
+  "id": "gltf-003",
+  "note": "gltf",
+  "question": "glTF 2.0 のデフォルトマテリアルモデルは何か",
+  "answer": "PBR Metallic-Roughness。baseColor / metallic / roughness の3つを核に、normal / occlusion / emissive を加えた構成で、Substance や Blender からの相互運用性を担保する。",
+  "ef": 2.5,
+  "interval": 0,
+  "reps": 0,
+  "due": "2026-05-04",
+  "created": "2026-05-04",
+  "history": []
+}

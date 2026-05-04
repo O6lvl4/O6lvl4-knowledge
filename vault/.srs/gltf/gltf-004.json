@@ -1,0 +1,12 @@
+{
+  "id": "gltf-004",
+  "note": "gltf",
+  "question": "glTF 拡張のプレフィックス3種を挙げよ",
+  "answer": "KHR_* (Khronos 公式、仕様レビュー済み)、EXT_* (マルチベンダ採用)、<VENDOR>_* (ベンダ固有、例: VRMC_*, MSFT_*, ADOBE_*)。",
+  "ef": 2.5,
+  "interval": 0,
+  "reps": 0,
+  "due": "2026-05-04",
+  "created": "2026-05-04",
+  "history": []
+}

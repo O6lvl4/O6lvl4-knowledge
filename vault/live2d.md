@@ -1,9 +1,11 @@
 ---
 title: Live2D
 tags: [graphics, vtuber, animation]
-srs_state: new
+srs_state: learning
+retention: 0
 card_count: 6
-reviewed_count: 0
+reviewed_count: 1
+last_reviewed: 2026-05-04
 next_due: 2026-05-04
 ---
 

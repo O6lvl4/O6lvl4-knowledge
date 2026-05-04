@@ -1,0 +1,12 @@
+{
+  "id": "gltf-002",
+  "note": "gltf",
+  "question": ".gltf と .glb の違いを説明せよ",
+  "answer": ".gltf は JSON 記述ファイルと、外部の .bin (頂点データ) とテクスチャ画像に分離された形式。.glb はそれらを単一のバイナリに連結した形式で、配布が一回の HTTP リクエストで済むため Web / VR で主流。",
+  "ef": 2.5,
+  "interval": 0,
+  "reps": 0,
+  "due": "2026-05-04",
+  "created": "2026-05-04",
+  "history": []
+}
