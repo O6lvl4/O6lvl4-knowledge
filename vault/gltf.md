@@ -92,13 +92,13 @@ glTF が「これだけでとりあえず見られる」ようにするため、
 
 ```mermaid
 flowchart LR
-    Edit[編集系: fbx / blend / usd] -->|export| Glt[glTF / glb]
+    Edit["編集系: fbx / blend / usd"] -->|export| Glt["glTF / glb"]
     Glt -->|拡張| Vrm[".vrm<br/>(VRMC_* 拡張)"]
     Glt -->|拡張| Usdz["AR Quick Look<br/>(usdz の代替)"]
     Glt -->|読込| Three[Three.js]
     Glt -->|読込| Babylon[Babylon.js]
     Glt -->|読込| Unity[Unity glTFast]
-    Glt -->|読込| Browser[model-viewer / WebXR]
+    Glt -->|読込| Browser["model-viewer / WebXR"]
 ```
 
 - **fbx**: Autodesk の編集向け。glTF への変換は Blender や FBX2glTF で行う
