@@ -1,12 +1,17 @@
 {
   "id": "3tene-004",
   "note": "3tene",
-  "question": "PRO+LIVE2D 版の特徴は何か",
+  "question": "3tene PRO+LIVE2D 版の特徴は何か",
   "answer": "VRM に加えて Live2D アバターも読み込めるようになる版。1 つの 3tene の中で 3D と 2D を切り替えて運用できる。",
-  "ef": 2.5,
-  "interval": 0,
+  "ef": 1.96,
+  "interval": 1,
   "reps": 0,
-  "due": "2026-05-04",
+  "due": "2026-05-05",
   "created": "2026-05-04",
-  "history": []
+  "history": [
+    {
+      "date": "2026-05-04",
+      "quality": 1
+    }
+  ]
 }

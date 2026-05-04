@@ -1,7 +1,7 @@
 {
   "id": "3tene-005",
   "note": "3tene",
-  "question": "STUDIO 版が想定する規模はどんなものか",
+  "question": "3tene STUDIO 版が想定する規模はどんなものか",
   "answer": "スタジオでの本格制作レベル。Perception Neuron による全身慣性モーキャプに対応し、企業案件やスタジオ向けの全身トラッキングが可能。",
   "ef": 2.5,
   "interval": 0,
