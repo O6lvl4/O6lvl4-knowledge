@@ -5,7 +5,7 @@ created_at: 2026-05-07
 updated_at: 2026-05-07
 draft: true
 srs_state: new
-card_count: 5
+card_count: 6
 reviewed_count: 0
 next_due: 2026-05-07
 ---
@@ -128,6 +128,25 @@ framework name は意図的に未定のまま据え置く。理由:
 
 名前選定は **AITubeStudio v0 が動き、homullus との共通抽象が実コードで見えた段階** に持ち越す。
 
+## 組織構造（将来）— Rails の分離パターン
+
+Rails は `github.com/rails` という **専用 organization** を持つ（rails/rails をフラグシップ、sprockets / turbolinks / spring 等の component gem も同 org で運用）。Basecamp は別組織 `github.com/basecamp`。**フレームワークと起源プロダクトで org が分離されている** のが Rails が community framework として定着した条件の一つ。
+
+Almide エコシステムでも、framework が名前を持つ段階で同じ分離が必要になる:
+
+| 層 | Web 時代 | AI エージェント時代 |
+|---|---|---|
+| 言語の org | `github.com/ruby` | `github.com/almide`（既存）|
+| 起源プロダクトの org | `github.com/basecamp` | `github.com/Aid-On`（既存）|
+| **抽出された framework の org** | `github.com/rails` | **TBD（framework 名確定時に新設予定）**|
+
+org 分離が概念的・実務的に持つ意味:
+
+- **概念的**: framework は抽象、product は具象。org が分かれることで「framework は誰のもの」「product は誰のもの」の所有権境界がコードレベルで顕在化する。一企業 / 一プロダクトの社内ツールに見えなくなる
+- **実務的**: framework が他の product でも使われるようになった時、特定の company org に閉じない。コミュニティが framework に貢献する際、product 側の意思決定権を経由せずに済む
+
+この分離は **framework がコミュニティ財として機能するための前提条件**。homullus が `github.com/almide` 配下にいる現状はあくまで testbed の位置づけで、抽出された framework は Aid-On でも almide でもない第三の org に置くのが Rails 流儀に沿う。
+
 ## 実装に入らない理由
 
 このノートは設計仕様ではなく **観察ガイド**。実コードでの抽象抽出は次の条件が揃った後に着手する:
@@ -145,6 +164,7 @@ planning ノートを実装に転化する圧力は意識的に避ける。**抽
 - L1 (provider) を framework に取り込まない判断 → **`almai` への依存に留める。Rails が独自 HTTP クライアントを抱えなかったのと同じ筋**
 - 抽出前に確かめるべき 3 つの緊張点 → **(1) loop の駆動源 pull/push、(2) 失敗の意味論、(3) realtime 制約の横断的保証**
 - 名前を決めない理由 → **粒度未確定 / 含意に引きずられる / placeholder で planning は回る。決定は AITubeStudio v0 が動いた段階に持ち越す**
+- framework org の Rails 流儀 → **Rails が `github.com/rails` を専用 org として持ち、Basecamp（`github.com/basecamp`）から分離されているのと同様、抽出された framework は Aid-On でも almide でもない第三の専用 org に置く。コミュニティ財として機能する前提条件**
 
 ## Links
 
