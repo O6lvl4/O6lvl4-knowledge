@@ -1,0 +1,17 @@
+---
+title: playground
+tags: [almide, wasm, browser]
+---
+
+ブラウザ上で [[almide|Almide]] コードを実行できるオンライン IDE。
+
+## 仕組み
+
+Almide コンパイラ自体を WASM にコンパイルし、ブラウザ上で `.almd` → TypeScript → JavaScript に変換して eval する。サーバーラウンドトリップなし。
+
+## 機能
+
+- コードエディタ
+- AST 表示
+- コンパイル済み JS 表示
+- GitHub Pages でホスティング
