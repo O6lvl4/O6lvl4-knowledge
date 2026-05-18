@@ -3,67 +3,80 @@ title: Type 3 文法（正規文法）
 tags: [formal-language, automata-theory, computer-science]
 ---
 
-[[chomsky-hierarchy|チョムスキー階層]]の最下位。最も制約が強く、最も効率的に処理できる文法クラス。
+[[chomsky-hierarchy|チョムスキー階層]]の最下位。正規表現と完全に等価。
 
-## 定義
+## プログラマ向けの一言
 
-生成規則（右線形文法の場合）:
+**変数1個（状態）だけで判定できる言語。** メモリ（スタックや配列）を一切使わずに、文字を左から1つずつ見て、今の「状態」だけで accept/reject を決める。
 
-- A → aB（終端記号 + 非終端記号）
-- A → a （終端記号のみ）
-- A → ε （空文字列）
+## 正規表現 = 有限オートマトン = 正規文法
 
-左辺は非終端記号1つ、右辺は終端記号1つ + 非終端記号0〜1個。再帰は許されるが、入れ子構造は表現できない。
+この3つは表現力が完全に同じ。書き方が違うだけ。
 
-## 認識する機械: 有限オートマトン (FA)
+```ts
+// ---- 1. 正規表現で書く ----
+const regex = /^a*b$/;
+regex.test("b");     // true
+regex.test("ab");    // true
+regex.test("aaab");  // true
+regex.test("aabb");  // false（b が2個はダメ）
 
-状態の集合と遷移関数だけで構成される最も単純な計算モデル。メモリを持たない（スタックもテープもない）。
+// ---- 2. 有限オートマトンで書く（= 状態変数1個の while ループ）----
+function accepts(input: string): boolean {
+  let state: "reading_a" | "got_b" | "dead" = "reading_a";
 
-- **DFA** (決定性有限オートマトン): 各状態で遷移先が一意
-- **NFA** (非決定性有限オートマトン): 複数の遷移候補がありうる
-- DFA と NFA の認識能力は等価（NFAはDFAに変換可能）
+  for (const ch of input) {
+    switch (state) {
+      case "reading_a":
+        if (ch === "a") state = "reading_a";  // a が続く間はそのまま
+        else if (ch === "b") state = "got_b";  // b が来たら遷移
+        else state = "dead";
+        break;
+      case "got_b":
+        state = "dead";  // b の後に何か来たらアウト
+        break;
+      case "dead":
+        break;
+    }
+  }
+  return state === "got_b";
+}
 
-## 正規表現との等価性
-
-Type 3 文法が生成する言語 = 正規表現が記述する言語 = 有限オートマトンが認識する言語。
-
-これら3つは表現力が完全に等しい。
-
-```
-正規文法 ⟺ 正規表現 ⟺ 有限オートマトン
-```
-
-## 例
-
-言語: a の0回以上の繰り返しの後に b が1つ（正規表現: `a*b`）
-
-```
-G = (N, Σ, P, S)
-N = { S }
-Σ = { a, b }
-P = { S → aS, S → b }
-```
-
-導出例:
-
-```
-S → b           (b)
-S → aS → ab    (ab)
-S → aS → aaS → aab  (aab)
+// ---- 3. 正規文法で書く ----
+// S → aS    （a を読んで S に戻る）
+// S → b     （b を読んで終了）
+// ↑ これは上の switch 文と全く同じことを言っている
 ```
 
-## 限界: 何が表現できないか
+## 限界: なぜ括弧の対応が無理か
 
-正規文法（= 正規表現、= 有限オートマトン）では**入れ子構造を表現できない**。
+```ts
+// 「a が n 個 → b が n 個」(aabb, aaabbb, ...) を判定したい
+// 状態変数だけでは n を覚えられない！
 
-- `a^n b^n` は不可能 — a の個数を記憶して b と一致させる必要があるが、メモリがない
-- 括弧の対応 `((()))` は不可能 — 同じ理由
-- HTML/XML のタグ対応も不可能
+function cannotDoThis(input: string): boolean {
+  let state = "?";
+  for (const ch of input) {
+    // a を何個見たか覚えておく方法がない
+    // state = "saw_1_a" | "saw_2_a" | "saw_3_a" | ...  ← 無限に状態が要る
+  }
+  return false; // 有限個の状態では判定不可能
+}
 
-これらには [[type-2-grammar|Type 2（文脈自由文法）]] が必要。
+// これをやるにはスタックが必要 → Type 2 の領域
+```
 
 ## 実用
 
-- **正規表現**: テキスト検索、バリデーション、lexer のトークン定義
-- **字句解析 (lexer)**: コンパイラの最初のフェーズ。ソースコードをトークンに分割する処理は正規文法で十分
-- **ネットワーク**: パケットフィルタ、URL ルーティングのパターンマッチ
+```ts
+// 字句解析（lexer）: ソースコードをトークンに分割
+// → 各トークンの定義は正規表現で十分
+const tokenRules = [
+  { type: "NUMBER",  pattern: /^[0-9]+/ },
+  { type: "IDENT",   pattern: /^[a-zA-Z_]\w*/ },
+  { type: "LPAREN",  pattern: /^\(/ },
+  { type: "RPAREN",  pattern: /^\)/ },
+];
+// ↑ ここまでは Type 3 で十分
+// ↓ トークン列が正しい構文かチェックするのは Type 2 の仕事（パーサ）
+```

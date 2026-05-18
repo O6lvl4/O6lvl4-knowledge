@@ -3,81 +3,137 @@ title: Type 2 文法（文脈自由文法）
 tags: [formal-language, automata-theory, computer-science]
 ---
 
-[[chomsky-hierarchy|チョムスキー階層]]の Type 2。プログラミング言語の構文定義に最も広く使われる文法クラス。
+[[chomsky-hierarchy|チョムスキー階層]]の Type 2。プログラミング言語の構文定義に最も広く使われる。
 
-## 定義
+## プログラマ向けの一言
 
-生成規則: A → γ
+**スタック（push/pop）があれば判定できる言語。** 「開き括弧を push、閉じ括弧で pop、最後に空なら OK」— これがまさに Type 2。
 
-- 左辺は非終端記号1つだけ
-- 右辺は終端記号と非終端記号の任意の列
+## 例1: 括弧の対応チェック
 
-「文脈自由」の意味: A がどんな文脈（周囲の記号列）にあっても、同じ規則で置換できる。文脈に依存しない。
+プログラマなら書いたことがあるはず:
 
-## 例: a^n b^n
+```ts
+function isBalanced(input: string): boolean {
+  const stack: string[] = [];
 
-```
-G = (N, Σ, P, S)
-N = { S }
-Σ = { a, b }
-P = { S → aSb, S → ab }
-```
+  for (const ch of input) {
+    if (ch === "(") {
+      stack.push(ch);          // 開き括弧 → push
+    } else if (ch === ")") {
+      if (stack.length === 0) return false;
+      stack.pop();             // 閉じ括弧 → pop
+    }
+  }
+  return stack.length === 0;   // 全部対応していれば空
+}
 
-導出例（aabb を生成）:
-
-```
-S → aSb → aabb
-```
-
-導出例（aaabbb を生成）:
-
-```
-S → aSb → aaSbb → aaabbb
+isBalanced("((()))");  // true
+isBalanced("(()");     // false
+isBalanced(")(");      // false
 ```
 
-## 認識する機械: プッシュダウンオートマトン (PDA)
+正規表現では括弧の対応は絶対にチェックできない。スタックが必須 = Type 2 の問題。
 
-有限オートマトンにスタックを追加した計算モデル。通常の有限オートマトンと2点で異なる:
+## 例2: a^n b^n（a が n 個、b が n 個）
 
-1. スタックのトップを使って状態遷移を判断する
-2. 遷移の一部としてスタック操作（push/pop）を行う
+元の会話で出てきた例。文法は `S → aSb | ab`。
 
-### PDA による a^n b^n の認識
+```ts
+// 文法ルールどおりに生成してみる
+function generate(n: number): string {
+  // S → aSb を n-1 回適用し、最後に S → ab
+  return "a".repeat(n) + "b".repeat(n);
+}
 
+// 判定する（= プッシュダウンオートマトン）
+function matchAnBn(input: string): boolean {
+  const stack: string[] = [];
+  let i = 0;
+
+  // フェーズ1: a を見たら push
+  while (i < input.length && input[i] === "a") {
+    stack.push("a");
+    i++;
+  }
+
+  // フェーズ2: b を見たら pop
+  while (i < input.length && input[i] === "b") {
+    if (stack.length === 0) return false;
+    stack.pop();
+    i++;
+  }
+
+  // 全部読み切って、スタックも空なら OK
+  return i === input.length && stack.length === 0;
+}
+
+matchAnBn("aaabbb");  // true  (n=3)
+matchAnBn("aabb");    // true  (n=2)
+matchAnBn("aabbb");   // false (a=2, b=3)
+matchAnBn("");         // false
 ```
-Input: aaabbb, Stack: S -> aSb
-Input: aabbb,  Stack: Sb
-Input: aabbb,  Stack: aSbb
-Input: abbb,   Stack: Sbb
-Input: abbb,   Stack: abbb
-Input: bbb,    Stack: bbb
-Input: bb,     Stack: bb
-Input: b,      Stack: b
-Input: (empty), Stack: (empty) → Accept
+
+## PDA = 有限オートマトン + スタック
+
+```ts
+// プッシュダウンオートマトン (PDA) の一般的な構造
+type PDA = {
+  state: string;
+  stack: string[];
+  transition: (state: string, input: string, stackTop: string)
+    => { nextState: string; stackOp: "push" | "pop" | "none"; pushValue?: string };
+};
+
+// Type 3（有限オートマトン）との違いはスタックがあるかどうかだけ
+// Type 3: state だけで判断
+// Type 2: state + stack.peek() で判断
 ```
 
-### NPDA と DPDA
+## NPDA vs DPDA
 
-- **NPDA** (非決定性): 複数の遷移候補がありうる。上の例で S → aSb と S → ab のどちらを選ぶか非決定的
-- **DPDA** (決定性): 各状態で遷移が一意に決まる
+```ts
+// 文法: S → aSb | ab
+// 「aSb にする？ ab にする？」が入力を見ただけでは決まらない → 非決定性 (NPDA)
 
-NPDA が認識できる言語 = 文脈自由言語の全体。DPDA はそのサブセット（決定性文脈自由言語）のみ認識する。
+// NPDAをコードで表現すると「全パターンを試す」再帰になる
+function npdaMatch(input: string, pos: number, stack: string[]): boolean {
+  if (pos === input.length && stack.length === 0) return true;
+
+  // 選択肢1: S → aSb を試す
+  // 選択肢2: S → ab を試す
+  // どっちかが成功すれば OK（非決定的 = 全探索）
+  return tryRule1(input, pos, [...stack]) || tryRule2(input, pos, [...stack]);
+}
+
+// DPDAは「先読み」などで選択を一意にできる場合のみ動く
+// プログラミング言語のパーサは大体 DPDA 相当（LL(1), LR(1) など）
+```
 
 ## プログラミング言語との関係
 
-ほぼすべてのプログラミング言語の構文は文脈自由文法（の変種）で定義される:
+```ts
+// JSON パーサ = Type 2 パーサの典型例
+// { "a": { "b": [1, 2] } }
+// ↑ 入れ子構造 → スタックで { や [ の対応を追跡
 
-- **BNF / EBNF** — 文脈自由文法の表記法
-- **LL パーサ** — 左から読み、左端導出（再帰下降）
-- **LR パーサ** — 左から読み、右端導出（yacc, bison）
-- **PEG** — 文脈自由文法に似るが、選択に順序がある（パックラットパーサ）
+// 再帰下降パーサ = 関数の再帰呼び出し = コールスタックを使った PDA
+function parseExpr(): Expr {
+  if (peek() === "(") {
+    consume("(");
+    const inner = parseExpr();  // 再帰 = stack.push() と同じ
+    consume(")");               // 対応する閉じ括弧 = stack.pop()
+    return inner;
+  }
+  return parseAtom();
+}
+```
 
-## Type 3 との境界
+## 限界
 
-- a^n b^n → Type 2 が必要（有限オートマトンでは n を記憶できない）
-- a*b* → Type 3 で十分（個数の一致を要求しない）
-
-## Type 1 との境界
-
-- a^n b^n → Type 2 で十分
-- a^n b^n c^n → Type 1 が必要（スタック1本では2つの量を同時追跡できない）
+```ts
+// a^n b^n c^n (a が n 個、b が n 個、c が n 個) は判定できない
+// スタックで a の個数を数えて b と対応させることはできるが、
+// その時点でスタックは空になっているので、c の個数をチェックする手段がない
+// → Type 1 が必要
+```

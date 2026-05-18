@@ -5,41 +5,87 @@ tags: [formal-language, automata-theory, computer-science]
 
 形式言語を生成する形式文法の包含階層。1956年にノーム・チョムスキーが発表。
 
-## 形式文法
+## 形式文法 = 文字列の生成ルール
 
-形式文法は4つ組 G = (N, Σ, P, S) で定義される。
+「ある文字列がこの言語に属するか？」を判定する仕組み。プログラマ向けに言えば、バリデーション関数の表現力の分類。
 
-| 記号 | 意味 | 例 |
-|---|---|---|
-| N | 非終端記号の集合 | { S } |
-| Σ | 終端記号の集合 | { a, b } |
-| P | 生成規則の集合 | { S → aSb, S → ab } |
-| S | 開始記号 | S |
+```ts
+// 形式文法を TypeScript で表現するとこうなる
+type Grammar = {
+  nonTerminals: string[];   // N: まだ展開できる記号（変数みたいなもの）
+  terminals: string[];      // Σ: 最終的な出力文字（リテラルみたいなもの）
+  rules: Rule[];            // P: 展開ルール
+  start: string;            // S: 最初の記号
+};
+type Rule = { from: string; to: string };
 
-非終端記号は「まだ展開できる記号」、終端記号は「最終的な出力文字」。生成規則を繰り返し適用して、開始記号から終端記号の列（= 言語の文字列）を生成する。
+// 例: a が n 個、b が n 個 並ぶ文字列（ab, aabb, aaabbb, ...）
+const grammar: Grammar = {
+  nonTerminals: ["S"],
+  terminals: ["a", "b"],
+  rules: [
+    { from: "S", to: "aSb" },  // S を aSb に展開できる
+    { from: "S", to: "ab" },   // S を ab に展開できる
+  ],
+  start: "S",
+};
+// S → aSb → aaSbb → aaabbb  （S を繰り返し展開して文字列を生成）
+```
 
-## 階層
+## 階層 = 「バリデーション関数にどれだけの道具を許すか」
 
-生成規則に課す制約の強さで4段階に分類される。上位は下位を包含する。
+```ts
+// Type 3: 変数1個で足りる（状態だけ、メモリなし）
+function type3(input: string): boolean {
+  let state = "start";
+  for (const ch of input) {
+    // 今の状態と文字だけで次の状態が決まる
+    state = transition(state, ch);
+  }
+  return state === "accept";
+}
 
-| Type | 文法 | 認識する機械 | 生成規則の制約 |
+// Type 2: スタック（配列の push/pop）が必要
+function type2(input: string): boolean {
+  const stack: string[] = [];
+  for (const ch of input) {
+    // 今の状態 + スタックのトップ で判断
+  }
+  return stack.length === 0;
+}
+
+// Type 1: メモリは使えるが入力長に比例する量まで
+function type1(input: string): boolean {
+  const memory = new Array(input.length * C); // 定数倍まで
+  // ...
+}
+
+// Type 0: 何でもあり = 普通のプログラム
+function type0(input: string): boolean {
+  // 任意のコードが書ける。ただし停止しないかもしれない
+}
+```
+
+## 階層の対応表
+
+| Type | プログラマの感覚 | 使える道具 | 身近な例 |
 |---|---|---|---|
-| [[type-0-grammar\|Type 0]] | 句構造文法 | チューリングマシン | 制約なし |
-| [[type-1-grammar\|Type 1]] | 文脈依存文法 | 線形有界オートマトン | 左辺の長さ ≤ 右辺の長さ |
-| [[type-2-grammar\|Type 2]] | 文脈自由文法 | プッシュダウンオートマトン | 左辺が非終端記号1つ |
-| [[type-3-grammar\|Type 3]] | 正規文法 | 有限オートマトン | 左辺が非終端記号1つ、右辺が終端記号 + 非終端記号0〜1個 |
+| [[type-3-grammar\|Type 3]] | 正規表現 | 変数1個（状態） | `/^a*b$/` |
+| [[type-2-grammar\|Type 2]] | 再帰 / スタック | `stack.push()` / `stack.pop()` | 括弧の対応チェック |
+| [[type-1-grammar\|Type 1]] | 配列を使った検証 | 入力長に比例するメモリ | 型チェック |
+| [[type-0-grammar\|Type 0]] | 任意のプログラム | 制限なし | 停止問題 |
 
 ## 包含関係
 
 ```
 Type 3 ⊂ Type 2 ⊂ Type 1 ⊂ Type 0
-正規    文脈自由   文脈依存   句構造
+
+正規表現で書けるものは、再帰でも書ける。逆は無理。
+再帰で書けるものは、配列でも書ける。逆は無理。
 ```
 
-下位の文法で書ける言語は、上位の文法でも書ける。逆は成り立たない。
+## なぜプログラマに関係あるか
 
-## なぜ重要か
-
-- **コンパイラ設計**: プログラミング言語の構文は主に Type 2（文脈自由文法）で記述される。パーサの設計根拠。
-- **正規表現**: Type 3 の能力と限界を知ることで、正規表現で解ける問題と解けない問題が区別できる。
-- **計算可能性**: Type 0 がチューリングマシンと等価 = 計算可能な問題の限界を示す。
+- **正規表現** (Type 3) で括弧の対応を検証しようとして失敗した経験 → それは Type 2 の問題だから
+- **パーサ** を書くとき、再帰下降パーサ (Type 2) で十分か、もっと強い仕組みが要るかの判断基準
+- `JSON.parse()` は Type 2 のパーサ。TypeScript の型チェッカーは Type 1 以上の処理
