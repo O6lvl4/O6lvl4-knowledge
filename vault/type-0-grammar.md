@@ -9,26 +9,69 @@ tags: [formal-language, automata-theory, computer-science]
 
 **あなたが書ける任意のプログラムと同じ表現力。** ただし「必ず答えが返ってくる」保証がない。無限ループする可能性がある。
 
-## チューリングマシン = 普通のプログラム
+## 各 Type の具体実装を並べて比較
+
+同じ「入力を受けて true/false を返す関数」でも、使っていい道具が違う:
 
 ```ts
-// Type 0 が認識できる言語 = チューリングマシンが認識できる言語
-// チューリングマシン = 無制限のメモリを持つ計算モデル
-//                   = 要するに普通のプログラム
-
-// 各 Type を「関数にどこまで許すか」で並べると:
+// --- Type 3: 変数1個だけ。メモリなし。 ---
+// 言語: /^a*b$/ にマッチする文字列
 function type3(input: string): boolean {
-  // 変数1個だけ                    ← 有限オートマトン
+  let state: "reading_a" | "got_b" | "dead" = "reading_a";
+  for (const ch of input) {
+    if (state === "reading_a" && ch === "a") state = "reading_a";
+    else if (state === "reading_a" && ch === "b") state = "got_b";
+    else state = "dead";
+  }
+  return state === "got_b";
 }
+
+// --- Type 2: スタック (push/pop) を使える ---
+// 言語: a^n b^n（a が n 個、b が n 個）
 function type2(input: string): boolean {
-  // stack (push/pop) まで          ← PDA
+  const stack: string[] = [];
+  let phase: "a" | "b" = "a";
+  for (const ch of input) {
+    if (phase === "a" && ch === "a") {
+      stack.push("a");
+    } else if (ch === "b") {
+      phase = "b";
+      if (stack.length === 0) return false;
+      stack.pop();
+    } else {
+      return false; // a フェーズで b 以外、or b フェーズで a
+    }
+  }
+  return stack.length === 0 && phase === "b";
 }
+
+// --- Type 1: 入力長に比例する配列を使える ---
+// 言語: a^n b^n c^n（a, b, c が各 n 個）
 function type1(input: string): boolean {
-  // 入力長 × 定数 のメモリまで      ← 線形有界オートマトン
+  // 3つの区間を同時にチェック — スタック1本では不可能
+  const len = input.length;
+  if (len === 0 || len % 3 !== 0) return false;
+  const k = len / 3;
+  for (let i = 0; i < k; i++) if (input[i] !== "a") return false;
+  for (let i = k; i < 2 * k; i++) if (input[i] !== "b") return false;
+  for (let i = 2 * k; i < 3 * k; i++) if (input[i] !== "c") return false;
+  return true;
 }
+
+// --- Type 0: 何でもあり。停止しないかもしれない ---
+// 言語: 「コラッツ予想が成り立つ数の文字列表現」
+// n から始めて「偶数なら÷2、奇数なら3n+1」を繰り返すと必ず1になる…か？
+// 数学的に未解決。一部の入力で永遠にループする可能性を排除できない。
 function type0(input: string): boolean {
-  // 何でもあり。while(true) も書ける ← チューリングマシン
-  // ただし、この関数が return する保証はない
+  let n = parseInt(input, 10);
+  if (isNaN(n) || n <= 0) return false;
+  while (n !== 1) {
+    if (n % 2 === 0) n = n / 2;
+    else n = n * 3 + 1;
+    // n = 1 に到達する保証がない（未証明）
+    // → この関数が return する保証がない
+  }
+  return true;
 }
 ```
 
@@ -58,22 +101,10 @@ function paradox(): boolean {
 ## Type 1 との違い
 
 ```ts
-// Type 1: メモリに上限がある → 必ず停止する（有限の状態しかないので無限ループ検出可能）
-// Type 0: メモリに上限がない → 停止しないかもしれない
-
-// 実用的には:
-// - あなたが書く普通のプログラムは大体 Type 1 に収まる
-//   （入力サイズに比例するメモリで動き、必ず停止する）
-// - Type 0 が必要になるのは「この問題は原理的に解けるか？」という理論の話
-```
-
-## 各 Type の比較まとめ
-
-```ts
-// 言語         | 使える道具           | 停止保証 | 身近な例
-// -------------|---------------------|---------|------------------
-// Type 3 (正規) | 状態変数1個          | あり     | /^a*b$/
-// Type 2 (CFG)  | + スタック          | あり     | JSON.parse()
-// Type 1 (CSG)  | + 入力長ぶんの配列   | あり     | TypeScript 型チェック
-// Type 0 (句構造) | 制限なし           | なし     | 停止問題
+// Type 1 (a^n b^n c^n) は入力を1回なめるだけで必ず終わる
+// Type 0 (コラッツ) は入力によっては永遠に終わらないかもしれない
+//
+// この「必ず止まるか、止まらないかもしれないか」が境界線
+// Type 1 以下: 必ず停止する
+// Type 0:      停止しないかもしれない
 ```
