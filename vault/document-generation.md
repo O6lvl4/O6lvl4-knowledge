@@ -103,6 +103,6 @@ flowchart TB
 
 ## 関連
 
+- [[css-paged-media|CSS Paged Media]] — 印刷レイアウトのための CSS 仕様
 - [[prince|Prince]] — 最高品質の HTML → PDF 変換エンジン
-- [[creative-commons|Creative Commons]] — 生成した書面のライセンス
 - [[vn3-license|VN3 ライセンス]] — 利用規約の自動生成という関連分野
