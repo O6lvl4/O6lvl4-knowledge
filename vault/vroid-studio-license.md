@@ -8,7 +8,7 @@ tags: [vtuber, 3d, license, pixiv]
 ## 定数と変数 — 何が動かなくて、何が変わりうるか
 
 ```mermaid
-flowchart LR
+flowchart TB
     subgraph const["定数 - 動かない"]
         C1["モデルの権利はあなたのもの"]
         C2["書き出し済み .vrm は遡って禁止できない"]
@@ -25,7 +25,7 @@ flowchart LR
         T2["VRoid Hub モデルの利用条件"]
     end
 
-    const --- var --- third
+    const --> var --> third
 ```
 
 | 区分 | 内容 | なぜ動かない / 動く |
