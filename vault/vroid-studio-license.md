@@ -92,3 +92,6 @@ VTuber 配信、ゲームに組み込む、グッズにする、VRM を販売す
 - [[vroid-studio|VRoid Studio]] — ツール本体
 - [[vroid-hub|VRoid Hub]] — 他人のモデルはここの利用条件に従う
 - [[vrm|VRM]] — VRoid が出力するフォーマット
+- [[copyright-law|著作権法]] — 権利の法的根拠
+- [[creative-commons|Creative Commons]] — CC0 との比較の前提知識
+- [[good-faith-principle|信義則]] — 遡及的な規約変更が困難な法的根拠
