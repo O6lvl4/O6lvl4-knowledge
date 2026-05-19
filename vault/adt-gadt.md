@@ -79,3 +79,4 @@ function evalExpr(e: Expr2): number | string {
 
 - [[functional-programming|関数型言語]] — ADT は関数型の基本的な型定義方法
 - [[phantom-type|幽霊型]] — GADT の簡易版として使えるテクニック
+- [[duality|双対]] — 直積型と直和型は双対の関係

@@ -95,3 +95,4 @@ async function getUserPosts(id: string) {
 - [[algebraic-effects|Algebraic Effects]] — Monad の「色付き関数」問題を解決する別のアプローチ
 - [[continuation|継続 / 限定継続]] — Cont Monad は継続を Monad で扱う
 - [[pure-functional-programming|純粋関数型言語]] — Haskell は IO Monad で副作用を管理
+- [[duality|双対]] — Iterator（pull）と Observer（push）の双対性

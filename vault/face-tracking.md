@@ -139,3 +139,10 @@ VTuber アプリは **トラッキング部分を内製するか外部 SDK（ARK
 - [MediaPipe Face Landmarker](https://developers.google.com/mediapipe/solutions/vision/face_landmarker)
 - [OpenSeeFace (VSeeFace の中核)](https://github.com/emilianavt/OpenSeeFace)
 - [ARKit Blendshapes 一覧](https://developer.apple.com/documentation/arkit/arfaceanchor/blendshapelocation)
+
+## 関連
+
+- [[3tene]] — フェイストラッキングでアバターを駆動する VTuber アプリ
+- [[vrm|VRM]] — ARKit Blendshapes を表情定義に採用した 3D アバター規格
+- [[live2d|Live2D]] — 2D キャラクターのフェイストラッキング駆動
+- [[obs|OBS Studio]] — トラッキング済みアバターを配信に合成する出口

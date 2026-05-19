@@ -122,3 +122,10 @@ flowchart LR
 - [glTF 2.0 仕様](https://registry.khronos.org/glTF/specs/2.0/glTF-2.0.html)
 - [Khronos glTF 拡張一覧](https://github.com/KhronosGroup/glTF/tree/main/extensions)
 - [glTF サンプルモデル集](https://github.com/KhronosGroup/glTF-Sample-Models)
+
+## 関連
+
+- [[vrm|VRM]] — glTF 2.0 + VRMC 拡張によるヒューマノイドアバター規格
+- [[nendo]] — Almide で glTF/VRM をパース・レンダリングするプロジェクト
+- [[fbx|FBX]] — DCC ツール間の交換フォーマット。glTF はランタイム配信向け
+- [[blender|Blender]] — glTF インポート/エクスポートに対応

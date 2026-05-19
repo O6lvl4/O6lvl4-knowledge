@@ -238,3 +238,9 @@ Almide Doctrine は逆だ。Almide はまだ若く、批判はこれから来る
 - [almide-dojo（MSR 測定タスクバンク）](https://github.com/almide/almide-dojo)
 - [Almide Playground（ブラウザ実行）](https://almide.github.io/playground/)
 - [The Rails Doctrine（参照元）](https://rubyonrails.org/doctrine)
+
+## 関連
+
+- [[almide|Almide]] — このドクトリンに基づいて設計された言語
+- [[almide-dojo]] — MSR を日次測定するベンチマーク
+- [[the-rails-doctrine|The Rails Doctrine]] — 参照元。人間プログラマの幸福 vs LLM + Vibe Coder の幸福

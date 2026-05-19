@@ -257,3 +257,9 @@ Web 2.0 という呼称自体は 2010 年代に入って使われなくなった
 - [Heroku 創業エピソード（James Lindenbaum）](https://blog.heroku.com/the-history-of-heroku)
 - [Y Combinator History](https://www.ycombinator.com/about)
 - [TIOBE Index（言語人気ランキング）](https://www.tiobe.com/tiobe-index/)
+
+## 関連
+
+- [[rails|Rails]] — Web 2.0 の技術的体現
+- [[ruby|Ruby]] — Rails のランタイム
+- [[convention-over-configuration|CoC]] — Web 2.0 時代に広まった設計原則
