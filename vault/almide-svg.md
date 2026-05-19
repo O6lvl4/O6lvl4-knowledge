@@ -5,6 +5,10 @@ tags: [almide, stdlib, graphics]
 
 SVG ドキュメント生成ライブラリ。[[almide|Almide]] で純粋実装。
 
+## SVG とは
+
+Scalable Vector Graphics。XML ベースのベクター画像フォーマット。ブラウザでネイティブ描画でき、拡大しても劣化しない。アイコン、チャート、ダイアグラムなどに使われる。
+
 ## 要素
 
 rect, circle, ellipse, line, polygon, path, text, group
@@ -15,7 +19,7 @@ fill, stroke, opacity, transform, font
 
 ## パスビルダー
 
-`svg.path` でパスコマンド（M, L, C, A, Z 等）をビルダーパターンで構築。
+`svg.path` でパスコマンド（M: 移動, L: 直線, C: ベジェ曲線, A: 円弧, Z: 閉じる）をビルダーパターンで構築。
 
 ## 関連
 
