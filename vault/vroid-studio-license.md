@@ -231,9 +231,14 @@ flowchart LR
         U5[VRM を販売する]
     end
 
-    subgraph ng["NG - モデルを生成するツールを配る"]
+    subgraph ng["NG - VRoid のアセットを流用したツールを配る"]
         direction TB
-        N1[VRoid のアセットを<br/>組み込んだ<br/>キャラクタークリエイターを<br/>公開する]
+        N1[VRoid Studio のメッシュや<br/>テクスチャを組み込んだ<br/>キャラクタークリエイターを<br/>公開する]
+    end
+
+    subgraph notrelated["この制限と無関係"]
+        direction TB
+        NR1[自作アセットで VRM を出力する<br/>独自サービス]
     end
 
     subgraph exc["例外"]
@@ -255,6 +260,8 @@ VRoid Studio ガイドラインの原文:
 - **メッシュ** — 3D モデルの形状データ（ポリゴンの集まり）
 - **テクスチャ** — 3D モデルの表面に貼る画像（肌の色、服の模様など）
 - **変形または組み合わせ** — VRoid Studio 内でスライダー調整やパーツ選択をして作ったもの
+
+**これは VRoid Studio のアセットを使った場合だけの制限。** 自分でゼロからメッシュやテクスチャを作って VRM を出力する独自サービスを開発するのは、VRoid Studio のガイドラインとは無関係で何の問題もない。VRM はオープンなフォーマットであり、pixiv の許可は不要。
 
 また、利用規約 第5条第6項で VRoid Studio 自体の商用利用・二次利用は原則禁止されているが、「出力物の制作（Production of Output Items = VRoid Studio を使ってモデルを作ること）」は明示的に例外として許可されている。
 
