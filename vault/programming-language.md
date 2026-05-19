@@ -12,6 +12,9 @@ tags: [computer-science, language]
 - [[almide|Almide]] — LLM コード生成に最適化。Rust/WASM にコンパイル
 - [[ruby|Ruby]] — プログラマの幸福を一次価値にした動的型付け言語
 - [[lisp|LISP]] — コード = データ。1958年生まれ
+- [[forth|Forth]] — [[stack-oriented-programming|スタック指向]]の元祖。1970年
+- [[mind|Mind]] — 日本語 × スタック指向
+- [[nadesiko|なでしこ]] — 日本語 × 手続き型
 
 ## 関連
 

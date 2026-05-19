@@ -65,5 +65,6 @@ TAPL で扱われるトピックの多くがこの knowledge base にある:
 - [[inference-rules|推論規則]] — 型システムの定義方法
 - [[curry-howard|カリー=ハワード同型対応]] — 型と論理の対応
 - [[adt-gadt|ADT / GADT]] — 代数的データ型
+- [[intuitionistic-logic|直観主義論理]] — 型と論理の対応の論理側
 - [[dependent-type|依存型]] — TAPL の先にある話題
 - [[refinement-type|篩型]] — TAPL の先にある話題

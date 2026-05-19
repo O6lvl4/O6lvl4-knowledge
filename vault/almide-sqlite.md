@@ -16,3 +16,7 @@ tags: [almide, database]
 ## デフォルト設定
 
 WAL モードと外部キーが自動で有効化される。
+
+## 関連
+
+- [[almide|Almide]] — 言語本体

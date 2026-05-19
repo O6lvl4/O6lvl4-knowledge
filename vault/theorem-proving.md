@@ -37,7 +37,7 @@ function reverse<T>(arr: T[]): T[] {
 
 ## 定理証明系の例
 
-```
+```coq
 -- Coq (Gallina) での証明の雰囲気:
 Theorem rev_involutive : forall (A : Type) (l : list A),
   rev (rev l) = l.

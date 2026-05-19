@@ -16,3 +16,8 @@ fill, stroke, opacity, transform, font
 ## パスビルダー
 
 `svg.path` でパスコマンド（M, L, C, A, Z 等）をビルダーパターンで構築。
+
+## 関連
+
+- [[almide|Almide]] — 言語本体
+- [[lumen]] — グラフィックス数学ライブラリ

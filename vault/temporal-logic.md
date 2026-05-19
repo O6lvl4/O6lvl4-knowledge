@@ -64,18 +64,47 @@ function checkUntil(p: boolean[], q: boolean[]): boolean {
 // CTL = 非決定性がある場合に「すべての可能性で」or「ある可能性で」を区別
 ```
 
+## プログラマが知っている時相論理
+
+```ts
+// 実はプログラマは日常的に時相論理的な性質を扱っている:
+
+// □ (Always) = ループ不変条件
+while (queue.length > 0) {
+  // ここでは常に queue.length > 0 が成り立つ
+  const item = queue.shift()!;
+  process(item);
+}
+
+// ◇ (Eventually) = Promise の resolve
+const data = await fetch("/api"); // いつか結果が返る
+
+// U (Until) = イベントリスナの解除待ち
+element.addEventListener("click", handler);
+// handler が呼ばれるまでリスナがアクティブ
+
+// □(A → ◇B) = リトライロジック
+// 「常に、失敗したらいつかリトライが成功する」
+async function withRetry(fn: () => Promise<void>) {
+  while (true) {
+    try { await fn(); return; }
+    catch { await sleep(1000); }
+  }
+}
+```
+
 ## 実用例
 
 ```ts
 // TLA+ での仕様記述（Amazon が使っている）
 // 「メッセージは送信されたら、いつか配信される」
-// Spec == □(sent(m) => ◇delivered(m))
+// □(sent(m) → ◇delivered(m))
 
 // 「2つのプロセスが同時にクリティカルセクションに入らない」
-// Safety == □¬(inCS(p1) ∧ inCS(p2))
+// □¬(inCS(p1) ∧ inCS(p2))
 
 // 「待っているプロセスはいつかクリティカルセクションに入れる」
-// Liveness == □(waiting(p) => ◇inCS(p))
+// □(waiting(p) → ◇inCS(p))
 ```
 
 ## 関連

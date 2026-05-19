@@ -1,5 +1,5 @@
 ---
-title: playground
+title: almide-playground
 tags: [almide, wasm, browser]
 ---
 
@@ -15,3 +15,8 @@ Almide コンパイラ自体を WASM にコンパイルし、ブラウザ上で 
 - AST 表示
 - コンパイル済み JS 表示
 - GitHub Pages でホスティング
+
+## 関連
+
+- [[almide|Almide]] — 言語本体
+- [[almide-docs|docs]] — ドキュメンテーションサイト
