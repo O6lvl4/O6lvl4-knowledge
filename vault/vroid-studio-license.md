@@ -8,27 +8,24 @@ tags: [vtuber, 3d, license, pixiv]
 ## 定数と変数 — 何が動かなくて、何が変わりうるか
 
 ```mermaid
-flowchart TB
+flowchart LR
     subgraph const["定数 - 動かない"]
-        direction TB
-        C1["あなたが作ったモデルの権利はあなたのもの<br/>（利用規約 第9条）"]
-        C2["既に書き出した .vrm を遡って禁止できない<br/>（民法 信義則）"]
-        C3["著作権は作った瞬間に自動発生<br/>届出不要（著作権法）"]
-        C4["CC0 で放棄された権利は取り消せない<br/>（CC0 の法的性質）"]
+        C1["モデルの権利はあなたのもの"]
+        C2["書き出し済み .vrm は遡って禁止できない"]
+        C3["著作権は自動発生"]
     end
 
-    subgraph var["変数 - pixiv の判断で変わりうる"]
-        direction TB
-        V1["プリセット素材の利用条件<br/>（ガイドラインで規定。現時点は商用OK）"]
-        V2["今後追加されるプリセットの<br/>ライセンス表示"]
-        V3["競合アプリ禁止の範囲や<br/>個別ライセンスの条件"]
+    subgraph var["変数 - pixiv 次第"]
+        V1["プリセット素材の利用条件"]
+        V2["今後のライセンス表示"]
     end
 
     subgraph third["変数 - 第三者次第"]
-        direction TB
-        T1["BOOTH 等で買った素材のライセンス<br/>（素材ごとに違う）"]
-        T2["VRoid Hub 上のモデルの利用条件<br/>（作者が設定）"]
+        T1["BOOTH 素材のライセンス"]
+        T2["VRoid Hub モデルの利用条件"]
     end
+
+    const --- var --- third
 ```
 
 | 区分 | 内容 | なぜ動かない / 動く |
