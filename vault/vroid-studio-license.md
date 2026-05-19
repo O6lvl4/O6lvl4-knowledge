@@ -156,9 +156,43 @@ flowchart TB
 - **既に書き出した .vrm** に対して遡って制限をかけることは[[good-faith-principle|信義則]]上できない
 - 変わりうるのは「今後新しく作るモデル」に適用される条件だけ
 
+## 関わるライセンス一覧
+
+VRoid Studio で作ったキャラに関わるライセンスは全部で4種類。
+
+| ライセンス | 何を守っている | 種類 | 誰が決めた | どこに書いてある |
+|---|---|---|---|---|
+| [[copyright-law\|著作権法]] | あなたが作ったもの全般 | 法律（自動発生） | 日本国 | 法律そのもの |
+| [VRoid Studio 利用規約](https://store.steampowered.com/eula/1486350_eula_0) 第9条 | 完成した .vrm モデルの権利帰属 | 契約 | pixiv | 利用規約 |
+| [VRoid Studio ガイドライン](https://vroid.com/en/studio/guidelines) | プリセット素材の利用条件 | 使用許諾 | pixiv | ガイドライン |
+| 各素材の個別ライセンス | BOOTH 等で買った素材 | 素材ごとに異なる | 各素材の作者 | 素材の販売ページ |
+
+```mermaid
+flowchart TB
+    subgraph law["著作権法（自動・不変）"]
+        L1[あなたが作ったものは<br/>あなたのもの]
+    end
+
+    subgraph contract["VRoid Studio 利用規約 第9条（契約・不変）"]
+        C1[VRoid で作った .vrm の<br/>知的財産権はユーザーに帰属]
+    end
+
+    subgraph guideline["VRoid Studio ガイドライン（使用許諾・変わりうる）"]
+        G1[プリセット素材は<br/>商用OK・販売OK・改変OK]
+    end
+
+    subgraph each["各素材の個別ライセンス（素材ごと・要確認）"]
+        E1[BOOTH 素材は<br/>販売ページを確認]
+    end
+
+    law --> contract --> guideline --> each
+```
+
+上から順に強い。著作権法と利用規約は動かない。ガイドラインは pixiv が変えられる（ただし遡及はできない）。BOOTH 素材は毎回確認。
+
 ## CC0 との違い
 
-上の「pixiv のもの」がなぜ CC0 ではないのかという話。フリー素材には「権利放棄」と「使用許諾」の2種類がある。VRoid のプリセットは後者。
+上のガイドライン（使用許諾）がなぜ CC0 ではないのかという話。フリー素材には「権利放棄」と「使用許諾」の2種類がある。VRoid のプリセットは後者。
 
 ```mermaid
 flowchart LR
