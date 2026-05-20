@@ -77,6 +77,8 @@ function evalExpr(e: Expr2): number | string {
 
 ## 関連
 
+- [[enum|列挙型]] — 直和型の各言語での実装形態（C enum → tagged union）
+- [[union-type|共用型 / Union 型]] — C union / TypeScript union / tagged union の関係
 - [[functional-programming|関数型言語]] — ADT は関数型の基本的な型定義方法
 - [[phantom-type|幽霊型]] — GADT の簡易版として使えるテクニック
 - [[duality|双対]] — 直積型と直和型は双対の関係

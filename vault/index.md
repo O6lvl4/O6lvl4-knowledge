@@ -162,6 +162,8 @@ O6lvl4 Knowledge の knowledge base。
 ### type-theory
 
 - [[adt-gadt]] - ADT / GADT
+- [[enum]] - 列挙型 (Enum)
+- [[union-type]] - 共用型 / Union 型
 - [[tapl]] - TAPL
 - [[curry-howard]] - カリー=ハワード同型対応
 - [[dependent-type]] - 依存型
