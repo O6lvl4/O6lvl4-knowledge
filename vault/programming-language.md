@@ -10,6 +10,7 @@ tags: [computer-science, language]
 ## このナレッジベースにある言語
 
 - [[almide|Almide]] — LLM コード生成に最適化。Rust/WASM にコンパイル
+- [[rust|Rust]] — 所有権システムで GC なしメモリ安全。システムプログラミング
 - [[ruby|Ruby]] — プログラマの幸福を一次価値にした動的型付け言語
 - [[lisp|LISP]] — コード = データ。1958年生まれ
 - [[forth|Forth]] — [[stack-oriented-programming|スタック指向]]の元祖。1970年
