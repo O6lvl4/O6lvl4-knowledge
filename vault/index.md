@@ -21,11 +21,14 @@ O6lvl4 Knowledge の knowledge base。
 - [[almai]] - almai
 - [[almide-agent-framework]] - Almide Agent Framework — 抽象スケッチ (仮)
 - [[almide-bindgen]] - almide-bindgen
+- [[almide-compiler-errors]] - Almide コンパイラエラー体験
 - [[almide-dojo]] - almide-dojo
 - [[almide-grammar]] - almide-grammar
 - [[almide-js]] - almide-js
 - [[almide-lander]] - almide-lander
+- [[almide-lsp]] - almide-lsp
 - [[almide-playground]] - almide-playground
+- [[almide-repl]] - almide-repl
 - [[almide-sqlite]] - almide-sqlite
 - [[almide-wasm-bindgen]] - almide-wasm-bindgen
 - [[almide-web]] - almide-web

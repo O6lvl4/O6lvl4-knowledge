@@ -87,17 +87,19 @@ Lexer → Parser → AST → Type Checker → Lowering → IR
 
 ## Toolchain
 
+- `almide` — [[almide-repl|REPL]]（引数なしで起動）
 - `almide run file.almd` — コンパイル + 実行
 - `almide build` — ネイティブバイナリ生成
 - `almide build --target wasm` — WebAssembly 出力
 - `almide test` — テスト実行
 - `almide fmt` — フォーマッタ
+- `almide lsp` — [[almide-lsp|LSP サーバー]]
 
 ## Ecosystem
 
 ### almide org
 
-**コンパイラツール**: [[almide-grammar]], [[tree-sitter-almide]], [[vscode-almide]]
+**コンパイラツール**: [[almide-grammar]], [[tree-sitter-almide]], [[vscode-almide]], [[almide-lsp]], [[almide-repl]], [[almide-compiler-errors]]
 **多言語エクスポート**: [[almide-lander]], [[almide-bindgen]], [[almide-wasm-bindgen]]
 **ベンチ/ドキュメント**: [[almide-dojo]], [[almide-docs]], [[almide-playground]], [[almide-js]]
 **セキュリティ**: [[porta]]
