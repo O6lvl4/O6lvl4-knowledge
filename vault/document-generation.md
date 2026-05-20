@@ -70,6 +70,7 @@ flowchart LR
 flowchart TB
     subgraph oss["OSS（無料）"]
         direction TB
+        PA["Pagina<br/>Rust / Servo ベース<br/>CSS Paged Media 対応"]
         PJ["Paged.js<br/>JS / ブラウザ上で組版"]
         VS["Vivliostyle<br/>JS / 日本語組版に強い"]
         WP["WeasyPrint<br/>Python / サーバーサイド向き"]
@@ -86,6 +87,7 @@ flowchart TB
 | エンジン | 言語 | CSS Paged Media | 向いている用途 |
 |---|---|---|---|
 | [[prince\|Prince]] | CLI | ほぼフル対応 | 高品質な出版物 |
+| [[pagina\|Pagina]] | Rust (CLI) | コア機能対応 | 高速・OSS での本格組版 |
 | Paged.js | JS (CDN) | 部分的 | フロントエンドでプレビュー+印刷 |
 | Vivliostyle | JS (CLI) | 部分的 | 日本語の書籍組版 |
 | WeasyPrint | Python | 部分的 | サーバーサイドの帳票生成 |
