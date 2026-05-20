@@ -41,7 +41,7 @@ LLM が構文・意味・修復戦略で分岐する回数を最小化する。
 
 ```almd
 fn greet(name: String) -> String =
-  "Hello, " ++ name ++ "!"
+  "Hello, " + name + "!"
 
 type Shape =
   | Circle(Float)
