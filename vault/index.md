@@ -176,6 +176,7 @@ O6lvl4 Knowledge の knowledge base。
 - [[3tene]] - 3tene
 - [[aivishub]] - AivisHub
 - [[style-bert-vits2]] - Style-Bert-VITS2
+- [[voice-cloning]] - 音声クローン
 - [[voicevox]] - VOICEVOX
 - [[vroid-hub]] - VRoid Hub
 - [[vroid-studio]] - VRoid Studio
