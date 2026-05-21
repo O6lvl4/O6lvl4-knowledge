@@ -52,6 +52,10 @@ O6lvl4 Knowledge の knowledge base。
 - [[vscode-almide]] - vscode-almide
 - [[almide-yaml]] - yaml (Almide)
 
+### cryptography
+
+- [[nist-test-vectors]] - NIST テストベクタ
+
 ### computer-science
 
 - [[copy-on-write]] - Copy-on-Write (COW)
