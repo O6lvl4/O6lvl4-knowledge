@@ -22,6 +22,7 @@ O6lvl4 Knowledge の knowledge base。
 - [[almide-agent-framework]] - Almide Agent Framework — 抽象スケッチ (仮)
 - [[almide-bindgen]] - almide-bindgen
 - [[almide-compiler-errors]] - Almide コンパイラエラー体験
+- [[almide-v0.20-issues]] - Almide v0.20.0 既知問題
 - [[almide-dojo]] - almide-dojo
 - [[almide-grammar]] - almide-grammar
 - [[almide-js]] - almide-js
