@@ -91,6 +91,7 @@ O6lvl4 Knowledge の knowledge base。
 - [[v8-isolates]] - V8 Isolates
 - [[wasm-at-the-edge]] - WASM at the Edge
 - [[edge-platforms]] - Edge プラットフォーム比較
+- [[edge-data]] - Edge データストア
 
 ### formal-language
 
