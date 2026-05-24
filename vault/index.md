@@ -13,6 +13,10 @@ O6lvl4 Knowledge の knowledge base。
 
 - [[character-creator]] - キャラクタークリエイター
 
+### aituber
+
+- [[aituber-cost]] - AITuber 配信コスト構造
+
 ### almide
 
 - [[agent-framework-scope]] - Agent Framework — スコープ概念設計 (仮)
@@ -20,9 +24,8 @@ O6lvl4 Knowledge の knowledge base。
 - [[aitube-studio]] - AITubeStudio (仮)
 - [[almai]] - almai
 - [[almide-agent-framework]] - Almide Agent Framework — 抽象スケッチ (仮)
-- [[almide-bindgen]] - almide-bindgen
 - [[almide-compiler-errors]] - Almide コンパイラエラー体験
-- [[almide-v0.20-issues]] - Almide v0.20.0 既知問題
+- [[almide-bindgen]] - almide-bindgen
 - [[almide-dojo]] - almide-dojo
 - [[almide-grammar]] - almide-grammar
 - [[almide-js]] - almide-js
@@ -53,43 +56,38 @@ O6lvl4 Knowledge の knowledge base。
 - [[vscode-almide]] - vscode-almide
 - [[almide-yaml]] - yaml (Almide)
 
-### cryptography
-
-- [[nist-test-vectors]] - NIST テストベクタ
-
 ### computer-science
 
 - [[copy-on-write]] - Copy-on-Write (COW)
 - [[dead-code-elimination]] - Dead Code Elimination (DCE)
 - [[fifo-lifo]] - FIFO / LIFO
-- [[programming-language]] - プログラミング言語
-- [[swiss-table]] - SwissTable
-- [[work-stealing]] - Work-Stealing
-- [[duality]] - 双対
-
-### wasm
-
-- [[wasm-simd]] - WebAssembly SIMD
 - [[relaxed-simd]] - Relaxed SIMD
-
-### edge-computing
-
-- [[edge-computing]] - Edge Computing
+- [[swiss-table]] - SwissTable
+- [[wasm-simd]] - WebAssembly SIMD
+- [[work-stealing]] - Work-Stealing
+- [[programming-language]] - プログラミング言語
+- [[duality]] - 双対
 
 ### concept
 
 - [[face-tracking]] - フェイストラッキング
 
-### document-generation
+### cryptography
 
-- [[document-generation]] - 書面の自動生成
+- [[nist-test-vectors]] - NIST テストベクタ
+
+### css
+
 - [[css-paged-media]] - CSS Paged Media
-- [[prince]] - Prince
-- [[pagina]] - Pagina
 
 ### design-principle
 
 - [[convention-over-configuration]] - Convention over Configuration
+
+### edge-computing
+
+- [[edge-computing]] - Edge Computing
+- [[edge-vs-cloud-vs-onprem]] - Edge vs Cloud vs On-premise
 
 ### formal-language
 
@@ -129,11 +127,6 @@ O6lvl4 Knowledge の knowledge base。
 
 - [[gpu]] - GPU
 
-### crate
-
-- [[hashbrown]] - hashbrown
-- [[rayon]] - rayon
-
 ### language
 
 - [[almide]] - Almide
@@ -157,6 +150,12 @@ O6lvl4 Knowledge の knowledge base。
 
 - [[intuitionistic-logic]] - 直観主義論理
 
+### pdf
+
+- [[pagina]] - Pagina
+- [[prince]] - Prince
+- [[document-generation]] - 書面の自動生成
+
 ### programming-paradigm
 
 - [[algebraic-effects]] - Algebraic Effects
@@ -173,23 +172,34 @@ O6lvl4 Knowledge の knowledge base。
 
 - [[the-rails-doctrine]] - The Rails Doctrine
 
+### rust
+
+- [[axum]] - axum
+- [[hashbrown]] - hashbrown
+- [[rayon]] - rayon
+
 ### streaming
 
-- [[aituber-cost]] - AITuber 配信コスト構造
+- [[obs-libobs]] - libobs
 - [[obs]] - OBS Studio
 - [[obs-studio-architecture]] - OBS Studio アーキテクチャ
-- [[obs-libobs]] - libobs
 - [[obs-plugin-system]] - OBS Studio プラグインシステム
 - [[streaming-software]] - 配信ソフトウェア
+
+### tts
+
+- [[aivishub]] - AivisHub
+- [[style-bert-vits2]] - Style-Bert-VITS2
+- [[voice-cloning]] - 音声クローン
 
 ### type-theory
 
 - [[adt-gadt]] - ADT / GADT
-- [[enum]] - 列挙型 (Enum)
-- [[union-type]] - 共用型 / Union 型
 - [[tapl]] - TAPL
 - [[curry-howard]] - カリー=ハワード同型対応
 - [[dependent-type]] - 依存型
+- [[union-type]] - 共用型 / Union 型
+- [[enum]] - 列挙型 (Enum)
 - [[phantom-type]] - 幽霊型
 - [[inference-rules]] - 推論規則
 - [[refinement-type]] - 篩型
@@ -197,9 +207,6 @@ O6lvl4 Knowledge の knowledge base。
 ### vtuber
 
 - [[3tene]] - 3tene
-- [[aivishub]] - AivisHub
-- [[style-bert-vits2]] - Style-Bert-VITS2
-- [[voice-cloning]] - 音声クローン
 - [[voicevox]] - VOICEVOX
 - [[vroid-hub]] - VRoid Hub
 - [[vroid-studio]] - VRoid Studio
@@ -207,7 +214,6 @@ O6lvl4 Knowledge の knowledge base。
 
 ### web-framework
 
-- [[axum]] - axum
 - [[rails]] - Ruby on Rails
 
 ### web-history
