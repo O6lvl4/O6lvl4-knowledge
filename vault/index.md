@@ -93,6 +93,7 @@ O6lvl4 Knowledge の knowledge base。
 - [[edge-platforms]] - Edge プラットフォーム比較
 - [[edge-data]] - Edge データストア
 - [[anycast-cdn]] - Anycast / CDN
+- [[wasi]] - WASI
 
 ### formal-language
 
