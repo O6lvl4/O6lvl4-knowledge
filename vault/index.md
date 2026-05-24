@@ -65,6 +65,7 @@ O6lvl4 Knowledge の knowledge base。
 - [[relaxed-simd]] - Relaxed SIMD
 - [[swiss-table]] - SwissTable
 - [[wasm-simd]] - WebAssembly SIMD
+- [[region-inference]] - Region Inference
 - [[work-stealing]] - Work-Stealing
 - [[programming-language]] - プログラミング言語
 - [[duality]] - 双対
