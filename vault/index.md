@@ -95,6 +95,7 @@ O6lvl4 Knowledge の knowledge base。
 - [[edge-data]] - Edge データストア
 - [[anycast-cdn]] - Anycast / CDN
 - [[edge-design-patterns]] - Edge 設計パターン
+- [[edge-security]] - Edge Security
 - [[wasi]] - WASI
 - [[wintertc]] - WinterTC
 
