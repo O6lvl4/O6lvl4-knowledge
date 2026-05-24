@@ -231,3 +231,4 @@ pos = H1(hash) & bucket_mask
 ## 関連
 
 - [[hashbrown]] — SwissTable の Rust 実装。Rust 標準ライブラリの HashMap バックエンド
+- [[wasm-simd]] — WASM 環境では bitmask の非対称性により hashbrown は SIMD 不使用 (ポータブル fallback)

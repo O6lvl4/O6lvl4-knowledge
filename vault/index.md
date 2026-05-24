@@ -66,6 +66,11 @@ O6lvl4 Knowledge の knowledge base。
 - [[work-stealing]] - Work-Stealing
 - [[duality]] - 双対
 
+### wasm
+
+- [[wasm-simd]] - WebAssembly SIMD
+- [[relaxed-simd]] - Relaxed SIMD
+
 ### concept
 
 - [[face-tracking]] - フェイストラッキング
