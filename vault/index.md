@@ -72,6 +72,10 @@ O6lvl4 Knowledge の knowledge base。
 - [[wasm-simd]] - WebAssembly SIMD
 - [[relaxed-simd]] - Relaxed SIMD
 
+### edge-computing
+
+- [[edge-computing]] - Edge Computing
+
 ### concept
 
 - [[face-tracking]] - フェイストラッキング
