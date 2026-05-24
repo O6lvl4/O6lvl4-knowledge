@@ -60,6 +60,7 @@ O6lvl4 Knowledge の knowledge base。
 ### computer-science
 
 - [[copy-on-write]] - Copy-on-Write (COW)
+- [[fifo-lifo]] - FIFO / LIFO
 - [[programming-language]] - プログラミング言語
 - [[swiss-table]] - SwissTable
 - [[work-stealing]] - Work-Stealing
