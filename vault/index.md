@@ -98,6 +98,7 @@ O6lvl4 Knowledge の knowledge base。
 - [[edge-security]] - Edge Security
 - [[wasi]] - WASI
 - [[wintertc]] - WinterTC
+- [[quic-http3]] - QUIC / HTTP/3
 
 ### formal-language
 

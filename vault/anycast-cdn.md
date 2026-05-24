@@ -204,3 +204,4 @@ graph TB
 - [[edge-computing]] — Anycast / CDN が Edge の「近さ」を実現する基盤技術
 - [[edge-platforms]] — Cloudflare, Fastly, Deno 各プラットフォームの Anycast 活用
 - [[edge-data]] — CDN キャッシュと Edge データストアの使い分け
+- [[quic-http3]] — QUIC の Connection ID が TCP + Anycast の経路変更問題を構造的に解決
