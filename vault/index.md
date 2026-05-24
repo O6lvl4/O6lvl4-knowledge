@@ -60,15 +60,15 @@ O6lvl4 Knowledge の knowledge base。
 
 - [[copy-on-write]] - Copy-on-Write (COW)
 - [[dead-code-elimination]] - Dead Code Elimination (DCE)
-- [[distributed-consistency]] - 分散システムの一貫性 — CAP定理, CRDT, 一貫性モデル
 - [[fifo-lifo]] - FIFO / LIFO
+- [[perceus]] - Perceus
+- [[region-inference]] - Region Inference
 - [[relaxed-simd]] - Relaxed SIMD
 - [[swiss-table]] - SwissTable
 - [[wasm-simd]] - WebAssembly SIMD
-- [[perceus]] - Perceus
-- [[region-inference]] - Region Inference
 - [[work-stealing]] - Work-Stealing
 - [[programming-language]] - プログラミング言語
+- [[distributed-consistency]] - 分散システムの一貫性 — CAP定理, CRDT, 一貫性モデル
 - [[duality]] - 双対
 
 ### concept
@@ -89,20 +89,18 @@ O6lvl4 Knowledge の knowledge base。
 
 ### edge-computing
 
-- [[edge-computing]] - Edge Computing
-- [[edge-vs-cloud-vs-onprem]] - Edge vs Cloud vs On-premise
-- [[v8-isolates]] - V8 Isolates
-- [[wasm-at-the-edge]] - WASM at the Edge
-- [[edge-platforms]] - Edge プラットフォーム比較
-- [[edge-data]] - Edge データストア
+- [[edge-wasm-landscape]] - Edge / WebAssembly ランドスケープ
 - [[anycast-cdn]] - Anycast / CDN
-- [[edge-design-patterns]] - Edge 設計パターン
+- [[edge-computing]] - Edge Computing
+- [[edge-design-patterns]] - Edge Computing 実務設計パターン
 - [[edge-security]] - Edge Security
+- [[edge-vs-cloud-vs-onprem]] - Edge vs Cloud vs On-premise
+- [[edge-data]] - Edge データストア
+- [[edge-platforms]] - Edge プラットフォーム比較
+- [[v8-isolates]] - V8 Isolates
 - [[wasi]] - WASI
+- [[wasm-at-the-edge]] - WASM at the Edge
 - [[wintertc]] - WinterTC
-- [[quic-http3]] - QUIC / HTTP/3
-- [[bytecode-alliance]] - Bytecode Alliance
-- [[component-model]] - Component Model
 
 ### formal-language
 
@@ -165,6 +163,10 @@ O6lvl4 Knowledge の knowledge base。
 
 - [[intuitionistic-logic]] - 直観主義論理
 
+### networking
+
+- [[quic-http3]] - QUIC / HTTP/3
+
 ### pdf
 
 - [[pagina]] - Pagina
@@ -192,7 +194,6 @@ O6lvl4 Knowledge の knowledge base。
 - [[axum]] - axum
 - [[hashbrown]] - hashbrown
 - [[rayon]] - rayon
-- [[wasmtime]] - Wasmtime
 
 ### streaming
 
@@ -235,3 +236,9 @@ O6lvl4 Knowledge の knowledge base。
 ### web-history
 
 - [[web2.0]] - Web 2.0
+
+### webassembly
+
+- [[bytecode-alliance]] - Bytecode Alliance
+- [[component-model]] - Component Model
+- [[wasmtime]] - Wasmtime
