@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import { execSync } from 'node:child_process';
+import { resolve } from 'node:path';
 import Base from '@o6lvl4/graph-garden/layouts/Base.astro';
 import { slugify } from '@o6lvl4/graph-garden';
 
@@ -9,19 +10,31 @@ const notes = allNotes.filter(
   (n) => n.id !== 'index' && n.id !== 'dashboard' && n.data.public !== false
 );
 
-const vaultDir = new URL('../../vault/', import.meta.url).pathname;
+// repo root から git log で全ファイルの最終コミット日時を一括取得
+const repoRoot = resolve(process.cwd(), '..');
 const gitTimestamps = new Map<string, string>();
-for (const note of notes) {
-  try {
-    const ts = execSync(
-      `git log -1 --format=%cI -- "${vaultDir}${note.id}.md"`,
-      { encoding: 'utf-8', cwd: vaultDir }
-    ).trim();
-    if (ts) gitTimestamps.set(note.id, ts);
-  } catch { /* ignore */ }
-}
+try {
+  const raw = execSync(
+    `git log --format="%cI" --name-only --diff-filter=ACMR -- vault/`,
+    { encoding: 'utf-8', cwd: repoRoot, maxBuffer: 10 * 1024 * 1024 }
+  );
+  // パース: コミット日時行とファイル名行が交互に出る
+  let currentTs = '';
+  for (const line of raw.split('\n')) {
+    const trimmed = line.trim();
+    if (!trimmed) continue;
+    if (trimmed.startsWith('20')) {
+      // ISO 日時 (2026-...)
+      currentTs = trimmed;
+    } else if (trimmed.startsWith('vault/') && trimmed.endsWith('.md')) {
+      const id = trimmed.replace('vault/', '').replace('.md', '');
+      if (!gitTimestamps.has(id)) {
+        gitTimestamps.set(id, currentTs);
+      }
+    }
+  }
+} catch { /* ignore */ }
 
-// デフォルト: 最新順 (desc)
 const sorted = notes.sort((a, b) => {
   const da = gitTimestamps.get(a.id) || '';
   const db = gitTimestamps.get(b.id) || '';
