@@ -60,6 +60,7 @@ O6lvl4 Knowledge の knowledge base。
 
 - [[copy-on-write]] - Copy-on-Write (COW)
 - [[dead-code-elimination]] - Dead Code Elimination (DCE)
+- [[distributed-consistency]] - 分散システムの一貫性 — CAP定理, CRDT, 一貫性モデル
 - [[fifo-lifo]] - FIFO / LIFO
 - [[relaxed-simd]] - Relaxed SIMD
 - [[swiss-table]] - SwissTable
