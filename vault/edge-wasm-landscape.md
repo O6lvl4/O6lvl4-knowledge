@@ -57,38 +57,51 @@ graph TB
 
 ## レイヤー構成
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│                     アプリケーション層                         │
-│  [[edge-design-patterns|設計パターン]]                        │
-│  Middleware / SSR / A-B テスト / API Gateway / FBIP          │
-├─────────────────────────────────────────────────────────────┤
-│                     プラットフォーム層                         │
-│  [[edge-platforms|Cloudflare Workers / Deno Deploy / Fastly]]│
-├──────────────────────┬──────────────────────────────────────┤
-│    JS ランタイム       │        WASM ランタイム                │
-│  [[v8-isolates]]      │  [[wasm-at-the-edge]]               │
-│  workerd / Deno       │  [[wasmtime]] / Wasmer / WasmEdge   │
-├──────────────────────┼──────────────────────────────────────┤
-│    JS API 標準        │        WASM 仕様                     │
-│  [[wintertc]]         │  [[component-model]] ← 合成の型システム│
-│  ECMA-429             │  [[wasi]] ← システム API              │
-├──────────────────────┴──────────────────────────────────────┤
-│                     データ層                                 │
-│  [[edge-data|KV / Durable Objects / D1 / R2 / Queues]]     │
-│  [[distributed-consistency|CAP / CRDT / 一貫性モデル]]        │
-├─────────────────────────────────────────────────────────────┤
-│                     ネットワーク層                            │
-│  [[anycast-cdn|Anycast + BGP]] → 最寄り PoP にルーティング     │
-│  [[quic-http3|QUIC / HTTP/3]] → 0-RTT, コネクションマイグレーション│
-├─────────────────────────────────────────────────────────────┤
-│                     セキュリティ層                            │
-│  [[edge-security|DDoS / WAF / TLS 終端 / Zero Trust / Bot]] │
-├─────────────────────────────────────────────────────────────┤
-│                     判断フレームワーク                        │
-│  [[edge-computing|Edge Computing とは]]                      │
-│  [[edge-vs-cloud-vs-onprem|Edge vs Cloud vs On-premise]]    │
-└─────────────────────────────────────────────────────────────┘
+```mermaid
+graph TB
+    subgraph App["アプリケーション層"]
+        Patterns["設計パターン<br/>Middleware / SSR / A-B テスト / API Gateway"]
+    end
+
+    subgraph Platform["プラットフォーム層"]
+        Platforms["Cloudflare Workers / Deno Deploy / Fastly Compute"]
+    end
+
+    subgraph Runtime["ランタイム層"]
+        JS_RT["JS ランタイム<br/>V8 Isolates<br/>workerd / Deno"]
+        WASM_RT["WASM ランタイム<br/>Wasmtime / Wasmer / WasmEdge"]
+    end
+
+    subgraph Spec["仕様 / 標準層"]
+        JS_Spec["JS API 標準<br/>WinterTC (ECMA-429)"]
+        WASM_Spec["Component Model<br/>合成の型システム"]
+        WASI_Spec["WASI<br/>システム API"]
+    end
+
+    subgraph Data["データ層"]
+        DataStore["KV / Durable Objects / D1 / R2 / Queues<br/>CAP / CRDT / 一貫性モデル"]
+    end
+
+    subgraph Net["ネットワーク層"]
+        Network["Anycast + BGP → 最寄り PoP<br/>QUIC / HTTP/3 → 0-RTT"]
+    end
+
+    subgraph Sec["セキュリティ層"]
+        Security["DDoS / WAF / TLS 終端 / Zero Trust / Bot"]
+    end
+
+    subgraph Foundation["判断フレームワーク"]
+        Decide["Edge Computing とは<br/>Edge vs Cloud vs On-premise"]
+    end
+
+    App --> Platform
+    Platform --> Runtime
+    JS_RT --> JS_Spec
+    WASM_RT --> WASM_Spec --> WASI_Spec
+    Runtime --> Data
+    Data --> Net
+    Net --> Sec
+    Sec --> Foundation
 ```
 
 ## WASM 仕様の階層
