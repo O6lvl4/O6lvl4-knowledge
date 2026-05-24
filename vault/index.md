@@ -61,6 +61,7 @@ O6lvl4 Knowledge の knowledge base。
 
 - [[copy-on-write]] - Copy-on-Write (COW)
 - [[programming-language]] - プログラミング言語
+- [[swiss-table]] - SwissTable
 - [[duality]] - 双対
 
 ### concept
@@ -115,6 +116,10 @@ O6lvl4 Knowledge の knowledge base。
 ### hardware
 
 - [[gpu]] - GPU
+
+### crate
+
+- [[hashbrown]] - hashbrown
 
 ### language
 

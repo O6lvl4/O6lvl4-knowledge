@@ -114,6 +114,7 @@ crates.io が中央リポジトリ。主要なクレート：
 | 非同期ランタイム | tokio, async-std |
 | Web フレームワーク | [[axum]], actix-web, rocket |
 | HTTP クライアント | reqwest, hyper |
+| ハッシュテーブル | [[hashbrown]] (std HashMap のバックエンド) |
 | シリアライズ | serde (+ serde_json, toml, etc.) |
 | CLI | clap, argh |
 | エラーハンドリング | anyhow, thiserror |
@@ -164,4 +165,5 @@ crates.io が中央リポジトリ。主要なクレート：
 ## 関連
 
 - [[axum]] — Rust の Web フレームワーク（tokio + tower + hyper ベース）
+- [[hashbrown]] — std HashMap のバックエンド。SwissTable の Rust 実装
 - [[almide]] — Rust で実装されたプログラミング言語（Almide コンパイラが Rust 製）
