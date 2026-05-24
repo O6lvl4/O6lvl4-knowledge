@@ -185,6 +185,7 @@ O6lvl4 Knowledge の knowledge base。
 - [[axum]] - axum
 - [[hashbrown]] - hashbrown
 - [[rayon]] - rayon
+- [[wasmtime]] - Wasmtime
 
 ### streaming
 
