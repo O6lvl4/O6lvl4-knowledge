@@ -9,7 +9,6 @@ const notes = allNotes.filter(
   (n) => n.id !== 'index' && n.id !== 'dashboard' && n.data.public !== false
 );
 
-// git log で各ファイルの最終コミット日時を取得
 const vaultDir = new URL('../../vault/', import.meta.url).pathname;
 const gitTimestamps = new Map<string, string>();
 for (const note of notes) {
@@ -22,6 +21,7 @@ for (const note of notes) {
   } catch { /* ignore */ }
 }
 
+// デフォルト: 最新順 (desc)
 const sorted = notes.sort((a, b) => {
   const da = gitTimestamps.get(a.id) || '';
   const db = gitTimestamps.get(b.id) || '';
@@ -37,32 +37,97 @@ function formatTimestamp(id: string): string {
   const pad = (n: number) => String(n).padStart(2, '0');
   return `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())} ${pad(d.getHours())}:${pad(d.getMinutes())}`;
 }
+
+const noteData = sorted.map((note) => ({
+  href: `${base}notes/${slugify(note.id)}`,
+  title: note.data.title || note.id,
+  date: formatTimestamp(note.id),
+  ts: gitTimestamps.get(note.id) || '',
+  tags: (note.data.tags || []) as string[],
+}));
 ---
 
 <Base title="Recent" ogType="website" canonicalPath="/recent">
   <div class="note-list">
-    <h2>Recent Notes</h2>
-    <p class="subtitle">{notes.length} notes, sorted by last git commit</p>
-    {
-      sorted.map((note) => (
-        <a href={`${base}notes/${slugify(note.id)}`} class="note-card">
-          <span class="title">{note.data.title || note.id}</span>
+    <div class="recent-header">
+      <h2>Recent Notes</h2>
+      <button id="sort-toggle" class="sort-btn" data-order="desc" title="Sort order">
+        <span class="sort-label">New → Old</span>
+        <span class="sort-icon">↓</span>
+      </button>
+    </div>
+    <p class="subtitle">{notes.length} notes</p>
+    <div id="note-container">
+      {noteData.map((note) => (
+        <a href={note.href} class="note-card" data-ts={note.ts}>
+          <span class="title">{note.title}</span>
           <span class="meta">
-            <span class="date">{formatTimestamp(note.id)}</span>
-            {(note.data.tags || []).map((tag: string) => (
+            <span class="date">{note.date}</span>
+            {note.tags.map((tag) => (
               <span class="tag">{tag}</span>
             ))}
           </span>
         </a>
-      ))
-    }
+      ))}
+    </div>
   </div>
 </Base>
 
+<script>
+  const btn = document.getElementById('sort-toggle')!;
+  const container = document.getElementById('note-container')!;
+  const label = btn.querySelector('.sort-label')!;
+  const icon = btn.querySelector('.sort-icon')!;
+
+  btn.addEventListener('click', () => {
+    const current = btn.dataset.order;
+    const next = current === 'desc' ? 'asc' : 'desc';
+    btn.dataset.order = next;
+    label.textContent = next === 'desc' ? 'New → Old' : 'Old → New';
+    icon.textContent = next === 'desc' ? '↓' : '↑';
+
+    const cards = [...container.querySelectorAll('.note-card')] as HTMLElement[];
+    cards.sort((a, b) => {
+      const ta = a.dataset.ts || '';
+      const tb = b.dataset.ts || '';
+      return next === 'desc' ? tb.localeCompare(ta) : ta.localeCompare(tb);
+    });
+    for (const card of cards) container.appendChild(card);
+  });
+</script>
+
 <style>
+  .recent-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .recent-header h2 {
+    margin: 0;
+  }
+  .sort-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.25rem 0.6rem;
+    border: 1px solid var(--border, #30363d);
+    border-radius: 6px;
+    background: var(--bg-secondary, #161b22);
+    color: var(--fg-muted, #8b949e);
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: border-color 0.15s;
+  }
+  .sort-btn:hover {
+    border-color: var(--fg-muted, #8b949e);
+    color: var(--fg, #c9d1d9);
+  }
+  .sort-icon {
+    font-size: 0.9rem;
+  }
   .subtitle {
     color: var(--fg-muted, #8b949e);
-    margin-top: -0.5rem;
+    margin-top: 0.25rem;
     margin-bottom: 1.5rem;
     font-size: 0.9rem;
   }
