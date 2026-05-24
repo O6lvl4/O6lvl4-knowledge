@@ -1,5 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
+import { execSync } from 'node:child_process';
 import Base from '@o6lvl4/graph-garden/layouts/Base.astro';
 import { slugify } from '@o6lvl4/graph-garden';
 
@@ -8,31 +9,46 @@ const notes = allNotes.filter(
   (n) => n.id !== 'index' && n.id !== 'dashboard' && n.data.public !== false
 );
 
-function toDateStr(d: string | Date | undefined): string {
-  if (!d) return '';
-  if (d instanceof Date) return d.toISOString().slice(0, 10);
-  return String(d);
+// git log で各ファイルの最終コミット日時を取得
+const vaultDir = new URL('../../vault/', import.meta.url).pathname;
+const gitTimestamps = new Map<string, string>();
+for (const note of notes) {
+  try {
+    const ts = execSync(
+      `git log -1 --format=%cI -- "${vaultDir}${note.id}.md"`,
+      { encoding: 'utf-8', cwd: vaultDir }
+    ).trim();
+    if (ts) gitTimestamps.set(note.id, ts);
+  } catch { /* ignore */ }
 }
 
 const sorted = notes.sort((a, b) => {
-  const da = toDateStr(a.data.updated_at) || toDateStr(a.data.created_at) || '';
-  const db = toDateStr(b.data.updated_at) || toDateStr(b.data.created_at) || '';
+  const da = gitTimestamps.get(a.id) || '';
+  const db = gitTimestamps.get(b.id) || '';
   return db.localeCompare(da);
 });
 
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+
+function formatTimestamp(id: string): string {
+  const ts = gitTimestamps.get(id);
+  if (!ts) return '';
+  const d = new Date(ts);
+  const pad = (n: number) => String(n).padStart(2, '0');
+  return `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())} ${pad(d.getHours())}:${pad(d.getMinutes())}`;
+}
 ---
 
 <Base title="Recent" ogType="website" canonicalPath="/recent">
   <div class="note-list">
     <h2>Recent Notes</h2>
-    <p class="subtitle">{notes.length} notes, sorted by last updated</p>
+    <p class="subtitle">{notes.length} notes, sorted by last git commit</p>
     {
       sorted.map((note) => (
         <a href={`${base}notes/${slugify(note.id)}`} class="note-card">
           <span class="title">{note.data.title || note.id}</span>
           <span class="meta">
-            <span class="date">{toDateStr(note.data.updated_at) || toDateStr(note.data.created_at)}</span>
+            <span class="date">{formatTimestamp(note.id)}</span>
             {(note.data.tags || []).map((tag: string) => (
               <span class="tag">{tag}</span>
             ))}
