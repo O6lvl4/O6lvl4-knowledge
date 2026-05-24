@@ -20,37 +20,37 @@ graph TB
     end
 
     subgraph Network["ネットワーク層"]
-        QUIC["[[quic-http3|QUIC / HTTP/3]]<br/>トランスポート"]
-        Anycast["[[anycast-cdn|Anycast / CDN]]<br/>ルーティング + キャッシュ"]
+        QUIC["QUIC / HTTP/3<br/>トランスポート"]
+        Anycast["Anycast / CDN<br/>ルーティング + キャッシュ"]
     end
 
     subgraph Edge["Edge 実行層"]
-        V8["[[v8-isolates|V8 Isolates]]<br/>JS/TS ランタイム"]
-        WasmEdge["[[wasm-at-the-edge|WASM at the Edge]]<br/>WASM ランタイム"]
+        V8["V8 Isolates<br/>JS/TS ランタイム"]
+        WasmE["WASM at the Edge<br/>WASM ランタイム"]
     end
 
-    subgraph Runtime["ランタイム実装"]
-        Wasmtime["[[wasmtime|Wasmtime]]<br/>リファレンスランタイム"]
+    subgraph Impl["ランタイム実装"]
+        WT["Wasmtime<br/>リファレンスランタイム"]
     end
 
     subgraph Spec["仕様 / 標準"]
-        CM["[[component-model|Component Model]]<br/>コンポーネント合成"]
-        WASI["[[wasi|WASI]]<br/>システムインターフェース"]
-        WinterTC["[[wintertc|WinterTC]]<br/>JS API 標準化"]
+        CM["Component Model<br/>コンポーネント合成"]
+        WS["WASI<br/>システムインターフェース"]
+        WTC["WinterTC<br/>JS API 標準化"]
     end
 
     subgraph Data["データ層"]
-        EdgeData["[[edge-data|Edge データストア]]<br/>KV / DO / D1 / R2"]
+        ED["Edge データストア<br/>KV / DO / D1 / R2"]
     end
 
     subgraph Org["組織"]
-        BA["[[bytecode-alliance|Bytecode Alliance]]<br/>実装団体"]
+        BA["Bytecode Alliance<br/>実装団体"]
     end
 
     Browser --> QUIC --> Anycast --> Edge
-    V8 --> WinterTC
-    WasmEdge --> Wasmtime --> CM --> WASI
-    BA --> Wasmtime
+    V8 --> WTC
+    WasmE --> WT --> CM --> WS
+    BA --> WT
     BA --> CM
     Edge --> Data
 ```
@@ -72,18 +72,18 @@ graph TB
         WASM_RT["WASM ランタイム<br/>Wasmtime / Wasmer / WasmEdge"]
     end
 
-    subgraph Spec["仕様 / 標準層"]
-        JS_Spec["JS API 標準<br/>WinterTC (ECMA-429)"]
+    subgraph SpecLayer["仕様 / 標準層"]
+        JS_Spec["JS API 標準<br/>WinterTC ECMA-429"]
         WASM_Spec["Component Model<br/>合成の型システム"]
         WASI_Spec["WASI<br/>システム API"]
     end
 
-    subgraph Data["データ層"]
+    subgraph DataLayer["データ層"]
         DataStore["KV / Durable Objects / D1 / R2 / Queues<br/>CAP / CRDT / 一貫性モデル"]
     end
 
     subgraph Net["ネットワーク層"]
-        Network["Anycast + BGP → 最寄り PoP<br/>QUIC / HTTP/3 → 0-RTT"]
+        Network["Anycast + BGP で最寄り PoP<br/>QUIC / HTTP/3 で 0-RTT"]
     end
 
     subgraph Sec["セキュリティ層"]
@@ -98,8 +98,8 @@ graph TB
     Platform --> Runtime
     JS_RT --> JS_Spec
     WASM_RT --> WASM_Spec --> WASI_Spec
-    Runtime --> Data
-    Data --> Net
+    Runtime --> DataLayer
+    DataLayer --> Net
     Net --> Sec
     Sec --> Foundation
 ```
@@ -110,9 +110,9 @@ Component Model がどこに位置するかを明確にする。
 
 ```mermaid
 graph BT
-    Core["Core WebAssembly Spec<br/>バイトコード, 線形メモリ, 数値型のみ<br/>(W3C Standard)"]
-    CM["[[component-model|Component Model]]<br/>WIT + Canonical ABI + Share-Nothing<br/>Core Module を型安全に結合<br/>(W3C Proposal)"]
-    WASI["[[wasi|WASI]]<br/>wasi:http, wasi:filesystem, wasi:sockets 等<br/>Component Model の上に定義された API 群<br/>(W3C WASI Subgroup)"]
+    Core["Core WebAssembly Spec<br/>バイトコード, 線形メモリ, 数値型のみ<br/>W3C Standard"]
+    CM["Component Model<br/>WIT + Canonical ABI + Share-Nothing<br/>Core Module を型安全に結合<br/>W3C Proposal"]
+    WASI["WASI<br/>wasi:http, wasi:filesystem, wasi:sockets 等<br/>Component Model の上に定義された API 群<br/>W3C WASI Subgroup"]
     App["アプリケーション<br/>Edge ハンドラ, プラグイン, マイクロサービス"]
 
     Core --> CM
@@ -132,9 +132,9 @@ graph BT
 
 ```mermaid
 graph LR
-    W3C["W3C WebAssembly CG<br/>「何を標準にするか」<br/>Core Wasm / Component Model / WASI 仕様"]
-    BA["[[bytecode-alliance|Bytecode Alliance]]<br/>「どう実装するか」<br/>Wasmtime / Cranelift / cargo-component"]
-    WTC["[[wintertc|Ecma TC55 (WinterTC)]]<br/>JS ランタイム間の API 標準化<br/>ECMA-429"]
+    W3C["W3C WebAssembly CG<br/>何を標準にするか<br/>Core Wasm / Component Model / WASI"]
+    BA["Bytecode Alliance<br/>どう実装するか<br/>Wasmtime / Cranelift / cargo-component"]
+    WTC["Ecma TC55 WinterTC<br/>JS ランタイム間の API 標準化<br/>ECMA-429"]
     CNCF["CNCF<br/>クラウドネイティブプロジェクト<br/>SpinKube / wasmCloud"]
 
     W3C -->|"仕様"| BA
@@ -153,17 +153,17 @@ graph TB
         Vercel["Vercel Edge<br/>126 PoP"]
     end
 
-    subgraph WASM_RT["WASM ランタイム"]
+    subgraph WR["WASM ランタイム"]
         Fastly["Fastly Compute<br/>Wasmtime / ~80 PoP"]
-        Spin["Fermyon Spin (Akamai)<br/>Wasmtime / 4100+ PoP"]
+        Spin["Fermyon Spin Akamai<br/>Wasmtime / 4100+ PoP"]
     end
 
     subgraph Hybrid["ハイブリッド"]
         CFW["Cloudflare Workers<br/>V8 内で WASM も実行<br/>34% が WASM 含む"]
     end
 
-    JS ---|"[[wintertc]] で API 標準化"| JS
-    WASM_RT ---|"[[wasi]] + [[component-model]] で標準化"| WASM_RT
+    JS ---|"WinterTC で API 標準化"| JS
+    WR ---|"WASI + Component Model で標準化"| WR
 ```
 
 ## データフロー: リクエストの旅
@@ -216,10 +216,10 @@ graph LR
     WIT["WIT 定義<br/>wasi:http/incoming-handler"]
     WIT -.-> Component
 
-    DCE["[[dead-code-elimination|DCE]]<br/>wasm-opt -Oz"]
+    DCE["DCE<br/>wasm-opt -Oz"]
     DCE -.->|"バイナリサイズ → Cold Start"| Component
 
-    RI["[[region-inference|Region Inference]]<br/>+ [[perceus|Perceus]]"]
+    RI["Region Inference<br/>+ Perceus"]
     RI -.->|"GC なしメモリ管理"| Rust
 ```
 
@@ -229,16 +229,16 @@ graph LR
 graph LR
     subgraph Static["コンパイル時決定"]
         Rust_OW["Rust 所有権"]
-        RI["[[region-inference|Region Inference]]<br/>リージョン単位一括解放"]
+        RI["Region Inference<br/>リージョン単位一括解放"]
     end
 
-    subgraph Runtime["実行時決定"]
-        Perceus_RC["[[perceus|Perceus]]<br/>RC + reuse (alloc/free ゼロ)"]
-        GC["GC<br/>(tracing, generational)"]
+    subgraph RT["実行時決定"]
+        Perceus_RC["Perceus<br/>RC + reuse (alloc/free ゼロ)"]
+        GC["GC<br/>tracing, generational"]
     end
 
-    subgraph Hybrid_Mem["ハイブリッド"]
-        Bump["Bump Allocator<br/>+ リージョンスコープ<br/>(Almide の現在の実装)"]
+    subgraph HM["ハイブリッド"]
+        Bump["Bump Allocator<br/>+ リージョンスコープ<br/>Almide の現在の実装"]
     end
 
     Rust_OW -.->|"影響"| RI
