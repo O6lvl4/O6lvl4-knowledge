@@ -65,6 +65,7 @@ O6lvl4 Knowledge の knowledge base。
 - [[relaxed-simd]] - Relaxed SIMD
 - [[swiss-table]] - SwissTable
 - [[wasm-simd]] - WebAssembly SIMD
+- [[perceus]] - Perceus
 - [[region-inference]] - Region Inference
 - [[work-stealing]] - Work-Stealing
 - [[programming-language]] - プログラミング言語
