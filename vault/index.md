@@ -101,6 +101,7 @@ O6lvl4 Knowledge の knowledge base。
 - [[wintertc]] - WinterTC
 - [[quic-http3]] - QUIC / HTTP/3
 - [[bytecode-alliance]] - Bytecode Alliance
+- [[component-model]] - Component Model
 
 ### formal-language
 
