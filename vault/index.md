@@ -88,6 +88,7 @@ O6lvl4 Knowledge の knowledge base。
 
 - [[edge-computing]] - Edge Computing
 - [[edge-vs-cloud-vs-onprem]] - Edge vs Cloud vs On-premise
+- [[v8-isolates]] - V8 Isolates
 
 ### formal-language
 
