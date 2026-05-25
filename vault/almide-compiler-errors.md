@@ -3,10 +3,6 @@ title: Almide コンパイラエラー体験
 tags: [almide, compiler, dx, error-handling]
 created_at: 2026-05-20
 updated_at: 2026-05-20
-srs_state: new
-card_count: 5
-reviewed_count: 0
-next_due: 2026-05-20
 ---
 
 [[almide|Almide]] コンパイラが目指す **Elm-grade** のエラー体験。「何が間違っているか」だけでなく「どう直せばいいか」まで提示する設計。v0.19.0 で Phase 1-2 を実装。

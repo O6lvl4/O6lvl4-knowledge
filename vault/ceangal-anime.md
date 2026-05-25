@@ -1,6 +1,8 @@
 ---
 title: ceangal-anime
 tags: [almide, graphics, animation]
+created_at: 2026-05-18
+updated_at: 2026-05-19
 ---
 
 anime.js インスパイアの [[almide|Almide]] 用アニメーションエンジン。純 WASM、DOM/JS ランタイム依存なし。

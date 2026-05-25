@@ -3,10 +3,6 @@ title: Edge プラットフォーム比較
 tags: [edge-computing, platform, cloudflare, deno, fastly]
 created_at: 2026-05-24
 updated_at: 2026-05-24
-srs_state: new
-card_count: 12
-reviewed_count: 0
-next_due: 2026-05-24
 ---
 
 CDN Edge の主要3プラットフォーム — Cloudflare Workers、Deno Deploy、Fastly Compute — を比較する。それぞれ [[v8-isolates|V8 Isolates]]、V8 Isolates、[[wasm-at-the-edge|WASM]] と異なる実行モデルを採用している。

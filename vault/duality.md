@@ -1,6 +1,8 @@
 ---
 title: 双対
 tags: [computer-science, type-theory, mathematics]
+created_at: 2026-05-18
+updated_at: 2026-05-18
 ---
 
 2つの概念が「矢印を逆にしただけ」の関係にあること。

@@ -1,6 +1,8 @@
 ---
 title: 依存型
 tags: [type-theory, computer-science]
+created_at: 2026-05-18
+updated_at: 2026-05-18
 ---
 
 型が値に依存できる型システム。

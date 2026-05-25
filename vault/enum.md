@@ -3,10 +3,6 @@ title: 列挙型 (Enum)
 tags: [type-theory, programming-language, computer-science]
 created_at: 2026-05-20
 updated_at: 2026-05-20
-srs_state: new
-card_count: 6
-reviewed_count: 0
-next_due: 2026-05-20
 ---
 
 値が有限個のバリアントのいずれかであることを表す型。言語ごとに表現力が大きく異なり、単なる名前付き整数定数から、データ付きバリアント（= tagged union = [[adt-gadt|直和型]]）まで連続的なスペクトラムを持つ。

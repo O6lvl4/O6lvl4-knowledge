@@ -8,6 +8,7 @@ export default defineConfig({
     graphGarden({
       vault: '../vault',
       title: 'O6lvl4 Knowledge',
+      navLinks: [{ label: 'Recent', href: 'recent' }],
     }),
   ],
 });

@@ -2,7 +2,7 @@
 title: VRoid Studio
 tags: [vtuber, 3d, character-creator, japan, pixiv]
 created_at: 2026-05-04
-updated_at: 2026-05-04
+updated_at: 2026-05-19
 srs_state: new
 card_count: 6
 reviewed_count: 0

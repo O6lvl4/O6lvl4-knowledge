@@ -1,6 +1,8 @@
 ---
 title: obsid
 tags: [almide, graphics, wasm]
+created_at: 2026-05-01
+updated_at: 2026-05-18
 ---
 
 [[almide|Almide]] 用グラフィックスランタイム。Canvas 2D、WebGL、3D メッシュレンダリングを WASM 経由で提供。

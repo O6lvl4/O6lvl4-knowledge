@@ -1,6 +1,8 @@
 ---
 title: スタック指向プログラミング
 tags: [programming-paradigm, computer-science]
+created_at: 2026-05-19
+updated_at: 2026-05-19
 ---
 
 スタック上の値を操作して計算を進めるプログラミングパラダイム。

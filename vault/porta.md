@@ -1,6 +1,8 @@
 ---
 title: porta
 tags: [almide, security, mcp, agent]
+created_at: 2026-05-01
+updated_at: 2026-05-18
 ---
 
 AI エージェント・ネイティブコマンド向けのセキュア MCP bridge。[[almide|Almide]] で実装。

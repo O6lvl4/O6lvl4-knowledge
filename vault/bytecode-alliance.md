@@ -3,10 +3,6 @@ title: Bytecode Alliance
 tags: [webassembly, wasm, organization, edge-computing]
 created_at: 2026-05-24
 updated_at: 2026-05-24
-srs_state: new
-card_count: 10
-reviewed_count: 0
-next_due: 2026-05-24
 ---
 
 WebAssembly エコシステムの安全で標準準拠な共有実装を構築する 501(c)(6) 非営利法人。2019年に Mozilla, Fastly, Intel, Red Hat が設立。標準化団体ではなく実装団体であり、W3C WebAssembly CG が策定した仕様のリファレンス実装を提供する。

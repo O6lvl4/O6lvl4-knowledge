@@ -2,11 +2,7 @@
 title: Web 2.0
 tags: [web-history, era, movement, web-stack]
 created_at: 2026-05-07
-updated_at: 2026-05-07
-srs_state: new
-card_count: 8
-reviewed_count: 0
-next_due: 2026-05-07
+updated_at: 2026-05-19
 ---
 
 2004 年に Tim O'Reilly が提唱し、2005 年のエッセイ "What Is Web 2.0" で定義された **Web の構造的転換を指す概念**。**「ページとして読むもの」から「アプリケーション・プラットフォーム」へ** の移行を指す。同時期に登場した Rails が広まる時代背景そのものでもある。

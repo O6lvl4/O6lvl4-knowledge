@@ -3,10 +3,6 @@ title: Wasmtime
 tags: [webassembly, wasm, runtime, edge-computing, crate]
 created_at: 2026-05-24
 updated_at: 2026-05-24
-srs_state: new
-card_count: 14
-reviewed_count: 0
-next_due: 2026-05-24
 ---
 
 Bytecode Alliance が開発する WebAssembly のリファレンスランタイム。[[wasi|WASI]] および Component Model の世界初の完全実装。Cranelift コンパイラバックエンドによるセキュリティ重視の設計と、Pooling Allocator + CoW によるマイクロ秒レベルのインスタンス化が特徴。Fastly Compute と Fermyon Spin (Akamai) の基盤。

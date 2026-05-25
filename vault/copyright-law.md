@@ -1,6 +1,8 @@
 ---
 title: 著作権法
 tags: [law, license, intellectual-property]
+created_at: 2026-05-19
+updated_at: 2026-05-19
 ---
 
 「作った人のもの」を法律で守る仕組み。

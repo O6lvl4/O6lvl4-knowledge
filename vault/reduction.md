@@ -1,6 +1,8 @@
 ---
 title: 簡約（α, β, η）
 tags: [programming-paradigm, computer-science, type-theory]
+created_at: 2026-05-18
+updated_at: 2026-05-19
 ---
 
 [[lambda-calculus|λ計算]]における式の書き換えルール。計算 = 簡約を繰り返して最終的な値に到達すること。

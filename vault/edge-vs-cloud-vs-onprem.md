@@ -3,10 +3,6 @@ title: Edge vs Cloud vs On-premise
 tags: [edge-computing, architecture, decision-framework]
 created_at: 2026-05-24
 updated_at: 2026-05-24
-srs_state: new
-card_count: 10
-reviewed_count: 0
-next_due: 2026-05-24
 ---
 
 [[edge-computing|Edge Computing]]、Cloud Computing、On-premise の3つの計算配置モデルの判断軸を体系化する。2026年において、これらは二者択一ではなく、ワークロードごとの最適配置 (Workload Placement Discipline) が戦略の核心。

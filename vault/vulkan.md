@@ -1,6 +1,8 @@
 ---
 title: Vulkan
 tags: [graphics, gpu]
+created_at: 2026-05-19
+updated_at: 2026-05-19
 ---
 
 Khronos Group が策定したクロスプラットフォームの低レベル[[gpu|GPU]] API。2016年発表。[[opengl|OpenGL]] の後継。

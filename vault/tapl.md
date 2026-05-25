@@ -1,6 +1,8 @@
 ---
 title: TAPL
 tags: [type-theory, computer-science, book]
+created_at: 2026-05-18
+updated_at: 2026-05-19
 ---
 
 "Types and Programming Languages" (Benjamin C. Pierce, 2002)。型理論とプログラミング言語の理論を学ぶ定番の教科書。

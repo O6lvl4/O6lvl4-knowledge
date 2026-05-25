@@ -1,6 +1,8 @@
 ---
 title: 時相論理
 tags: [formal-methods, computer-science, logic]
+created_at: 2026-05-18
+updated_at: 2026-05-19
 ---
 
 「いつか」「常に」「〜するまで」といった時間に関する性質を表現する論理。

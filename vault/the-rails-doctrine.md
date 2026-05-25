@@ -3,10 +3,6 @@ title: The Rails Doctrine
 tags: [rails, philosophy, design-principle, doctrine]
 created_at: 2026-05-07
 updated_at: 2026-05-07
-srs_state: new
-card_count: 9
-reviewed_count: 0
-next_due: 2026-05-07
 ---
 
 DHH が 2016 年に公開した [[rails]] の **設計哲学を 9 つの柱として明文化したマニフェスト**。Rails 自体は 2004 年から存在するが、その背後にあった原則を後から体系化したのが本書。Rails コアコミッタやコミュニティの判断基準であり、後続フレームワーク・スタートアップ思想にも影響を残した。

@@ -89,8 +89,8 @@ O6lvl4 Knowledge の knowledge base。
 
 ### edge-computing
 
-- [[edge-wasm-landscape]] - Edge / WebAssembly ランドスケープ
 - [[anycast-cdn]] - Anycast / CDN
+- [[edge-wasm-landscape]] - Edge / WebAssembly ランドスケープ
 - [[edge-computing]] - Edge Computing
 - [[edge-design-patterns]] - Edge Computing 実務設計パターン
 - [[edge-security]] - Edge Security

@@ -1,6 +1,8 @@
 ---
 title: Type 0 文法（句構造文法）
 tags: [formal-language, automata-theory, computer-science]
+created_at: 2026-05-18
+updated_at: 2026-05-18
 ---
 
 [[chomsky-hierarchy|チョムスキー階層]]の最上位。制約なし = 計算可能なすべて。

@@ -3,10 +3,6 @@ title: almide-repl
 tags: [almide, repl, cli, compiler]
 created_at: 2026-05-20
 updated_at: 2026-05-20
-srs_state: new
-card_count: 6
-reviewed_count: 0
-next_due: 2026-05-20
 ---
 
 [[almide|Almide]] の対話的実行環境。`almide`（引数なし）で起動する。v0.19.0 で追加。

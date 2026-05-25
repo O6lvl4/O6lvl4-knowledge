@@ -1,6 +1,8 @@
 ---
 title: Almide
 tags: [language, llm, compiler, rust, wasm]
+created_at: 2026-04-30
+updated_at: 2026-05-20
 ---
 
 LLM によるコード生成に最適化された[[programming-language|プログラミング言語]]。Rust と WebAssembly にコンパイルされる。~72,000 行の純 Rust コンパイラ。

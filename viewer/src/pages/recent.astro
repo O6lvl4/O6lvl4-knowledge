@@ -1,7 +1,5 @@
 ---
 import { getCollection } from 'astro:content';
-import { execSync } from 'node:child_process';
-import { resolve } from 'node:path';
 import Base from '@o6lvl4/graph-garden/layouts/Base.astro';
 import { slugify } from '@o6lvl4/graph-garden';
 
@@ -10,52 +8,24 @@ const notes = allNotes.filter(
   (n) => n.id !== 'index' && n.id !== 'dashboard' && n.data.public !== false
 );
 
-// repo root から git log で全ファイルの最終コミット日時を一括取得
-const repoRoot = resolve(process.cwd(), '..');
-const gitTimestamps = new Map<string, string>();
-try {
-  const raw = execSync(
-    `git log --format="%cI" --name-only --diff-filter=ACMR -- vault/`,
-    { encoding: 'utf-8', cwd: repoRoot, maxBuffer: 10 * 1024 * 1024 }
-  );
-  // パース: コミット日時行とファイル名行が交互に出る
-  let currentTs = '';
-  for (const line of raw.split('\n')) {
-    const trimmed = line.trim();
-    if (!trimmed) continue;
-    if (trimmed.startsWith('20')) {
-      // ISO 日時 (2026-...)
-      currentTs = trimmed;
-    } else if (trimmed.startsWith('vault/') && trimmed.endsWith('.md')) {
-      const id = trimmed.replace('vault/', '').replace('.md', '');
-      if (!gitTimestamps.has(id)) {
-        gitTimestamps.set(id, currentTs);
-      }
-    }
-  }
-} catch { /* ignore */ }
+function toDateStr(v: string | Date | undefined): string {
+  if (!v) return '';
+  if (v instanceof Date) return v.toISOString().slice(0, 10);
+  return String(v);
+}
 
 const sorted = notes.sort((a, b) => {
-  const da = gitTimestamps.get(a.id) || '';
-  const db = gitTimestamps.get(b.id) || '';
+  const da = toDateStr(a.data.updated_at) || toDateStr(a.data.created_at) || '';
+  const db = toDateStr(b.data.updated_at) || toDateStr(b.data.created_at) || '';
   return db.localeCompare(da);
 });
 
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 
-function formatTimestamp(id: string): string {
-  const ts = gitTimestamps.get(id);
-  if (!ts) return '';
-  const d = new Date(ts);
-  const pad = (n: number) => String(n).padStart(2, '0');
-  return `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())} ${pad(d.getHours())}:${pad(d.getMinutes())}`;
-}
-
 const noteData = sorted.map((note) => ({
   href: `${base}notes/${slugify(note.id)}`,
   title: note.data.title || note.id,
-  date: formatTimestamp(note.id),
-  ts: gitTimestamps.get(note.id) || '',
+  date: toDateStr(note.data.updated_at) || toDateStr(note.data.created_at),
   tags: (note.data.tags || []) as string[],
 }));
 ---
@@ -72,7 +42,7 @@ const noteData = sorted.map((note) => ({
     <p class="subtitle">{notes.length} notes</p>
     <div id="note-container">
       {noteData.map((note) => (
-        <a href={note.href} class="note-card" data-ts={note.ts}>
+        <a href={note.href} class="note-card" data-date={note.date}>
           <span class="title">{note.title}</span>
           <span class="meta">
             <span class="date">{note.date}</span>
@@ -101,8 +71,8 @@ const noteData = sorted.map((note) => ({
 
     const cards = [...container.querySelectorAll('.note-card')] as HTMLElement[];
     cards.sort((a, b) => {
-      const ta = a.dataset.ts || '';
-      const tb = b.dataset.ts || '';
+      const ta = a.dataset.date || '';
+      const tb = b.dataset.date || '';
       return next === 'desc' ? tb.localeCompare(ta) : ta.localeCompare(tb);
     });
     for (const card of cards) container.appendChild(card);

@@ -1,6 +1,8 @@
 ---
 title: 推論規則
 tags: [type-theory, logic, computer-science]
+created_at: 2026-05-18
+updated_at: 2026-05-18
 ---
 
 「前提から結論を導く」ルールの形式的な記法。型システムの定義はこれで書かれる。

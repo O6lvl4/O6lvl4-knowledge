@@ -1,6 +1,8 @@
 ---
 title: Pagina
 tags: [pdf, css, document-generation, rust, oss]
+created_at: 2026-05-20
+updated_at: 2026-05-20
 ---
 
 Rust 製の HTML + CSS → PDF 変換エンジン。CSS Paged Media 仕様の実装を目指す OSS (MIT / Apache-2.0)。

@@ -1,6 +1,8 @@
 ---
 title: Algebraic Effects
 tags: [programming-paradigm, computer-science, type-theory]
+created_at: 2026-05-18
+updated_at: 2026-05-18
 ---
 
 副作用を「宣言」と「処理」に分離する仕組み。

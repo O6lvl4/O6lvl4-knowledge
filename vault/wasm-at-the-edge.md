@@ -3,10 +3,6 @@ title: WASM at the Edge
 tags: [edge-computing, webassembly, wasm, runtime]
 created_at: 2026-05-24
 updated_at: 2026-05-24
-srs_state: new
-card_count: 12
-reviewed_count: 0
-next_due: 2026-05-24
 ---
 
 WebAssembly を [[edge-computing|Edge Computing]] の実行モデルとして使うアプローチ。[[v8-isolates|V8 Isolates]] と並ぶ Edge の二大実行モデルの一つ。AOT コンパイルによる 35-50μs の Cold Start、リニアメモリによる構造的なセキュリティ分離、言語非依存性が技術的優位。Fastly Compute が先駆者で、Akamai の Fermyon 買収 (2025) によりエンタープライズ採用が加速。

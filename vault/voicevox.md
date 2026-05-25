@@ -1,6 +1,8 @@
 ---
 title: VOICEVOX
 tags: [vtuber, audio, tts, open-source]
+created_at: 2026-05-19
+updated_at: 2026-05-20
 ---
 
 無料で使えるテキスト読み上げ・歌声合成ソフトウェア。ヒホ（ヒロシバ）が 2021年に公開。ずんだもん等のキャラクターボイスで知られる。

@@ -1,6 +1,8 @@
 ---
 title: Type 3 文法（正規文法）
 tags: [formal-language, automata-theory, computer-science]
+created_at: 2026-05-18
+updated_at: 2026-05-18
 ---
 
 [[chomsky-hierarchy|チョムスキー階層]]の最下位。正規表現と完全に等価。

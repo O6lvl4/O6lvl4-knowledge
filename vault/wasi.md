@@ -3,10 +3,6 @@ title: WASI
 tags: [edge-computing, webassembly, wasm, wasi, standard]
 created_at: 2026-05-24
 updated_at: 2026-05-24
-srs_state: new
-card_count: 14
-reviewed_count: 0
-next_due: 2026-05-24
 ---
 
 WebAssembly System Interface。WASM モジュールがブラウザ外でファイルシステム、ネットワーク、時刻取得等のシステムリソースにアクセスするための標準化 API 群。Capability-based security (deny-by-default) が設計の核心。Bytecode Alliance が主導し、[[wasm-at-the-edge|Edge Computing]] の基盤技術として機能する。

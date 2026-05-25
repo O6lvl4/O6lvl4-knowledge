@@ -1,6 +1,8 @@
 ---
 title: 純粋関数型言語
 tags: [programming-paradigm, computer-science]
+created_at: 2026-05-18
+updated_at: 2026-05-18
 ---
 
 すべての関数が純粋（副作用なし）であることを型システムで強制する[[functional-programming|関数型言語]]。

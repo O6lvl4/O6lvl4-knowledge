@@ -2,11 +2,7 @@
 title: Rust
 tags: [language, systems, programming]
 created_at: 2026-05-20
-updated_at: 2026-05-20
-srs_state: new
-card_count: 8
-reviewed_count: 0
-next_due: 2026-05-20
+updated_at: 2026-05-24
 ---
 
 Mozilla Research が開発し 2015 年に 1.0 をリリースしたシステムプログラミング言語。**所有権（ownership）** と **借用（borrow）** の型システムにより、GC なしでメモリ安全性をコンパイル時に保証する。

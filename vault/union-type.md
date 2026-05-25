@@ -3,10 +3,6 @@ title: 共用型 / Union 型
 tags: [type-theory, programming-language, computer-science]
 created_at: 2026-05-20
 updated_at: 2026-05-20
-srs_state: new
-card_count: 6
-reviewed_count: 0
-next_due: 2026-05-20
 ---
 
 「複数の型のいずれかである」ことを表す型。実装形態によって安全性と表現力が大きく異なる。

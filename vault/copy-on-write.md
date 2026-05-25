@@ -1,6 +1,8 @@
 ---
 title: Copy-on-Write (COW)
 tags: [computer-science, memory-management, optimization]
+created_at: 2026-05-19
+updated_at: 2026-05-19
 ---
 
 「コピーが必要になるまでコピーしない」最適化戦略。

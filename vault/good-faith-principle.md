@@ -1,6 +1,8 @@
 ---
 title: 信義則
 tags: [law, civil-law]
+created_at: 2026-05-19
+updated_at: 2026-05-19
 ---
 
 「相手の信頼を裏切っちゃダメ」という民法の大原則。民法第1条第2項。

@@ -1,6 +1,8 @@
 ---
 title: WebGPU
 tags: [graphics, web, gpu]
+created_at: 2026-05-19
+updated_at: 2026-05-19
 ---
 
 ブラウザから[[gpu|GPU]]にアクセスするための次世代 Web 標準 API。W3C が策定。[[opengl|OpenGL]] ベースの WebGL の後継。

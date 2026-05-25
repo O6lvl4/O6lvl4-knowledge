@@ -1,6 +1,8 @@
 ---
 title: Prince
 tags: [pdf, css, document-generation, proprietary]
+created_at: 2026-05-20
+updated_at: 2026-05-20
 ---
 
 HTML + CSS → PDF 変換の業界最高品質ツール。プロプライエタリ。YesLogic 社（オーストラリア）が 2003 年から開発。

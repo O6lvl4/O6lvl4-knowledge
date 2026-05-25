@@ -3,10 +3,6 @@ title: Edge / WebAssembly ランドスケープ
 tags: [edge-computing, webassembly, meta]
 created_at: 2026-05-24
 updated_at: 2026-05-24
-srs_state: new
-card_count: 0
-reviewed_count: 0
-next_due: 2026-05-24
 ---
 
 Edge Computing と WebAssembly エコシステムの全体構成を俯瞰するマップ。各ノートがどのレイヤーに属し、何と何が接続するかを示す。

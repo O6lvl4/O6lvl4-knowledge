@@ -3,10 +3,6 @@ title: V8 Isolates
 tags: [edge-computing, runtime, javascript, v8]
 created_at: 2026-05-24
 updated_at: 2026-05-24
-srs_state: new
-card_count: 12
-reviewed_count: 0
-next_due: 2026-05-24
 ---
 
 V8 エンジン (Google 製、Chrome/Node.js/Deno の JS エンジン) における完全に独立した VM インスタンス。独自のヒープ、GC、コンパイルパイプラインを持ち、1プロセス内で数千の Isolate が共存できる。Cloudflare Workers が [[edge-computing|Edge Computing]] の実行モデルとして採用し、0.4ms の Cold Start と 32,000 Isolate/host の高密度マルチテナントを実現した。

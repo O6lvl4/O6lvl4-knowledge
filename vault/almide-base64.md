@@ -1,6 +1,8 @@
 ---
 title: base64 (Almide)
 tags: [almide, stdlib]
+created_at: 2026-05-01
+updated_at: 2026-05-19
 ---
 
 RFC 4648 準拠の Base64 エンコード/デコードライブラリ。[[almide|Almide]] で純粋実装。

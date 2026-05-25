@@ -1,6 +1,8 @@
 ---
 title: lumen
 tags: [almide, graphics, math]
+created_at: 2026-05-18
+updated_at: 2026-05-19
 ---
 
 [[almide|Almide]] 用のグラフィックス数学ライブラリ。すべてのターゲット（ネイティブ + WASM）で動作。

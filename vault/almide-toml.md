@@ -1,6 +1,8 @@
 ---
 title: toml (Almide)
 tags: [almide, stdlib]
+created_at: 2026-05-01
+updated_at: 2026-05-19
 ---
 
 TOML v1.0 パーサー・シリアライザ。[[almide|Almide]] で純粋実装。

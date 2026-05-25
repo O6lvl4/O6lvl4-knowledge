@@ -2,7 +2,7 @@
 title: OBS Studio
 tags: [streaming, recording, open-source, video]
 created_at: 2026-05-04
-updated_at: 2026-05-04
+updated_at: 2026-05-20
 srs_state: new
 card_count: 6
 reviewed_count: 0

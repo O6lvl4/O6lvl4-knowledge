@@ -1,6 +1,8 @@
 ---
 title: Forth
 tags: [language, programming-paradigm, stack]
+created_at: 2026-05-19
+updated_at: 2026-05-19
 ---
 
 1970年に Charles Moore が開発した[[stack-oriented-programming|スタック指向]][[programming-language|プログラミング言語]]。

@@ -3,10 +3,6 @@ title: Style-Bert-VITS2
 tags: [tts, audio, ai, open-source, aituber]
 created_at: 2026-05-20
 updated_at: 2026-05-20
-srs_state: new
-card_count: 5
-reviewed_count: 0
-next_due: 2026-05-20
 ---
 
 自分の音声データからカスタム音声モデルを学習できるローカル TTS ソフトウェア。[[voicevox|VOICEVOX]] がプリセットキャラのみなのに対し、Style-Bert-VITS2 は**オリジナルの声**を作れるのが最大の差別化点。

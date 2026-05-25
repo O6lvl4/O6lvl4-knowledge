@@ -1,6 +1,8 @@
 ---
 title: DirectX
 tags: [graphics, gpu, microsoft]
+created_at: 2026-05-19
+updated_at: 2026-05-19
 ---
 
 Microsoft のマルチメディア API 群。[[gpu|GPU]] グラフィックスには Direct3D が使われる。Windows / Xbox で動作。

@@ -1,6 +1,8 @@
 ---
 title: VRoid Hub
 tags: [vtuber, 3d, platform, pixiv]
+created_at: 2026-05-19
+updated_at: 2026-05-19
 ---
 
 [[vrm|VRM]] モデルの共有プラットフォーム。pixiv が運営。[[vroid-studio|VRoid Studio]] とは別サービス。

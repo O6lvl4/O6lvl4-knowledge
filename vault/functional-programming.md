@@ -1,6 +1,8 @@
 ---
 title: 関数型言語
 tags: [programming-paradigm, computer-science]
+created_at: 2026-05-18
+updated_at: 2026-05-18
 ---
 
 関数を第一級の値として扱うプログラミングパラダイム。

@@ -3,10 +3,6 @@ title: WinterTC
 tags: [edge-computing, javascript, standard, ecma]
 created_at: 2026-05-24
 updated_at: 2026-05-24
-srs_state: new
-card_count: 10
-reviewed_count: 0
-next_due: 2026-05-24
 ---
 
 Ecma International TC55。サーバーサイド / Edge の JavaScript ランタイム間で Web Platform API の互換性を標準化する技術委員会。旧名 WinterCG (W3C Community Group, 2022年設立)。2024年12月に Ecma に移管され、正式な国際標準を発行できるようになった。2025年12月に ECMA-429 (Minimum Common Web Platform API) が採択。

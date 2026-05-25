@@ -187,26 +187,37 @@ function syncNote(slug) {
   return null;
 }
 
-function listSlugs() {
+function listSrsSlugs() {
   return safeReaddir(SRS)
     .filter((e) => e.isDirectory() && !e.name.startsWith('.'))
     .map((e) => e.name);
 }
 
+function listAllSlugs() {
+  return safeReaddir(VAULT)
+    .filter((e) => e.isFile() && e.name.endsWith('.md') && !e.name.startsWith('.'))
+    .map((e) => e.name.replace(/\.md$/, ''));
+}
+
 function main() {
-  const slugs = listSlugs();
-  if (slugs.length === 0) {
-    console.error(`no SRS data under ${SRS}`);
+  const srsSlugs = new Set(listSrsSlugs());
+  const allSlugs = listAllSlugs();
+  if (allSlugs.length === 0) {
+    console.error(`no notes under ${VAULT}`);
     return;
   }
   let touched = 0;
-  for (const slug of slugs) {
+  for (const slug of allSlugs) {
     const r = syncNote(slug);
     if (r) {
       touched++;
       const s = r.summary;
-      const ret = s?.retention === null || s?.retention === undefined ? '—' : s.retention.toFixed(2);
-      console.log(`✓ ${slug.padEnd(30)} state=${s?.srs_state ?? '—'} retention=${ret} cards=${s?.card_count ?? 0} due=${s?.next_due ?? '—'}`);
+      if (srsSlugs.has(slug)) {
+        const ret = s?.retention === null || s?.retention === undefined ? '—' : s.retention.toFixed(2);
+        console.log(`✓ ${slug.padEnd(30)} state=${s?.srs_state ?? '—'} retention=${ret} cards=${s?.card_count ?? 0} due=${s?.next_due ?? '—'}`);
+      } else {
+        console.log(`✓ ${slug.padEnd(30)} dates=${r.dates.created_at}..${r.dates.updated_at}`);
+      }
     }
   }
   console.log(`\nupdated ${touched} note(s)`);

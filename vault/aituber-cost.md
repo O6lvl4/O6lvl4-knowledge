@@ -3,10 +3,6 @@ title: AITuber 配信コスト構造
 tags: [aituber, cost, llm, tts, streaming]
 created_at: 2026-05-20
 updated_at: 2026-05-20
-srs_state: new
-card_count: 6
-reviewed_count: 0
-next_due: 2026-05-20
 ---
 
 AITuber の配信を回すために必要なランニングコストの構造分析。コストは大きく **LLM（対話生成）** と **TTS（音声合成）** の 2 つで構成される。

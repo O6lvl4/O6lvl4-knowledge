@@ -1,6 +1,8 @@
 ---
 title: svg (Almide)
 tags: [almide, stdlib, graphics]
+created_at: 2026-05-01
+updated_at: 2026-05-19
 ---
 
 SVG ドキュメント生成ライブラリ。[[almide|Almide]] で純粋実装。

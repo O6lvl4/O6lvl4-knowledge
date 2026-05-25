@@ -3,10 +3,6 @@ title: Anycast / CDN
 tags: [edge-computing, networking, cdn, anycast, bgp]
 created_at: 2026-05-24
 updated_at: 2026-05-24
-srs_state: new
-card_count: 12
-reviewed_count: 0
-next_due: 2026-05-24
 ---
 
 [[edge-computing|Edge Computing]] における「近さ」を実現する技術。Anycast は L3 で最寄りの PoP にパケットを自動ルーティングし、CDN はその上にキャッシュ階層を構築する。Edge CDN はさらにコンピュートを追加して「近い場所でコードも実行できる」世界を実現した。

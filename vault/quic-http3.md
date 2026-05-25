@@ -3,10 +3,6 @@ title: QUIC / HTTP/3
 tags: [networking, protocol, edge-computing, transport, http]
 created_at: 2026-05-24
 updated_at: 2026-05-24
-srs_state: new
-card_count: 36
-reviewed_count: 0
-next_due: 2026-05-24
 ---
 
 UDP 上に構築された暗号化・多重化トランスポートプロトコル QUIC と、その上で動作する HTTP/3 の包括的整理。TCP + TLS が数十年かけて獲得した機能を、ossification を回避しつつ単一プロトコルに統合した。2025年10月時点で全 Web トラフィックの約 35% が HTTP/3 で配信されている。

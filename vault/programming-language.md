@@ -1,6 +1,8 @@
 ---
 title: プログラミング言語
 tags: [computer-science, language]
+created_at: 2026-05-19
+updated_at: 2026-05-20
 ---
 
 人間がコンピュータに対する命令を記述するための人工言語。

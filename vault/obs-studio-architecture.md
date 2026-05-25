@@ -3,10 +3,6 @@ title: OBS Studio アーキテクチャ
 tags: [streaming, architecture, open-source, video]
 created_at: 2026-05-20
 updated_at: 2026-05-20
-srs_state: new
-card_count: 7
-reviewed_count: 0
-next_due: 2026-05-20
 ---
 
 [[obs|OBS Studio]] の内部アーキテクチャの分析。ソースコード（GitHub `obsproject/obs-studio`）を基に構成要素と設計判断を整理したもの。

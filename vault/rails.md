@@ -3,10 +3,6 @@ title: Ruby on Rails
 tags: [web-framework, ruby, history, dx]
 created_at: 2026-05-07
 updated_at: 2026-05-07
-srs_state: new
-card_count: 8
-reviewed_count: 0
-next_due: 2026-05-07
 ---
 
 David Heinemeier Hansson（DHH）が 2004 年 7 月に公開した、**[[ruby]] で書かれたフルスタック Web アプリケーションフレームワーク**。Basecamp（37signals）の社内コードから抽出された。**[[convention-over-configuration]]** と DRY を核に据え、当時の Web 開発の生産性基準を一段階押し上げた。設計哲学は後に [[the-rails-doctrine]] として 9 原則に体系化されている。

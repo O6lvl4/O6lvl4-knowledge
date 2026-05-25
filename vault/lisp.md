@@ -1,6 +1,8 @@
 ---
 title: LISP
 tags: [programming-paradigm, computer-science, language]
+created_at: 2026-05-18
+updated_at: 2026-05-18
 ---
 
 1958年に生まれた、現存する最古の高級言語の一つ。「コードとデータが同じ構造」という設計思想を持つ。

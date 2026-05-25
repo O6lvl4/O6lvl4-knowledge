@@ -3,10 +3,6 @@ title: Edge データストア
 tags: [edge-computing, database, distributed-systems, data]
 created_at: 2026-05-24
 updated_at: 2026-05-24
-srs_state: new
-card_count: 14
-reviewed_count: 0
-next_due: 2026-05-24
 ---
 
 [[edge-computing|Edge Computing]] における最大の技術的課題: データの配置と一貫性。「データをユーザーに近づけるほどレイテンシは下がるが、一貫性の維持コストが上がる」というジレンマが全ての設計判断の根底にある。

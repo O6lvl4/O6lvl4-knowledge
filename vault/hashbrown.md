@@ -3,10 +3,6 @@ title: hashbrown
 tags: [rust, data-structure, hash-table, crate]
 created_at: 2026-05-24
 updated_at: 2026-05-24
-srs_state: new
-card_count: 10
-reviewed_count: 0
-next_due: 2026-05-24
 ---
 
 [[swiss-table|SwissTable]] アルゴリズム（Google の `absl::flat_hash_map`）の [[rust|Rust]] 移植。**Rust 1.36 以降、`std::collections::HashMap` / `HashSet` の内部実装そのもの**である。独立クレートとして公開されており、std にはない追加機能を提供する。

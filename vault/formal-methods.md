@@ -1,6 +1,8 @@
 ---
 title: 形式手法
 tags: [formal-methods, computer-science]
+created_at: 2026-05-18
+updated_at: 2026-05-18
 ---
 
 数学的な手法でソフトウェアの正しさを保証する技術の総称。

@@ -1,6 +1,8 @@
 ---
 title: Metal
 tags: [graphics, gpu, apple]
+created_at: 2026-05-19
+updated_at: 2026-05-19
 ---
 
 Apple の低レベル[[gpu|GPU]] API。2014年発表。macOS / iOS / visionOS で動作。

@@ -1,6 +1,8 @@
 ---
 title: 定理証明
 tags: [formal-methods, computer-science]
+created_at: 2026-05-01
+updated_at: 2026-05-19
 ---
 
 [[formal-methods|形式手法]]の一種。プログラムの性質を数学的に証明する。

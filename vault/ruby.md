@@ -3,10 +3,6 @@ title: Ruby
 tags: [language, dynamic, scripting]
 created_at: 2026-05-07
 updated_at: 2026-05-07
-srs_state: new
-card_count: 6
-reviewed_count: 0
-next_due: 2026-05-07
 ---
 
 まつもとゆきひろ（Matz）が 1993 年に開発を始め、1995 年に最初のパブリックリリースを出した **動的型・オブジェクト指向の汎用プログラミング言語**。**「プログラマの幸福（programmer happiness）」を一次価値に据えた稀な言語**で、後に [[rails]] のランタイムとして英語圏で爆発的に普及した。

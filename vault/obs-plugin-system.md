@@ -3,10 +3,6 @@ title: OBS Studio プラグインシステム
 tags: [streaming, architecture, plugin, open-source]
 created_at: 2026-05-20
 updated_at: 2026-05-20
-srs_state: new
-card_count: 6
-reviewed_count: 0
-next_due: 2026-05-20
 ---
 
 [[obs|OBS Studio]] のプラグインシステムの全体像。OBS の具体的機能はほぼすべて `obs_module_t`（プラグインモジュール）として実装されている。

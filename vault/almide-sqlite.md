@@ -1,6 +1,8 @@
 ---
 title: almide-sqlite
 tags: [almide, database]
+created_at: 2026-05-18
+updated_at: 2026-05-19
 ---
 
 [[almide|Almide]] 用の SQLite3 バインディング。

@@ -3,10 +3,6 @@ title: libobs
 tags: [streaming, architecture, c, library]
 created_at: 2026-05-20
 updated_at: 2026-05-20
-srs_state: new
-card_count: 6
-reviewed_count: 0
-next_due: 2026-05-20
 ---
 
 [[obs|OBS Studio]] のコアライブラリ。C 言語で実装され、映像/音声パイプラインの全基盤を提供する。OBS の「カーネル」にあたる部分であり、具体的な機能（キャプチャ、エンコード、配信）は一切持たず、**抽象型の定義**と**パイプラインの駆動**だけを行う。

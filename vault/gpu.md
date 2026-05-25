@@ -1,6 +1,8 @@
 ---
 title: GPU
 tags: [hardware, graphics, computer-science]
+created_at: 2026-05-19
+updated_at: 2026-05-19
 ---
 
 Graphics Processing Unit。大量の単純な計算を並列実行することに特化したプロセッサ。

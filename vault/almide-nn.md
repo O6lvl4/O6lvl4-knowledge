@@ -1,6 +1,8 @@
 ---
 title: nn (Almide)
 tags: [almide, ai, neural-network]
+created_at: 2026-05-01
+updated_at: 2026-05-19
 ---
 
 [[almide|Almide]] 用ニューラルネットワークプリミティブ。matrix stdlib ベースの Transformer + 信号処理ライブラリ。

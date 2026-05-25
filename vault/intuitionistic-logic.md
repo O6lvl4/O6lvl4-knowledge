@@ -1,6 +1,8 @@
 ---
 title: 直観主義論理
 tags: [logic, computer-science, type-theory]
+created_at: 2026-05-18
+updated_at: 2026-05-18
 ---
 
 「証拠を構成しないと真とは言えない」という立場の論理。

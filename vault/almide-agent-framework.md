@@ -1,13 +1,9 @@
 ---
 title: Almide Agent Framework — 抽象スケッチ (仮)
 tags: [almide, agent, framework, planning, draft, sketch]
+draft: true
 created_at: 2026-05-07
 updated_at: 2026-05-07
-draft: true
-srs_state: new
-card_count: 6
-reviewed_count: 0
-next_due: 2026-05-07
 ---
 
 > **[仮版・thin sketch]** まだ実装に入らない。[[aitube-studio]] と homullus が並走で叩くであろう共通抽象を、抽出フェーズに入る前に薄く列挙しておく planning ノート。各抽象の境界・名前・粒度・存続可否はすべて検討中。意思決定の固定ではなく **「抽出時に何を見るか」のチェックリスト** として書く。

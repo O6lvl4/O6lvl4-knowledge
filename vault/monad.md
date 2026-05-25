@@ -1,6 +1,8 @@
 ---
 title: Monad
 tags: [programming-paradigm, computer-science, type-theory]
+created_at: 2026-05-18
+updated_at: 2026-05-19
 ---
 
 「文脈付きの値」を連鎖的につなげる仕組み。

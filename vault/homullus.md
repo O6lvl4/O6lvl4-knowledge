@@ -1,6 +1,8 @@
 ---
 title: homullus
 tags: [almide, ai, agent, cli]
+created_at: 2026-05-01
+updated_at: 2026-05-18
 ---
 
 [[almide|Almide]] で実装した自律 AI エージェント CLI。[[almai]] 経由でマルチプロバイダー対応。~1337 行。

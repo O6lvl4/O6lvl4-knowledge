@@ -1,6 +1,8 @@
 ---
 title: almide-bindgen
 tags: [almide, cli, ffi, codegen]
+created_at: 2026-05-01
+updated_at: 2026-05-18
 ---
 
 [[almide|Almide]] モジュールから20言語のFFIバインディングを生成するジェネレータ。Almide 自身で実装されている。

@@ -1,13 +1,9 @@
 ---
 title: Agent Framework — スコープ概念設計 (仮)
 tags: [almide, agent, framework, planning, draft, scope]
+draft: true
 created_at: 2026-05-07
 updated_at: 2026-05-07
-draft: true
-srs_state: new
-card_count: 7
-reviewed_count: 0
-next_due: 2026-05-07
 ---
 
 > **[仮版・concept design]** [[almide-agent-framework]] の候補抽象 7 つのうち、**どこまでを「Almide 版 Rails」として bundle するか** を決めるための概念設計ノート。スコープ判断が後の抽出・命名・パッケージ分割すべての境界条件を決めるので、実コードに入る前にここを固める。

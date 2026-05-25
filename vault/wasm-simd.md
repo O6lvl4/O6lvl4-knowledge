@@ -3,10 +3,6 @@ title: WebAssembly SIMD
 tags: [computer-science, webassembly, simd, wasm]
 created_at: 2026-05-24
 updated_at: 2026-05-24
-srs_state: new
-card_count: 10
-reviewed_count: 0
-next_due: 2026-05-24
 ---
 
 WebAssembly に 128-bit 幅のベクトル演算 (SIMD: Single Instruction Multiple Data) を追加する拡張仕様。単一の命令で複数のデータ要素を同時に処理し、スカラ WASM と比べて 2-6x の高速化を実現する。WebAssembly 2.0 仕様の一部として 2024年12月に W3C Standard となった。

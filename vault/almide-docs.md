@@ -1,6 +1,8 @@
 ---
 title: docs (Almide)
 tags: [almide, documentation]
+created_at: 2026-05-01
+updated_at: 2026-05-19
 ---
 
 [[almide|Almide]] のドキュメンテーションサイト。Astro + Starlight で構築、GitHub Pages でホスティング。

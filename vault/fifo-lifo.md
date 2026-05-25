@@ -3,10 +3,6 @@ title: FIFO / LIFO
 tags: [computer-science, data-structure, algorithm]
 created_at: 2026-05-24
 updated_at: 2026-05-24
-srs_state: new
-card_count: 6
-reviewed_count: 0
-next_due: 2026-05-24
 ---
 
 データの挿入と取り出しの順序を定める二つの基本原則。あらゆるバッファ、スケジューラ、メモリ管理の設計基盤になる。

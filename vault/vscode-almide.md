@@ -1,6 +1,8 @@
 ---
 title: vscode-almide
 tags: [almide, language-tooling, editor]
+created_at: 2026-05-01
+updated_at: 2026-05-18
 ---
 
 [[almide|Almide]] の VS Code 拡張。

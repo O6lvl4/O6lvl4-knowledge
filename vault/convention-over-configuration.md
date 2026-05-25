@@ -3,10 +3,6 @@ title: Convention over Configuration
 tags: [design-principle, framework, philosophy]
 created_at: 2026-05-07
 updated_at: 2026-05-07
-srs_state: new
-card_count: 5
-reviewed_count: 0
-next_due: 2026-05-07
 ---
 
 「**設定よりも規約**」と訳される設計原則。**「妥当な既定値を規約として埋め込み、開発者は規約から外れたい場所だけを記述する」** という考え方。[[rails]] が原則として明文化し、その後の Web フレームワーク全般に広がった。

@@ -3,10 +3,6 @@ title: Work-Stealing
 tags: [computer-science, concurrency, scheduling, algorithm]
 created_at: 2026-05-24
 updated_at: 2026-05-24
-srs_state: new
-card_count: 8
-reviewed_count: 0
-next_due: 2026-05-24
 ---
 
 並列タスクスケジューリングアルゴリズム。暇なスレッドが忙しいスレッドからタスクを「盗む」ことで負荷を動的に分散する。1999年の Cilk プロジェクト (MIT) で理論的基盤が確立された。[[rayon]] が Rust 実装として代表的。

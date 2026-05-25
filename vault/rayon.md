@@ -3,10 +3,6 @@ title: rayon
 tags: [rust, concurrency, parallelism, crate]
 created_at: 2026-05-24
 updated_at: 2026-05-24
-srs_state: new
-card_count: 12
-reviewed_count: 0
-next_due: 2026-05-24
 ---
 
 [[rust|Rust]] のデータ並列処理ライブラリ。**`.iter()` を `.par_iter()` に変えるだけで並列化が完了する** API 設計と、Rust の型システムによるデータ競合の静的防止を両立する。内部は [[work-stealing]] スケジューラで駆動される。

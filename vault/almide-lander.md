@@ -1,6 +1,8 @@
 ---
 title: almide-lander
 tags: [almide, cli, codegen]
+created_at: 2026-05-01
+updated_at: 2026-05-18
 ---
 
 Almide モジュールをネイティブパッケージにエクスポートする CLI オーケストレータ。

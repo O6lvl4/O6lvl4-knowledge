@@ -3,10 +3,6 @@ title: Edge Computing 実務設計パターン
 tags: [edge-computing, architecture, web-performance, design-pattern]
 created_at: 2026-05-24
 updated_at: 2026-05-24
-srs_state: new
-card_count: 28
-reviewed_count: 0
-next_due: 2026-05-24
 ---
 
 [[edge-computing|Edge Computing]] をWeb開発の実務でどう使うか。インフラ論ではなく「リクエストが到着してからレスポンスを返すまでに Edge で何をするか」の設計パターン集。

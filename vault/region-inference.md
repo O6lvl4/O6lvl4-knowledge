@@ -3,10 +3,6 @@ title: Region Inference
 tags: [computer-science, memory-management, type-theory, compiler]
 created_at: 2026-05-24
 updated_at: 2026-05-24
-srs_state: new
-card_count: 16
-reviewed_count: 0
-next_due: 2026-05-24
 ---
 
 コンパイル時にヒープメモリの割り当てと解放をすべて推論する手法。GC なしで安全なメモリ管理を実現する。Tofte & Talpin (1997) が理論的基盤を確立し、MLKit (Standard ML コンパイラ) で実装された。

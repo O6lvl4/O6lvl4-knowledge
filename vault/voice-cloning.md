@@ -3,10 +3,6 @@ title: 音声クローン
 tags: [tts, audio, ai, aituber]
 created_at: 2026-05-20
 updated_at: 2026-05-20
-srs_state: new
-card_count: 6
-reviewed_count: 0
-next_due: 2026-05-20
 ---
 
 少量の音声データから特定の話者の声を再現する技術。任意のテキストをその声で読み上げさせることができる。AITuber のオリジナルキャラクター音声、ナレーション、吹き替え等に使われる。

@@ -1,6 +1,8 @@
 ---
 title: 幽霊型
 tags: [type-theory, computer-science]
+created_at: 2026-05-18
+updated_at: 2026-05-18
 ---
 
 実行時には存在しないが、コンパイル時に型の区別として機能する型パラメータ。Phantom type。

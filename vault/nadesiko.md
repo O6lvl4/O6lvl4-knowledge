@@ -1,6 +1,8 @@
 ---
 title: なでしこ
 tags: [language, japanese, education]
+created_at: 2026-05-19
+updated_at: 2026-05-19
 ---
 
 日本語で記述する手続き型[[programming-language|プログラミング言語]]。クジラ飛行机が開発。

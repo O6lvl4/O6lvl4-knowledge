@@ -1,6 +1,8 @@
 ---
 title: almai
 tags: [almide, ai, llm]
+created_at: 2026-05-01
+updated_at: 2026-05-18
 ---
 
 [[almide|Almide]] 用のマルチプロバイダー LLM クライアント。Almide で純粋実装（外部 SDK 依存なし）。

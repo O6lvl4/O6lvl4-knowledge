@@ -1,12 +1,8 @@
 ---
 title: Edge Computing
 tags: [edge-computing, distributed-systems, architecture]
-created_at: 2026-05-24
+created_at: 2026-05-01
 updated_at: 2026-05-24
-srs_state: new
-card_count: 12
-reviewed_count: 0
-next_due: 2026-05-24
 ---
 
 データが生成・消費される場所の近くで計算処理を行う分散コンピューティングパラダイム。中央クラウドへの往復を排除することで、レイテンシ削減・帯域幅節約・データ主権の確保を実現する。

@@ -1,6 +1,8 @@
 ---
 title: モデル検査
 tags: [formal-methods, computer-science]
+created_at: 2026-05-18
+updated_at: 2026-05-18
 ---
 
 [[formal-methods|形式手法]]の一種。システムの状態を網羅的に探索して、仕様違反がないことを自動で検証する。

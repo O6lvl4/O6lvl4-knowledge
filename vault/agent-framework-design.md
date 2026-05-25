@@ -1,13 +1,9 @@
 ---
 title: Agent Framework — 設計詳細 (仮)
 tags: [almide, agent, framework, planning, draft, design]
+draft: true
 created_at: 2026-05-07
 updated_at: 2026-05-07
-draft: true
-srs_state: new
-card_count: 8
-reviewed_count: 0
-next_due: 2026-05-07
 ---
 
 > **[仮版・concept design]** [[agent-framework-scope]] でスコープが「realtime agent framework + Rails 流モジュラー」に固まったのを受けて、その下層の 5 つの設計詳細（package 粒度 / state model API / realtime API / command protocol 型表現 / 名前選定基準）を概念設計する。実装はしない。各節は推奨案 + open questions を残す形で書く。

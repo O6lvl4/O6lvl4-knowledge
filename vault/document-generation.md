@@ -1,6 +1,8 @@
 ---
 title: 書面の自動生成
 tags: [pdf, document-generation, concept]
+created_at: 2026-05-20
+updated_at: 2026-05-20
 ---
 
 テンプレートにデータを流し込んで、印刷可能な PDF（契約書、請求書、帳票、証明書等）をプログラムで生成すること。

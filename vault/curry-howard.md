@@ -1,6 +1,8 @@
 ---
 title: カリー=ハワード同型対応
 tags: [type-theory, logic, computer-science]
+created_at: 2026-05-18
+updated_at: 2026-05-18
 ---
 
 論理の命題と型、論理の証明とプログラムが一対一に対応するという発見。

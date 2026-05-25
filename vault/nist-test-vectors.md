@@ -1,6 +1,8 @@
 ---
 title: NIST テストベクタ
 tags: [cryptography, testing, standard]
+created_at: 2026-05-21
+updated_at: 2026-05-21
 ---
 
 NIST (米国国立標準技術研究所) が暗号アルゴリズムの仕様書と一緒に公開している公式のテスト入出力データ。

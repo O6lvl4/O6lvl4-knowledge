@@ -3,10 +3,6 @@ title: 分散システムの一貫性 — CAP定理, CRDT, 一貫性モデル
 tags: [computer-science, distributed-systems, edge-computing, consistency]
 created_at: 2026-05-24
 updated_at: 2026-05-24
-srs_state: new
-card_count: 28
-reviewed_count: 0
-next_due: 2026-05-24
 ---
 
 分散システムにおけるデータ一貫性の理論的基盤と実践的設計パターンの包括的整理。CAP 定理の正確な理解から、一貫性モデルの階層、CRDT の数学的定義、Edge Computing での実装まで。

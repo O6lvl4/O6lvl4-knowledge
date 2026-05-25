@@ -1,6 +1,8 @@
 ---
 title: almide-web
 tags: [almide, wasm, browser]
+created_at: 2026-05-18
+updated_at: 2026-05-18
 ---
 
 [[almide|Almide]] WASM アプリ向けのブラウザ API バインディング。

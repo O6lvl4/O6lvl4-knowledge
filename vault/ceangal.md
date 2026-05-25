@@ -1,6 +1,8 @@
 ---
 title: ceangal
 tags: [almide, graphics, ui, wasm]
+created_at: 2026-05-18
+updated_at: 2026-05-18
 ---
 
 GPU ネイティブの UI フレームワーク。[[snaidhm]] 上のレイアウト・ウィジェット・インタラクション層。[[almide|Almide]] で実装。

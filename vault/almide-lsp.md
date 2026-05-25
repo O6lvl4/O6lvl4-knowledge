@@ -3,10 +3,6 @@ title: almide-lsp
 tags: [almide, lsp, editor, tooling]
 created_at: 2026-05-20
 updated_at: 2026-05-20
-srs_state: new
-card_count: 5
-reviewed_count: 0
-next_due: 2026-05-20
 ---
 
 [[almide|Almide]] の Language Server Protocol サーバー。`almide lsp` で起動する。v0.19.0 で Phase 1 を実装。

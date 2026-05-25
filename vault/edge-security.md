@@ -3,10 +3,6 @@ title: Edge Security
 tags: [edge-computing, security, ddos, waf, tls, zero-trust, bot-management]
 created_at: 2026-05-24
 updated_at: 2026-05-24
-srs_state: new
-card_count: 40
-reviewed_count: 0
-next_due: 2026-05-24
 ---
 
 [[edge-computing|Edge Computing]] におけるセキュリティの全体像。Edge はリクエストが最初に到達する地点であり、セキュリティの最前線。DDoS 緩和、WAF、TLS 終端、Zero Trust、Bot Management、認証、Supply Chain Security、マルチテナント分離の8領域を網羅する。

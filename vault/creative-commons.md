@@ -1,6 +1,8 @@
 ---
 title: Creative Commons
 tags: [law, license, intellectual-property]
+created_at: 2026-05-19
+updated_at: 2026-05-19
 ---
 
 「この作品、こういう条件なら使っていいよ」を世界共通のマークで示す仕組み。略称 CC。

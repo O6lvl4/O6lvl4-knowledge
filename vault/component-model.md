@@ -3,10 +3,6 @@ title: Component Model
 tags: [webassembly, wasm, component-model, standard]
 created_at: 2026-05-24
 updated_at: 2026-05-24
-srs_state: new
-card_count: 14
-reviewed_count: 0
-next_due: 2026-05-24
 ---
 
 WebAssembly モジュールを型安全に結合するための仕様。Core Module が数値型しか扱えない制約を、WIT (型安全な IDL) + Canonical ABI (標準バイナリ表現) + メモリ隔離 (Share-Nothing) で解決する。[[wasi|WASI]] はこの上に構築された API 群であり、Component Model はその基盤レイヤー。[[bytecode-alliance|Bytecode Alliance]] が [[wasmtime|Wasmtime]] でリファレンス実装を提供。

@@ -1,6 +1,8 @@
 ---
 title: almide-wasm-bindgen
 tags: [almide, wasm, codegen]
+created_at: 2026-05-01
+updated_at: 2026-05-18
 ---
 
 [[almide|Almide]] 向けの WASM + JavaScript/TypeScript バインディングジェネレータ。Almide で実装。

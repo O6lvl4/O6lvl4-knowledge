@@ -1,6 +1,8 @@
 ---
 title: almide-dojo
 tags: [almide, llm, benchmark]
+created_at: 2026-05-01
+updated_at: 2026-05-18
 ---
 
 [[almide|Almide]] コンパイラの MSR（Modification Survival Rate）を日次測定するベンチマークスイート。Almide で実装。

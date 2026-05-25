@@ -3,10 +3,6 @@ title: Relaxed SIMD
 tags: [computer-science, webassembly, simd, wasm]
 created_at: 2026-05-24
 updated_at: 2026-05-24
-srs_state: new
-card_count: 6
-reviewed_count: 0
-next_due: 2026-05-24
 ---
 
 [[wasm-simd|WebAssembly SIMD]] の厳密な決定性要件を緩和し、ハードウェア固有の高速命令を活用可能にする拡張提案。2024年7月に Phase 4 (Finished Proposal) に到達。WebAssembly 3.0 仕様の一部。

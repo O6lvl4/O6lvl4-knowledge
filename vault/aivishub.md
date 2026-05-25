@@ -3,10 +3,6 @@ title: AivisHub
 tags: [tts, audio, api, aituber]
 created_at: 2026-05-20
 updated_at: 2026-05-20
-srs_state: new
-card_count: 4
-reviewed_count: 0
-next_due: 2026-05-20
 ---
 
 日本語音声合成（TTS）のクラウド API サービス。[[voicevox|VOICEVOX]] フォークの **AivisSpeech** をベースにしたホスティング版で、API 経由で音声合成を利用できる。

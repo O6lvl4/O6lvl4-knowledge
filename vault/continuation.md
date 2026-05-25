@@ -1,6 +1,8 @@
 ---
 title: 継続 / 限定継続
 tags: [programming-paradigm, computer-science]
+created_at: 2026-05-02
+updated_at: 2026-05-18
 ---
 
 「この後の計算の残り全部」を値として扱う概念。

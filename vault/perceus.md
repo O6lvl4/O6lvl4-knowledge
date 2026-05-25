@@ -3,10 +3,6 @@ title: Perceus
 tags: [computer-science, memory-management, reference-counting, compiler]
 created_at: 2026-05-24
 updated_at: 2026-05-24
-srs_state: new
-card_count: 14
-reviewed_count: 0
-next_due: 2026-05-24
 ---
 
 GC なしの精密参照カウント (RC) + reuse 解析アルゴリズム。Reinking, Xie, de Moura, Leijen (Microsoft Research) による PLDI 2021 論文 (Distinguished Paper Award)。Koka 言語のメモリ管理の中核。関数型プログラミングでありながら命令型と同等のメモリ効率を達成する。

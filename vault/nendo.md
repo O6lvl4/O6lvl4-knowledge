@@ -1,6 +1,8 @@
 ---
 title: nendo
 tags: [almide, graphics, 3d, vrm]
+created_at: 2026-05-18
+updated_at: 2026-05-19
 ---
 
 [[vrm|VRM]] 3D モデルをブラウザで [[almide|Almide]] + [[obsid]] を使ってレンダリングするプロジェクト。three.js 排除が目標。

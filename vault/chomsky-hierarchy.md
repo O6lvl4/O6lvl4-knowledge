@@ -1,6 +1,8 @@
 ---
 title: チョムスキー階層
 tags: [formal-language, automata-theory, computer-science]
+created_at: 2026-05-18
+updated_at: 2026-05-18
 ---
 
 形式言語を生成する形式文法の包含階層。1956年にノーム・チョムスキーが発表。

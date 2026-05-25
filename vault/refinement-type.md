@@ -1,6 +1,8 @@
 ---
 title: 篩型
 tags: [type-theory, computer-science]
+created_at: 2026-05-18
+updated_at: 2026-05-18
 ---
 
 既存の型に述語（条件）を付加して絞り込む型。Refinement type。

@@ -3,10 +3,6 @@ title: Dead Code Elimination (DCE)
 tags: [computer-science, compiler, optimization, wasm]
 created_at: 2026-05-24
 updated_at: 2026-05-24
-srs_state: new
-card_count: 8
-reviewed_count: 0
-next_due: 2026-05-24
 ---
 
 実行されることがないコード (dead code) をコンパイル時に除去する最適化。バイナリサイズの削減、キャッシュ効率の向上、他の最適化パスの有効化に寄与する。WebAssembly ではバイナリを配信するためサイズが直接ロード時間に影響し、DCE の重要度が特に高い。

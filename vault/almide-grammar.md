@@ -1,6 +1,8 @@
 ---
 title: almide-grammar
 tags: [almide, language-tooling]
+created_at: 2026-05-01
+updated_at: 2026-05-18
 ---
 
 [[almide|Almide]] の構文定義の単一真実ソース（Single Source of Truth）。Almide で実装。

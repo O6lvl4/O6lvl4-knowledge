@@ -1,6 +1,8 @@
 ---
 title: wgpu
 tags: [graphics, gpu, rust, wasm]
+created_at: 2026-05-19
+updated_at: 2026-05-19
 ---
 
 Rust 製の [[webgpu|WebGPU]] 実装。ブラウザ外でも動く。

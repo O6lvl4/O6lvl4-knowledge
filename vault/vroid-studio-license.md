@@ -1,6 +1,8 @@
 ---
 title: VRoid Studio ライセンス
 tags: [vtuber, 3d, license, pixiv]
+created_at: 2026-05-19
+updated_at: 2026-05-19
 ---
 
 [[vroid-studio|VRoid Studio]] で作ったキャラクターの権利と利用条件。

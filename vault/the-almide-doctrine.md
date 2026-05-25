@@ -1,13 +1,9 @@
 ---
 title: The Almide Doctrine (仮)
 tags: [almide, philosophy, design-principle, llm, doctrine, draft]
-created_at: 2026-05-07
-updated_at: 2026-05-07
 draft: true
-srs_state: new
-card_count: 9
-reviewed_count: 0
-next_due: 2026-05-07
+created_at: 2026-05-07
+updated_at: 2026-05-19
 ---
 
 > **[仮版・WIP]** これは Almide Doctrine のドラフト。Rails Doctrine の文体・構成を参照しつつ、AI 時代の言語設計に対する応答として書いた思考実験。9 原則の選定・命名・順序・記述は今後の議論で大きく更新される可能性がある。引用・転載する際は本ドキュメントが仮版である旨を明示すること。

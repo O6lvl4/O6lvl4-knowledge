@@ -1,6 +1,8 @@
 ---
 title: almide-js
 tags: [almide, wasm]
+created_at: 2026-05-01
+updated_at: 2026-05-19
 ---
 
 [[almide-wasm-bindgen]] の設計ドキュメントとベンチマーク結果をまとめたリポジトリ。

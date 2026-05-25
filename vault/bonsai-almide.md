@@ -1,6 +1,8 @@
 ---
 title: bonsai-almide
 tags: [almide, llm, wasm]
+created_at: 2026-05-01
+updated_at: 2026-05-19
 ---
 
 1-bit 量子化 LLM（Bonsai 1.7B）を [[almide|Almide]] + WASM でブラウザ実行するデモ。

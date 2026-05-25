@@ -1,6 +1,8 @@
 ---
 title: tree-sitter-almide
 tags: [almide, language-tooling]
+created_at: 2026-05-01
+updated_at: 2026-05-19
 ---
 
 [[almide|Almide]] 用の Tree-sitter パーサー文法。

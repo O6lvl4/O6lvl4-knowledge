@@ -1,6 +1,8 @@
 ---
 title: Type 2 文法（文脈自由文法）
 tags: [formal-language, automata-theory, computer-science]
+created_at: 2026-05-18
+updated_at: 2026-05-18
 ---
 
 [[chomsky-hierarchy|チョムスキー階層]]の Type 2。プログラミング言語の構文定義に最も広く使われる。

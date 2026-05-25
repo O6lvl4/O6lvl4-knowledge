@@ -1,6 +1,8 @@
 ---
 title: ADT / GADT
 tags: [type-theory, computer-science]
+created_at: 2026-05-18
+updated_at: 2026-05-20
 ---
 
 代数的データ型 (Algebraic Data Type) と一般化代数的データ型 (Generalized ADT)。

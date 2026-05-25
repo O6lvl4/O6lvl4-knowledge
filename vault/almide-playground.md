@@ -1,6 +1,8 @@
 ---
 title: almide-playground
 tags: [almide, wasm, browser]
+created_at: 2026-05-18
+updated_at: 2026-05-19
 ---
 
 ブラウザ上で [[almide|Almide]] コードを実行できるオンライン IDE。

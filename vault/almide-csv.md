@@ -1,6 +1,8 @@
 ---
 title: csv (Almide)
 tags: [almide, stdlib]
+created_at: 2026-05-01
+updated_at: 2026-05-19
 ---
 
 RFC 4180 準拠の CSV パーサー・シリアライザ。[[almide|Almide]] で純粋実装。

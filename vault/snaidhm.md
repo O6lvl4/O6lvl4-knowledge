@@ -1,6 +1,8 @@
 ---
 title: snaidhm
 tags: [almide, graphics, gpu, wasm]
+created_at: 2026-05-18
+updated_at: 2026-05-18
 ---
 
 [[almide|Almide]] 用の WebGPU ベース計算シェーダ最優先 2D/3D レンダラ。

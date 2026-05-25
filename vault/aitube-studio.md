@@ -1,13 +1,9 @@
 ---
 title: AITubeStudio (仮)
 tags: [almide, aituber, agent, product, draft, planning]
+draft: true
 created_at: 2026-05-07
 updated_at: 2026-05-07
-draft: true
-srs_state: new
-card_count: 7
-reviewed_count: 0
-next_due: 2026-05-07
 ---
 
 > **[仮版・planning]** AITubeStudio はまだ実装されていない計画段階のプロダクト。プロダクト名（"AITubeStudio" 自体が仮置き）・スコープ・市場ポジションすべて流動的。本ドキュメントは Almide エコシステムにおけるこのプロダクトの構造的役割を記述する planning ノート。

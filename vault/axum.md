@@ -3,10 +3,6 @@ title: axum
 tags: [rust, web-framework, async, tokio]
 created_at: 2026-05-20
 updated_at: 2026-05-20
-srs_state: new
-card_count: 7
-reviewed_count: 0
-next_due: 2026-05-20
 ---
 
 [[rust|Rust]] の Web フレームワーク。tokio チームが開発。**tower の Service トレイトをそのまま基盤に使う** 設計により、ミドルウェアやエコシステムを tower / hyper / tonic 等と共有できるのが最大の特徴。

@@ -1,6 +1,8 @@
 ---
 title: OpenGL
 tags: [graphics, gpu]
+created_at: 2026-05-19
+updated_at: 2026-05-19
 ---
 
 Khronos Group が管理するクロスプラットフォームの[[gpu|GPU]] API。1992年発表。長年のデファクトスタンダード。

@@ -1,6 +1,8 @@
 ---
 title: CSS Paged Media
 tags: [css, pdf, document-generation, standard]
+created_at: 2026-05-20
+updated_at: 2026-05-20
 ---
 
 HTML + CSS で印刷用のページレイアウトを定義するための CSS 仕様群。W3C が策定。

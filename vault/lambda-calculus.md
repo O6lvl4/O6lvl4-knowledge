@@ -1,6 +1,8 @@
 ---
 title: λ計算
 tags: [programming-paradigm, computer-science, type-theory]
+created_at: 2026-05-18
+updated_at: 2026-05-18
 ---
 
 「関数の定義と適用」だけですべての計算を表現する形式体系。1930年代にアロンゾ・チャーチが考案。

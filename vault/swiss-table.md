@@ -3,10 +3,6 @@ title: SwissTable
 tags: [computer-science, data-structure, hash-table, algorithm]
 created_at: 2026-05-24
 updated_at: 2026-05-24
-srs_state: new
-card_count: 10
-reviewed_count: 0
-next_due: 2026-05-24
 ---
 
 Google が Abseil C++ ライブラリ (`absl::flat_hash_map` / `absl::flat_hash_set`) で実装した高性能ハッシュテーブルアルゴリズム。**制御バイト配列をデータと分離し、SIMD 命令で一括探索する**ことで、従来のオープンアドレッシング法を大幅に上回る性能を実現する。

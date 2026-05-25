@@ -1,6 +1,8 @@
 ---
 title: Mind
 tags: [language, programming-paradigm, stack, japanese]
+created_at: 2026-05-19
+updated_at: 2026-05-19
 ---
 
 日本語でプログラムを記述する[[stack-oriented-programming|スタック指向]][[programming-language|プログラミング言語]]。
