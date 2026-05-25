@@ -2,58 +2,85 @@
 title: Perceus
 tags: [computer-science, memory-management, reference-counting, compiler]
 created_at: 2026-05-24
-updated_at: 2026-05-24
+updated_at: 2026-05-25
 ---
 
-GC なしの精密参照カウント (RC) + reuse 解析アルゴリズム。Reinking, Xie, de Moura, Leijen (Microsoft Research) による PLDI 2021 論文 (Distinguished Paper Award)。Koka 言語のメモリ管理の中核。関数型プログラミングでありながら命令型と同等のメモリ効率を達成する。
+GC なしの精密参照カウント (RC) + reuse 解析アルゴリズム。Reinking, Xie, de Moura, Leijen (Microsoft Research) による PLDI 2021 論文 (Distinguished Paper Award)。Koka 言語のメモリ管理の中核。
 
-## 核心アイデア
+論文の核心的主張: **たった3つの RC 操作ルールだけで、GC なしのメモリ管理が完結する。** さらにこの3ルールの上に reuse analysis と drop specialization を重ねることで、関数型プログラミングが命令型と同等のメモリ効率を達成する。
 
-```
-// 通常の RC:
-let mapped = list.map(data, f)  // alloc → ヒープ確保
-// data dies → rc_dec → free → フリーリストに返す
-// 次の alloc → フリーリストから取る
+## RC 操作の3ルール
 
-// Perceus:
-let mapped = list.map(data, f)  // data の RC==1 なら data のメモリを直接上書き
-// alloc も free も発生しない
-```
+線形リソース計算 (λ₁) 上で、すべての RC 操作を3つのルールに帰着させる。
 
-3つの核心技術:
-1. **Drop insertion**: 変数が dead になったとき自動で `rc_dec` を挿入
-2. **Reuse analysis**: RC==1 なら同サイズのメモリをその場で再利用
-3. **Drop specialization**: drop と reuse を融合して free+alloc ペアを消滅させる
+| Rule | 操作 | 意味 | 生成されるコード |
+|---|---|---|---|
+| Rule 1 | `dup(x)` | 変数をコピーするとき RC を増加 | `rc_inc(x)` |
+| Rule 2 | `drop(x)` | 変数が不要になったとき RC を減少 | `rc_dec(x)` → RC==0 なら `free(x)` |
+| Rule 3 | recursive drop | RC==0 で解放するとき、子フィールドを再帰的に drop | `drop(x.f1); drop(x.f2); free(x)` |
 
-## Drop Insertion
+この3ルールの前提: λ₁ では **各変数はちょうど1回使用される**。複数回使うなら明示的に `dup`、使わないなら明示的に `drop`。コンパイラが自動挿入するのでプログラマは意識しない。
 
-線形リソース計算 (λ₁) に基づく。各変数はちょうど1回使用されるか、明示的に drop される。
+## Rule 1: dup — コピー時に RC 増加
 
-原則:
-- **dup は可能な限り遅く** (導出の葉まで押し出す)
-- **drop は可能な限り早く** (束縛の直後に生成)
+変数が複数回使用される場合、コンパイラが `dup` を挿入する。
 
 ```
-// Koka の map 関数に Perceus が dup/drop を挿入した後
 fun map(xs, f)
   match xs
     Cons(x, xx) ->
-      dup(f)              // f は2回使われる → dup
+      dup(f)              // f は f(x) と map(xx, f) の2箇所で使用 → dup
       val y  = f(x)
       val ys = map(xx, f)
       Cons(y, ys)
+    Nil -> ...
+```
+
+**原則: dup は可能な限り遅く。** 使用直前まで引き延ばし、不要な dup を回避する。実際に両方の分岐を通るとは限らないため、導出の葉まで押し出す。
+
+## Rule 2: drop — 不要時に RC 減少
+
+変数がその後使用されない場合、コンパイラが `drop` を挿入する。
+
+```
+fun map(xs, f)
+  match xs
+    Cons(x, xx) -> ...
     Nil ->
       drop(f)             // f はこの分岐で不使用 → 即 drop
       Nil
 ```
 
-ANF (A-Normal Form) 上で動作し、各変数の「最後の使用地点」が構文的に確定するため、drop 位置を正確に決定できる。
+**原則: drop は可能な限り早く。** 束縛の直後、最初の「使わない」ことが確定した地点で即座に挿入する。これにより RC==0 到達が早まり、メモリ消費のピークが下がる。
 
-## Reuse Analysis
+Rust のスコープベース解放と比較すると、Perceus はスコープ終了を待たず使用終了直後に解放するため、メモリ使用量がスコープベースの半分で済むケースがある。
+
+## Rule 3: recursive drop — 構造的再帰で子を解放
+
+Rule 2 で RC==0 になった複合オブジェクトは、子フィールドそれぞれに対して再帰的に drop を適用してから自身を解放する。
+
+```c
+// Rule 3 の素朴な実装
+void drop_Cons(Cons* x) {
+    if (is_unique(x)) {        // RC==1 → これが最後の参照
+        drop(x->head);         // 子フィールドを再帰的に drop
+        drop(x->tail);
+        free(x);               // 自身を解放
+    } else {
+        rc_dec(x);             // RC>1 → カウントを減らすだけ
+    }
+}
+```
+
+この Rule 3 が **drop specialization** と **reuse analysis** の基盤になる。RC==1 の分岐で `free(x)` する代わりにメモリを再利用に回す発想が、Perceus の核心的な最適化を生む。
+
+## 3ルールからの最適化
+
+3ルール自体は正しくメモリを管理するだけだが、ここに2つの最適化を重ねることで性能が劇的に向上する。
+
+### Reuse Analysis
 
 パターンマッチで分解されたオブジェクトと、同じ分岐で構築される新オブジェクトが同サイズなら、メモリを直接再利用する。
-
-### Reuse Token
 
 ```
 fun map(xs, f)
@@ -77,21 +104,48 @@ fun map(xs, f)
 - 実行時に RC==1 (ユニーク参照)
 - コンパイラが reuse token を発行する構文位置にあること
 
-## Drop Specialization
+### Drop Specialization
 
-drop と reuse を融合する最適化:
+Rule 3 の recursive drop と reuse analysis を融合する最適化。`free` せずに reuse token として返す。
 
 ```c
-// 通常の drop: free する
+// Rule 3 そのまま (free する)
 if (is_unique(x)) { drop(x.f1); drop(x.f2); free(x); }
 else { decref(x); }
 
-// Drop specialization: free せずに reuse token として返す
+// Drop specialization (free せず reuse token として返す)
 if (is_unique(x)) { drop(x.f1); drop(x.f2); return &x; }  // reuse token
 else { decref(x); return NULL; }
 ```
 
-fast path (RC==1) では free+alloc ペアが完全に消滅する。
+fast path (RC==1) では **free+alloc ペアが完全に消滅** する。これが Perceus を「Garbage Free」と呼ぶ根拠。
+
+### 最適化の積み上げ
+
+```
+3ルール (正しさ)
+  └─ Rule 1: dup → rc_inc
+  └─ Rule 2: drop → rc_dec
+  └─ Rule 3: recursive drop → 子を再帰的に drop + free
+        │
+        ├─ Reuse Analysis (効率)
+        │    RC==1 なら同サイズオブジェクトのメモリを再利用
+        │
+        └─ Drop Specialization (融合)
+             Rule 3 の free を reuse token 発行に置換
+             → fast path で alloc も free も発生しない
+```
+
+## Drop Insertion アルゴリズム
+
+3ルールの dup/drop をコンパイラが自動配置するアルゴリズム。ANF (A-Normal Form) 上で動作する。
+
+1. プログラムを ANF に変換 (各部分式に名前を束縛)
+2. 各変数の「最後の使用地点」を構文的に確定
+3. **dup**: 変数が複数回使われる箇所で、2回目以降の使用前に挿入
+4. **drop**: 変数がある分岐で使われない場合、分岐の先頭で挿入
+
+ANF のおかげで各変数の生存区間が構文的に明確になり、drop 位置を正確に決定できる。GC のような到達可能性解析は不要。
 
 ## FBIP (Functional But In-Place)
 
@@ -110,7 +164,7 @@ fip fun reverse-acc(xs : list<a>, acc : list<a>) : list<a>
     Nil -> acc
 ```
 
-map, filter, ツリー走査 (Zipper パターン) が in-place で動作する条件をコンパイラが静的にチェック。
+3ルール + reuse が正しく効いていれば、map, filter, ツリー走査 (Zipper パターン) が alloc ゼロで動作する。`fip`/`fbip` はその条件をコンパイラが静的にチェックするアノテーション。
 
 ## Koka 言語
 
@@ -179,20 +233,16 @@ PLDI'21 の結果 (メモリ割当中心のベンチマーク):
 
 ## 押さえどころ（カード化候補）
 
-- Perceus の核心 → RC==1 (ユニーク参照) のオブジェクトを同サイズの新オブジェクトとして直接再利用。alloc も free も発生しない。GC なしで関数型プログラミングを命令型と同等の効率に
-- Drop insertion の原則 → dup は可能な限り遅く (葉まで)、drop は可能な限り早く (束縛直後)。線形リソース計算に基づき、各変数はちょうど1回使用 or 明示的 drop
-- Reuse token の仕組み → パターンマッチで分解時に RC==1 なら reuse token を発行。同サイズのコンストラクタに渡して in-place 再利用。RC>1 なら NULL → 通常 alloc にフォールバック
-- Drop specialization → drop と reuse を融合。RC==1 のとき free せずに reuse token として返す。fast path で free+alloc ペアが完全に消滅
-- FBIP (Functional But In-Place) → fip: 定数スタック + ヒープ割当ゼロを保証。fbip: 解放は許容。コンパイラが静的にチェック。list.reverse, tree.map が alloc ゼロで動作
-- Perceus vs Rust → Rust: 所有権をコンパイル時に静的決定、ライフタイム注釈が必要。Perceus: 実行時 RC で追跡、注釈完全不要、reuse で in-place 更新。Rust にはムーブがあるが reuse はない
-- サイクル参照の扱い → Koka は純粋関数型なので不変データにサイクルが構造的に不在。ref (可変参照) を使えばサイクル可能だが手動破壊が必要
-- Reuse が効かないケース → RC > 1 (共有されている)、サイズ不一致、中間参照保持。通常の alloc/free にフォールバック。小さなリファクタリングで reuse が消失する fragility も
-- Lean 4 との関係 → Lean 4 の "Counting Immutable Beans" が先行研究。借用参照で dup/drop を省略。Perceus が形式化と reuse analysis を強化した発展版
-- Frame Limited Reuse → Perceus の reuse 解析の脆弱性を改善。drop-guided reuse でより堅牢なアルゴリズム。各関数呼び出しで保持するメモリが定数因子で限界づけられることを保証
-- ベンチマーク結果 → 赤黒木で純粋関数型 Koka が C++ in-place 版の 10% 以内。永続データ構造では C++ を上回るケースも。reuse + mimalloc の組み合わせ効果
-- Perceus と Region Inference の併用可能性 → 解放単位が異なる (オブジェクト vs リージョン)。bump allocator (リージョン) 内で Perceus 的 reuse を行う構成が原理的に可能
-- Koka の Algebraic Effects → 副作用を型レベルで追跡しハンドラで処理。例外、async/await、非決定性をライブラリとして定義可能。Perceus + Effects で GC もランタイムシステムも不要な C11 コード生成
-- 精密 RC の最適化 → 値型はスタックにアンボックス配置 (RC 不要)。借用推論 (borrow inference) で引数の dup/drop を省略。スレッドは shared/local 分割で非共有は非アトミック RC
+- Perceus の3ルール → Rule 1: dup = rc_inc (コピー時)、Rule 2: drop = rc_dec (不要時)、Rule 3: recursive drop (RC==0 で子を再帰 drop + free)。この3つだけで GC なしメモリ管理が完結
+- Rule 1 の原則 → dup は可能な限り遅く (導出の葉まで)。不要な rc_inc を回避し、分岐で使われない可能性を考慮
+- Rule 2 の原則 → drop は可能な限り早く (束縛直後)。RC==0 到達を早めメモリ消費ピークを下げる。スコープベースの Rust より早期に解放
+- Rule 3 → drop specialization の基盤 → Rule 3 の recursive drop で free する代わりに reuse token を返す。これが drop specialization の本質。free+alloc ペアが完全消滅
+- Reuse analysis → パターンマッチで分解時、RC==1 かつ同サイズなら reuse token を発行。新コンストラクタに渡して in-place 再利用。RC>1 なら通常 alloc にフォールバック
+- 3ルールの前提 → 線形リソース計算 (λ₁)。各変数はちょうど1回使用。複数回使うなら dup、使わないなら drop。コンパイラが ANF 上で自動挿入
+- FBIP (Functional But In-Place) → 3ルール + reuse が完全に効く条件をコンパイラが静的保証。fip: 定数スタック + ヒープ割当ゼロ。fbip: 解放は許容
+- Perceus vs Rust → Rust: コンパイル時の静的所有権、ライフタイム注釈必要、reuse なし。Perceus: 実行時 RC、注釈不要、reuse で in-place 更新
+- Lean 4 との関係 → "Counting Immutable Beans" が先行。Perceus は形式化 (λ₁ + 3ルール) と reuse analysis を強化した発展版
+- Reuse が効かないケース → RC > 1 (共有)、サイズ不一致、中間参照保持。フォールバックは通常 alloc/free。リファクタリングで消失する fragility あり
 
 ## Links
 
