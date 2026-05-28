@@ -64,10 +64,12 @@ O6lvl4 Knowledge の knowledge base。
 
 - [[copy-on-write]] - Copy-on-Write (COW)
 - [[dead-code-elimination]] - Dead Code Elimination (DCE)
+- [[equality-saturation]] - Equality Saturation
 - [[fifo-lifo]] - FIFO / LIFO
 - [[perceus]] - Perceus
 - [[region-inference]] - Region Inference
 - [[relaxed-simd]] - Relaxed SIMD
+- [[stream-fusion]] - Stream Fusion
 - [[swiss-table]] - SwissTable
 - [[wasm-simd]] - WebAssembly SIMD
 - [[work-stealing]] - Work-Stealing
@@ -246,5 +248,5 @@ O6lvl4 Knowledge の knowledge base。
 
 - [[bytecode-alliance]] - Bytecode Alliance
 - [[component-model]] - Component Model
-- [[wasm-core]] - WebAssembly Core — バイナリ・WAT・スタックマシン・形式的安全性
 - [[wasmtime]] - Wasmtime
+- [[wasm-core]] - WebAssembly Core — バイナリ・WAT・スタックマシン・形式的安全性

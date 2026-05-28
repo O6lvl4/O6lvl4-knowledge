@@ -15,6 +15,7 @@ updated_at: 2026-05-20
 - [[rust|Rust]] — 所有権システムで GC なしメモリ安全。システムプログラミング
 - [[ruby|Ruby]] — プログラマの幸福を一次価値にした動的型付け言語
 - [[lisp|LISP]] — コード = データ。1958年生まれ
+- [[grain|Grain]] — WebAssembly ネイティブの関数型言語。LLVM 不使用
 - [[forth|Forth]] — [[stack-oriented-programming|スタック指向]]の元祖。1970年
 - [[mind|Mind]] — 日本語 × スタック指向
 - [[nadesiko|なでしこ]] — 日本語 × 手続き型
