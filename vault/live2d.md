@@ -83,6 +83,12 @@ flowchart LR
 - Live2D vs VRM → **Live2D は 2D（絵そのまま、横は描けない）/ VRM は 3D（どの角度でも描ける、モデリング必要）**
 - Cubism Editor の FREE / PRO の境目 → **個人や小規模は FREE、本格商用は PRO**
 
+## 関連
+
+- [[face-tracking|フェイストラッキング]] — Live2D パラメータを駆動するトラッキング技術
+- [[vrm|VRM]] — 3D アバター規格（Live2D の 2D アプローチとの対比）
+- [[3tene]] — VRM と Live2D の両方に対応する VTuber アプリ
+
 ## Links
 
 - [Live2D 公式](https://www.live2d.com/)

@@ -94,6 +94,14 @@ FREE 〜 PRO はそれぞれ独立した Steam ページがあり、Steam 経由
 - STUDIO 版が想定する規模 → **スタジオでの本格制作。Perception Neuron による全身慣性モーキャプに対応**
 - 3tene と VSeeFace の主な違い → **3tene は段階制商用ライセンスで PRO 拡張あり。VSeeFace は完全無料・英語圏中心。両方とも VRM が主軸**
 
+## 関連
+
+- [[vrm|VRM]] — 3tene が読み込むアバターフォーマット
+- [[face-tracking|フェイストラッキング]] — アバターを駆動するトラッキング技術
+- [[vroid-studio|VRoid Studio]] — .vrm を作る代表的ツール
+- [[live2d|Live2D]] — PRO+LIVE2D 版で対応する 2D アバター技術
+- [[obs|OBS Studio]] — 配信の出口（OBS 連携機能あり）
+
 ## Links
 
 - [3tene 公式](https://3tene.com/)
