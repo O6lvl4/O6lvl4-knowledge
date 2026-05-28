@@ -2,7 +2,7 @@
 title: Almide
 tags: [language, llm, compiler, rust, wasm]
 created_at: 2026-04-30
-updated_at: 2026-05-20
+updated_at: 2026-05-28
 ---
 
 LLM によるコード生成に最適化された[[programming-language|プログラミング言語]]。Rust と WebAssembly にコンパイルされる。~72,000 行の純 Rust コンパイラ。
@@ -86,6 +86,26 @@ Lexer → Parser → AST → Type Checker → Lowering → IR
 ```
 
 12 crate の Rust ワークスペース: syntax, types, frontend, ir, optimize, codegen, tools, base 等。
+
+## Pipeline Verification Chain
+
+コンパイラパイプラインの各パスが個別の正しさ保証を担い、合成して「コンパイル結果が壊れない」ことを機械的に保証する。
+
+| パス | 保証 | 証明状況 |
+|---|---|---|
+| Type Checker | 型安全 | 型検査 |
+| [[perceus\|Perceus]] | heap alloc は exactly once 解放 | Lean 4: 23 定理, 0 sorry |
+| StackBalance | void block に余計な値が残らない | 構造的不変条件 (tail = None ⇒ Ret 不可能) |
+| ConcretizeTypes | IR 型と VarTable が一致 | パスの postcondition |
+
+```
+LLM → well-typed .almd → Perceus (proven) + StackBalance (by construction)
+    → 正しい WASM / 正しい Rust
+```
+
+Rust がソースレベルの borrow checker でメモリ安全を保証するのに対し、Almide は**パイプライン全体で保証を積み上げる**。型検査 → メモリ安全 (Perceus) → ターゲット安全 (StackBalance) → 二重検証 (PerceusVerify)。各パスが1つの定理を守り、合成でコンパイル結果の正しさが導かれる。
+
+これは WASM が untrusted code を実行する文脈（edge computing、serverless、plugin system）で意味が大きい。ほとんどの言語の WASM バックエンドは「動くかテストで確認」だが、Almide は「構造的に壊れない」に向かっている。
 
 ## Toolchain
 
