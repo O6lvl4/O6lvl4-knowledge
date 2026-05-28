@@ -13,6 +13,10 @@ O6lvl4 Knowledge の knowledge base。
 
 - [[character-creator]] - キャラクタークリエイター
 
+### ai-planning
+
+- [[htn-planning]] - HTN Planning（階層型タスクネットワーク）
+
 ### aituber
 
 - [[aituber-cost]] - AITuber 配信コスト構造
@@ -112,6 +116,7 @@ O6lvl4 Knowledge の knowledge base。
 
 ### formal-methods
 
+- [[petri-nets]] - ペトリネット
 - [[model-checking]] - モデル検査
 - [[theorem-proving]] - 定理証明
 - [[formal-methods]] - 形式手法
@@ -241,4 +246,5 @@ O6lvl4 Knowledge の knowledge base。
 
 - [[bytecode-alliance]] - Bytecode Alliance
 - [[component-model]] - Component Model
+- [[wasm-core]] - WebAssembly Core — バイナリ・WAT・スタックマシン・形式的安全性
 - [[wasmtime]] - Wasmtime

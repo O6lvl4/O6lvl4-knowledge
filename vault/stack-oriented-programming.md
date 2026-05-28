@@ -80,3 +80,4 @@ rot    ( a b c -- b c a ) 3番目をトップに回す
 
 - [[type-2-grammar|Type 2 文法（文脈自由文法）]] — PDA はスタックマシン
 - [[forth|Forth]]
+- [[wasm-core]] — WebAssembly もスタックマシン。バイナリサイズ最小化・ポータビリティ・バリデーション容易性が採用理由
