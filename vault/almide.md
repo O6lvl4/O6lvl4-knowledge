@@ -98,6 +98,26 @@ Lexer → Parser → AST → Type Checker → Lowering → IR
 | StackBalance | void block に余計な値が残らない | 構造的不変条件 (tail = None ⇒ Ret 不可能) |
 | ConcretizeTypes | IR 型と VarTable が一致 | パスの postcondition |
 
+### StackBalance の仕組み
+
+Wasm はスタックマシンであり、各 block は宣言された型と一致するスタック状態で終了しなければならない。void block（戻り値なし）に値を残すと Wasm バリデータが拒否する。多くのコンパイラはこれをテストで検出するが、Almide は**データ構造自体が不正状態を表現不能にする** (making illegal states unrepresentable)。
+
+核心は IR の `block_to_fnbody(stmts, tail)` 関数で、`tail: Option<Expr>`:
+
+```
+tail = Some(expr) → Ret(expr) を生成（値を返す block）
+tail = None       → fold_stmts(stmts, Nop) にしかならない（Ret を構築不可能）
+```
+
+`tail` が `None` のとき、コード生成パスに `Ret` を生成する経路が型レベルで存在しない。バグを「見つけて直す」のではなく「書けなくする」アプローチ。Lean 4 で形式化可能：
+
+```lean
+theorem stack_balance_preserved :
+    ∀ (stmts : List Stmt) (tail : Option Expr),
+      tail = none →
+      block_to_fnbody stmts tail = fold_stmts stmts Nop
+```
+
 ```
 LLM → well-typed .almd → Perceus (proven) + StackBalance (by construction)
     → 正しい WASM / 正しい Rust
