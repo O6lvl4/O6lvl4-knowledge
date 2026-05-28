@@ -119,4 +119,8 @@ flowchart LR
 
 ## 関連
 
-- [[almide|Almide]] — LLM のコード生成精度を最大化する言語設計。形式的言語能力の範囲内で最大限の正しさを引き出す思想
+- [[executive-function|実行機能]] — PFC 系。agent ループ・CoT の神経科学的対応物
+- [[episodic-memory|エピソード記憶]] — 海馬系。RAG・ベクトル DB の対応物
+- [[symbol-grounding|記号接地問題]] — 身体・感覚系の欠如がもたらす根本問題
+- [[reward-system|報酬系と内発的動機]] — ドパミン報酬系。RLHF の対応物
+- [[theory-of-mind|心の理論]] — 社会認知。LLM が言語経由で代理する構造
