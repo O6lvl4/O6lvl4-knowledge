@@ -229,3 +229,4 @@ Core Wasm が持つ値の型は 4 つだけ:
 - [[formal-methods]] — Wasm の安全性証明が属する学問領域
 - [[theorem-proving]] — WasmCert は Isabelle/HOL による機械的定理証明
 - [[edge-wasm-landscape]] — Wasm エコシステム全体の俯瞰マップ
+- [[grain|Grain]] — Wasm を唯一のターゲットとして設計された関数型言語
