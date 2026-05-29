@@ -92,6 +92,7 @@ O6lvl4 Knowledge の knowledge base。
 ### design-principle
 
 - [[convention-over-configuration]] - Convention over Configuration
+- [[simple-vs-easy]] - Simple vs Easy
 
 ### edge-computing
 
