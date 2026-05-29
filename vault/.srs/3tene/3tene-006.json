@@ -3,10 +3,15 @@
   "note": "3tene",
   "question": "3tene と VSeeFace の主な違いは何か",
   "answer": "3tene は段階制の商用ライセンス (FREE→PRO→PRO+LIVE2D→STUDIO) で iPhone/VR/RealSense などの拡張トラッキングが解禁される。VSeeFace は完全無料で英語圏で人気。両方とも VRM ベースが主軸。",
-  "ef": 2.5,
-  "interval": 0,
+  "ef": 1.96,
+  "interval": 1,
   "reps": 0,
-  "due": "2026-05-04",
+  "due": "2026-05-05",
   "created": "2026-05-04",
-  "history": []
+  "history": [
+    {
+      "date": "2026-05-04",
+      "quality": 1
+    }
+  ]
 }

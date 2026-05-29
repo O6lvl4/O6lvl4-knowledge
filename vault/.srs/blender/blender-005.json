@@ -3,10 +3,15 @@
   "note": "blender",
   "question": "VTuber / VRM 周辺での Blender の役割",
   "answer": "UniVRM addon を入れることで .vrm を読み書きできる。VRoid Studio で完結しない作業 (衣装追加メッシュ、指関節の追加、ボーンウェイト調整、カスタム表情のシェイプキー、SpringBone 物理調整) の引き受け手として機能する。",
-  "ef": 2.5,
-  "interval": 0,
+  "ef": 1.7000000000000002,
+  "interval": 1,
   "reps": 0,
-  "due": "2026-05-04",
+  "due": "2026-05-05",
   "created": "2026-05-04",
-  "history": []
+  "history": [
+    {
+      "date": "2026-05-04",
+      "quality": 0
+    }
+  ]
 }
