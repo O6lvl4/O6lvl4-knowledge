@@ -93,3 +93,4 @@ TTS をローカル化した場合、LLM コストだけが残り **毎日 1 時
 - [[voicevox|VOICEVOX]] — ローカル TTS（コスト ¥0）
 - [[style-bert-vits2]] — カスタム音声のローカル TTS
 - [[aitube-studio]] — AITubeStudio（Almide 版 AITuber 配信基盤）
+- [[aituber-engagement-response]] — best-of-N で応答を最適化すると推論が N 倍になり、LLM コストに直結する

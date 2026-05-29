@@ -93,6 +93,7 @@ flagship 論文(2411.13187)はこの**1段目**で、現状ここを正面から
 - [[reward-machine-learning]] — そもそも「報酬」とは何か(本手法が最大化するスカラー値の正体)
 - [[inference-time-alignment]] — best-of-N 軸の理論。報酬ハッキングをどう抑えるか
 - [[llm-social-simulation]] — 報酬の供給源(SNS の反応をシミュレートする側)
+- [[aituber-engagement-response]] — 本手法をリアルタイム配信(AITuber)に落とした応用
 - [[viralbert]] — 予測器。本手法の報酬モデルとして挿せる前世代
 - [[human-vs-ai-text]] — 「報酬モデルで best-of-n を rerank」する構成の出発点。なぜ効くかの理論的背景
 - [[formal-vs-functional-competence]] — LLM の中庸さ(機能的能力の欠如)を外部報酬で補う、という構図

@@ -60,3 +60,4 @@ RLHF 等の重み更新は高コストで、学習後は報酬が固定される
 - [[reward-machine-learning]] — 本分野が最大化する「報酬」そのもの。推論時最適化はその一軸
 - [[engagement-driven-generation]] — best-of-N を実運用に載せる側。反・報酬ハッキングの設計を共有
 - [[viralbert]] — best-of-N の報酬モデルとして挿せる予測器
+- [[aituber-engagement-response]] — 小N BoN / speculative rejection をリアルタイム配信に適用した実例

@@ -29,6 +29,7 @@ O6lvl4 Knowledge の knowledge base。
 ### aituber
 
 - [[aituber-cost]] - AITuber 配信コスト構造
+- [[aituber-engagement-response]] - AITuber 応答のエンゲージメント最適化
 
 ### almide
 
