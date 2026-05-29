@@ -141,6 +141,7 @@ O6lvl4 Knowledge の knowledge base。
 - [[do-178c]] - DO-178C (航空ソフトウェア認証)
 - [[iso-26262]] - ISO 26262 (自動車機能安全)
 - [[iec-62304]] - IEC 62304 (医療機器ソフトウェア)
+- [[accepted-safety-in-systems]] - システムにおける「許容される安全性」とは
 - [[temporal-logic]] - 時相論理
 
 ### game-engine
