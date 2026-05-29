@@ -47,6 +47,44 @@ LLM の素の出力           = 平均への収束（低 perplexity / 低 bursti
 
 実用上の含意: AI を使うなら「平均を書かせる」のではなく、**逸脱の素材(自分の立場・固有の体験・言い切り)を人間が与え、整形だけ任せる**のが筋。声と stance は外注できない。
 
+## 研究の裏付け
+
+主張は実証研究と整合する。3系統で活発に研究されている。
+
+### 人間は見分けられるのか(知覚研究)
+
+ほぼできない。しかもモデルが新しいほどチャンスレベルに落ちる。
+
+| 対象モデル | 人間の正答率 |
+|---|---|
+| GPT-2 | 57.9%(XL で最良 62%) |
+| GPT-3 | **49.9%(≒偶然)** |
+
+- 即時フィードバック付きで訓練すると有意に向上する(Jakesch 系の追試・arXiv 2505.01877)。素の訓練だけでは伸びない。
+- 「どこで人間→機械に切り替わったか」を当てさせる **RoFT (Real or Fake Text)** という実験系もある(arXiv 2212.12672)。
+- ドメイン専門家(医学・人文)は内容の妥当性で見分けられる — 表層でなく中身で判定している。
+
+### 統計的・文体的検出(機械が測る)
+
+- 実測例: **perplexity 人間 57.3 / AI 37.8、burstiness 人間 0.61 / AI 0.38** と、人間側が高い(本ノートの主張どおり)。
+- 代表手法: DetectGPT、GPTZero、**Counter Turing Test (CT²)**(EMNLP 2023)。
+- ただし **perplexity/burstiness 系はすでに破綻しつつある**(Pangram Labs)。2025 年の fine-tuned モデルは人間並みの perplexity を出せ、この指標での検出は劣化中 = いたちごっこが実証された。
+
+### 言語横断・多言語
+
+- **COLING 2025** の AI 生成テキスト検出ワークショップで多言語タスクが設定。XLM-RoBERTa / RemBERT のアンサンブルで Macro-F1 0.7513。多言語ほど汎化が難しい。
+- 中国語+英語の対訳コーパス **HC3 (Human ChatGPT Comparison Corpus)**。
+- **日本語の研究も存在する**: "Stylometry can reveal artificial intelligence authorship, but humans struggle"(人間 vs 7 LLM、日本語対象)。タイトルが論旨そのもの — **文体計量(機械)では暴けるが人間には難しい**。「日本語の一般向け記事は少ないが、学術研究は日本語対象でもある」。
+
+## Links
+
+- [Humans can learn to detect AI-generated texts (arXiv 2505.01877)](https://arxiv.org/pdf/2505.01877)
+- [Real or Fake Text? RoFT (arXiv 2212.12672)](https://arxiv.org/pdf/2212.12672)
+- [Stylometry can reveal AI authorship — 日本語・7 LLM (PMC12558491)](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12558491/)
+- [Counter Turing Test CT² (ACL/EMNLP 2023)](https://aclanthology.org/2023.emnlp-main.136.pdf)
+- [Why Perplexity and Burstiness Fail to Detect AI (Pangram Labs)](https://www.pangram.com/blog/why-perplexity-and-burstiness-fail-to-detect-ai)
+- [LuxVeri / GenAI Detection Task 1 多言語 (arXiv 2501.11914)](https://arxiv.org/pdf/2501.11914)
+
 ## 関連
 
 - [[formal-vs-functional-competence]] — 表層は流暢でも立場・思考が欠ける構造。AIっぽさの中核
