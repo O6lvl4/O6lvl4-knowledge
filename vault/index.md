@@ -17,6 +17,7 @@ O6lvl4 Knowledge の knowledge base。
 
 - [[human-vs-ai-text]] - 人間の文章 vs AI 文章
 - [[viralbert]] - ViralBERT
+- [[engagement-driven-generation]] - エンゲージメント駆動生成
 
 ### ai-planning
 

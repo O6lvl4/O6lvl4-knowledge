@@ -63,5 +63,6 @@ updated_at: 2026-05-29T15:03:37+09:00
 
 ## 関連
 
+- [[engagement-driven-generation]] — 予測器を報酬に変えて「生成」を最適化する次世代。ViralBERT はその報酬モデルとして挿せる
 - [[human-vs-ai-text]] — best-of-n 生成を rerank する「報酬関数」として ViralBERT を据える構成。本文より質、配信構造が先という本知見はその設計判断にも効く
 - [[formal-vs-functional-competence]] — 感情トーンが効くという結果は、表層の流暢さより stance/情動が拡散を駆動することの傍証
