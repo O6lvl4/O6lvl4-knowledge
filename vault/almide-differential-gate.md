@@ -41,3 +41,4 @@ flowchart LR
 - [[almide]] — Pipeline Verification Chain。差分ゲートはその実行時版
 - [[almide-list-mutation]] — push/pop の各段階を差分ゲートで保証しながら進める
 - [[anf-closure-lifting-bug]] — 同じく「事後検証が本物のバグを検出した」事例(postcondition 版)
+- [[safety-critical-certification]] — 出力照合を証明連鎖へ引き上げる先にある安全臨界認証の要求

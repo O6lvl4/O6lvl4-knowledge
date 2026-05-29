@@ -137,6 +137,7 @@ O6lvl4 Knowledge の knowledge base。
 - [[model-checking]] - モデル検査
 - [[theorem-proving]] - 定理証明
 - [[formal-methods]] - 形式手法
+- [[safety-critical-certification]] - 安全臨界ソフトウェア認証と Almide のギャップ
 - [[temporal-logic]] - 時相論理
 
 ### game-engine

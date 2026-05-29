@@ -64,3 +64,4 @@ Qed.
 - [[model-checking|モデル検査]] — 証明を書く代わりに全探索する手法
 - [[curry-howard|カリー=ハワード同型対応]] — 「型=命題、プログラム=証明」
 - [[dependent-type|依存型]] — 定理証明系の型システムの基盤
+- [[safety-critical-certification|安全臨界ソフトウェア認証]] — DO-333 で機械証明を認証エビデンスにできる。Almide は Perceus を Lean 4 で証明
