@@ -2,7 +2,7 @@
 title: Almide 差分ゲート (differential gate)
 tags: [almide, compiler, testing]
 created_at: 2026-05-29
-updated_at: 2026-05-29T23:20:06+09:00
+updated_at: 2026-05-29T23:23:08+09:00
 ---
 
 新しい WASM バックエンド(v2)の出力を、**既存(レガシー)バックエンドの出力と1テストずつ照合**して回帰を防ぐ仕組み。新実装を「正しいと信じる」のではなく「旧実装と一致するか」を機械的にゲートする差分テスト(differential / back-to-back testing)の一種。
@@ -18,6 +18,19 @@ updated_at: 2026-05-29T23:20:06+09:00
 | **V2-BUGS** | v2 の出力がレガシーと**食い違った**件数。**常に 0 が条件**(一致しなければ即バグ) |
 
 → 開発は「**ran を上げ、fell-back を減らし、V2-BUGS は 0 を維持**」で進む。fell-back の各項目(push/pop, JSON, stdlib-call など)が次に潰すブロッカーになる。
+
+```mermaid
+flowchart LR
+    src["テスト .almd"] --> v2["v2 バックエンド"]
+    src --> legacy["レガシーバックエンド<br/>(oracle)"]
+    v2 -->|対応済み| outv2["v2 出力"]
+    legacy --> outl["レガシー出力"]
+    outv2 --> cmp{"出力一致?"}
+    outl --> cmp
+    cmp -->|一致| pass["ran に計上<br/>V2-BUGS=0 維持"]
+    cmp -->|不一致| bug["V2-BUGS 検出<br/>→ 即修正"]
+    v2 -.->|未対応| fb["fell-back<br/>レガシーに委譲"]
+```
 
 ## なぜ差分なのか
 
