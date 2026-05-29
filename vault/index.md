@@ -138,6 +138,9 @@ O6lvl4 Knowledge の knowledge base。
 - [[theorem-proving]] - 定理証明
 - [[formal-methods]] - 形式手法
 - [[safety-critical-certification]] - 安全臨界ソフトウェア認証と Almide のギャップ
+- [[do-178c]] - DO-178C (航空ソフトウェア認証)
+- [[iso-26262]] - ISO 26262 (自動車機能安全)
+- [[iec-62304]] - IEC 62304 (医療機器ソフトウェア)
 - [[temporal-logic]] - 時相論理
 
 ### game-engine
