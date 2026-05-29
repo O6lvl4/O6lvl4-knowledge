@@ -90,3 +90,4 @@ LLM の素の出力           = 平均への収束（低 perplexity / 低 bursti
 - [[formal-vs-functional-competence]] — 表層は流暢でも立場・思考が欠ける構造。AIっぽさの中核
 - [[symbol-grounding]] — 体験に根ざさないことが「具体性のなさ」として表れる
 - [[theory-of-mind]] — 読み手を動かす文章が要する「相手の心の推定」を LLM は代理でしかこなせない
+- [[viralbert]] — エンゲージメント予測を報酬関数に使う構成の具体例(ツイートのバイラル性予測)
