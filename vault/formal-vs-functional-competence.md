@@ -124,3 +124,4 @@ flowchart LR
 - [[symbol-grounding|記号接地問題]] — 身体・感覚系の欠如がもたらす根本問題
 - [[reward-system|報酬系と内発的動機]] — ドパミン報酬系。RLHF の対応物
 - [[theory-of-mind|心の理論]] — 社会認知。LLM が言語経由で代理する構造
+- [[human-vs-ai-text|人間の文章 vs AI 文章]] — 形式的能力は高いが機能的能力を欠くことが "AIっぽさ" として表れる

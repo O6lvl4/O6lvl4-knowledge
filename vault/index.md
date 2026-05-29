@@ -13,6 +13,10 @@ O6lvl4 Knowledge の knowledge base。
 
 - [[character-creator]] - キャラクタークリエイター
 
+### ai
+
+- [[human-vs-ai-text]] - 人間の文章 vs AI 文章
+
 ### ai-planning
 
 - [[htn-planning]] - HTN Planning（階層型タスクネットワーク）
