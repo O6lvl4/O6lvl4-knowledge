@@ -2,7 +2,7 @@
 title: ViralBERT
 tags: [ai, nlp, writing]
 created_at: 2026-05-29
-updated_at: 2026-05-29
+updated_at: 2026-05-29T15:03:37+09:00
 ---
 
 ツイートの**バイラル性(リツイートでどれだけ再拡散されるか)を予測する** BERT ベースのモデル。Rameez, Rahmani et al.、ACM UMAP 2022(arXiv 2206.10298)。本文 [[human-vs-ai-text|人間の文章 vs AI 文章]] で触れた「エンゲージメント予測器を報酬関数にする」構成の、具体的な実装例にあたる。

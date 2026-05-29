@@ -2,7 +2,7 @@
 title: プッシュダウン・オートマトン (PDA)
 tags: [formal-language, automata-theory, computer-science]
 created_at: 2026-05-29
-updated_at: 2026-05-29
+updated_at: 2026-05-29T09:56:47+09:00
 ---
 
 **有限オートマトンにスタックを1本足したもの。** これが受理できる言語のクラスが [[type-2-grammar|文脈自由言語 (CFL)]] とぴったり一致する。[[type-3-grammar|有限オートマトン]] は状態しか持てないが、PDA は状態 + スタックトップで遷移を決められるぶんだけ強い。

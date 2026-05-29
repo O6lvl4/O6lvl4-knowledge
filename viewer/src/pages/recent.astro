@@ -8,24 +8,37 @@ const notes = allNotes.filter(
   (n) => n.id !== 'index' && n.id !== 'dashboard' && n.data.public !== false
 );
 
-function toDateStr(v: string | Date | undefined): string {
-  if (!v) return '';
-  if (v instanceof Date) return v.toISOString().slice(0, 10);
-  return String(v);
+// Parse to a full Date so notes sharing a calendar day still order by time.
+// Date-only frontmatter (YYYY-MM-DD) parses to midnight; timestamped notes
+// (YYYY-MM-DDTHH:mm:ss+09:00) keep their time and sort correctly within a day.
+function toDate(v: string | Date | undefined): Date | null {
+  if (!v) return null;
+  const d = v instanceof Date ? v : new Date(v);
+  return Number.isNaN(d.getTime()) ? null : d;
 }
 
-const sorted = notes.sort((a, b) => {
-  const da = toDateStr(a.data.updated_at) || toDateStr(a.data.created_at) || '';
-  const db = toDateStr(b.data.updated_at) || toDateStr(b.data.created_at) || '';
-  return db.localeCompare(da);
-});
+// Display only the calendar day. Prefer the authored string prefix to avoid a
+// UTC off-by-one near midnight; fall back to ISO for Date objects.
+function toDisplayDate(v: string | Date | undefined): string {
+  if (!v) return '';
+  if (typeof v === 'string') return v.slice(0, 10);
+  return v.toISOString().slice(0, 10);
+}
+
+function sortValue(note: (typeof notes)[number]): number {
+  const d = toDate(note.data.updated_at) ?? toDate(note.data.created_at);
+  return d ? d.getTime() : 0;
+}
+
+const sorted = notes.sort((a, b) => sortValue(b) - sortValue(a));
 
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 
 const noteData = sorted.map((note) => ({
   href: `${base}notes/${slugify(note.id)}`,
   title: note.data.title || note.id,
-  date: toDateStr(note.data.updated_at) || toDateStr(note.data.created_at),
+  date: toDisplayDate(note.data.updated_at) || toDisplayDate(note.data.created_at),
+  sort: sortValue(note),
   tags: (note.data.tags || []) as string[],
 }));
 ---
@@ -42,7 +55,7 @@ const noteData = sorted.map((note) => ({
     <p class="subtitle">{notes.length} notes</p>
     <div id="note-container">
       {noteData.map((note) => (
-        <a href={note.href} class="note-card" data-date={note.date}>
+        <a href={note.href} class="note-card" data-date={note.date} data-sort={note.sort}>
           <span class="title">{note.title}</span>
           <span class="meta">
             <span class="date">{note.date}</span>
@@ -71,9 +84,9 @@ const noteData = sorted.map((note) => ({
 
     const cards = [...container.querySelectorAll('.note-card')] as HTMLElement[];
     cards.sort((a, b) => {
-      const ta = a.dataset.date || '';
-      const tb = b.dataset.date || '';
-      return next === 'desc' ? tb.localeCompare(ta) : ta.localeCompare(tb);
+      const ta = Number(a.dataset.sort || '0');
+      const tb = Number(b.dataset.sort || '0');
+      return next === 'desc' ? tb - ta : ta - tb;
     });
     for (const card of cards) container.appendChild(card);
   });

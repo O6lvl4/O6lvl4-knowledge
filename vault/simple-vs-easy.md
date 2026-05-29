@@ -2,7 +2,7 @@
 title: Simple vs Easy
 tags: [design-principle, philosophy, computer-science]
 created_at: 2026-05-29
-updated_at: 2026-05-29
+updated_at: 2026-05-29T12:26:42+09:00
 ---
 
 Rich Hickey ([[lisp|Clojure]] 作者) が講演 "Simple Made Easy" (2011) で提示した区別。**simple と easy は別物であり、混同するとソフトウェアが壊れる**という主張。日本語圏では eed3si9n 訳「シンプルさの必要性」がほぼ唯一のまとまった紹介で、概念自体は [[functional-programming|Clojure]] コミュニティ発だが Go コミュニティでも頻繁に参照される。
