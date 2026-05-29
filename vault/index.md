@@ -142,6 +142,7 @@ O6lvl4 Knowledge の knowledge base。
 - [[iso-26262]] - ISO 26262 (自動車機能安全)
 - [[iec-62304]] - IEC 62304 (医療機器ソフトウェア)
 - [[accepted-safety-in-systems]] - システムにおける「許容される安全性」とは
+- [[soup]] - SOUP (Software of Unknown Provenance)
 - [[temporal-logic]] - 時相論理
 
 ### game-engine
