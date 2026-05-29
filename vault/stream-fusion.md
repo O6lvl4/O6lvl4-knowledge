@@ -160,3 +160,4 @@ PipelineStage::Filter → 条件分岐として挿入
 - [[equality-saturation]] — 代数的融合規則の自動適用に使える最適化フレームワーク
 - [[functional-programming]] — stream fusion は関数型パイプラインの核心的最適化
 - [[dead-code-elimination]] — 融合後に不要になった中間関数を DCE で除去
+- [[hof-inline-fusion]] — Almide での HOF インライン融合。ラムダ本体をループに展開する前段の最適化

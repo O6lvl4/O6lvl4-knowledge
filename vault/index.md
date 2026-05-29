@@ -56,6 +56,7 @@ O6lvl4 Knowledge の knowledge base。
 - [[ceangal-anime]] - ceangal-anime
 - [[almide-csv]] - csv (Almide)
 - [[almide-docs]] - docs (Almide)
+- [[hof-inline-fusion]] - HOF インライン融合とクロージャ変換
 - [[homullus]] - homullus
 - [[lumen]] - lumen
 - [[nendo]] - nendo
