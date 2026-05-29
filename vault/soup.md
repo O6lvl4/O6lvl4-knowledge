@@ -55,3 +55,4 @@ SOUP は医療の呼び名で、同じ「既製・外部ソフトをどう扱う
 - [[safety-critical-certification]] — ランタイム未認証 = SOUP 問題
 - [[accepted-safety-in-systems]] — 第6原則「責任範囲は依存物まで」の具体
 - [[do-178c]] / [[iso-26262]] — 他基準での対応概念(COTS/PDS, qualification)
+- [[rust-safety-critical]] — rustc も本来 SOUP。Ferrocene の tool qualification がそれを解く例
