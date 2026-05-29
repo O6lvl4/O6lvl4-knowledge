@@ -17,10 +17,10 @@ updated_at: 2026-05-29T23:52:08+09:00
 
 ## Ferrocene — 認定済み Rust ツールチェーン
 
-Ferrous Systems が rustc の下流を **TÜV SÜD で tool qualification** したもの。コンパイラ=SOUP 問題を正面から解く。
+[[ferrocene|Ferrocene]] = Ferrous Systems が rustc の下流を **TÜV SÜD で tool qualification** したもの。コンパイラ=SOUP 問題を正面から解く。
 
 - **ISO 26262 ASIL D**(自動車・最高レベル)
-- **IEC 61508 SIL 4**(産業機能安全)
+- **IEC 61508 SIL 3**(産業機能安全。SIL 4 の顧客認証を支援)
 - **IEC 62304 Class C**(医療)— **Rust ツールチェーン初の達成、2025/1**
 - **DO-178C (DAL C)** は顧客の認証取得を支援する段階
 - core ライブラリの**認定サブセット**も拡大中(IEC 61508 SIL 2 / ISO 26262 ASIL B、認定関数 2,903→5,169、最小 panic hook 等を含む / Ferrocene 26.02.0)
@@ -63,6 +63,7 @@ Rust が持つもの・持たないものを混同しない:
 
 ## 関連
 
+- [[ferrocene]] — 認定済みツールチェーンの詳細(OSS・FLS・認定範囲)
 - [[rust]] — 言語本体。借用と所有権による静的メモリ安全
 - [[soup]] — rustc/LLVM も本来は SOUP。Ferrocene がそれを認定で解く
 - [[safety-critical-certification]] — Almide のギャップ。Rust の認定路と対比

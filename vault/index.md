@@ -220,6 +220,7 @@ O6lvl4 Knowledge の knowledge base。
 ### rust
 
 - [[axum]] - axum
+- [[ferrocene]] - Ferrocene
 - [[hashbrown]] - hashbrown
 - [[rayon]] - rayon
 - [[rust-safety-critical]] - Rust と安全臨界 (Ferrocene / RustBelt)

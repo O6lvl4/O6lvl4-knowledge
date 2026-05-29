@@ -56,3 +56,4 @@ SOUP は医療の呼び名で、同じ「既製・外部ソフトをどう扱う
 - [[accepted-safety-in-systems]] — 第6原則「責任範囲は依存物まで」の具体
 - [[do-178c]] / [[iso-26262]] — 他基準での対応概念(COTS/PDS, qualification)
 - [[rust-safety-critical]] — rustc も本来 SOUP。Ferrocene の tool qualification がそれを解く例
+- [[ferrocene]] — rustc を SOUP でなくす tool qualification の実例
