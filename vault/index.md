@@ -115,6 +115,7 @@ O6lvl4 Knowledge の knowledge base。
 - [[type-2-grammar]] - Type 2 文法（文脈自由文法）
 - [[type-3-grammar]] - Type 3 文法（正規文法）
 - [[chomsky-hierarchy]] - チョムスキー階層
+- [[pushdown-automaton]] - プッシュダウン・オートマトン (PDA)
 
 ### formal-methods
 
