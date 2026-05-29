@@ -69,15 +69,30 @@ LLM で候補を N 本生成
 - **配信構造の天井**: [[viralbert]] の「伸びはフォロワー数=配信構造に支配される」— 文章最適化だけでは限界がある。
 - **社会的コスト**: エンゲージメント最大化は、分断・誤情報の増幅を招いた推薦システムと同じ目的関数。「伸ばす」最適化は外部不経済を内包している。
 
+## 研究の地図(誰が何を)
+
+一枚岩の分野ではなく、4つのコミュニティが別角度から触っている。
+
+| 層 | 主な担い手 | 問い |
+|---|---|---|
+| エンゲージ駆動生成(本体) | **CENTAI(トリノ)/ ICAR-CNR / カラブリア大 / Eurecat**(Coppolillo, Cinus, Minici, **Bonchi**, Manco)。KDD 2025 | LLM で伸びる文を生成できるか |
+| 反応シミュレーション | Stanford(Generative Agents), 清華 等 → [[llm-social-simulation]] | SNS の反応をどう模すか(=報酬の作り方) |
+| 推論時アライメント理論 | DeepMind, MSR/MIT, Harvard → [[inference-time-alignment]] | best-of-N で報酬をどう安全に使うか |
+| 報酬の過剰最適化(基礎) | OpenAI | 代理報酬はどこで壊れるか |
+
+flagship 論文(2411.13187)はこの**1段目**で、現状ここを正面からやる専門グループはイタリア系データマイニング・クラスタがほぼ唯一。⚠️ 一部の所属・人名は著者リストと既知系譜からの推定を含む。
+
 ## Links
 
-- [Engagement-Driven Content Generation with LLMs (arXiv 2411.13187)](https://arxiv.org/abs/2411.13187)
+- [Engagement-Driven Content Generation with LLMs (arXiv 2411.13187 / KDD 2025)](https://arxiv.org/abs/2411.13187)
 - [PushGen: Push Notifications Generation with LLM (arXiv 2512.14490)](https://arxiv.org/pdf/2512.14490)
 - [RLAIF 概説 (EmergentMind)](https://www.emergentmind.com/topics/reinforcement-learning-with-ai-feedback-rlaif)
 
 ## 関連
 
 - [[reward-machine-learning]] — そもそも「報酬」とは何か(本手法が最大化するスカラー値の正体)
+- [[inference-time-alignment]] — best-of-N 軸の理論。報酬ハッキングをどう抑えるか
+- [[llm-social-simulation]] — 報酬の供給源(SNS の反応をシミュレートする側)
 - [[viralbert]] — 予測器。本手法の報酬モデルとして挿せる前世代
 - [[human-vs-ai-text]] — 「報酬モデルで best-of-n を rerank」する構成の出発点。なぜ効くかの理論的背景
 - [[formal-vs-functional-competence]] — LLM の中庸さ(機能的能力の欠如)を外部報酬で補う、という構図

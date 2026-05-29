@@ -44,6 +44,7 @@ updated_at: 2026-05-29T18:16:17+09:00
 ## 関連
 
 - [[engagement-driven-generation]] — エンゲージメントを報酬に据えて LLM 生成を最適化する具体例
+- [[inference-time-alignment]] — 重みを更新せず推論時に報酬を使う(best-of-N)。報酬の「使い方」の一軸
 - [[viralbert]] — 予測器スコアをそのまま報酬モデルに使える前世代
 - [[reward-system]] — 同じ「報酬」概念の神経科学版(RPE / TD 誤差の等価性)
 - [[formal-vs-functional-competence]] — RLHF は外部報酬で好みを注入する=内発的動機の欠如を補う構図
