@@ -55,3 +55,4 @@ updated_at: 2026-05-29T23:59:19+09:00
 - [[rust]] — 上流の言語/コンパイラ。Ferrocene はその認定ディストリビューション
 - [[soup]] — rustc は本来 SOUP。Ferrocene の tool qualification がそれを正当化する
 - [[iso-26262]] / [[iec-62304]] / [[do-178c]] — 認定先の各標準
+- [[certification-ecosystem]] — TÜV SÜD が担う「第三者評価機関」の位置づけ
