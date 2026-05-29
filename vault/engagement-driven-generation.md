@@ -77,6 +77,7 @@ LLM で候補を N 本生成
 
 ## 関連
 
+- [[reward-machine-learning]] — そもそも「報酬」とは何か(本手法が最大化するスカラー値の正体)
 - [[viralbert]] — 予測器。本手法の報酬モデルとして挿せる前世代
 - [[human-vs-ai-text]] — 「報酬モデルで best-of-n を rerank」する構成の出発点。なぜ効くかの理論的背景
 - [[formal-vs-functional-competence]] — LLM の中庸さ(機能的能力の欠如)を外部報酬で補う、という構図

@@ -65,3 +65,4 @@ flowchart LR
 
 - [[formal-vs-functional-competence|形式的 vs 機能的言語能力]] — 動機の欠如は機能的言語能力の限界
 - [[executive-function|実行機能]] — OFC の価値評価は報酬系と密接に連携
+- [[reward-machine-learning|報酬 (強化学習)]] — 同じ「報酬」概念の機械学習版。RPE は RL の TD 誤差と等価
