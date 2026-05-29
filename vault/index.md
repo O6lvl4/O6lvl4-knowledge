@@ -143,7 +143,7 @@ O6lvl4 Knowledge の knowledge base。
 - [[iec-62304]] - IEC 62304 (医療機器ソフトウェア)
 - [[accepted-safety-in-systems]] - システムにおける「許容される安全性」とは
 - [[soup]] - SOUP (Software of Unknown Provenance)
-- [[certification-ecosystem]] - 安全臨界の認証エコシステム(誰が何をするか)
+- [[safety-critical-certification-bodies]] - 安全臨界の認証に関わる団体(標準化・評価・規制)
 - [[temporal-logic]] - 時相論理
 
 ### game-engine
