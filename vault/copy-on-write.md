@@ -104,3 +104,4 @@ Rust は「今これは借用？所有？」を型レベルで追跡する。Swi
 ## 関連
 
 - [[programming-language|プログラミング言語]]
+- [[almide-list-mutation]] — 共有 (`rc>1`) list への push で COW が要る、という具体的な適用例

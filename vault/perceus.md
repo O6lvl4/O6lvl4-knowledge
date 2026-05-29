@@ -258,3 +258,4 @@ PLDI'21 の結果 (メモリ割当中心のベンチマーク):
 - [[region-inference]] — 別のアプローチで GC なしメモリ管理。Perceus とは解放単位が異なる (オブジェクト vs リージョン)
 - [[rust]] — 所有権 + 借用規則による静的メモリ管理。Perceus は実行時 RC + reuse で注釈不要
 - [[copy-on-write]] — RC==1 でのコピー回避は CoW と同じ精神。Perceus の reuse はさらに進んで alloc 自体を回避
+- [[almide-list-mutation]] — `rc > 1` 判定が list の破壊的 push で COW を発火させる(Perceus の実応用)

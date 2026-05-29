@@ -56,6 +56,8 @@ O6lvl4 Knowledge の knowledge base。
 - [[ceangal-anime]] - ceangal-anime
 - [[almide-csv]] - csv (Almide)
 - [[almide-docs]] - docs (Almide)
+- [[almide-differential-gate]] - Almide 差分ゲート (differential gate)
+- [[almide-list-mutation]] - Almide の list in-place mutation (push/pop) 設計
 - [[hof-inline-fusion]] - HOF インライン融合とクロージャ変換
 - [[homullus]] - homullus
 - [[lumen]] - lumen
