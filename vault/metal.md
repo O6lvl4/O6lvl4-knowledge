@@ -25,3 +25,4 @@ Apple Silicon（M1〜）はユニファイドメモリアーキテクチャで C
 - [[webgpu|WebGPU]] — macOS では Metal がバックエンドとして使われる
 - [[wgpu]] — Rust 製の WebGPU 実装。Metal バックエンドを持つ
 - [[gpu|GPU]]
+- [[xcode|Xcode]] — Apple 純正 IDE。Metal アプリのビルド・デバッグ・シェーダ編集環境

@@ -76,6 +76,13 @@ O6lvl4 Knowledge の knowledge base。
 - [[vscode-almide]] - vscode-almide
 - [[almide-yaml]] - yaml (Almide)
 
+### business
+
+- [[app-store]] - App Store
+- [[app-store-review]] - App Store Review
+- [[google-play]] - Google Play
+- [[google-play-review]] - Google Play Review
+
 ### computer-science
 
 - [[copy-on-write]] - Copy-on-Write (COW)
@@ -86,6 +93,7 @@ O6lvl4 Knowledge の knowledge base。
 - [[region-inference]] - Region Inference
 - [[relaxed-simd]] - Relaxed SIMD
 - [[stream-fusion]] - Stream Fusion
+- [[virtual-scrolling]] - 仮想スクロール
 - [[swiss-table]] - SwissTable
 - [[wasm-simd]] - WebAssembly SIMD
 - [[work-stealing]] - Work-Stealing
@@ -247,6 +255,18 @@ O6lvl4 Knowledge の knowledge base。
 - [[obs-studio-architecture]] - OBS Studio アーキテクチャ
 - [[obs-plugin-system]] - OBS Studio プラグインシステム
 - [[streaming-software]] - 配信ソフトウェア
+- [[tv-guide-apps]] - 番組表アプリ / EPG
+- [[tv-guide-architecture]] - 番組表アーキテクチャ
+- [[tv-guide-oss]] - 番組表 OSS / EPG ライブラリ
+
+### tools
+
+- [[android-delivery]] - Android Delivery
+- [[android-release-flow]] - Android Release Flow
+- [[android-studio]] - Android Studio
+- [[app-delivery]] - App Delivery
+- [[app-release-flow]] - App Release Flow
+- [[xcode]] - Xcode
 
 ### tts
 
