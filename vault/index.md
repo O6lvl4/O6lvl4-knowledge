@@ -15,12 +15,14 @@ O6lvl4 Knowledge の knowledge base。
 
 ### ai
 
-- [[human-vs-ai-text]] - 人間の文章 vs AI 文章
+- [[llm-social-simulation]] - LLM ソーシャルシミュレーション
 - [[viralbert]] - ViralBERT
 - [[engagement-driven-generation]] - エンゲージメント駆動生成
+- [[human-vs-ai-text]] - 人間の文章 vs AI 文章
 - [[reward-machine-learning]] - 報酬 (強化学習)
+- [[formal-vs-functional-competence]] - 形式的言語能力 vs 機能的言語能力
 - [[inference-time-alignment]] - 推論時アライメント
-- [[llm-social-simulation]] - LLM ソーシャルシミュレーション
+- [[symbol-grounding]] - 記号接地問題
 
 ### ai-planning
 
@@ -28,8 +30,8 @@ O6lvl4 Knowledge の knowledge base。
 
 ### aituber
 
-- [[aituber-cost]] - AITuber 配信コスト構造
 - [[aituber-engagement-response]] - AITuber 応答のエンゲージメント最適化
+- [[aituber-cost]] - AITuber 配信コスト構造
 
 ### almide
 
@@ -39,6 +41,8 @@ O6lvl4 Knowledge の knowledge base。
 - [[almai]] - almai
 - [[almide-agent-framework]] - Almide Agent Framework — 抽象スケッチ (仮)
 - [[almide-compiler-errors]] - Almide コンパイラエラー体験
+- [[almide-list-mutation]] - Almide の list in-place mutation (push/pop) 設計
+- [[almide-differential-gate]] - Almide 差分ゲート (differential gate)
 - [[almide-bindgen]] - almide-bindgen
 - [[almide-dojo]] - almide-dojo
 - [[almide-grammar]] - almide-grammar
@@ -50,14 +54,13 @@ O6lvl4 Knowledge の knowledge base。
 - [[almide-sqlite]] - almide-sqlite
 - [[almide-wasm-bindgen]] - almide-wasm-bindgen
 - [[almide-web]] - almide-web
+- [[anf-closure-lifting-bug]] - ANF パスとクロージャリフティングのバグ事例
 - [[almide-base64]] - base64 (Almide)
 - [[bonsai-almide]] - bonsai-almide
 - [[ceangal]] - ceangal
 - [[ceangal-anime]] - ceangal-anime
 - [[almide-csv]] - csv (Almide)
 - [[almide-docs]] - docs (Almide)
-- [[almide-differential-gate]] - Almide 差分ゲート (differential gate)
-- [[almide-list-mutation]] - Almide の list in-place mutation (push/pop) 設計
 - [[hof-inline-fusion]] - HOF インライン融合とクロージャ変換
 - [[homullus]] - homullus
 - [[lumen]] - lumen
@@ -135,15 +138,9 @@ O6lvl4 Knowledge の knowledge base。
 
 - [[petri-nets]] - ペトリネット
 - [[model-checking]] - モデル検査
+- [[safety-critical-certification]] - 安全臨界ソフトウェア認証と Almide のギャップ
 - [[theorem-proving]] - 定理証明
 - [[formal-methods]] - 形式手法
-- [[safety-critical-certification]] - 安全臨界ソフトウェア認証と Almide のギャップ
-- [[do-178c]] - DO-178C (航空ソフトウェア認証)
-- [[iso-26262]] - ISO 26262 (自動車機能安全)
-- [[iec-62304]] - IEC 62304 (医療機器ソフトウェア)
-- [[accepted-safety-in-systems]] - システムにおける「許容される安全性」とは
-- [[soup]] - SOUP (Software of Unknown Provenance)
-- [[safety-critical-certification-bodies]] - 安全臨界の認証に関わる団体(標準化・評価・規制)
 - [[temporal-logic]] - 時相論理
 
 ### game-engine
@@ -173,6 +170,7 @@ O6lvl4 Knowledge の knowledge base。
 
 - [[almide]] - Almide
 - [[forth]] - Forth
+- [[grain]] - Grain
 - [[mind]] - Mind
 - [[ruby]] - Ruby
 - [[rust]] - Rust
@@ -195,6 +193,13 @@ O6lvl4 Knowledge の knowledge base。
 ### networking
 
 - [[quic-http3]] - QUIC / HTTP/3
+
+### neuroscience
+
+- [[episodic-memory]] - エピソード記憶
+- [[reward-system]] - 報酬系と内発的動機
+- [[executive-function]] - 実行機能
+- [[theory-of-mind]] - 心の理論
 
 ### pdf
 
@@ -225,6 +230,15 @@ O6lvl4 Knowledge の knowledge base。
 - [[hashbrown]] - hashbrown
 - [[rayon]] - rayon
 - [[rust-safety-critical]] - Rust と安全臨界 (Ferrocene / RustBelt)
+
+### safety-critical
+
+- [[do-178c]] - DO-178C (航空ソフトウェア認証)
+- [[iec-62304]] - IEC 62304 (医療機器ソフトウェア)
+- [[iso-26262]] - ISO 26262 (自動車機能安全)
+- [[soup]] - SOUP (Software of Unknown Provenance)
+- [[accepted-safety-in-systems]] - システムにおける「許容される安全性」とは
+- [[safety-critical-certification-bodies]] - 安全臨界の認証に関わる団体(標準化・評価・規制)
 
 ### streaming
 
