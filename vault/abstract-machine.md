@@ -34,3 +34,4 @@ updated_at: 2026-05-30T20:30:00+09:00
 - [[reduction|簡約]] — 抽象機械は簡約戦略を機械化したもの
 - [[stack-oriented-programming|スタック指向]] — SECD/ZAM はスタックマシン
 - [[tail-call-optimization|末尾呼び出し最適化]] — 継続/スタックの再利用と表裏
+- [[ocaml|OCaml]] — バイトコードを ZAM で実行

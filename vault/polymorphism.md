@@ -78,6 +78,9 @@ Rust の trait は **単相化（速い）と `dyn`（動的）を選べる**点
 - [[rust|Rust]] — trait による単相化/動的の選択、境界付き多相
 - [[tapl|TAPL]] — System F（parametric 多相の理論）を扱う型理論の教科書
 - [[dependent-type|依存型]] — 型が値に依存する、多相のさらに先
+- [[hindley-milner|Hindley–Milner 型推論]] — parametric＋let 多相の型推論
+- [[parametricity|パラメトリシティ]] — parametric 多相が持つ一様性の性質
+- [[higher-kinded-types|高階型 (HKT)]] — 型構築子 `F[_]` まで広げた多相
 
 ## Links
 

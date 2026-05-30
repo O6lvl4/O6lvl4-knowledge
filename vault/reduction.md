@@ -95,3 +95,4 @@ const expr = ((x: number) => (y: number) => x + y)(1 + 1)(2 + 2);
 - [[lambda-calculus|λ計算]] — 簡約はλ計算の計算規則
 - [[lisp|LISP]] — λ計算（と簡約）を最初に実装した言語
 - [[functional-programming|関数型言語]] — 簡約 = 関数適用の実行モデル
+- [[equational-reasoning|等式推論]] — 簡約は等式に向きを付けた適用

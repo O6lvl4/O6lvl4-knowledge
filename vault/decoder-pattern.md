@@ -47,3 +47,5 @@ userDecoder =
 - [[adt-gadt|ADT / GADT]] — デコード先の内部表現。`andThen` でタグ判別して直和に振り分ける
 - [[polymorphism|ポリモーフィズム]] — `map`/`map2`/`andThen` はアプリカティブ/モナドの構造
 - [[union-type|共用型 / Union 型]] — 曖昧な入力を判別共用体へ落とす対象
+- [[parser-combinator|パーサコンビネータ]] — テキスト相手の同型パターン（Decoder ≈ Parser）
+- [[make-illegal-states-unrepresentable|不正な状態を表現不能にする]] — 境界で型付き値に落とす「parse, don't validate」

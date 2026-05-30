@@ -103,3 +103,4 @@ function handleInteractive(gen: Generator) {
 - [[monad|Monad]] — 副作用を扱う別のアプローチ
 - [[pure-functional-programming|純粋関数型言語]] — 副作用管理の文脈で比較される
 - [[coeffect|Coeffect]] — effect（出力側）の双対＝文脈・資源の要求（入力側）
+- [[ocaml|OCaml]] — 5.0 でエフェクトハンドラを言語機能として導入

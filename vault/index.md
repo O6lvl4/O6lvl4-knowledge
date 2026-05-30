@@ -120,6 +120,8 @@ O6lvl4 Knowledge の knowledge base。
 
 - [[accidental-complexity]] - 偶有的複雑性 / 本質的複雑性
 - [[convention-over-configuration]] - Convention over Configuration
+- [[functional-core-imperative-shell]] - Functional Core, Imperative Shell
+- [[make-illegal-states-unrepresentable]] - 不正な状態を表現不能にする
 - [[simple-vs-easy]] - Simple vs Easy
 
 ### edge-computing
@@ -181,9 +183,12 @@ O6lvl4 Knowledge の knowledge base。
 ### language
 
 - [[almide]] - Almide
+- [[clojure]] - Clojure
 - [[forth]] - Forth
+- [[fsharp]] - F#
 - [[grain]] - Grain
 - [[mind]] - Mind
+- [[ocaml]] - OCaml
 - [[ruby]] - Ruby
 - [[rust]] - Rust
 - [[nadesiko]] - なでしこ
@@ -237,6 +242,9 @@ O6lvl4 Knowledge の knowledge base。
 - [[partial-evaluation]] - 部分評価
 - [[recursion-schemes]] - 再帰スキーム
 - [[decoder-pattern]] - デコーダパターン
+- [[multi-stage-programming]] - 多段階計算
+- [[parser-combinator]] - パーサコンビネータ
+- [[equational-reasoning]] - 等式推論
 
 ### rails
 
@@ -299,6 +307,9 @@ O6lvl4 Knowledge の knowledge base。
 - [[polymorphism]] - ポリモーフィズム
 - [[bidirectional-typing]] - 双方向型検査
 - [[category-theory]] - 圏論
+- [[hindley-milner]] - Hindley–Milner 型推論
+- [[parametricity]] - パラメトリシティ / 自由定理
+- [[higher-kinded-types]] - 高階型 (HKT)
 
 ### vtuber
 

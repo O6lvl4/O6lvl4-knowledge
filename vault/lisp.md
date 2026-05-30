@@ -76,3 +76,4 @@ function macroUnless(expr: SExpr[]): SExpr[] {
 
 - [[lambda-calculus|λ計算]] — LISP の理論的基盤。LISP は λ 計算の実装と言える
 - [[functional-programming|関数型言語]] — LISP は最初の関数型言語
+- [[clojure|Clojure]] — JVM 上の現代的 Lisp 方言

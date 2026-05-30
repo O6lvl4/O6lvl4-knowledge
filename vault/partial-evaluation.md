@@ -38,3 +38,4 @@ updated_at: 2026-05-30T20:31:00+09:00
 - [[abstract-machine|抽象機械]] — インタプリタ特化＝コンパイルの関係を体現
 - [[stream-fusion|Stream Fusion]] — 中間構造を消す隣接最適化
 - [[dead-code-elimination|DCE]] — 既知入力で不要コードが落ちる
+- [[multi-stage-programming|多段階計算]] — 部分評価をステージで明示制御する版

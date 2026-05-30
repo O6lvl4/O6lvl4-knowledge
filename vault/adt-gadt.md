@@ -89,3 +89,4 @@ function evalExpr(e: Expr2): number | string {
 - [[recursion-schemes|再帰スキーム]] — catamorphism は ADT の fold を一般化したもの
 - [[decoder-pattern|デコーダパターン]] — 外部データを ADT に判別変換する
 - [[category-theory|圏論]] — 直和/直積は余積/積という圏論的構成
+- [[make-illegal-states-unrepresentable|不正な状態を表現不能にする]] — 直和であり得る状態だけを列挙する

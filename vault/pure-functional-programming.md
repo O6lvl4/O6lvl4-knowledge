@@ -75,3 +75,5 @@ greet name = do
 - [[functional-programming|関数型言語]] — 純粋関数型はその厳密版
 - [[monad|Monad]] — Haskell が副作用を扱う仕組み
 - [[algebraic-effects|Algebraic Effects]] — Monad とは別の副作用管理アプローチ
+- [[functional-core-imperative-shell|Functional Core, Imperative Shell]] — 純粋なコアと副作用の殻を分ける設計
+- [[equational-reasoning|等式推論]] — 参照透過性が可能にする式変形・証明
