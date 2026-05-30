@@ -105,8 +105,8 @@ AITuber 用途で API を使うなら Pro ($99/月) から。従量単価は約 
 
 | 要件 | 推奨 |
 |---|---|
-| 日本語オンリー、GPU あり | [[style-bert-vits2|Style-Bert-VITS2]]（コスト ¥0、高品質） |
-| 日本語オンリー、手軽に始めたい | [[voicevox|VOICEVOX]] プリセット → 後で Style-Bert-VITS2 に移行 |
+| 日本語オンリー、GPU あり | [[style-bert-vits2\|Style-Bert-VITS2]]（コスト ¥0、高品質） |
+| 日本語オンリー、手軽に始めたい | [[voicevox\|VOICEVOX]] プリセット → 後で Style-Bert-VITS2 に移行 |
 | 多言語配信、最高品質 | ElevenLabs Professional（月額 $99〜） |
 | とにかく安く既存の声を変えたい | RVC + VOICEVOX |
 

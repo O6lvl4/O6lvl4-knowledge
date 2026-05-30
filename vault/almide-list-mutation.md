@@ -15,7 +15,7 @@ list は `[len][cap][data]` レイアウト(長さ・確保容量・データ本
 |---|---|---|
 | (a) | **変数書き戻し** | `push` の戻り値は `Unit` なのに `xs` 自体を変える。`xs` が `Var` なら、その local を更新する特別扱いが要る |
 | (b) | **realloc** | `len == cap` で容量不足になると再確保 → **バッファのポインタが動く**。新ポインタを (a) で呼び出し元 local に書き戻さねば壊れる |
-| (c) | **COW (copy-on-write)** | [[perceus|Perceus]] 的には push は所有的変更。共有されている(`rc > 1`)list を push すると、他参照を壊さないため[[copy-on-write\|コピーしてから書く]]必要がある |
+| (c) | **COW (copy-on-write)** | [[perceus\|Perceus]] 的には push は所有的変更。共有されている(`rc > 1`)list を push すると、他参照を壊さないため[[copy-on-write\|コピーしてから書く]]必要がある |
 
 (c) は borrow / `alm_eq` 解析と整合させないと、共有 list を黙って破壊する致命的バグになる。
 

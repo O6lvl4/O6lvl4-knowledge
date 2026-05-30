@@ -127,7 +127,7 @@ Ecma Technical Report として策定中。
 
 ## WinterTC と WASI の関係
 
-| 観点 | WinterTC | [[wasi|WASI]] |
+| 観点 | WinterTC | [[wasi\|WASI]] |
 |---|---|---|
 | 対象 | JavaScript ランタイム | WebAssembly ランタイム |
 | 言語 | ECMAScript | 言語非依存 (Rust, C, Go → WASM) |

@@ -42,7 +42,7 @@ SOUP は医療の呼び名で、同じ「既製・外部ソフトをどう扱う
 | 標準 | 対応概念 |
 |---|---|
 | IEC 62304(医療) | **SOUP** |
-| [[do-178c|DO-178C]](航空) | COTS / PDS(Previously Developed Software)、ツールは DO-330 で認定 |
+| [[do-178c\|DO-178C]](航空) | COTS / PDS(Previously Developed Software)、ツールは DO-330 で認定 |
 | [[iso-26262]](自動車) | ソフトウェアコンポーネントの qualification / SEooC |
 
 ## Links
