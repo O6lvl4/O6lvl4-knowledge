@@ -82,6 +82,7 @@ O6lvl4 Knowledge の knowledge base。
 - [[app-store-review]] - App Store Review
 - [[google-play]] - Google Play
 - [[google-play-review]] - Google Play Review
+- [[free-distribution-strategy]] - 無料配布の設計（なぜ「N本無料」なのか）
 
 ### computer-science
 
@@ -93,11 +94,11 @@ O6lvl4 Knowledge の knowledge base。
 - [[region-inference]] - Region Inference
 - [[relaxed-simd]] - Relaxed SIMD
 - [[stream-fusion]] - Stream Fusion
-- [[virtual-scrolling]] - 仮想スクロール
 - [[swiss-table]] - SwissTable
 - [[wasm-simd]] - WebAssembly SIMD
 - [[work-stealing]] - Work-Stealing
 - [[programming-language]] - プログラミング言語
+- [[virtual-scrolling]] - 仮想スクロール
 - [[distributed-consistency]] - 分散システムの一貫性 — CAP定理, CRDT, 一貫性モデル
 - [[duality]] - 双対
 
@@ -254,10 +255,10 @@ O6lvl4 Knowledge の knowledge base。
 - [[obs]] - OBS Studio
 - [[obs-studio-architecture]] - OBS Studio アーキテクチャ
 - [[obs-plugin-system]] - OBS Studio プラグインシステム
-- [[streaming-software]] - 配信ソフトウェア
-- [[tv-guide-apps]] - 番組表アプリ / EPG
-- [[tv-guide-architecture]] - 番組表アーキテクチャ
 - [[tv-guide-oss]] - 番組表 OSS / EPG ライブラリ
+- [[tv-guide-architecture]] - 番組表アーキテクチャ
+- [[tv-guide-apps]] - 番組表アプリ / EPG
+- [[streaming-software]] - 配信ソフトウェア
 
 ### tools
 
