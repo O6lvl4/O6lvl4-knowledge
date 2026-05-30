@@ -106,3 +106,4 @@ const identity = <T>(x: T) => x;
 - [[intuitionistic-logic|直観主義論理]] — 推論規則で定義される論理体系
 - [[tapl|TAPL]] — 推論規則を体系的に学べる教科書
 - [[dependent-type|依存型]] — より表現力の高い推論規則
+- [[bidirectional-typing|双方向型検査]] — 推論規則を check/synth の2判断に割る実装技法

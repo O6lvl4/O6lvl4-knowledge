@@ -166,3 +166,4 @@ crates.io が中央リポジトリ。主要なクレート：
 - [[rayon]] — work-stealing ベースのデータ並列ライブラリ
 - [[almide]] — Rust で実装されたプログラミング言語（Almide コンパイラが Rust 製）
 - [[rust-safety-critical]] — 安全臨界での Rust。Ferrocene(認定ツールチェーン)と RustBelt(型システムの機械証明)
+- [[polymorphism|ポリモーフィズム]] — trait は単相化/動的を選べ、ad-hoc と境界付き parametric を融合

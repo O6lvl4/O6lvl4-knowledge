@@ -161,3 +161,5 @@ PipelineStage::Filter → 条件分岐として挿入
 - [[functional-programming]] — stream fusion は関数型パイプラインの核心的最適化
 - [[dead-code-elimination]] — 融合後に不要になった中間関数を DCE で除去
 - [[hof-inline-fusion]] — Almide での HOF インライン融合。ラムダ本体をループに展開する前段の最適化
+- [[recursion-schemes|再帰スキーム]] — hylomorphism による中間構造除去が deforestation の理論背景
+- [[partial-evaluation|部分評価]] — 「汎用コードを具体化して速くする」最適化の同類

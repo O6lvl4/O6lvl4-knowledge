@@ -98,3 +98,6 @@ async function getUserPosts(id: string) {
 - [[continuation|継続 / 限定継続]] — Cont Monad は継続を Monad で扱う
 - [[pure-functional-programming|純粋関数型言語]] — Haskell は IO Monad で副作用を管理
 - [[duality|双対]] — Iterator（pull）と Observer（push）の双対性
+- [[tagless-final|Tagless Final]] — Free モナド（initial）に対する final encoding。作用を `F[_]` で抽象
+- [[comonad|Comonad]] — 圏論的双対。return↔extract、bind↔extend
+- [[category-theory|圏論]] — Monad は「自己関手の圏におけるモノイド対象」

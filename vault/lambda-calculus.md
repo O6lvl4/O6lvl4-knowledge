@@ -63,3 +63,4 @@ IF(FALSE)("yes")("no"); // "no"
 - [[lisp|LISP]] — λ計算を最初に実装した言語
 - [[functional-programming|関数型言語]] — λ計算を実用化したもの
 - [[curry-howard|カリー=ハワード同型対応]] — λ計算の項 = 論理の証明
+- [[abstract-machine|抽象機械]] — λ計算を状態遷移で実行する仮想機械（SECD/CEK 等）

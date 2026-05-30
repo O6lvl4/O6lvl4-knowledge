@@ -84,3 +84,8 @@ function evalExpr(e: Expr2): number | string {
 - [[functional-programming|関数型言語]] — ADT は関数型の基本的な型定義方法
 - [[phantom-type|幽霊型]] — GADT の簡易版として使えるテクニック
 - [[duality|双対]] — 直積型と直和型は双対の関係
+- [[tagless-final|Tagless Final]] — GADT による initial encoding の対。型クラスで tagless にする final 流儀
+- [[polymorphism|ポリモーフィズム]] — 直和型での場合分けは subtype 多相と並ぶ手段
+- [[recursion-schemes|再帰スキーム]] — catamorphism は ADT の fold を一般化したもの
+- [[decoder-pattern|デコーダパターン]] — 外部データを ADT に判別変換する
+- [[category-theory|圏論]] — 直和/直積は余積/積という圏論的構成

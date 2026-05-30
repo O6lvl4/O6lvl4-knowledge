@@ -77,3 +77,6 @@ async function consumer(stream: AsyncIterable<number>) {
 
 - [[adt-gadt|ADT / GADT]] — 直積型と直和型の双対性
 - [[continuation|継続 / 限定継続]] — CPS 変換は双対変換の一種
+- [[comonad|Comonad]] — Monad の双対。代数/余代数、始代数/終余代数の対
+- [[recursion-schemes|再帰スキーム]] — catamorphism（代数）と anamorphism（余代数）の双対
+- [[category-theory|圏論]] — opposite category `C^op` が双対の源

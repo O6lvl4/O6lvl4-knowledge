@@ -101,6 +101,8 @@ O6lvl4 Knowledge の knowledge base。
 - [[virtual-scrolling]] - 仮想スクロール
 - [[distributed-consistency]] - 分散システムの一貫性 — CAP定理, CRDT, 一貫性モデル
 - [[duality]] - 双対
+- [[tail-call-optimization]] - 末尾呼び出し最適化 (TCO)
+- [[actor-model]] - アクターモデル
 
 ### concept
 
@@ -116,6 +118,7 @@ O6lvl4 Knowledge の knowledge base。
 
 ### design-principle
 
+- [[accidental-complexity]] - 偶有的複雑性 / 本質的複雑性
 - [[convention-over-configuration]] - Convention over Configuration
 - [[simple-vs-easy]] - Simple vs Easy
 
@@ -227,6 +230,13 @@ O6lvl4 Knowledge の knowledge base。
 - [[pure-functional-programming]] - 純粋関数型言語
 - [[continuation]] - 継続 / 限定継続
 - [[functional-programming]] - 関数型言語
+- [[tagless-final]] - Tagless Final
+- [[comonad]] - Comonad
+- [[coeffect]] - Coeffect
+- [[abstract-machine]] - 抽象機械
+- [[partial-evaluation]] - 部分評価
+- [[recursion-schemes]] - 再帰スキーム
+- [[decoder-pattern]] - デコーダパターン
 
 ### rails
 
@@ -286,6 +296,9 @@ O6lvl4 Knowledge の knowledge base。
 - [[phantom-type]] - 幽霊型
 - [[inference-rules]] - 推論規則
 - [[refinement-type]] - 篩型
+- [[polymorphism]] - ポリモーフィズム
+- [[bidirectional-typing]] - 双方向型検査
+- [[category-theory]] - 圏論
 
 ### vtuber
 

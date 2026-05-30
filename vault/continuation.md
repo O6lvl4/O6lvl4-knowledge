@@ -95,3 +95,5 @@ try {
 
 - [[algebraic-effects|Algebraic Effects]] — 限定継続を使って副作用を扱う仕組み
 - [[monad|Monad]] — 継続を扱う別のアプローチ（Cont モナド）
+- [[abstract-machine|抽象機械]] — CEK 機械は継続を状態として明示化
+- [[tail-call-optimization|末尾呼び出し最適化]] — CPS 変換で全呼び出しが末尾化する

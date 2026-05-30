@@ -518,3 +518,4 @@ graph TD
 - [[edge-data]] -- Edge データストアの具体的な比較
 - [[edge-platforms]] -- Edge プラットフォーム比較
 - [[copy-on-write]] -- COW は CRDT の delta 最適化と関連する概念
+- [[actor-model|アクターモデル]] — 位置透過なアクターは分散システムの構成単位

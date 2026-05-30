@@ -85,3 +85,4 @@ function absurd<A>(x: never): A {
 - [[dependent-type|依存型]] — ∀ と ∃ まで対応を拡張する
 - [[theorem-proving|定理証明]] — この対応を直接利用する
 - [[tapl|TAPL]] — この対応を詳しく学べる教科書
+- [[category-theory|圏論]] — カリー＝ハワード＝ランベック対応（論理＝型＝圏）の圏側

@@ -70,3 +70,5 @@ TAPL で扱われるトピックの多くがこの knowledge base にある:
 - [[intuitionistic-logic|直観主義論理]] — 型と論理の対応の論理側
 - [[dependent-type|依存型]] — TAPL の先にある話題
 - [[refinement-type|篩型]] — TAPL の先にある話題
+- [[polymorphism|ポリモーフィズム]] — System F（parametric 多相）は TAPL の主要トピック
+- [[bidirectional-typing|双方向型検査]] — 型検査器を実装する際の中心技法
