@@ -32,6 +32,7 @@ O6lvl4 Knowledge の knowledge base。
 
 - [[aituber-engagement-response]] - AITuber 応答のエンゲージメント最適化
 - [[aituber-cost]] - AITuber 配信コスト構造
+- [[animula]] - animula
 
 ### almide
 
@@ -240,6 +241,7 @@ O6lvl4 Knowledge の knowledge base。
 
 ### pdf
 
+- [[paged-js]] - Paged.js
 - [[pagina]] - Pagina
 - [[prince]] - Prince
 - [[document-generation]] - 書面の自動生成
