@@ -57,7 +57,7 @@ const render = [start - overscan, end + overscan]  // overscan = 先読みバッ
 
 最大の対比: **Web は仮想化ライブラリを後付けする**が、**ネイティブ / Flutter は標準のリストプリミティブが最初から仮想化済み**。やることは「正しいプリミティブを選ぶ」だけ。方式は2系統ある。
 
-**(a) ビュー再利用（view recycling）** — 実際のビュー객체をプールして使い回す
+**(a) ビュー再利用（view recycling）** — 実際のビューオブジェクトをプールして使い回す
 
 - **iOS UIKit** — `UITableView` / `UICollectionView`。`dequeueReusableCell` で再利用プールから取り出す（再利用は事実上必須）。iOS 10+ の **prefetching**（`UICollectionViewDataSourcePrefetching`）で出現直前のセル/データを先読み
 - **Android View** — `RecyclerView`。**ViewHolder パターン**で画面分＋数個だけ作り、上に消えたビューを下の新項目へ回す（`ListView` の後継）

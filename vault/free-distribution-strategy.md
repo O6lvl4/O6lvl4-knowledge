@@ -77,3 +77,9 @@ updated_at: 2026-05-30T13:37:18+09:00
 ## 関連
 
 - [[engagement-driven-generation]] — 「エンゲージメント(反応)を報酬に最適化」する側。無料配布が獲得した母数の上で何を最大化するかの隣接テーマ
+- [[loss-leader]] — 原価割れで撒いて本命で回収する価格戦略。無料配布(価格ゼロ版)の一般形
+- [[freemium]] — 無料層で母数、転換率で採算という構造
+- [[cac-ltv]] — 無料配布 = 現物の顧客獲得コスト。LTV>CAC が成立条件
+- [[lock-in]] — 配布後にスイッチングコストでチャーンを下げ LTV を伸ばす
+- [[behavioral-economics]] — 保有効果・損失回避など、無料が効く心理的土台
+- [[hooked-model]] — 習慣ループ(trigger→action→reward→investment)で行動を置換する本命ロジック

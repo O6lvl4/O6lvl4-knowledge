@@ -163,3 +163,7 @@ Supervisor.init(children, strategy: :one_for_one)
 - [[edge-vs-cloud-vs-onprem]] — local-first 採用の判断軸
 - [[distributed-consistency]] — BEAM クラスタで Hub + エッジノードを分散する際の一貫性
 - [[edge-design-patterns]] — エッジでの処理設計（遠隔アクセス層の参考）
+- [[actor-model]] — GenServer = 軽量プロセス/メッセージ並行の理論的裏付け
+- [[functional-core-imperative-shell]] — 決定論コア + エッジで副作用、という本計画の構造そのもの
+- [[make-illegal-states-unrepresentable]] — 生 LLM 出力を schema 検証して実機直結を防ぐ設計の核
+- [[circuit-breaker]] — Brain(LLM)境界の耐障害設計。失敗時に安全側へ倒す

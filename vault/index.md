@@ -82,7 +82,11 @@ O6lvl4 Knowledge の knowledge base。
 - [[app-store-review]] - App Store Review
 - [[google-play]] - Google Play
 - [[google-play-review]] - Google Play Review
+- [[freemium]] - フリーミアム / 無料トライアル
+- [[loss-leader]] - ロスリーダー（撒き餌価格）
+- [[lock-in]] - ロックイン / スイッチングコスト
 - [[free-distribution-strategy]] - 無料配布の設計（なぜ「N本無料」なのか）
+- [[cac-ltv]] - 顧客獲得単価（CAC）と顧客生涯価値（LTV）
 
 ### computer-science
 
@@ -97,12 +101,12 @@ O6lvl4 Knowledge の knowledge base。
 - [[swiss-table]] - SwissTable
 - [[wasm-simd]] - WebAssembly SIMD
 - [[work-stealing]] - Work-Stealing
+- [[actor-model]] - アクターモデル
 - [[programming-language]] - プログラミング言語
 - [[virtual-scrolling]] - 仮想スクロール
 - [[distributed-consistency]] - 分散システムの一貫性 — CAP定理, CRDT, 一貫性モデル
 - [[duality]] - 双対
 - [[tail-call-optimization]] - 末尾呼び出し最適化 (TCO)
-- [[actor-model]] - アクターモデル
 
 ### concept
 
@@ -118,11 +122,19 @@ O6lvl4 Knowledge の knowledge base。
 
 ### design-principle
 
-- [[accidental-complexity]] - 偶有的複雑性 / 本質的複雑性
 - [[convention-over-configuration]] - Convention over Configuration
 - [[functional-core-imperative-shell]] - Functional Core, Imperative Shell
-- [[make-illegal-states-unrepresentable]] - 不正な状態を表現不能にする
 - [[simple-vs-easy]] - Simple vs Easy
+- [[make-illegal-states-unrepresentable]] - 不正な状態を表現不能にする
+- [[accidental-complexity]] - 偶有的複雑性 / 本質的複雑性
+
+### distributed-systems
+
+- [[circuit-breaker]] - サーキットブレーカ — 連鎖障害を止める耐障害パターン
+
+### economics
+
+- [[behavioral-economics]] - 行動経済学 — 人が「合理的でなく」動く法則
 
 ### edge-computing
 
@@ -180,12 +192,16 @@ O6lvl4 Knowledge の knowledge base。
 
 - [[gpu]] - GPU
 
+### homeos
+
+- [[homeos-functional-plan]] - HomeOS を関数型で作る — 計画 (仮)
+
 ### language
 
 - [[almide]] - Almide
 - [[clojure]] - Clojure
-- [[forth]] - Forth
 - [[fsharp]] - F#
+- [[forth]] - Forth
 - [[grain]] - Grain
 - [[mind]] - Mind
 - [[ocaml]] - OCaml
@@ -224,27 +240,31 @@ O6lvl4 Knowledge の knowledge base。
 - [[prince]] - Prince
 - [[document-generation]] - 書面の自動生成
 
+### product
+
+- [[hooked-model]] - Hooked モデル — 習慣を作る4段ループ
+
 ### programming-paradigm
 
 - [[algebraic-effects]] - Algebraic Effects
+- [[coeffect]] - Coeffect
+- [[comonad]] - Comonad
 - [[lisp]] - LISP
 - [[monad]] - Monad
+- [[tagless-final]] - Tagless Final
 - [[lambda-calculus]] - λ計算
 - [[stack-oriented-programming]] - スタック指向プログラミング
+- [[decoder-pattern]] - デコーダパターン
+- [[parser-combinator]] - パーサコンビネータ
+- [[recursion-schemes]] - 再帰スキーム
+- [[multi-stage-programming]] - 多段階計算
+- [[abstract-machine]] - 抽象機械
+- [[equational-reasoning]] - 等式推論
 - [[reduction]] - 簡約（α, β, η）
 - [[pure-functional-programming]] - 純粋関数型言語
 - [[continuation]] - 継続 / 限定継続
-- [[functional-programming]] - 関数型言語
-- [[tagless-final]] - Tagless Final
-- [[comonad]] - Comonad
-- [[coeffect]] - Coeffect
-- [[abstract-machine]] - 抽象機械
 - [[partial-evaluation]] - 部分評価
-- [[recursion-schemes]] - 再帰スキーム
-- [[decoder-pattern]] - デコーダパターン
-- [[multi-stage-programming]] - 多段階計算
-- [[parser-combinator]] - パーサコンビネータ
-- [[equational-reasoning]] - 等式推論
+- [[functional-programming]] - 関数型言語
 
 ### rails
 
@@ -296,19 +316,19 @@ O6lvl4 Knowledge の knowledge base。
 ### type-theory
 
 - [[adt-gadt]] - ADT / GADT
+- [[hindley-milner]] - Hindley–Milner 型推論
 - [[tapl]] - TAPL
 - [[curry-howard]] - カリー=ハワード同型対応
+- [[parametricity]] - パラメトリシティ / 自由定理
+- [[polymorphism]] - ポリモーフィズム
 - [[dependent-type]] - 依存型
 - [[union-type]] - 共用型 / Union 型
 - [[enum]] - 列挙型 (Enum)
+- [[bidirectional-typing]] - 双方向型検査
+- [[category-theory]] - 圏論
 - [[phantom-type]] - 幽霊型
 - [[inference-rules]] - 推論規則
 - [[refinement-type]] - 篩型
-- [[polymorphism]] - ポリモーフィズム
-- [[bidirectional-typing]] - 双方向型検査
-- [[category-theory]] - 圏論
-- [[hindley-milner]] - Hindley–Milner 型推論
-- [[parametricity]] - パラメトリシティ / 自由定理
 - [[higher-kinded-types]] - 高階型 (HKT)
 
 ### vtuber
