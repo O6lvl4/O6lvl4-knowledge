@@ -2,7 +2,7 @@
 title: 時相論理
 tags: [formal-methods, computer-science, logic]
 created_at: 2026-05-18
-updated_at: 2026-05-19
+updated_at: 2026-05-31T21:33:21+09:00
 ---
 
 「いつか」「常に」「〜するまで」といった時間に関する性質を表現する論理。
@@ -108,6 +108,14 @@ async function withRetry(fn: () => Promise<void>) {
 // 「待っているプロセスはいつかクリティカルセクションに入れる」
 // □(waiting(p) → ◇inCS(p))
 ```
+
+## 押さえどころ（カード化候補）
+
+- 時相論理とは → 「いつか」「常に」「〜するまで」といった時間に関する性質を形式的に記述する論理。モデル検査で検証する仕様を書くための言語
+- 4つの演算子 → □ (Always/Globally: 常に成り立つ＝不変条件)、◇ (Eventually: いつか成り立つ＝Promise resolve)、○ (Next: 次のステップで)、U (Until: Q が成り立つまで P が続く)
+- LTL vs CTL → LTL は時間が一本道で1つの実行トレースを語る。CTL は時間が分岐する木で A (全分岐) / E (ある分岐) を区別し非決定性を扱える
+- プログラマの直感との対応 → □ = ループ不変条件、◇ = await 結果、U = リスナ解除待ち、□(A→◇B) = リトライロジック (失敗したらいつか成功)
+- 典型的な仕様パターン → □(request → ◇response) (応答保証)、□¬(inCS(p1)∧inCS(p2)) (相互排他)、□(waiting(p) → ◇inCS(p)) (飢餓なし)
 
 ## 関連
 

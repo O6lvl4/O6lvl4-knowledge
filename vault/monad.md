@@ -2,7 +2,7 @@
 title: Monad
 tags: [programming-paradigm, computer-science, type-theory]
 created_at: 2026-05-18
-updated_at: 2026-05-19
+updated_at: 2026-05-31T21:33:07+09:00
 ---
 
 「文脈付きの値」を連鎖的につなげる仕組み。
@@ -91,6 +91,13 @@ async function getUserPosts(id: string) {
 // await = Haskell の <- (bind の糖衣構文)
 // async = do ブロック
 ```
+
+## 押さえどころ（カード化候補）
+
+- Monad とは → 「文脈付きの値」を連鎖的につなぐ仕組み。Promise/Optional/Result/配列がすべて Monad。直感的には Promise のこと
+- 本質は flatMap → then = bind = >>= = flatMap。「箱の中身を取り出し関数に渡し新しい箱に入れる」。Promise の then、配列の flatMap、Option の null チェック連鎖が同型
+- Monad 則 → 左単位元 of(x).then(f)===f(x)、右単位元 m.then(of)===m、結合律 m.then(f).then(g)===m.then(x=&gt;f(x).then(g))
+- do 記法 = async/await → await が Haskell の &lt;- (bind の糖衣)、async が do ブロックに対応。両者は同じもの
 
 ## 関連
 

@@ -2,7 +2,7 @@
 title: LISP
 tags: [programming-paradigm, computer-science, language]
 created_at: 2026-05-18
-updated_at: 2026-05-18
+updated_at: 2026-05-31T21:33:23+09:00
 ---
 
 1958年に生まれた、現存する最古の高級言語の一つ。「コードとデータが同じ構造」という設計思想を持つ。
@@ -71,6 +71,13 @@ function macroUnless(expr: SExpr[]): SExpr[] {
 - **Clojure** — JVM 上で動くモダン LISP。イミュータブルデータ構造
 - **Emacs Lisp** — Emacs の拡張言語
 - **Racket** — Scheme 系。言語を作るための言語
+
+## 押さえどころ（カード化候補）
+
+- **LISP とは** → 1958 年生まれ、現存最古級の高級言語。「コードとデータが同じ構造（S 式 = リスト）」が設計思想
+- **すべてがリスト** → 関数呼び出しも `(関数名 引数1 引数2)` というリスト。`(+ 1 2)` は `["+", 1, 2]` に対応し、評価器は再帰的にリストを評価する
+- **ホモイコニシティ（同図像性）** → コード = データなので、プログラムでコードを操作できる。マクロ = コードを受け取りコードを返す関数（`unless` → `if (not …)`）。TS/JS は AST を直接操作できないのでこれができない
+- **主要方言** → Common Lisp（実用大規模）、Scheme（ミニマル・SICP）、Clojure（JVM・イミュータブル）、Emacs Lisp、Racket（言語を作る言語）
 
 ## 関連
 

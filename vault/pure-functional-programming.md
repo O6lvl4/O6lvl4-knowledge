@@ -2,7 +2,7 @@
 title: 純粋関数型言語
 tags: [programming-paradigm, computer-science]
 created_at: 2026-05-18
-updated_at: 2026-05-18
+updated_at: 2026-05-31T21:33:23+09:00
 ---
 
 すべての関数が純粋（副作用なし）であることを型システムで強制する[[functional-programming|関数型言語]]。
@@ -69,6 +69,13 @@ greet name = do
   putStrLn "Side effect!"
   return ("Hello, " ++ name)
 ```
+
+## 押さえどころ（カード化候補）
+
+- **純粋関数型言語とは** → すべての関数が純粋（副作用なし）であることを型システムで強制する関数型言語。副作用を書くのに型の許可が要る
+- **IO の箱** → 副作用は `IO<A>`（実行するまで何も起きない箱）に入れないと書けない。`greetWithLog("world")` の時点では無、`.run()` で初めて副作用が発生
+- **参照透過性** → 式を結果で置き換えてもプログラムの意味が変わらない性質。`double(3)` を `6` に置換可（透過）、`increment()`（counter を増やす）は不可（非透過）
+- **代表は Haskell** → 型が副作用を明示。`Int -> Int` は純粋、`String -> IO String` は副作用あり
 
 ## 関連
 

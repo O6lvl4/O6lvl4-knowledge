@@ -2,7 +2,7 @@
 title: Algebraic Effects
 tags: [programming-paradigm, computer-science, type-theory]
 created_at: 2026-05-18
-updated_at: 2026-05-18
+updated_at: 2026-05-31T21:33:23+09:00
 ---
 
 副作用を「宣言」と「処理」に分離する仕組み。
@@ -96,6 +96,14 @@ function handleInteractive(gen: Generator) {
 - **Eff** — Algebraic Effects の研究言語
 - **Koka** — Microsoft Research の言語。Effects を前面に押し出した設計
 - **Unison** — Abilities として実装
+
+## 押さえどころ（カード化候補）
+
+- **Algebraic Effects とは** → 副作用を「宣言（perform）」と「処理（handler）」に分離する仕組み。`throw`/`try-catch` の一般化
+- **例外との違い** → 例外は投げたら戻れないが、エフェクトはハンドラが `resume(値)` を呼ぶと perform の位置に戻って計算を続けられる
+- **宣言と実装の分離** → 同じプログラムに対しハンドラを差し替え可能（テストはモック、本番はリアル I/O）。Generator の `yield`/`gen.next(値)` で模倣できる
+- **Monad との違い** → Monad は副作用を型に閉じ込め flatMap でネストし「色付き関数」問題を起こす。Effects は直接的に書け複数副作用を自由に組み合わせられる
+- **実装言語** → OCaml 5（2022 ネイティブ）、Eff（研究言語）、Koka、Unison（Abilities）
 
 ## 関連
 

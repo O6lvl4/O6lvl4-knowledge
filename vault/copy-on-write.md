@@ -2,7 +2,7 @@
 title: Copy-on-Write (COW)
 tags: [computer-science, memory-management, optimization]
 created_at: 2026-05-19
-updated_at: 2026-05-19
+updated_at: 2026-05-31T21:33:23+09:00
 ---
 
 「コピーが必要になるまでコピーしない」最適化戦略。
@@ -100,6 +100,14 @@ Rust は「今これは借用？所有？」を型レベルで追跡する。Swi
 - **Rust の `Cow<T>`** — 文字列処理、パーサ、設定値の受け渡しなど
 - **PHP の変数** — 代入時はコピーせず、書き換え時にコピー（zval の refcount）
 - **Git のオブジェクト** — ファイルが変わっていなければ同じ blob を共有
+
+## 押さえどころ（カード化候補）
+
+- **COW とは** → 「コピーが必要になるまでコピーしない」最適化。データを共有しておき、書き換えの瞬間に初めてコピーを作る。読むだけならコストゼロ
+- **Rust の `Cow<T>`** → 所有権ベース。`Borrowed`（参照）/ `Owned`（所有）の 2 状態 enum。書き換えが要るときだけ `Owned` 化してコピー。型で明示
+- **Swift の値型** → 参照カウントベース。Array/Dictionary/String/Set すべて COW。参照が 1 なら書き換えてもコピーせず、2 以上で書き換え時にだけコピー。暗黙
+- **Rust vs Swift** → 判断基準が「所有権を持つか」vs「参照カウント > 1 か」。目的（不要コピー回避）は同じでアプローチが違う
+- **使われる場所** → OS の fork（書き換えたページだけコピー）、Swift 値型、Rust `Cow<T>`、PHP の zval refcount、Git の blob 共有
 
 ## 関連
 

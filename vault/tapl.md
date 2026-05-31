@@ -2,7 +2,7 @@
 title: TAPL
 tags: [type-theory, computer-science, book]
 created_at: 2026-05-18
-updated_at: 2026-05-19
+updated_at: 2026-05-31T21:33:07+09:00
 ---
 
 "Types and Programming Languages" (Benjamin C. Pierce, 2002)。型理論とプログラミング言語の理論を学ぶ定番の教科書。
@@ -57,6 +57,14 @@ updated_at: 2026-05-19
 // Progress + Preservation = 型安全性 (Type Safety)
 // 「型が通るプログラムは、実行時に型エラーで止まらない」
 ```
+
+## 押さえどころ（カード化候補）
+
+- TAPL とは → Pierce の "Types and Programming Languages" (2002)。型チェッカーの仕組みと型システムが正しさを保証する理由を基礎から構築する定番教科書
+- 構成の流れ → 型なしλ計算 → 単純型 → サブタイピング → 再帰型 → 多相型(System F) → 高階の型、と段階的に表現力を上げていく
+- Progress → 型が通る式は値であるか、もう一歩計算を進められるかのどちらか。「詰まらない」（undefined is not a function が起きない）
+- Preservation → 一歩計算を進めても型は保たれる。計算の途中で型が壊れない
+- 型安全性 → Progress + Preservation = 型が通るプログラムは実行時に型エラーで止まらない、という TAPL 中心の定理
 
 ## 関連する概念とページ
 

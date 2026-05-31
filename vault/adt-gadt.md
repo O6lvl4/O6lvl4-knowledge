@@ -2,7 +2,7 @@
 title: ADT / GADT
 tags: [type-theory, computer-science]
 created_at: 2026-05-18
-updated_at: 2026-05-20
+updated_at: 2026-05-31T21:33:07+09:00
 ---
 
 代数的データ型 (Algebraic Data Type) と一般化代数的データ型 (Generalized ADT)。
@@ -76,6 +76,14 @@ function evalExpr(e: Expr2): number | string {
   }
 }
 ```
+
+## 押さえどころ（カード化候補）
+
+- ADT とは → 直和（OR / union）と直積（AND / record）の組み合わせで型を構成する方式。TypeScript の判別 union + リテラル型がこれにあたる
+- なぜ「代数的」か → 直積は組み合わせ数 |A|×|B|、直和は |A|+|B|。型の数が掛け算・足し算で計算できるから代数的
+- パターンマッチと網羅性 → discriminant での switch が場合分け。バリアント追加時に switch の漏れがコンパイルエラーになり、抜けを型で防げる
+- ADT の限界 → 型パラメータが全バリアントで共通なので Expr&lt;number&gt; と Expr&lt;string&gt; を区別できず、add(num, str) を禁止できない
+- GADT とは → 各バリアントが返す型を具体化できる ADT（Num :: Expr Int, Str :: Expr String）。TS では `__type` タグや関数オーバーロードで模倣する
 
 ## 関連
 

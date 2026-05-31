@@ -2,7 +2,7 @@
 title: 双対
 tags: [computer-science, type-theory, mathematics]
 created_at: 2026-05-18
-updated_at: 2026-05-18
+updated_at: 2026-05-31T21:33:23+09:00
 ---
 
 2つの概念が「矢印を逆にしただけ」の関係にあること。
@@ -72,6 +72,14 @@ async function consumer(stream: AsyncIterable<number>) {
 // map, filter, reduce が Iterator にあるなら
 // Observable にも map, filter, reduce があるべき → 実際にある
 ```
+
+## 押さえどころ（カード化候補）
+
+- **双対とは** → 2 つの概念が「矢印を逆にしただけ」の関係。片方を理解すれば逆向きでもう片方が自動的に得られる
+- **直積と直和** → Product（A AND B）は作るのが AND・使うのが OR、Sum（A OR B）は作るのが OR・使うのが AND。作る/使うの矢印を逆にすると入れ替わる
+- **Iterator と Observer** → Iterator は pull（消費者が next で引く）、Observer は push（生産者が next で押し込む）。データの流れる向きが逆なだけで構造は同じ（for ループ ⟷ イベントリスナ）
+- **Generator と async iteration** → Generator は pull、`for await` は push。同じ map/filter/reduce 群が両側に対称的に存在（RxJS は Iterator の双対として体系設計）
+- **なぜ有用か** → 片方の概念・定理から逆をタダで導出でき、API 設計で対称性・一貫性を作れる
 
 ## 関連
 

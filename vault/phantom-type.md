@@ -2,7 +2,7 @@
 title: 幽霊型
 tags: [type-theory, computer-science]
 created_at: 2026-05-18
-updated_at: 2026-05-18
+updated_at: 2026-05-31T21:33:07+09:00
 ---
 
 実行時には存在しないが、コンパイル時に型の区別として機能する型パラメータ。Phantom type。
@@ -68,6 +68,13 @@ const closed = closeFile(f);
 // コンパイル後の JS には型情報が消える → ランタイムコスト = ゼロ
 // 型としてだけ存在し、実行時には「幽霊」のように消える → 幽霊型
 ```
+
+## 押さえどころ（カード化候補）
+
+- 幽霊型とは → 実行時には存在せず、型引数を「タグ」として使い誤った組み合わせをコンパイルエラーにするテクニック。ランタイムコストはゼロ
+- 通貨ミックス防止 → Money&lt;JPY&gt; と Money&lt;USD&gt; を型で分離し、addMoney&lt;C&gt;(a, b) で同一通貨同士のみ加算可。円とドルの足し算がコンパイルエラーに
+- 状態マシンの型表現 → FileHandle&lt;Open&gt;/FileHandle&lt;Closed&gt; で状態遷移を型化。readFile は Open のみ受け、closeFile が Closed を返すので Closed の読み取りを禁止できる
+- なぜ「幽霊」か → 型パラメータは number に as でキャストしただけで JS には型情報が消える。型としてだけ存在し実行時に消える
 
 ## 関連
 
