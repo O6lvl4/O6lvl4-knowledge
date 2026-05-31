@@ -88,6 +88,10 @@ O6lvl4 Knowledge の knowledge base。
 - [[free-distribution-strategy]] - 無料配布の設計（なぜ「N本無料」なのか）
 - [[cac-ltv]] - 顧客獲得単価（CAC）と顧客生涯価値（LTV）
 
+### compiler
+
+- [[build-caching]] - ビルドキャッシュとプリコンパイル済み stdlib
+
 ### computer-science
 
 - [[copy-on-write]] - Copy-on-Write (COW)

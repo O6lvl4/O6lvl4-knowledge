@@ -168,3 +168,4 @@ crates.io が中央リポジトリ。主要なクレート：
 - [[rust-safety-critical]] — 安全臨界での Rust。Ferrocene(認定ツールチェーン)と RustBelt(型システムの機械証明)
 - [[polymorphism|ポリモーフィズム]] — trait は単相化/動的を選べ、ad-hoc と境界付き parametric を融合
 - [[build-caching]] — stdlib を `.rlib` 同梱 + cargo の `target/` インクリメンタルキャッシュ
+- [[coeffect]] — 所有/move ≈ アフィン使用。使用量を型で追う coeffect の最も普及した実例
