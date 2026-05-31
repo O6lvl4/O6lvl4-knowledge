@@ -267,6 +267,7 @@ O6lvl4 Knowledge の knowledge base。
 - [[decoder-pattern]] - デコーダパターン
 - [[parser-combinator]] - パーサコンビネータ
 - [[recursion-schemes]] - 再帰スキーム
+- [[effect-handlers]] - 効果ハンドラ (effect handlers)
 - [[multi-stage-programming]] - 多段階計算
 - [[abstract-machine]] - 抽象機械
 - [[equational-reasoning]] - 等式推論

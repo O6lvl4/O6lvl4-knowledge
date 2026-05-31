@@ -102,6 +102,7 @@ try {
 ## 関連
 
 - [[algebraic-effects|Algebraic Effects]] — 限定継続を使って副作用を扱う仕組み
+- [[effect-handlers|効果ハンドラ]] — handler が受け取る `k` は perform 地点までの限定継続。効果ハンドラ ≈ 型のついた shift/reset
 - [[monad|Monad]] — 継続を扱う別のアプローチ（Cont モナド）
 - [[abstract-machine|抽象機械]] — CEK 機械は継続を状態として明示化
 - [[tail-call-optimization|末尾呼び出し最適化]] — CPS 変換で全呼び出しが末尾化する
