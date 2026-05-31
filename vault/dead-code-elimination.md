@@ -222,3 +222,4 @@ wasm-tools strip app.opt.wasm -o app.final.wasm
 ## 関連
 
 - [[wasm-simd]] — WASM バイナリの最適化文脈で DCE が重要
+- [[build-caching]] — プリコンパイル済み stdlib をリンクする際、未使用部を DCE で削る
