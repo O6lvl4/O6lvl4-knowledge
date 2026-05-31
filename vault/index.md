@@ -156,6 +156,10 @@ O6lvl4 Knowledge の knowledge base。
 - [[wasm-at-the-edge]] - WASM at the Edge
 - [[wintertc]] - WinterTC
 
+### editor
+
+- [[emacs]] - Emacs
+
 ### formal-language
 
 - [[type-0-grammar]] - Type 0 文法（句構造文法）
