@@ -2,7 +2,7 @@
 title: LISP
 tags: [programming-paradigm, computer-science, language]
 created_at: 2026-05-18
-updated_at: 2026-05-31T21:33:23+09:00
+updated_at: 2026-05-31T23:01:18+09:00
 ---
 
 1958年に生まれた、現存する最古の高級言語の一つ。「コードとデータが同じ構造」という設計思想を持つ。
@@ -64,13 +64,33 @@ function macroUnless(expr: SExpr[]): SExpr[] {
 // LISP ではこれが言語の標準機能
 ```
 
+マクロの落とし穴は**変数捕捉**(マクロが展開先の変数を意図せず巻き込む)。Common Lisp は `gensym` で一意なシンボルを作って手で避け、Scheme の `syntax-rules` は**衛生的マクロ (hygienic macro)** が自動で防ぐ。コード=データゆえ構文そのものを作れる = **DSL を言語内で構築できる**のが Lisp 最大の実用的帰結。
+
+## Lisp が先取りした概念
+
+現代言語が「新機能」として取り込んだものの多くは Lisp 由来。Lisp は 1958 年時点で先回りしていた。
+
+| 概念 | Lisp での起源 | 後発への波及 |
+|---|---|---|
+| **ガベージコレクション** | McCarthy (1959) | Java/Go/JS… ほぼ全マネージド言語 |
+| 第一級・高階関数 | 関数 = 値 | JS/Python/Rust のクロージャ |
+| 条件式 `cond` / 再帰中心 | Lisp | ほぼ全言語 |
+| 動的型付け | Lisp | Python/Ruby/JS |
+| **REPL**(対話的評価) | Lisp | 各言語の対話環境 |
+| **マクロ / 同図像性** | S 式 = コード | Rust の macro、Elixir、テンプレート系 |
+| condition system(再開可能例外) | Common Lisp | 多くの言語が未追随 |
+
+> **Greenspun の第10法則**: 「十分に複雑な C / Fortran プログラムは、Common Lisp の半分をその場しのぎでバグだらけに再実装したものを含む」— 言語が結局 Lisp の機能を再発明する、という皮肉。
+
 ## 方言
 
-- **Common Lisp** — 実用的な大規模 LISP
-- **Scheme** — ミニマルな LISP。教育用途で有名（SICP）
-- **Clojure** — JVM 上で動くモダン LISP。イミュータブルデータ構造
-- **Emacs Lisp** — Emacs の拡張言語
-- **Racket** — Scheme 系。言語を作るための言語
+| 方言 | 性格 | マクロ | 特徴 |
+|---|---|---|---|
+| **Common Lisp** | 実用・大規模 | 非衛生 `defmacro` | CLOS(多重ディスパッチ)、condition system、巨大標準 |
+| **Scheme** | ミニマル・教育(SICP) | **衛生的** `syntax-rules` | 継続 [[continuation\|`call/cc`]] が一級。仕様が小さい |
+| **Clojure** | JVM 上のモダン Lisp | `defmacro` + syntax-quote | [[clojure\|イミュータブル永続データ構造]]・STM |
+| **Emacs Lisp** | [[emacs\|Emacs]] の拡張言語 | `defmacro` | エディタ全体の実装言語。動的束縛の歴史 |
+| **Racket** | 言語を作る言語 | 強力なマクロ系 | `#lang` で DSL / 新言語を量産 |
 
 ## 押さえどころ（カード化候補）
 
@@ -78,6 +98,8 @@ function macroUnless(expr: SExpr[]): SExpr[] {
 - **すべてがリスト** → 関数呼び出しも `(関数名 引数1 引数2)` というリスト。`(+ 1 2)` は `["+", 1, 2]` に対応し、評価器は再帰的にリストを評価する
 - **ホモイコニシティ（同図像性）** → コード = データなので、プログラムでコードを操作できる。マクロ = コードを受け取りコードを返す関数（`unless` → `if (not …)`）。TS/JS は AST を直接操作できないのでこれができない
 - **主要方言** → Common Lisp（実用大規模）、Scheme（ミニマル・SICP）、Clojure（JVM・イミュータブル）、Emacs Lisp、Racket（言語を作る言語）
+- **マクロの衛生性** → 変数捕捉が落とし穴。CL は `gensym` で手動回避、Scheme の `syntax-rules` は衛生的マクロが自動回避。構文を作れる＝言語内 DSL 構築が最大の実用的帰結
+- **Lisp が先取りした概念** → GC(McCarthy 1959)・第一級/高階関数・REPL・動的型付け・マクロ。現代言語の多くは Lisp の再発見(Greenspun の第10法則)
 
 ## 関連
 

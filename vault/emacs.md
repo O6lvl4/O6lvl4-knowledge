@@ -2,7 +2,7 @@
 title: Emacs
 tags: [editor, lisp, tools]
 created_at: 2026-05-31
-updated_at: 2026-05-31T22:53:02+09:00
+updated_at: 2026-05-31T23:01:18+09:00
 ---
 
 拡張可能・自己文書化されたテキストエディタ。実体は **[[lisp|Emacs Lisp]] (Elisp) のインタプリタ環境**で、「テキストを編集する Lisp マシン」と言った方が正確。1976年 RMS(Richard Stallman)らに由来、GNU Emacs が本流。
@@ -55,6 +55,32 @@ updated_at: 2026-05-31T22:53:02+09:00
 
 「**道具を使う側が道具そのものを書き換えられる**」設計の極北。設定とプラグインの境界が無く、ユーザーのカスタムも組み込み機能も同じ Elisp 空間に同居する。拡張性をコアに置く思想は [[lisp]] の自己反映性(reflection)とマクロ文化の直系で、半世紀使われ続ける耐久性の源でもある。
 
+## 2026年の Emacs
+
+半世紀目に入っても現役で、コアの近代化が続く一方、AI エディタ時代に「立ち位置」を問われている。
+
+**バージョン**
+- **Emacs 30.1**(2025-02 リリース)— **Android ネイティブ対応**(タッチ/スワイプにコマンド束縛可)、tree-sitter モード(`*-ts-mode`)が非 ts モードの**サブモード化**(従来設定が継承される)、`use-package :vc`(VCS から直接パッケージ導入)、native-comp が事実上の既定路線(byte-compile 比 2–5倍)。
+- **Emacs 31**(2026 にブランチ作成・feature freeze 入り)— ウィンドウ操作の拡充ほか。注目の**新 GC は 31 には入らない**。
+- **IGC(incremental / concurrent GC)** — Ravenbrook の **MPS** ライブラリを使い「固まらない Emacs」を狙う開発ブランチ。大きなバッファや LSP で顕著な **GC ポーズの解消**が目的。ただし ARM Linux / Raspberry Pi では MPS 未対応で当面使えない。
+
+**AI 統合** — 「環境を自分で組む」思想が LLM 時代に効いている。
+- **gptel** — 定番の LLM クライアント。任意のバッファから対話でき、**tool-use(エージェント化)・MCP(`mcp.el`)・マルチモーダル・reasoning** に対応。
+- **Ellama** — 要約/リファクタ/翻訳などタスク特化コマンド群。`copilot.el` / `codeium.el` は常時インライン補完。
+- 「単一ツールでなく**合成可能なレイヤ**(常時補完 + on-demand チャット + エージェント)として積む」のが 2026 の実践。拡張性がそのまま AI ワークフローの自由度になる。
+
+**競合の中での立ち位置** — AI ネイティブ編集の波。
+- **Zed**(Rust、入力遅延 <1ms、AI 内蔵=Zeta/Copilot)が「速さ + 無設定で効く AI」で台頭。
+- **Neovim**(Lua、非同期、LSP/tree-sitter 内蔵、CodeCompanion/ACP/MCP)がモーダル派の IDE 化を担う。
+- Emacs は依然「**エディタ = OS**(メール・git・シェル・AI クライアントまで内側)」のニッチ。速さや既定の手軽さでは劣るが、**全部を1つの Lisp 空間で再構成できる**唯一性で生き残っている。
+
+## Links
+
+- [Emacs 30.1 released (gnu.org)](https://lists.gnu.org/archive/html/emacs-devel/2025-02/msg00997.html)
+- [What's New in Emacs 30.1 (Mastering Emacs)](https://www.masteringemacs.org/article/whats-new-in-emacs-301)
+- [gptel — LLM client for Emacs](https://github.com/karthink/gptel)
+- [Emacs news (Sacha Chua)](https://sachachua.com/blog/)
+
 ## 押さえどころ（カード化候補）
 
 - **Emacs とは** → テキストを編集する Elisp インタプリタ環境。エディタの大半が Elisp 製で、動作中に再定義してエディタ自体を作り替えられる。
@@ -62,6 +88,7 @@ updated_at: 2026-05-31T22:53:02+09:00
 - **構成** → buffer / major・minor mode / keymap / minibuffer。すべてがバッファで、機能はコマンド(Elisp 関数)。
 - **Vim との対比** → Emacs=モードレス+Elisp で深く再定義、Vim=モーダルで編集高速化。拡張の深さと編集モデルが対照的。
 - **現代の核** → org-mode(アウトライン/文芸的)、Magit(git)、eglot(LSP)、tree-sitter・native-comp(Emacs 28/29)。
+- **2026年の状況** → Emacs 30.1(2025-02、Android 対応・ts モードのサブモード化)、31 はブランチ作成済み(新 GC は見送り)、IGC(MPS)で GC ポーズ解消を開発中。AI は gptel/Ellama/MCP を合成レイヤで。Zed/Neovim の AI ネイティブ化の中で「エディタ=OS」のニッチで生存。
 
 ## 関連
 
