@@ -134,6 +134,7 @@ O6lvl4 Knowledge の knowledge base。
 - [[simple-vs-easy]] - Simple vs Easy
 - [[make-illegal-states-unrepresentable]] - 不正な状態を表現不能にする
 - [[accidental-complexity]] - 偶有的複雑性 / 本質的複雑性
+- [[constraints-liberate]] - 制約が自由を生む (constraints liberate)
 
 ### distributed-systems
 

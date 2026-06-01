@@ -48,3 +48,4 @@ counter 系は「**コンパイルごとにリセット**(決定的に採番)」
 - [[pure-functional-programming]] — 参照透過性(入力だけで出力が決まる)を codegen に課した形
 - [[almide]] — Determinism/Purity Belt を持つコンパイラ本体
 - [[safety-critical-certification]] — 再現可能ビルドは認証(証跡)でも要件になる
+- [[constraints-liberate]] — 「非決定を禁じて再現性を買う」= 制約が自由を生むの一例

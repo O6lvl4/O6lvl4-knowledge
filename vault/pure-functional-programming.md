@@ -84,3 +84,4 @@ greet name = do
 - [[algebraic-effects|Algebraic Effects]] — Monad とは別の副作用管理アプローチ
 - [[functional-core-imperative-shell|Functional Core, Imperative Shell]] — 純粋なコアと副作用の殻を分ける設計
 - [[equational-reasoning|等式推論]] — 参照透過性が可能にする式変形・証明
+- [[constraints-liberate]] — 「副作用を禁じて局所推論を買う」= 制約が自由を生むの一例
