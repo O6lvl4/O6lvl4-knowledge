@@ -118,6 +118,7 @@ O6lvl4 Knowledge の knowledge base。
 ### concept
 
 - [[face-tracking]] - フェイストラッキング
+- [[projection]] - 射影 (projection)
 
 ### cryptography
 

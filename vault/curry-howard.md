@@ -93,3 +93,4 @@ function absurd<A>(x: never): A {
 - [[theorem-proving|定理証明]] — この対応を直接利用する
 - [[tapl|TAPL]] — この対応を詳しく学べる教科書
 - [[category-theory|圏論]] — カリー＝ハワード＝ランベック対応（論理＝型＝圏）の圏側
+- [[projection|射影]] — `A∧B→A`(∧除去)が射影。`A→A∨B`(∨導入)が入射

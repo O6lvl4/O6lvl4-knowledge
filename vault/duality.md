@@ -88,3 +88,4 @@ async function consumer(stream: AsyncIterable<number>) {
 - [[comonad|Comonad]] — Monad の双対。代数/余代数、始代数/終余代数の対
 - [[recursion-schemes|再帰スキーム]] — catamorphism（代数）と anamorphism（余代数）の双対
 - [[category-theory|圏論]] — opposite category `C^op` が双対の源
+- [[projection|射影]] — 積からの射影 ↔ 直和への入射、という双対の代表例

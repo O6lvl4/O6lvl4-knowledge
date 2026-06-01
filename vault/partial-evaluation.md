@@ -39,3 +39,4 @@ updated_at: 2026-05-30T20:31:00+09:00
 - [[stream-fusion|Stream Fusion]] — 中間構造を消す隣接最適化
 - [[dead-code-elimination|DCE]] — 既知入力で不要コードが落ちる
 - [[multi-stage-programming|多段階計算]] — 部分評価をステージで明示制御する版
+- [[projection|射影]] — 「Futamura 射影(二村射影)」の射影。同名の他の射影との区別
