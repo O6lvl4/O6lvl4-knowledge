@@ -155,6 +155,7 @@ O6lvl4 Knowledge の knowledge base。
 - [[edge-data]] - Edge データストア
 - [[edge-platforms]] - Edge プラットフォーム比較
 - [[go-on-cloudflare-workers]] - Go を Cloudflare Workers で動かす
+- [[syumai-workers]] - syumai/workers
 - [[v8-isolates]] - V8 Isolates
 - [[wasi]] - WASI
 - [[wasm-at-the-edge]] - WASM at the Edge
@@ -235,10 +236,6 @@ O6lvl4 Knowledge の knowledge base。
 ### logic
 
 - [[intuitionistic-logic]] - 直観主義論理
-
-### meta
-
-- [[cjktest]] - cjktest
 
 ### networking
 
