@@ -38,6 +38,7 @@ updated_at: 2026-06-01T21:58:40+09:00
 
 ## 関連
 
+- [[mruby]] — 技術詳細でなく「位置づけ・設計思想」を扱う概念ノート(本ノートの対)
 - [[ruby]] — 本家(CRuby/MRI)。mruby はその軽量・組込み版
 - [[stack-oriented-programming]] — mruby の RiteVM はレジスタマシン。YARV(スタック)との対比
 - [[build-caching]] — `mrbc` の bytecode 事前生成は「事前コンパイルして埋める」発想の一種

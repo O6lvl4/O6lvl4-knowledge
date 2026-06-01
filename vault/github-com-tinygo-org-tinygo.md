@@ -46,6 +46,7 @@ Go の型・言語資産を**サイズ制約の厳しい場所**(MCU・エッジ
 
 ## 関連
 
+- [[tinygo]] — 技術詳細でなく「位置づけ・設計思想」を扱う概念ノート(本ノートの対)
 - [[github-com-syumai-workers]] — Workers 用に TinyGo で wasm を吐く定番ライブラリ
 - [[go-on-cloudflare-workers]] — TinyGo がサイズ問題を解く文脈
 - [[wasm-core]] — 出力先の WASM。LLVM 経由でコンパイル

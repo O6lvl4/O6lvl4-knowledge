@@ -190,6 +190,7 @@ O6lvl4 Knowledge の knowledge base。
 ### go
 
 - [[github-com-tinygo-org-tinygo]] - github.com/tinygo-org/tinygo
+- [[tinygo]] - TinyGo
 
 ### graphics
 
@@ -293,6 +294,7 @@ O6lvl4 Knowledge の knowledge base。
 ### ruby
 
 - [[github-com-mruby-mruby]] - github.com/mruby/mruby
+- [[mruby]] - mruby
 
 ### rust
 
