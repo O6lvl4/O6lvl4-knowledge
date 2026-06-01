@@ -43,3 +43,4 @@ updated_at: 2026-05-31T17:04:59+09:00
 - [[almide]] — マルチターゲット codegen。stdlib をどう供給/キャッシュするかは同じ設計問題
 - [[dead-code-elimination]] — リンク時に未使用 stdlib を削る最適化(プリコンパイルと併走)
 - [[copy-on-write]] — 「変わるまで作り直さない」という遅延・再利用の発想は同根
+- [[deterministic-codegen]] — 「同じ入力→同じ出力」が成立しないとキャッシュは無効化する。その前提

@@ -76,6 +76,7 @@ O6lvl4 Knowledge の knowledge base。
 - [[tree-sitter-almide]] - tree-sitter-almide
 - [[vscode-almide]] - vscode-almide
 - [[almide-yaml]] - yaml (Almide)
+- [[deterministic-codegen]] - コンパイルの決定性 (Determinism/Purity Belt)
 
 ### business
 
