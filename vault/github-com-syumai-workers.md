@@ -118,3 +118,4 @@ D1 が `database/sql` ドライバなのが効いていて、**既存の Go の 
 - [[wasm-core]] — WASM は I/O を持たない。だから fetch→Go の変換層(グルー)が要る
 - [[v8-isolates]] — Workers の実行基盤。本ライブラリもこの制約下で動く
 - [[edge-platforms]] — Cloudflare Workers を含むエッジ実行環境
+- [[github-com-tinygo-org-tinygo]] — wasm を吐くコンパイラ。サイズ制約のため標準 Go でなくこれを使う

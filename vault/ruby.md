@@ -75,3 +75,7 @@ Rails が 2004 年に登場するまでに、Ruby は英語圏で既に文化的
 - [Programming Ruby (Pickaxe)](https://pragprog.com/titles/ruby5/programming-ruby-3-3-5th-edition/)
 - [why's (poignant) Guide to Ruby（アーカイブ）](https://poignant.guide/)
 - [Matz の言語設計に関する講演アーカイブ](https://www.ruby-lang.org/en/news/)
+
+## 関連
+
+- [[github-com-mruby-mruby]] — 軽量・組込み版 Ruby(まつもと作)。C アプリに埋め込める実装

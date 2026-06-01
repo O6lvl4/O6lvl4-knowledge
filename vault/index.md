@@ -187,6 +187,10 @@ O6lvl4 Knowledge の knowledge base。
 
 - [[unity]] - Unity
 
+### go
+
+- [[github-com-tinygo-org-tinygo]] - github.com/tinygo-org/tinygo
+
 ### graphics
 
 - [[blender]] - Blender
@@ -285,6 +289,10 @@ O6lvl4 Knowledge の knowledge base。
 ### rails
 
 - [[the-rails-doctrine]] - The Rails Doctrine
+
+### ruby
+
+- [[github-com-mruby-mruby]] - github.com/mruby/mruby
 
 ### rust
 
