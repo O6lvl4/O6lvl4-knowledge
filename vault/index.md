@@ -286,6 +286,7 @@ O6lvl4 Knowledge の knowledge base。
 ### rust
 
 - [[axum]] - axum
+- [[borrow-checker-value]] - Borrow Checker の価値 — 制約が信頼に変わる体験
 - [[ferrocene]] - Ferrocene
 - [[hashbrown]] - hashbrown
 - [[rayon]] - rayon

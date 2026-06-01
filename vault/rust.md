@@ -171,3 +171,4 @@ crates.io が中央リポジトリ。主要なクレート：
 - [[coeffect]] — 所有/move ≈ アフィン使用。使用量を型で追う coeffect の最も普及した実例
 - [[btreemap]] — std の順序付きマップ(B木)。HashMap との使い分け
 - [[swiss-table]] — std HashMap のバックエンド(hashbrown)が採用する設計
+- [[borrow-checker-value]] — 借用チェッカーに人が価値を見出した理由(体験・心理・設計思想)

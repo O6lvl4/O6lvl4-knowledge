@@ -102,3 +102,4 @@ Effect が Kleisli 射 `A → T B`(値 → 作用付き結果)なのに対し、
 - [[monad|Monad]] — effect 側のモデル。graded monad の双対が graded comonad
 - [[dependent-type|依存型]] — 型に値・量の情報を載せる点で隣接。Idris 2 の QTT は依存型 × coeffect 的 multiplicity
 - [[rust]] — 所有/move ≈ アフィン使用。coeffect(使用量の型追跡)の最も普及した実例
+- [[borrow-checker-value]] — そのアフィン制約に人が価値を見出した理由(体験・設計思想)

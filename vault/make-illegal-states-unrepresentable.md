@@ -39,3 +39,4 @@ type State = LoggedOut | LoggedIn of User
 - [[decoder-pattern|デコーダパターン]] / [[parser-combinator|パーサコンビネータ]] — 境界で型付き値に落とす
 - [[union-type|共用型 / Union 型]] — 判別共用体での状態表現
 - [[fsharp|F#]] / [[ocaml|OCaml]] — この設計を文化として持つ ML 系言語
+- [[borrow-checker-value]] — 同じ思想をメモリ別名レベルで実現した例(「共有×可変」を型で表現不能に)
