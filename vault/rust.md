@@ -169,3 +169,5 @@ crates.io が中央リポジトリ。主要なクレート：
 - [[polymorphism|ポリモーフィズム]] — trait は単相化/動的を選べ、ad-hoc と境界付き parametric を融合
 - [[build-caching]] — stdlib を `.rlib` 同梱 + cargo の `target/` インクリメンタルキャッシュ
 - [[coeffect]] — 所有/move ≈ アフィン使用。使用量を型で追う coeffect の最も普及した実例
+- [[btreemap]] — std の順序付きマップ(B木)。HashMap との使い分け
+- [[swiss-table]] — std HashMap のバックエンド(hashbrown)が採用する設計

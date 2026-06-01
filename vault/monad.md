@@ -108,3 +108,4 @@ async function getUserPosts(id: string) {
 - [[tagless-final|Tagless Final]] — Free モナド（initial）に対する final encoding。作用を `F[_]` で抽象
 - [[comonad|Comonad]] — 圏論的双対。return↔extract、bind↔extend
 - [[category-theory|圏論]] — Monad は「自己関手の圏におけるモノイド対象」
+- [[algebraic-operations|代数的演算]] — 代数的理論の自由モデルが副作用 Monad(free monad)になる

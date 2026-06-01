@@ -95,6 +95,7 @@ O6lvl4 Knowledge の knowledge base。
 
 ### computer-science
 
+- [[btreemap]] - BTreeMap
 - [[copy-on-write]] - Copy-on-Write (COW)
 - [[dead-code-elimination]] - Dead Code Elimination (DCE)
 - [[equality-saturation]] - Equality Saturation
@@ -332,6 +333,7 @@ O6lvl4 Knowledge の knowledge base。
 - [[curry-howard]] - カリー=ハワード同型対応
 - [[parametricity]] - パラメトリシティ / 自由定理
 - [[polymorphism]] - ポリモーフィズム
+- [[algebraic-operations]] - 代数的演算 (algebraic operations)
 - [[dependent-type]] - 依存型
 - [[union-type]] - 共用型 / Union 型
 - [[enum]] - 列挙型 (Enum)

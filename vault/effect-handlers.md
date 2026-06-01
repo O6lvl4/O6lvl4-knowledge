@@ -59,6 +59,7 @@ handle (perform Op v) with
 ## 関連
 
 - [[algebraic-effects]] — 本ノートの母体。効果ハンドラはその「一般化」の中身
+- [[algebraic-operations]] — ハンドラが解釈する「代数的演算」の理論。演算 arity が resume 回数に対応
 - [[continuation]] — 限定継続(shift/reset)が効果ハンドラの実装基盤
 - [[monad]] — 副作用を扱う対の手法。型に閉じ込める vs 投げて処理する
 - [[coeffect]] — effect(出力)の双対。文脈・資源の要求(入力)

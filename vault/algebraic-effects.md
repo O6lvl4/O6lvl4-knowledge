@@ -108,6 +108,7 @@ function handleInteractive(gen: Generator) {
 ## 関連
 
 - [[effect-handlers|効果ハンドラ]] — 「throw/try-catch の一般化」の中身。例外・状態・generator・async・非決定性を1機構の特殊例にまとめる
+- [[algebraic-operations|代数的演算]] — 「代数的」効果の理論的根拠。演算 signature + 等式で副作用を定義
 - [[continuation|継続 / 限定継続]] — Algebraic Effects は限定継続で実装される
 - [[monad|Monad]] — 副作用を扱う別のアプローチ
 - [[pure-functional-programming|純粋関数型言語]] — 副作用管理の文脈で比較される

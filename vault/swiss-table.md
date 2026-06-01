@@ -228,3 +228,4 @@ pos = H1(hash) & bucket_mask
 
 - [[hashbrown]] — SwissTable の Rust 実装。Rust 標準ライブラリの HashMap バックエンド
 - [[wasm-simd]] — WASM 環境では bitmask の非対称性により hashbrown は SIMD 不使用 (ポータブル fallback)
+- [[btreemap]] — 対になる順序付きマップ(B木)。整列・範囲クエリが要るとき HashMap の代わりに使う
