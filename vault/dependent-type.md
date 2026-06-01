@@ -98,7 +98,7 @@ replicate : (n : ℕ) → A → Vec A n
 
 ## 単純型 vs 篩型 vs 依存型
 
-| 軸 | 単純型 | [[refinement-type|篩型]] | 依存型 |
+| 軸 | 単純型 | [[refinement-type\|篩型]] | 依存型 |
 |---|---|---|---|
 | 型に載るもの | 構造のみ | 基底型 + decidable 述語 | **任意の値・計算** |
 | 例 | `Int -> Int` | `{v:Int \| v > 0}` | `Π(n).Vec n a` |

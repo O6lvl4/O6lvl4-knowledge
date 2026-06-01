@@ -55,7 +55,7 @@ Qed.
 
 | 系 | 基盤論理 | スタイル | 自動 / 対話 | 主用途・特色 |
 |---|---|---|---|---|
-| **Coq** | CIC（Calculus of Inductive Constructions, [[dependent-type|依存型]]） | tactic 言語 Ltac で証明を組む | 対話中心（`auto`/`lia`/`omega` 等の局所自動あり） | CompCert（検証済み C コンパイラ）、四色定理。プログラム**抽出**で OCaml/Haskell を生成 |
+| **Coq** | CIC（Calculus of Inductive Constructions, [[dependent-type\|依存型]]） | tactic 言語 Ltac で証明を組む | 対話中心（`auto`/`lia`/`omega` 等の局所自動あり） | CompCert（検証済み C コンパイラ）、四色定理。プログラム**抽出**で OCaml/Haskell を生成 |
 | **Lean**（Lean 4） | CIC ベースの依存型 | tactic + 関数型言語そのもの（Lean 4 は自身を Lean で実装） | 対話 + 強力な `simp`/`decide`/型クラス自動化 | mathlib による巨大な現代数学形式化。数学者コミュニティで急成長 |
 | **Agda** | Martin-Löf 型理論（依存型） | **証明を直接プログラムとして書く**（tactic を基本使わない） | ほぼ対話・手動（dependent pattern match） | 型理論の研究・教育。Haskell 風構文。証明 = 全域関数 |
 | **Isabelle/HOL** | **高階論理 (HOL)**（依存型ではない） | Isar（人間可読な宣言的証明）+ tactic | **自動化が最強**: `auto`/`blast`/Sledgehammer が外部 ATP・SMT を呼ぶ | seL4（検証済み OS マイクロカーネル）。大規模で実務的な証明に強い |
