@@ -1,8 +1,8 @@
 ---
-title: syumai/workers
+title: github.com/syumai/workers
 tags: [edge-computing, webassembly, go]
 created_at: 2026-06-01
-updated_at: 2026-06-01T16:05:48+09:00
+updated_at: 2026-06-01T16:12:00+09:00
 ---
 
 **標準の `net/http` ハンドラを Cloudflare Workers 上で動かす** Go パッケージ(syumai 作)。[[go-on-cloudflare-workers|Go を Workers で動かす]]の定番実装で、Go→WASM 化と JS グルーを隠蔽し、**既存の Go HTTP コードがほぼそのまま**エッジで動くようにする。experimental と明記。

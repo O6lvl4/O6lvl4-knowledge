@@ -154,8 +154,8 @@ O6lvl4 Knowledge の knowledge base。
 - [[edge-vs-cloud-vs-onprem]] - Edge vs Cloud vs On-premise
 - [[edge-data]] - Edge データストア
 - [[edge-platforms]] - Edge プラットフォーム比較
+- [[github-com-syumai-workers]] - github.com/syumai/workers
 - [[go-on-cloudflare-workers]] - Go を Cloudflare Workers で動かす
-- [[syumai-workers]] - syumai/workers
 - [[v8-isolates]] - V8 Isolates
 - [[wasi]] - WASI
 - [[wasm-at-the-edge]] - WASM at the Edge
