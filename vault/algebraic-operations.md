@@ -2,7 +2,7 @@
 title: 代数的演算 (algebraic operations)
 tags: [type-theory, programming-paradigm]
 created_at: 2026-06-01
-updated_at: 2026-06-01T09:55:12+09:00
+updated_at: 2026-06-01T10:11:14+09:00
 ---
 
 副作用を「**代数的理論(演算の signature + 等式)の演算**」としてモデル化する考え方。Plotkin & Power の理論で、[[algebraic-effects|Algebraic Effects]] の「**代数的**」が何を指すかの正体。効果が「代数的演算」だからこそ、[[effect-handlers|ハンドラ]]がその「解釈」になり、[[monad|モナド]]と繋がる。
@@ -57,6 +57,8 @@ put s (put s' k)         = put s' k          -- 連続 put は最後だけ効く
 ## Links
 
 - [Plotkin & Power — Algebraic Operations and Generic Effects (2003)](https://doi.org/10.1023/A:1023064908962)
+- [猫番 — 自由モナド (Free)](https://eed3si9n.com/herding-cats/ja/Free-monads.html) — free monad を「自由モナド」と訳す系
+- [そろそろFreeモナドに関して一言いっとくか (fumieval)](https://fumieval.hatenablog.com/entry/20121111/1352614885) — 「Freeモナド」と呼ぶ系
 
 ## 関連
 
