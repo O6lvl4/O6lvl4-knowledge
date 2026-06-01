@@ -5,7 +5,7 @@ created_at: 2026-05-30
 updated_at: 2026-05-30T20:31:00+09:00
 ---
 
-プログラムの入力の一部（**static** な入力）を先に固定し、その分の計算を済ませた**特化版プログラム（residual program）**を生成する技法。`p(static, dynamic)` を `p_static(dynamic)` に変換する。抽象化のオーバーヘッドを「抽象度を保ったまま」消すための基盤。
+プログラムの入力の一部（**static** な入力）を先に固定し、その分の計算を済ませた**特化版プログラム**（residual program）を生成する技法。`p(static, dynamic)` を `p_static(dynamic)` に変換する。抽象化のオーバーヘッドを「抽象度を保ったまま」消すための基盤。
 
 ## Futamura 射影（二村射影）
 

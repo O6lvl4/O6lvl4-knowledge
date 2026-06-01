@@ -5,7 +5,7 @@ created_at: 2026-05-30
 updated_at: 2026-05-31T09:47:03+09:00
 ---
 
-アプリを**純粋な決定ロジック（functional core）**と、副作用を担う**薄い殻（imperative shell）**に分ける設計。Gary Bernhardt 提唱。コアは入力→出力の純関数、殻が IO・DB・ネットワークを集約してコアを呼ぶ。
+アプリを**純粋な決定ロジック**（functional core）と、副作用を担う**薄い殻**（imperative shell）に分ける設計。Gary Bernhardt 提唱。コアは入力→出力の純関数、殻が IO・DB・ネットワークを集約してコアを呼ぶ。
 
 ## 構造
 

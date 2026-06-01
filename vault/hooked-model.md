@@ -5,7 +5,7 @@ created_at: 2026-05-31
 updated_at: 2026-05-31T09:47:37+09:00
 ---
 
-Nir Eyal が *Hooked: How to Build Habit-Forming Products* (2014) で提唱した、習慣形成型プロダクトの設計フレーム。**Trigger → Action → Variable Reward → Investment** の4段を1サイクルとし、これを反復させることで、外部の刺激がなくても自発的に戻ってくる**習慣（habit）**を作る。
+Nir Eyal が *Hooked: How to Build Habit-Forming Products* (2014) で提唱した、習慣形成型プロダクトの設計フレーム。**Trigger → Action → Variable Reward → Investment** の4段を1サイクルとし、これを反復させることで、外部の刺激がなくても自発的に戻ってくる**習慣**（habit）を作る。
 
 核心は最後の investment が**次の trigger を仕込む**点：ループが閉じて自己駆動する。だから一過性の「面白さ」ではなく、累積的なロックインになる。
 

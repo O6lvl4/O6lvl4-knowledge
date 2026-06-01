@@ -236,6 +236,10 @@ O6lvl4 Knowledge の knowledge base。
 
 - [[intuitionistic-logic]] - 直観主義論理
 
+### meta
+
+- [[cjktest]] - cjktest
+
 ### networking
 
 - [[quic-http3]] - QUIC / HTTP/3

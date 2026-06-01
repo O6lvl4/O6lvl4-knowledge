@@ -63,7 +63,7 @@ fmap_g f . h  ==  h . fmap_f f       -- naturality square
 
 ## 根拠
 
-型を**関係（logical relation）**で解釈し、「項は関係を保つ」ことを示す。型抽象が表現独立性（representation independence）＝**情報隠蔽の正当化**になる。
+型を**関係**（logical relation）で解釈し、「項は関係を保つ」ことを示す。型抽象が表現独立性（representation independence）＝**情報隠蔽の正当化**になる。
 
 ## 用途と破れ
 

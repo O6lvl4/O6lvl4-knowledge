@@ -5,7 +5,7 @@ created_at: 2026-05-30
 updated_at: 2026-05-31T09:47:03+09:00
 ---
 
-.NET 上の**関数型優先（functional-first）**言語（2005, Don Syme / Microsoft Research）。[[ocaml|OCaml]] の系譜（ML ファミリ）を .NET に持ち込んだもの。純粋ではないが、既定が不変・式指向。
+.NET 上の**関数型優先**（functional-first）言語（2005, Don Syme / Microsoft Research）。[[ocaml|OCaml]] の系譜（ML ファミリ）を .NET に持ち込んだもの。純粋ではないが、既定が不変・式指向。
 
 ## 型と設計
 
