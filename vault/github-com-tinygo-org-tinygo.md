@@ -2,7 +2,7 @@
 title: github.com/tinygo-org/tinygo
 tags: [go, compiler, webassembly]
 created_at: 2026-06-01
-updated_at: 2026-06-01T21:58:30+09:00
+updated_at: 2026-06-01T22:34:25+09:00
 ---
 
 **「小さな場所」向けの Go コンパイラ** — マイクロコントローラ、WebAssembly(wasm/wasi)、CLI ツールが対象。Go 公式の `gc` コンパイラの代わりに、**Go のフロントエンド資産 + [[wasm-core|LLVM]] バックエンド**で、はるかに**小さいバイナリ**を吐く。[[github-com-syumai-workers|syumai/workers]] が Cloudflare Workers 用に使うのもこれ。
@@ -21,6 +21,31 @@ updated_at: 2026-06-01T21:58:30+09:00
 | GC | 並行 GC | 選択式(conservative / leaking / none 等) |
 
 → 「**完全な Go 互換を犠牲に、サイズと組込み性を買う**」トレードオフ。[[constraints-liberate|制約と引き換えに別の自由(小ささ)を得る]]構図。
+
+## アーキテクチャ(コンパイルパイプライン)
+
+```
+Go ソース → go/types + go/ssa(Go公式ツール) → TinyGo の compiler/ が SSA を LLVM IR へ lower
+          → transform/(独自 LLVM パス)→ LLVM 最適化 → builder/ がリンク → バイナリ/wasm
+```
+
+公式 `gc` の資産(パーサ・型チェッカ・SSA)を流用しつつ、**バックエンドだけ LLVM に差し替える**のがミソ。リポジトリの主要ディレクトリ:
+
+| dir | 役割 |
+|---|---|
+| `compiler/` | Go SSA → LLVM IR への変換(channel/calls/atomic… 機能別) |
+| `transform/` | サイズ削減等の独自 LLVM パス |
+| `builder/` | ビルド統括・リンク・GC 同梱(`bdwgc.go`) |
+| `interp/` | パッケージ初期化をコンパイル時に実行する IR インタプリタ |
+| `loader/` `cgo/` | Go パッケージ読込 / cgo |
+| `src/` | TinyGo 版 stdlib + runtime + `machine/`(ボード別ペリフェラル) |
+
+## スケール感(確認版の数値)
+
+- **対応 Go**: 〜**Go 1.24**(`goenv`)
+- **ターゲット定義**: `targets/*.json` が **約 225**(各種 MCU ボード + アーキ)
+- **GC は選択式**: `precise` / `conservative` / `boehm`(bdwgc 同梱)/ `leaking` / `none` — 用途に応じ実行時コストとサイズを調整
+- **goroutine**: 独自スケジューラ(WASM では asyncify 方式)
 
 ## 2つの用途
 
