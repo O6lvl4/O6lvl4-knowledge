@@ -1,69 +1,67 @@
 ---
-title: sweep（敵対的差分スイープ）
+title: sweep（差分テスト / 生成ベースのバグ発見）
 tags: [testing, verification, computer-science]
 created_at: 2026-06-03
-updated_at: 2026-06-03T13:30:24+09:00
+updated_at: 2026-06-03T13:39:35+09:00
 ---
 
-**多様な入力/プログラムを大量・系統的に生成し、2つの実装(またはターゲット)の出力を突き合わせて「発散(divergence)」を炙り出す**検証手法。[[almide-differential-gate|差分テスト]]を**敵対的(adversarial)**に振り切った形 — 人が書いた spec テストが踏まない組み合わせ・境界の穴を、意図的に多様なパターンで暴く。
+「sweep」は俗称で、世の中では **差分テスト(differential testing)+ ランダム/系統的なプログラム生成(コンパイラ fuzzing)** として確立した手法。**多数のプログラムを生成し、同値であるべき2つの実装の出力を突き合わせて発散(divergence)を炙り出す**。McKeeman (1998) が「差分テスト」として定式化したのが起点。
 
-## 仕組み
+## 中心アイデア: オラクル問題の回避
 
-```
-プログラム/入力を大量生成(カテゴリ別に網羅)
-  → 2つの oracle で実行(例: native vs WASM / 新 vs 旧 / 参照実装 vs 高速実装)
-  → 全出力を照合
-  → 一致しない箇所 = divergence(バグの在処)
-```
+テストの難所は「正解(オラクル)を別途どう用意するか」。差分テストはこれを回避する — **正解を決めずとも、同値なはずの2実装が食い違えば、どちらかが必ずバグ**。生成器が入力を量産し、照合が穴を炙り出す。
 
-肝は **2つの "正しいはず" を互いの基準(oracle)にする**こと。どちらが正解か事前に決めなくても、**食い違えば必ずどちらかが間違っている**。これが [[almide-differential-gate|差分ゲート]]や [[safety-critical-certification|安全臨界]]の「証跡で正しさを示す」発想と同根。
+## 世の中の確立した手法・ツール
 
-## なぜ「敵対的」か — spec テストとの差
-
-| | 通常の spec テスト | **sweep** |
+| 名前 | 対象 | オラクルの作り方 |
 |---|---|---|
-| 入力 | 人が書いた限られたケース | **大量・系統生成**(組み合わせ・境界を狙う) |
-| 観測 | 部分的(例: 長さ・勝者だけ) | **全出力を照合** |
-| 穴 | 想定外の組合せを踏まない | **踏みに行く** |
+| **Csmith**(Yang+ PLDI'11) | C コンパイラ | ランダム C 生成 → 複数コンパイラ(GCC/Clang…)の出力を**差分**。3年で 325+ バグ |
+| **EMI / Equivalence Modulo Inputs**(Le+ PLDI'14) | 最適化コンパイラ | 実行されない分岐を刈って**同値変種**を作る(メタモルフィック)。GCC/LLVM で 147 バグ |
+| **YARPGen**(OOPSLA'20) | C/C++ | スコープ/UB を制御したランダム生成 |
+| **QuickCheck**(Claessen & Hughes 2000) | 任意の関数 | **性質(プロパティ)**を生成入力で反証。Hypothesis(Py)/fast-check(JS) |
+| **SQLancer**(M. Rigger) | DBMS の論理バグ | 同値変換オラクル **PQS / NoREC / TLP**(メタモルフィック+差分) |
+| **jsfunfuzz / AFL / libFuzzer / OSS-Fuzz** | JS エンジン・任意プログラム | カバレッジ誘導 fuzzing |
 
-→ 「やればやるだけ出てくる」。spec テストが見逃すバグを sweep が拾い続けるのは、**網羅の穴を確率的に突く**から([[model-checking|モデル検査]]の全探索に対し、ランダム/系統生成で広く薄く当てる)。
+→ 「sweep」が指すのは、この系統の **クロス実装/クロスターゲットの差分テスト**。
 
-## 2つの oracle の作り方
+## オラクルの3類型
 
-- **クロスターゲット** — 同一仕様の2バックエンド(例: native(Rust 経由)と WASM)。出力が一致すべき
-- **新旧** — リファクタ前後(v2 vs レガシー)= [[almide-differential-gate|差分ゲート]]
-- **参照 vs 最適化** — 素朴な参照実装 vs 高速実装
+正解を用意できない所で「食い違い」を判定する作り方は、ほぼ3つ:
 
-いずれも前提は[[deterministic-codegen|出力の決定性]] — 同じ入力で毎回同じ出力が出ないと、そもそも「食い違い」を判定できない。
+1. **クロス実装/ターゲット** — 同一仕様の別実装を互いの基準に(Csmith: 複数コンパイラ、native vs WASM の照合)
+2. **メタモルフィック** — 入力/プログラムを**意味を変えない変換**にかけ、出力が変わったらバグ(EMI、SQLancer の TLP/NoREC、[[deterministic-codegen|決定性]]前提)
+3. **参照実装 vs 最適化版** — 素朴で正しい実装 vs 速い実装
 
-## 実例: Almide の closure cross-target sweep
+## なぜ spec テストより穴を見つけるか
 
-closure プログラムの **native == WASM 完全性**を検証するため走らせた sweep。
+人手の spec テストは限られたケース + 部分観測(例: 長さや勝者だけ)で、想定外の**組み合わせ・境界**を踏まない。生成ベースは**広く薄く**当てて穴を突くので「やればやるだけ出てくる」。[[model-checking|モデル検査]]の全探索とは対照的に、確率的・系統的に網羅の隙間を埋める。
 
-- カテゴリ別に振る: **スカラ値 / フラット配列 / ネスト配列 / variant payload / HOF**
-- 初回 sweep で **15 発散**を発見 → 修正し PR をマージ
-- 「本当に完全か」を再確認するため**再走** → 4/6 カテゴリは clean、新たに **2バグ**:
-  - **BUG A**: Unit-param closure variant の trap
-  - **BUG B**: `group_by` Int-key の invalid module
-- spec テストが **WASM-only かつ長さ/勝者しか見ない**ために見逃していた穴を、この sweep が炙り出した
+## 発見した後: 縮める
 
-## 親戚(位置づけ)
+生成された発散プログラムは巨大で読めないことが多い。**test-case reduction**(C-Reduce / delta debugging)で、発散を保ったまま最小の再現例へ機械的に縮めるのが定石。
 
-- **differential testing** — 2実装の差分を取る。sweep の土台
-- **property-based testing / fuzzing** — ランダム/系統生成で網羅の穴を突く生成戦略
-- **metamorphic testing** — 「正解が不明でも、入力変換に対する出力の関係」で検証する近縁手法
+## 身近な実例: Almide の closure cross-target sweep
+
+クロスターゲット差分テストの一例。closure プログラムを **native(Rust 経由)== WASM** で照合し、カテゴリ別(スカラ/フラット配列/ネスト/variant payload/HOF)に振る。初回で 15 発散 → 修正、再走で 2 バグ(Unit-param closure variant の trap、`group_by` Int-key の invalid module)。→ vault では [[almide-differential-gate|差分ゲート]](新旧照合)と対。
 
 ## 押さえどころ（カード化候補）
 
-- **sweep とは** → 多様なプログラムを大量生成し、2 oracle(native/WASM 等)の出力を全照合して発散を炙り出す敵対的差分検証。
-- **なぜ効く** → どちらが正解か決めずとも「食い違えば必ずどちらかが誤り」。spec テストが踏まない組み合わせ・境界を生成で突く。
-- **前提** → 出力の決定性(同入力→同出力)が無いと差分判定が成立しない。
-- **実例** → Almide closure の native==WASM 検証。カテゴリ別生成で初回15発散、再走で2バグ(Unit-param variant trap / group_by Int-key)。
-- **親戚** → differential / property-based / fuzzing / metamorphic testing。
+- **正体** → 俗称 sweep ＝ 世の差分テスト(McKeeman 1998)+ ランダムプログラム生成(コンパイラ fuzzing)。
+- **中心アイデア** → オラクル問題の回避。「正解を決めずとも、同値な2実装が食い違えばどちらかがバグ」。
+- **代表ツール** → Csmith(C生成→複数コンパイラ差分)、EMI(同値変種=メタモルフィック)、QuickCheck(性質ベース生成)、SQLancer(DBMS の PQS/NoREC/TLP)。
+- **オラクル3類型** → クロス実装/ターゲット・メタモルフィック・参照vs最適化。
+- **後処理** → test-case reduction(C-Reduce/delta debugging)で最小再現に縮める。
+
+## Links
+
+- [Csmith — Finding and Understanding Bugs in C Compilers (PLDI 2011)](https://doi.org/10.1145/1993498.1993532)
+- [EMI — Compiler Validation via Equivalence Modulo Inputs (PLDI 2014)](https://doi.org/10.1145/2594291.2594334)
+- [YARPGen — Random Testing for C and C++ Compilers (OOPSLA 2020)](https://users.cs.utah.edu/~regehr/yarpgen-oopsla20.pdf)
+- [SQLancer / Manuel Rigger](https://github.com/sqlancer/sqlancer)
 
 ## 関連
 
-- [[almide-differential-gate]] — 新旧を照合する差分ゲート(sweep のクロスターゲット版に対し同一ターゲット版)
-- [[deterministic-codegen]] — 出力が決定的でないと発散判定が成立しない前提
-- [[anf-closure-lifting-bug]] — 事後検証が本物のバグを炙り出した別事例(postcondition 版)
+- [[almide-differential-gate]] — 新旧を照合する差分テスト(sweep のクロスターゲット版に対し同一ターゲット版)
+- [[deterministic-codegen]] — 出力が決定的でないと発散判定が成立しない前提(メタモルフィックの土台)
 - [[model-checking]] — 全探索で網羅する対極。sweep は生成で広く当てる
+- [[anf-closure-lifting-bug]] — 事後検証が本物のバグを炙り出した別事例(postcondition 版)

@@ -328,7 +328,7 @@ O6lvl4 Knowledge の knowledge base。
 
 ### testing
 
-- [[sweep]] - sweep（敵対的差分スイープ）
+- [[sweep]] - sweep（差分テスト / 生成ベースのバグ発見）
 
 ### tools
 
