@@ -76,3 +76,4 @@ updated_at: 2026-06-01T13:30:47+09:00
 - [[simple-vs-easy]] — easy を削って simple/safe を買う、という交換
 - [[accidental-complexity]] — 制約のスコープを誤ると逆に複雑性が増える
 - [[error-messages-for-ai-agents]] — 「型を通す」制約が修正の意味的正しさをほぼ保証する(97.9%)実証
+- [[asymptotic]] — 制約が駆動するフライホイールは複利漸近(天井のない凸曲線)

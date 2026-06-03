@@ -120,6 +120,7 @@ O6lvl4 Knowledge の knowledge base。
 
 - [[face-tracking]] - フェイストラッキング
 - [[projection]] - 射影 (projection)
+- [[asymptotic]] - 漸近的 (asymptotic) — 触れない線への規律
 
 ### cryptography
 

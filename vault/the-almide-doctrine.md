@@ -240,3 +240,4 @@ Almide Doctrine は逆だ。Almide はまだ若く、批判はこれから来る
 - [[almide|Almide]] — このドクトリンに基づいて設計された言語
 - [[almide-dojo]] — MSR を日次測定するベンチマーク
 - [[the-rails-doctrine|The Rails Doctrine]] — 参照元。人間プログラマの幸福 vs LLM + Vibe Coder の幸福
+- [[asymptotic]] — MSR→1.0 は飽和漸近。1.0 到達でなく「降りない曲線」を設計する読み直し
