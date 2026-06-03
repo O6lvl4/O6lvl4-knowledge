@@ -15,6 +15,7 @@ O6lvl4 Knowledge の knowledge base。
 
 ### ai
 
+- [[error-messages-for-ai-agents]] - AI エージェント向けエラーメッセージ（型エラーアブレーション）
 - [[llm-social-simulation]] - LLM ソーシャルシミュレーション
 - [[viralbert]] - ViralBERT
 - [[engagement-driven-generation]] - エンゲージメント駆動生成

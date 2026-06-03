@@ -126,3 +126,4 @@ flowchart LR
 - [[theory-of-mind|心の理論]] — 社会認知。LLM が言語経由で代理する構造
 - [[human-vs-ai-text|人間の文章 vs AI 文章]] — 形式的能力は高いが機能的能力を欠くことが "AIっぽさ" として表れる
 - [[llm-social-simulation|LLM ソーシャルシミュレーション]] — 内的心理の欠如が、人間集団シミュレーションの妥当性の天井になる
+- [[error-messages-for-ai-agents]] — 識別子を全消ししてもモデルがアルゴリズムを再構築＝形式から機能を引き出す能力の実証

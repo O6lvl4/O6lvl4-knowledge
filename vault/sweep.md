@@ -65,3 +65,4 @@ updated_at: 2026-06-03T13:39:35+09:00
 - [[deterministic-codegen]] — 出力が決定的でないと発散判定が成立しない前提(メタモルフィックの土台)
 - [[model-checking]] — 全探索で網羅する対極。sweep は生成で広く当てる
 - [[anf-closure-lifting-bug]] — 事後検証が本物のバグを炙り出した別事例(postcondition 版)
+- [[error-messages-for-ai-agents]] — テスト(症状信号)で穴を炙り出す側。型エラー(因果信号)との対比
