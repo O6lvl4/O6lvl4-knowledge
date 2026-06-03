@@ -100,3 +100,4 @@ function transitions(s: State): State[] {
 - [[formal-methods|形式手法]] — モデル検査はその一手法
 - [[theorem-proving|定理証明]] — 全探索の代わりに証明を書く手法
 - [[temporal-logic|時相論理]] — モデル検査の仕様記述に使う論理
+- [[sweep]] — 全探索の対極。生成した多数の入力で2実装の差分を広く当てる

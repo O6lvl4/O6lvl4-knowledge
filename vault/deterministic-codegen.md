@@ -49,3 +49,4 @@ counter 系は「**コンパイルごとにリセット**(決定的に採番)」
 - [[almide]] — Determinism/Purity Belt を持つコンパイラ本体
 - [[safety-critical-certification]] — 再現可能ビルドは認証(証跡)でも要件になる
 - [[constraints-liberate]] — 「非決定を禁じて再現性を買う」= 制約が自由を生むの一例
+- [[sweep]] — native vs WASM の出力照合。決定性が無いと発散判定が成立しない

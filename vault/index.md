@@ -326,6 +326,10 @@ O6lvl4 Knowledge の knowledge base。
 - [[tv-guide-apps]] - 番組表アプリ / EPG
 - [[streaming-software]] - 配信ソフトウェア
 
+### testing
+
+- [[sweep]] - sweep（敵対的差分スイープ）
+
 ### tools
 
 - [[android-delivery]] - Android Delivery
