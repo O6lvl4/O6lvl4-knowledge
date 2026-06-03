@@ -101,3 +101,4 @@ function transitions(s: State): State[] {
 - [[theorem-proving|定理証明]] — 全探索の代わりに証明を書く手法
 - [[temporal-logic|時相論理]] — モデル検査の仕様記述に使う論理
 - [[sweep]] — 全探索の対極。生成した多数の入力で2実装の差分を広く当てる
+- [[asymptotic]] — 状態爆発は `O(2ⁿ)` の漸近的増大。漸近解析が手法の限界を規定する
