@@ -44,3 +44,4 @@ flowchart LR
 - [[safety-critical-certification]] — 出力照合を証明連鎖へ引き上げる先にある安全臨界認証の要求
 - [[deterministic-codegen]] — 出力が決定的でないと、そもそもレガシーとの照合が成立しない前提
 - [[sweep]] — 同じ差分テストを敵対的に(native vs WASM・大量生成)振り切った版
+- [[traversal-totality|走査網羅性]] — ゲートが**手選びファイルしか照合しない**カバレッジ穴(残ギャップ #5)はここに出る

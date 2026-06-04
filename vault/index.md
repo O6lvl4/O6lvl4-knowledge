@@ -78,6 +78,7 @@ O6lvl4 Knowledge の knowledge base。
 - [[vscode-almide]] - vscode-almide
 - [[almide-yaml]] - yaml (Almide)
 - [[deterministic-codegen]] - コンパイルの決定性 (Determinism/Purity Belt)
+- [[traversal-totality]] - コード生成の走査網羅性 (traversal/site totality)
 
 ### business
 
@@ -101,6 +102,7 @@ O6lvl4 Knowledge の knowledge base。
 - [[copy-on-write]] - Copy-on-Write (COW)
 - [[dead-code-elimination]] - Dead Code Elimination (DCE)
 - [[equality-saturation]] - Equality Saturation
+- [[ryu]] - Ryū (最短往復の float→文字列変換)
 - [[fifo-lifo]] - FIFO / LIFO
 - [[perceus]] - Perceus
 - [[region-inference]] - Region Inference

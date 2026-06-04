@@ -50,3 +50,4 @@ counter 系は「**コンパイルごとにリセット**(決定的に採番)」
 - [[safety-critical-certification]] — 再現可能ビルドは認証(証跡)でも要件になる
 - [[constraints-liberate]] — 「非決定を禁じて再現性を買う」= 制約が自由を生むの一例
 - [[sweep]] — native vs WASM の出力照合。決定性が無いと発散判定が成立しない
+- [[traversal-totality|走査網羅性]] — 同じく「規律を機械的ゲートに変える」兄弟。非決定の禁止 ↔ 取りこぼしの禁止
