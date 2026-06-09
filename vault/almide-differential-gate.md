@@ -45,3 +45,4 @@ flowchart LR
 - [[deterministic-codegen]] — 出力が決定的でないと、そもそもレガシーとの照合が成立しない前提
 - [[sweep]] — 同じ差分テストを敵対的に(native vs WASM・大量生成)振り切った版
 - [[traversal-totality|走査網羅性]] — ゲートが**手選びファイルしか照合しない**カバレッジ穴(残ギャップ #5)はここに出る
+- [[almide-kernel]] — 同じ正しさ保証の**コンパイル時版**(permutation は1実行で証明)。reduction の within-tolerance 照合は差分ゲートと同じ oracle 照合の発想

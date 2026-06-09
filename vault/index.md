@@ -45,6 +45,7 @@ O6lvl4 Knowledge の knowledge base。
 - [[almide-compiler-errors]] - Almide コンパイラエラー体験
 - [[almide-list-mutation]] - Almide の list in-place mutation (push/pop) 設計
 - [[almide-differential-gate]] - Almide 差分ゲート (differential gate)
+- [[almide-kernel]] - almide-kernel — 検証付き高性能カーネル
 - [[almide-bindgen]] - almide-bindgen
 - [[almide-dojo]] - almide-dojo
 - [[almide-grammar]] - almide-grammar
@@ -224,6 +225,7 @@ O6lvl4 Knowledge の knowledge base。
 
 - [[almide]] - Almide
 - [[clojure]] - Clojure
+- [[exo]] - Exo — exocompilation
 - [[fsharp]] - F#
 - [[forth]] - Forth
 - [[grain]] - Grain

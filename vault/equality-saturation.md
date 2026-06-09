@@ -181,3 +181,4 @@ flat_map(flat_map(xs, f), g)  → flat_map(xs, compose_flat(f, g))
 - [[stream-fusion]] — equality saturation で代数的融合規則を自動適用 (Almide の almide-egg-lab)
 - [[wasmtime]] — Cranelift の aegraph が E-graph ベース最適化を本番採用
 - [[dead-code-elimination]] — E-graph からの抽出で不要ノードが自然に除去される
+- [[almide-kernel]] — 等価変換つながり。eq-sat は等価形を網羅探索、almide-kernel は人間が書いた変換の等価性証明を(permutation なら)1実行に還元する

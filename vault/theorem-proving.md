@@ -102,3 +102,4 @@ Qed.
 - [[dependent-type|依存型]] — Coq/Lean/Agda の型システム基盤。Isabelle/HOL だけは依存型でなく高階論理
 - [[refinement-type|篩型]] — 自動証明(SMT)を型に組み込んだ軽量版。決定可能な部分を人手の対話証明から解放する
 - [[safety-critical-certification|安全臨界ソフトウェア認証]] — DO-333 で機械証明を認証エビデンスにできる。Almide は Perceus を Lean 4 で証明
+- [[almide-kernel]] — 一般の変換 equivalence は SMT(半決定的)だが、permutation という制約を入れると decidable 断片に落ち、SMT 無し・1実行で証明できる実例
