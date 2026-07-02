@@ -65,6 +65,7 @@ graph LR
 ## 関連
 
 - [[rendering-strategies]] — CSR/SSR/SSG を横並びで比較する親ノート
+- [[rendering-phases]] — 初学者向けのフェーズ全体図（いつ何が見えるか）
 - [[ssr]] — 同じ「サーバー側で作る」をリクエスト時に行う隣人
 - [[csr]] — 静的配信という点は同じだが、HTML の中身を作る場所が違う
 - [[anycast-cdn]] — SSG の配信基盤。TTFB 最小化の実体

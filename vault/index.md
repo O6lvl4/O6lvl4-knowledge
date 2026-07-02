@@ -45,11 +45,11 @@ O6lvl4 Knowledge の knowledge base。
 - [[almide-compiler-errors]] - Almide コンパイラエラー体験
 - [[almide-list-mutation]] - Almide の list in-place mutation (push/pop) 設計
 - [[almide-differential-gate]] - Almide 差分ゲート (differential gate)
-- [[almide-kernel]] - almide-kernel — 検証付き高性能カーネル
 - [[almide-bindgen]] - almide-bindgen
 - [[almide-dojo]] - almide-dojo
 - [[almide-grammar]] - almide-grammar
 - [[almide-js]] - almide-js
+- [[almide-kernel]] - almide-kernel — 検証付き高性能カーネル
 - [[almide-lander]] - almide-lander
 - [[almide-lsp]] - almide-lsp
 - [[almide-playground]] - almide-playground
@@ -78,8 +78,8 @@ O6lvl4 Knowledge の knowledge base。
 - [[tree-sitter-almide]] - tree-sitter-almide
 - [[vscode-almide]] - vscode-almide
 - [[almide-yaml]] - yaml (Almide)
-- [[deterministic-codegen]] - コンパイルの決定性 (Determinism/Purity Belt)
 - [[traversal-totality]] - コード生成の走査網羅性 (traversal/site totality)
+- [[deterministic-codegen]] - コンパイルの決定性 (Determinism/Purity Belt)
 
 ### business
 
@@ -103,11 +103,11 @@ O6lvl4 Knowledge の knowledge base。
 - [[copy-on-write]] - Copy-on-Write (COW)
 - [[dead-code-elimination]] - Dead Code Elimination (DCE)
 - [[equality-saturation]] - Equality Saturation
-- [[ryu]] - Ryū (最短往復の float→文字列変換)
 - [[fifo-lifo]] - FIFO / LIFO
 - [[perceus]] - Perceus
 - [[region-inference]] - Region Inference
 - [[relaxed-simd]] - Relaxed SIMD
+- [[ryu]] - Ryū (最短往復の float→文字列変換)
 - [[stream-fusion]] - Stream Fusion
 - [[swiss-table]] - SwissTable
 - [[wasm-simd]] - WebAssembly SIMD
@@ -195,6 +195,7 @@ O6lvl4 Knowledge の knowledge base。
 - [[spa]] - SPA (Single Page Application)
 - [[ssg]] - SSG (Static Site Generation)
 - [[ssr]] - SSR (Server-Side Rendering)
+- [[rendering-phases]] - レンダリング戦略のフェーズ全体図 — いつ何が見えるか
 - [[rendering-strategies]] - レンダリング戦略 — CSR / SSR / SSG
 
 ### game-engine

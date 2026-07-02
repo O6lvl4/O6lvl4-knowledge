@@ -76,6 +76,7 @@ sequenceDiagram
 ## 関連
 
 - [[rendering-strategies]] — CSR/SSR/SSG を横並びで比較する親ノート
+- [[rendering-phases]] — 初学者向けのフェーズ全体図（いつ何が見えるか）
 - [[spa]] — 混同されがちな別軸の概念（遷移の構造）
 - [[ssr]] — 対極の戦略。初回 HTML をサーバーで作る
 - [[ssg]] — もう一つの対極。ビルド時に HTML を作る
