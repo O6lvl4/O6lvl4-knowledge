@@ -2,7 +2,7 @@
 title: SSR (Server-Side Rendering)
 tags: [frontend, web, rendering]
 created_at: 2026-07-03
-updated_at: 2026-07-03T07:11:00+09:00
+updated_at: 2026-07-03T07:29:00+09:00
 ---
 
 **リクエストのたびにサーバーで HTML を生成して返す**レンダリング戦略。ブラウザは受け取った瞬間から表示できるため初回表示が速く、SEO・OGP に完全対応する。代償はリクエストごとのサーバー計算コストと運用。[[rendering-strategies|レンダリング戦略]]の一角。
@@ -11,9 +11,9 @@ updated_at: 2026-07-03T07:11:00+09:00
 
 | | 古典 SSR | モダン SSR |
 |---|---|---|
-| 代表 | CGI, PHP, [[rails|Rails]], Django | Next.js, Nuxt, SvelteKit |
+| 代表 | CGI, PHP, [[rails\|Rails]], Django | Next.js, Nuxt, SvelteKit |
 | クライアント側 | HTML は完成品。動きは jQuery 等を別途追加 | 同じコンポーネントをクライアントでも実行して hydration |
-| 遷移 | フルページリロード（MPA） | 2 ページ目以降は [[spa|SPA]] 遷移 |
+| 遷移 | フルページリロード（MPA） | 2 ページ目以降は [[spa\|SPA]] 遷移 |
 | コードベース | サーバー用とクライアント用が分離 | **isomorphic / universal** — 1 つのコードが両方で動く |
 
 モダン SSR の核心は **isomorphic JavaScript**: React の `renderToString` 等で、同じコンポーネントツリーをサーバーでは HTML 文字列に、クライアントでは DOM 操作に使う。「Rails への回帰」ではなく、**CSR の資産（コンポーネントモデル）を保ったまま初回だけサーバーで描く折衷**。
@@ -49,7 +49,7 @@ sequenceDiagram
 | 初回表示が速い（完成 HTML が届く） | リクエストごとにサーバーで計算（コスト・スケール設計が必要） |
 | SEO / OGP に完全対応 | TTFB がサーバー処理時間に依存 |
 | データ取得がサーバー内で完結（クライアントからの API 往復より速い） | hydration のコストと FCP/TTI ギャップ |
-| リクエスト時情報（Cookie・地域・A/B）でパーソナライズできる | サーバー運用が必須（[[ssg|SSG]] のような「置くだけ」は不可） |
+| リクエスト時情報（Cookie・地域・A/B）でパーソナライズできる | サーバー運用が必須（[[ssg\|SSG]] のような「置くだけ」は不可） |
 
 ## 向くケース
 

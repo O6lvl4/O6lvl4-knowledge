@@ -2,7 +2,7 @@
 title: SPA (Single Page Application)
 tags: [frontend, web, architecture]
 created_at: 2026-07-03
-updated_at: 2026-07-03T07:13:00+09:00
+updated_at: 2026-07-03T07:29:00+09:00
 ---
 
 **最初に 1 つの HTML ドキュメントをロードし、以降のページ遷移をフルリロードなしで JS が処理する**アプリケーション構造。対義語は MPA (Multi-Page Application)。[[csr|CSR]]/[[ssr|SSR]]/[[ssg|SSG]] が「初回 HTML をいつ・どこで作るか」の軸なのに対し、**SPA は「2 ページ目以降をどう扱うか」の軸** — この 2 軸を分けて説明できるかがこのテーマの試金石（→ [[rendering-strategies]]）。
@@ -22,9 +22,9 @@ HTML ドキュメントの再取得・再パース・JS 再実行が起きない
 
 | 初回 HTML \ 遷移 | SPA（クライアント遷移） | MPA（フルリロード） |
 |---|---|---|
-| [[csr|CSR]] | 古典 SPA（Create React App, Vite + React Router） | （ほぼ存在しない） |
-| [[ssr|SSR]] | Next.js / Nuxt / SvelteKit | [[rails|Rails]], Django |
-| [[ssg|SSG]] | Gatsby | Astro（デフォルト）, Hugo |
+| [[csr\|CSR]] | 古典 SPA（Create React App, Vite + React Router） | （ほぼ存在しない） |
+| [[ssr\|SSR]] | Next.js / Nuxt / SvelteKit | [[rails\|Rails]], Django |
+| [[ssg\|SSG]] | Gatsby | Astro（デフォルト）, Hugo |
 
 「SPA と言えば CSR」だったのは 2010 年代前半の話。現代の主流は**初回だけ SSR/SSG で HTML を返し、hydration 後は SPA 遷移**というハイブリッド。
 
