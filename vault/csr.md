@@ -2,7 +2,7 @@
 title: CSR (Client-Side Rendering)
 tags: [frontend, web, rendering]
 created_at: 2026-07-03
-updated_at: 2026-07-03T07:10:00+09:00
+updated_at: 2026-07-03T08:05:00+09:00
 ---
 
 HTML の組み立てを**ブラウザ上の JavaScript に委ねる**レンダリング戦略。サーバー（や CDN）はほぼ空の HTML と JS バンドルを返すだけで、ユーザーが見るコンテンツは JS がダウンロード・実行され、API からデータを取得した後に初めて描画される。[[rendering-strategies|レンダリング戦略]]の一角で、[[ssr|SSR]]・[[ssg|SSG]] の対極。
@@ -58,7 +58,7 @@ sequenceDiagram
 
 ## [[spa|SPA]] との関係
 
-混同されがちだが軸が違う。**CSR は「初回の HTML をどう作るか」、SPA は「2 ページ目以降の遷移をどう扱うか」**。「CSR + SPA」（Create React App, Vite + React Router）が古典形だったため同一視されがちだが、現代の主流は Next.js のように初回は SSR で以降は SPA 遷移という組み合わせ。
+SPA とは「**画面づくりをブラウザに任せる**」という同じ思想の仲間で、担当が違う — **CSR は初回の HTML、SPA は 2 ページ目以降の遷移**。だから「CSR + SPA」（Create React App, Vite + React Router）が古典形としてセットで広まった。ただし軸としては独立しているので、現代の主流は初回だけ SSR に差し替えた「SSR + SPA」（Next.js）という組み替え。
 
 ## 押さえどころ（カード化候補）
 
@@ -66,7 +66,7 @@ sequenceDiagram
 - CSR が遅い構造的理由 → HTML → JS 取得 → JS 実行 → API フェッチ → 描画の直列チェーンを全部待つから。端末 CPU 性能にも比例
 - CSR の SEO 問題の実態 → Googlebot は JS を実行するが遅延しがち。OGP クローラーや他ボットの多くは JS を実行しない
 - CSR が向くケース → SEO 不要・ログイン前提のツール（管理画面・ダッシュボード）。コンテンツサイトには不向き
-- CSR と SPA の違い → CSR は初回 HTML の作り方、SPA はページ遷移の扱い方。別軸の概念で組み合わせは自由
+- CSR と SPA の関係 → 同じ「ブラウザで描く」思想の初回編（CSR）と遷移編（SPA）。セットが古典形だが、軸は独立で組み替え可能
 
 ## Links
 
@@ -77,6 +77,6 @@ sequenceDiagram
 
 - [[rendering-strategies]] — CSR/SSR/SSG を横並びで比較する親ノート
 - [[rendering-phases]] — 初学者向けのフェーズ全体図（いつ何が見えるか）
-- [[spa]] — 混同されがちな別軸の概念（遷移の構造）
+- [[spa]] — 同じ「ブラウザで描く」思想の遷移編。古典形はセット、軸としては独立
 - [[ssr]] — 対極の戦略。初回 HTML をサーバーで作る
 - [[ssg]] — もう一つの対極。ビルド時に HTML を作る
