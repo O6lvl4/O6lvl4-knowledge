@@ -189,6 +189,14 @@ O6lvl4 Knowledge の knowledge base。
 - [[formal-methods]] - 形式手法
 - [[temporal-logic]] - 時相論理
 
+### frontend
+
+- [[csr]] - CSR (Client-Side Rendering)
+- [[spa]] - SPA (Single Page Application)
+- [[ssg]] - SSG (Static Site Generation)
+- [[ssr]] - SSR (Server-Side Rendering)
+- [[rendering-strategies]] - レンダリング戦略 — CSR / SSR / SSG
+
 ### game-engine
 
 - [[unity]] - Unity

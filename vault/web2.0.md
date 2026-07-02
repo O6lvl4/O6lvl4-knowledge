@@ -259,3 +259,5 @@ Web 2.0 という呼称自体は 2010 年代に入って使われなくなった
 - [[rails|Rails]] — Web 2.0 の技術的体現
 - [[ruby|Ruby]] — Rails のランタイム
 - [[convention-over-configuration|CoC]] — Web 2.0 時代に広まった設計原則
+- [[spa|SPA]] — Gmail / Google Maps の Ajax が起点となったアプリケーション構造
+- [[rendering-strategies|レンダリング戦略]] — Ajax 以降の CSR/SSR/SSG の変遷

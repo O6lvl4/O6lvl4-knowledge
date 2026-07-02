@@ -208,3 +208,4 @@ microVM: 2026年、スナップショット復元が 3-8ms に短縮され、V8 
 - [[wasm-simd]] — Edge 上での WASM 実行に関連する SIMD 最適化
 - [[dead-code-elimination]] — WASM バイナリサイズと Edge の Cold start の関係
 - [[quic-http3]] — QUIC/HTTP/3 が Edge CDN の 0-RTT・コネクションマイグレーション基盤
+- [[ssr]] — Edge SSR としてレンダリングをエッジで実行するユースケース

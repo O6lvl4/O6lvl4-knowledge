@@ -201,3 +201,4 @@ graph TB
 - [[edge-platforms]] — Cloudflare, Fastly, Deno 各プラットフォームの Anycast 活用
 - [[edge-data]] — CDN キャッシュと Edge データストアの使い分け
 - [[quic-http3]] — QUIC の Connection ID が TCP + Anycast の経路変更問題を構造的に解決
+- [[ssg]] — CDN 配信を前提とするレンダリング戦略。静的 HTML を PoP から返す
