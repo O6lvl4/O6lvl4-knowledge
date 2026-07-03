@@ -2,7 +2,7 @@
 title: レンダリング戦略のフェーズ全体図 — いつ何が見えるか
 tags: [frontend, web, rendering, teaching]
 created_at: 2026-07-03
-updated_at: 2026-07-03T09:02:00+09:00
+updated_at: 2026-07-03T09:03:00+09:00
 ---
 
 [[csr|CSR]]・[[ssr|SSR]]・[[ssg|SSG]]・[[spa|SPA]] を**時間軸のフェーズ**で捉え直した初学者向けの全体図。各戦略の違いは、結局「**どのフェーズで HTML を作り、ユーザーがいつ・何を見るか**」の違いでしかない。より厳密な定義・比較・歴史は [[rendering-strategies]] へ。
@@ -84,7 +84,7 @@ graph LR
 
 ```mermaid
 graph LR
-    A["① リクエスト（④ データ取得もここ）<br/>白い画面（サーバーが調理中）"] --> B["② 完成 HTML 到着<br/>FCP！ 見えた、でも押せない"]
+    A["①＋④ リクエスト＆データ取得<br/>白い画面（サーバーが調理中）"] --> B["② 完成 HTML 到着<br/>FCP！ 見えた、でも押せない"]
     B --> C["③ JS ロード + hydration<br/>押せない時間の正体"]
     C --> D["⑤ 操作可能<br/>TTI"]
     classDef blank fill:#1E293B,stroke:#64748B,stroke-dasharray: 5 4,color:#94A3B8
@@ -103,7 +103,7 @@ graph LR
 
 ```mermaid
 graph LR
-    Z["⓪ ビルド時に全ページ生成 — ④ データ取得もここ<br/>ユーザーが来る前に完成済み"] -.-> A
+    Z["⓪＋④ ビルドで全ページ生成＆データ取得<br/>ユーザーが来る前に完成済み"] -.-> A
     A["① リクエスト<br/>一瞬（CDN がファイルを返すだけ）"] --> B["② 完成 HTML 到着<br/>最速で見える、まだ押せない"]
     B --> C["③ JS + hydration（あれば）<br/>⑤ 操作可能"]
     classDef blank fill:#1E293B,stroke:#64748B,stroke-dasharray: 5 4,color:#94A3B8
