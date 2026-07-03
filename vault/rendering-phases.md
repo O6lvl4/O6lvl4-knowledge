@@ -2,7 +2,7 @@
 title: レンダリング戦略のフェーズ全体図 — いつ何が見えるか
 tags: [frontend, web, rendering, teaching]
 created_at: 2026-07-03
-updated_at: 2026-07-03T08:05:00+09:00
+updated_at: 2026-07-03T09:02:00+09:00
 ---
 
 [[csr|CSR]]・[[ssr|SSR]]・[[ssg|SSG]]・[[spa|SPA]] を**時間軸のフェーズ**で捉え直した初学者向けの全体図。各戦略の違いは、結局「**どのフェーズで HTML を作り、ユーザーがいつ・何を見るか**」の違いでしかない。より厳密な定義・比較・歴史は [[rendering-strategies]] へ。
@@ -84,7 +84,7 @@ graph LR
 
 ```mermaid
 graph LR
-    A["① リクエスト<br/>白い画面（サーバーが調理中）"] --> B["② 完成 HTML 到着<br/>FCP！ 見えた、でも押せない"]
+    A["① リクエスト（④ データ取得もここ）<br/>白い画面（サーバーが調理中）"] --> B["② 完成 HTML 到着<br/>FCP！ 見えた、でも押せない"]
     B --> C["③ JS ロード + hydration<br/>押せない時間の正体"]
     C --> D["⑤ 操作可能<br/>TTI"]
     classDef blank fill:#1E293B,stroke:#64748B,stroke-dasharray: 5 4,color:#94A3B8
@@ -97,15 +97,15 @@ graph LR
 
 - **特色**: サーバーがデータ取得もレンダリングも済ませてから返すので、① が少し長い（TTFB はサーバーの仕事量次第）。そのかわり ② の瞬間に**完成した見た目**が出る
 - **フェーズ②〜③のギャップが主役**: 見えているのにボタンが反応しない時間（hydration 待ち）が SSR 特有の弱点。この「押せない時間」をどう縮めるかが RSC や Islands といった最新技術のテーマ
-- ④ が図に無いのは、データ取得を ① の中でサーバーが済ませているから
+- ブラウザ側が ③→⑤ と飛ぶのは、④（データ取得）を ① の中でサーバーが済ませているから。**フェーズは消えるのではなく、前倒しで場所が移る**
 
 ## SSG — ユーザーが来る前に、もう出来ている
 
 ```mermaid
 graph LR
-    Z["⓪ ビルド時に全ページ生成<br/>ユーザーが来る前に完成済み"] -.-> A
+    Z["⓪ ビルド時に全ページ生成 — ④ データ取得もここ<br/>ユーザーが来る前に完成済み"] -.-> A
     A["① リクエスト<br/>一瞬（CDN がファイルを返すだけ）"] --> B["② 完成 HTML 到着<br/>最速で見える、まだ押せない"]
-    B --> C["③ JS + hydration（あれば）<br/>操作可能"]
+    B --> C["③ JS + hydration（あれば）<br/>⑤ 操作可能"]
     classDef blank fill:#1E293B,stroke:#64748B,stroke-dasharray: 5 4,color:#94A3B8
     classDef visible fill:#422006,stroke:#F59E0B,color:#FDE68A
     classDef ready fill:#14532D,stroke:#4ADE80,color:#BBF7D0
