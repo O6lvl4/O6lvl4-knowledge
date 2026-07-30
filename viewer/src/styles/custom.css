@@ -1,0 +1,5 @@
+/* graph-garden の既定 --content-width: 720px を上書きする。
+   :root:root で詳細度を上げ、パッケージ側 global.css との読み込み順に依存しない */
+:root:root {
+  --content-width: 960px;
+}
