@@ -2,10 +2,10 @@
 title: AI-DLC (AI-Driven Development Life Cycle)
 tags: [ai, llm, methodology, software-engineering, aws]
 created_at: 2026-07-30
-updated_at: 2026-07-30T13:24:43+09:00
+updated_at: 2026-07-30T13:40:13+09:00
 ---
 
-AWS が 2025 年に提唱した開発方法論。**AI を「補助ツール」ではなく実行の主体（中心的コラボレーター）に置き、人間は承認ゲートで判断・監督する側に回る**よう SDLC を第一原理から再設計する。方法論を定義した whitepaper（Method Definition Paper）と、それを AI コーディングエージェント向けの実行可能ワークフローとして OSS 実装した [awslabs/aidlc-workflows](https://github.com/awslabs/aidlc-workflows)（v1 系 / v2 系）で構成される。
+AWS が 2025 年に提唱した開発方法論。**AI を実行の主体（中心的コラボレーター）に据え、人間は承認ゲートで判断・監督する側に回る** — この役割反転を軸に SDLC を第一原理から再設計する。方法論を定義した whitepaper（Method Definition Paper）と、それを AI コーディングエージェント向けの実行可能ワークフローとして OSS 実装した [awslabs/aidlc-workflows](https://github.com/awslabs/aidlc-workflows)（v1 系 / v2 系）で構成される。
 
 ## 成果物とバージョンの全体像
 
@@ -32,7 +32,7 @@ timeline
 
 ## 背景と問題意識
 
-whitepaper は現在を「**AI-Assisted の時代**(AI が個別タスクを補助)から **AI-Driven の時代**(AI がプロセス自体をオーケストレーション)への移行期」と位置づける。従来手法(SDLC/Scrum)は人間駆動の長い反復のために設計されており、「AI を後付け(retrofit)すると AI の能力を制約するだけでなく、旧来の非効率を強化する」と断じる。第三者研究の引用として、従来型プロセスへの AI 後付けの速度向上は 10〜15% 程度(ThoughtWorks 2025)、統制実験では AI 利用開発者がむしろ 20% 遅い(Metr.org)という数字を挙げ、ボトルネックはコーディングではなく調整会議・依存待ち・コンテキストスイッチという「システム全体」にあるとする。
+whitepaper は現在を「**AI-Assisted の時代**(AI が個別タスクを補助)から **AI-Driven の時代**(AI がプロセス自体をオーケストレーション)への移行期」と位置づける。従来手法(SDLC/Scrum)は人間駆動の長い反復のために設計されており、「AI を後付け(retrofit)すると AI の能力を制約するだけでなく、旧来の非効率を強化する」と断じる。裏付けには第三者研究を引く。従来型プロセスへの AI 後付けの速度向上は 10〜15% 程度(ThoughtWorks 2025)、統制実験では AI 利用開発者がむしろ 20% 遅い(Metr.org)。真のボトルネックは調整会議・依存待ち・コンテキストスイッチを含む「システム全体」にある、というのが whitepaper の診断だ。
 
 ## Whitepaper v1 の 10 原則
 
@@ -100,7 +100,7 @@ flowchart LR
 
 ## Workflow v1 の実装詳細
 
-実体はコードではなく **Markdown のステアリングルール群**(MIT-0)。Tenets は「Methodology first(ツールでなく方法論)」「Agnostic(特定 IDE/モデル非依存)」「Human in the loop」。
+実装といってもコードは含まれない。実体は **Markdown のステアリングルール群**(MIT-0)で、Tenets に「Methodology first(ツールより方法論)」「Agnostic(特定 IDE/モデル非依存)」「Human in the loop」を掲げる。
 
 - **コア**: `aidlc-rules/aws-aidlc-rules/core-workflow.md`(539 行、「This workflow OVERRIDES all other built-in workflows」)+ 条件付きで参照される詳細ルール `aws-aidlc-rule-details/`(common 10 / inception 7 / construction 6 / operations 1 / extensions)
 - **ステージ構成**: Inception = ① Workspace Detection(常時)→ ② Reverse Engineering(brownfield のみ)→ ③ Requirements Analysis(常時)→ ④ User Stories(条件付き)→ ⑤ Workflow Planning(常時)→ ⑥ Application Design(条件付き)→ ⑦ Units Generation(条件付き)。Construction = Unit ごとに Functional Design / NFR Requirements / NFR Design / Infrastructure Design(条件付き)+ Code Generation(常時)→ 全 Unit 完了後に Build and Test(常時)
