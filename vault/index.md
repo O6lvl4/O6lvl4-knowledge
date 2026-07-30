@@ -15,8 +15,8 @@ O6lvl4 Knowledge の knowledge base。
 
 ### ai
 
-- [[ai-dlc]] - AI-DLC (AI-Driven Development Life Cycle)
 - [[error-messages-for-ai-agents]] - AI エージェント向けエラーメッセージ（型エラーアブレーション）
+- [[ai-dlc]] - AI-DLC (AI-Driven Development Life Cycle)
 - [[llm-social-simulation]] - LLM ソーシャルシミュレーション
 - [[viralbert]] - ViralBERT
 - [[engagement-driven-generation]] - エンゲージメント駆動生成
@@ -196,8 +196,8 @@ O6lvl4 Knowledge の knowledge base。
 - [[spa]] - SPA (Single Page Application)
 - [[ssg]] - SSG (Static Site Generation)
 - [[ssr]] - SSR (Server-Side Rendering)
-- [[rendering-phases]] - レンダリング戦略のフェーズ全体図 — いつ何が見えるか
 - [[rendering-strategies]] - レンダリング戦略 — CSR / SSR / SSG
+- [[rendering-phases]] - レンダリング戦略のフェーズ全体図 — いつ何が見えるか
 
 ### game-engine
 
