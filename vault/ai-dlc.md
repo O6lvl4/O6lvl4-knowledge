@@ -179,6 +179,7 @@ flowchart LR
 
 ## 関連
 
+- [[ai-dlc-basics]] — 開発 1 年目向けの入門版。まず全体感を掴みたい人はこちらから
 - [[constraints-liberate]] — 厳格なフェーズ構造・承認ゲートで LLM を縛ることで力を引き出す = 制約が自由を生むの方法論版
 - [[error-messages-for-ai-agents]] — AI エージェントを開発の第一級の行為者として設計し直す同じ潮流。あちらはコンパイラ出力、こちらはプロセス全体
 - [[htn-planning]] — Intent → Level 1 Plan → サブタスクの再帰分解は階層型タスクネットワークと同型の発想

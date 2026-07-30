@@ -17,6 +17,7 @@ O6lvl4 Knowledge の knowledge base。
 
 - [[error-messages-for-ai-agents]] - AI エージェント向けエラーメッセージ（型エラーアブレーション）
 - [[ai-dlc]] - AI-DLC (AI-Driven Development Life Cycle)
+- [[ai-dlc-basics]] - AI-DLC 入門 — 開発1年目向け
 - [[llm-social-simulation]] - LLM ソーシャルシミュレーション
 - [[viralbert]] - ViralBERT
 - [[engagement-driven-generation]] - エンゲージメント駆動生成
