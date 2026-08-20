@@ -56,3 +56,4 @@ flowchart TB
 ## 関連
 
 - [[formal-vs-functional-competence|形式的 vs 機能的言語能力]] — エピソード記憶は機能的言語能力の基盤の一つ
+- [[retrieval-practice]] — CA3 のパターン補完が想起練習の神経基盤。睡眠リプレイによる固定化が分散学習を裏打ちする

@@ -267,6 +267,7 @@ O6lvl4 Knowledge の knowledge base。
 ### neuroscience
 
 - [[episodic-memory]] - エピソード記憶
+- [[retrieval-practice]] - 想起練習 — 知識はどう獲得されるか
 - [[reward-system]] - 報酬系と内発的動機
 - [[executive-function]] - 実行機能
 - [[theory-of-mind]] - 心の理論
