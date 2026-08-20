@@ -56,4 +56,3 @@ updated_at: 2026-05-28
 
 - [[formal-vs-functional-competence|形式的 vs 機能的言語能力]] — 接地の欠如は機能的言語能力の限界と直結
 - [[theory-of-mind|心の理論]] — 他者理解も身体的共感に依存する部分がある
-- [[retrieval-practice]] — 「自分の言葉で言い換えられるか」を理解のゲートに使うのは、接地の操作的な判定に近い

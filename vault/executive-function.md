@@ -57,4 +57,3 @@ flowchart LR
 
 - [[formal-vs-functional-competence|形式的 vs 機能的言語能力]] — 実行機能は機能的言語能力の中核
 - [[theory-of-mind|心の理論]] — 社会認知も PFC (mPFC) が関与
-- [[retrieval-practice]] — 効果的な学習法は手応えが悪い。流暢性の錯覚に逆らって選び続けるのは実行機能の仕事
