@@ -255,6 +255,7 @@ O6lvl4 Knowledge の knowledge base。
 ### learning
 
 - [[learning-system]] - 学習システムの設計 — 動力学とパイプラインの分離
+- [[cue-reduction]] - 手がかりを削る — 学習技法を1本の軸で選ぶ
 
 ### license
 

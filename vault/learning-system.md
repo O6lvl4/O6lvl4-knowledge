@@ -126,3 +126,4 @@ stateDiagram-v2
 
 - [[retrieval-practice]] — 本ノートが実装しようとしている理論。2軸モデルと3規則の出典
 - [[forgetting-curve]] — DSR の R/S を曲線の言葉で見た側。Stability を減衰の遅さで定義する手口の出どころ
+- [[cue-reduction]] — カードをどの難易度で作るかの判断基準。L2 が回す個々のセッションの中身
