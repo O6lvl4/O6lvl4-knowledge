@@ -252,6 +252,10 @@ O6lvl4 Knowledge の knowledge base。
 - [[good-faith-principle]] - 信義則
 - [[copyright-law]] - 著作権法
 
+### learning
+
+- [[learning-system]] - 学習システムの設計 — 動力学とパイプラインの分離
+
 ### license
 
 - [[vn3-license]] - VN3 ライセンス
