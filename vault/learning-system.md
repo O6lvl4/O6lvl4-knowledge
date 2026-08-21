@@ -125,3 +125,4 @@ stateDiagram-v2
 ## 関連
 
 - [[retrieval-practice]] — 本ノートが実装しようとしている理論。2軸モデルと3規則の出典
+- [[forgetting-curve]] — DSR の R/S を曲線の言葉で見た側。Stability を減衰の遅さで定義する手口の出どころ

@@ -272,6 +272,7 @@ O6lvl4 Knowledge の knowledge base。
 
 - [[episodic-memory]] - エピソード記憶
 - [[retrieval-practice]] - 想起練習 — 知識はどう獲得されるか
+- [[forgetting-curve]] - 忘却曲線 — 何を測ったもので、何を言っていないか
 - [[reward-system]] - 報酬系と内発的動機
 - [[executive-function]] - 実行機能
 - [[theory-of-mind]] - 心の理論
@@ -334,6 +335,7 @@ O6lvl4 Knowledge の knowledge base。
 - [[iec-62304]] - IEC 62304 (医療機器ソフトウェア)
 - [[iso-26262]] - ISO 26262 (自動車機能安全)
 - [[soup]] - SOUP (Software of Unknown Provenance)
+- [[cots]] - 商用オフザシェルフ (COTS) ソフトウェア
 - [[accepted-safety-in-systems]] - システムにおける「許容される安全性」とは
 - [[safety-critical-certification-bodies]] - 安全臨界の認証に関わる団体(標準化・評価・規制)
 
