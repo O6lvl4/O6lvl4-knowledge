@@ -2,7 +2,7 @@
 title: 学習システムの設計 — 動力学とパイプラインの分離
 tags: [learning, design-principle]
 created_at: 2026-08-21
-updated_at: 2026-08-21T09:34:12+09:00
+updated_at: 2026-08-21T16:02:15+09:00
 ---
 
 [[retrieval-practice|想起練習]]の理論を、実際に回るシステムへ落とすときの設計。核心は**記憶動力学(L1)とパイプライン(L2)を分離し、L1 を自作しないこと**。学習ツールの自作が失敗するのは、たいてい面白いほうの L1 に手を出して、価値のある L2 に到達しないため。
@@ -127,3 +127,4 @@ stateDiagram-v2
 - [[retrieval-practice]] — 本ノートが実装しようとしている理論。2軸モデルと3規則の出典
 - [[forgetting-curve]] — DSR の R/S を曲線の言葉で見た側。Stability を減衰の遅さで定義する手口の出どころ
 - [[cue-reduction]] — カードをどの難易度で作るかの判断基準。L2 が回す個々のセッションの中身
+- [[llm-assisted-learning]] — L2 の各工程(問いの生成・照合・ヒント)に LLM を入れる場合の設計と危険
